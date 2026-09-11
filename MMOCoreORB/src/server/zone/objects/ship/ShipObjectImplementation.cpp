@@ -41,8 +41,17 @@
 #include "server/zone/managers/faction/FactionManager.h"
 #include "server/zone/objects/ship/transform/ShipObjectTransform.h"
 #include "server/zone/objects/ship/transform/SpaceTransform.h"
+#include "server/zone/managers/ship/tasks/ShipObjectTimerTask.h"
 
 // #define DEBUG_COV
+
+void ShipObjectImplementation::finalize() {
+	if (getUniqueID() != 0) {
+		dropUniqueID(false);
+	}
+
+	TangibleObjectImplementation::finalize();
+}
 
 void ShipObjectImplementation::initializeTransientMembers() {
 	TangibleObjectImplementation::initializeTransientMembers();
@@ -56,7 +65,10 @@ void ShipObjectImplementation::initializeTransientMembers() {
 		resetComponentFlag(componentOptions.getKeyAt(i), false);
 	}
 
-	initializeUniqueID(false);
+	if (!isShipAiAgent()) {
+		initializeUniqueID(false);
+	}
+
 	initializeTransform(getPosition(), *getDirection());
 
 	auto volume = getCollisionVolume();
@@ -69,44 +81,49 @@ void ShipObjectImplementation::initializeTransientMembers() {
 			setBoundingRadius(sphereRadius);
 		}
 	}
+
+	timerTaskCrc = 0;
 }
 
 void ShipObjectImplementation::notifyLoadFromDatabase() {
 	TangibleObjectImplementation::notifyLoadFromDatabase();
 
+	// info(true) << "ShipObjectImplementation::notifyLoadFromDatabase() called -- Ship: " << getDisplayedName();
+
+	auto zoneServer = getZoneServer();
+
+	if (zoneServer == nullptr) {
+		return;
+	}
+
+	/*
 	// This ship is launched when loading from DB. Auto store it
-	if (!isShipAiAgent() && isShipLaunched()) {
-		auto zoneServer = getZoneServer();
-
-		if (zoneServer == nullptr) {
-			return;
-		}
-
+	if (isShipLaunched()) {
 		auto shipDevice = cast<ShipControlDevice*>(zoneServer->getObject(controlDeviceID).get());
 		auto owner = getOwner().get();
 
 		if (shipDevice != nullptr && owner != nullptr) {
-
 			auto launchZone = getSpaceLaunchZone();
 			auto launchLoc = getSpaceLaunchLocation();
 
+			// This should not be an empty string, but just in case it is, send them to Coronet
 			if (launchZone.isEmpty()) {
-				launchZone = "naboo";
-			}
-
-			if (launchLoc.getX() == 0 && launchLoc.getY() == 0) {
-				launchLoc.setX(-4868.f);
-				launchLoc.setY(4154.f);
-				launchLoc.setZ(6.0f);
+				launchZone = "corellia";
+				launchLoc.set(-66, 28, -4711);
 			}
 
 			StoreShipTask* storeTask = new StoreShipTask(owner, shipDevice, launchZone, launchLoc);
 
 			if (storeTask != nullptr) {
-				storeTask->schedule(2000);
+				// Schedule this task out, giving plenty of time for players to load in first
+				storeTask->schedule(10 * 1000);
 			}
 		}
 	}
+	*/
+
+	// Make sure no players remain in any of the ships slots
+	removeAllPlayersFromShip();
 }
 
 void ShipObjectImplementation::loadTemplateData(SharedObjectTemplate* templateData) {
@@ -556,6 +573,10 @@ void ShipObjectImplementation::notifyInsert(TreeEntry* object) {
 			return;
 		}
 
+		bool hyperspacing = isHyperspacing();
+
+		Locker lock(&playersOnBoardMutex);
+
 		for (int i = 0; i < playersOnBoard.size(); ++i) {
 			auto shipMemberID = playersOnBoard.get(i);
 			auto shipMember = cast<CreatureObject*>(zoneServer->getObject(shipMemberID).get());
@@ -566,25 +587,49 @@ void ShipObjectImplementation::notifyInsert(TreeEntry* object) {
 
 			// info(true) << "Ship: " << getDisplayedName() << " updating shipMember: " << shipMember->getDisplayedName();
 
-			// Update the Ship member
-			if (shipMember->getCloseObjects() != nullptr) {
-				shipMember->addInRangeObject(sceneO, false);
-			} else {
-				shipMember->notifyInsert(sceneO);
-			}
+			// During hyperspace, skip ALL sends and use raw COV puts instead of
+			// addInRangeObject. addInRangeObject unconditionally calls notifyInsert
+			// for new entries, which triggers PlayerSpaceZoneComponent::notifyInsert
+			// → sendTo, sending creates to players BEFORE their CmdStartScene.
+			// Raw COV puts silently add objects without triggering any sends.
+			// After hyperspacing clears, notifyInsertToZone rebuilds COVs properly.
+			bool skipMemberSend = hyperspacing;
 
-			if (shipMember != sceneO) {
-				shipMember->sendTo(sceneO, true, false);
+			if (skipMemberSend) {
+				auto memberCOV = shipMember->getCloseObjects();
 
-				// Update the Object with the ship member
-				if (sceneO->getCloseObjects() != nullptr) {
-					sceneO->addInRangeObject(shipMember, false);
-				} else {
-					sceneO->notifyInsert(shipMember);
+				if (memberCOV != nullptr) {
+					memberCOV->put(sceneO);
 				}
 
-				if (sceneO->getParent() != nullptr) {
-					sceneO->sendTo(shipMember, true, false);
+				if (shipMember != sceneO) {
+					auto sceneCOV = sceneO->getCloseObjects();
+
+					if (sceneCOV != nullptr) {
+						sceneCOV->put(shipMember);
+					}
+				}
+			} else {
+				// Update the Ship member
+				if (shipMember->getCloseObjects() != nullptr) {
+					shipMember->addInRangeObject(sceneO, false);
+				} else {
+					shipMember->notifyInsert(sceneO);
+				}
+
+				if (shipMember != sceneO) {
+					shipMember->sendTo(sceneO, true, false);
+
+					// Update the Object with the ship member
+					if (sceneO->getCloseObjects() != nullptr) {
+						sceneO->addInRangeObject(shipMember, false);
+					} else {
+						sceneO->notifyInsert(shipMember);
+					}
+
+					if (sceneO->getParent() != nullptr) {
+						sceneO->sendTo(shipMember, true, false);
+					}
 				}
 			}
 		}
@@ -615,6 +660,8 @@ void ShipObjectImplementation::notifyDissapear(TreeEntry* object) {
 			return;
 		}
 
+		Locker lock(&playersOnBoardMutex);
+
 		for (int i = 0; i < playersOnBoard.size(); ++i) {
 			auto shipMemberID = playersOnBoard.get(i);
 			auto shipMember = cast<CreatureObject*>(zoneServer->getObject(shipMemberID).get());
@@ -640,18 +687,29 @@ void ShipObjectImplementation::notifyDissapear(TreeEntry* object) {
 	}
 }
 
-void ShipObjectImplementation::notifyDespawn(Zone* zone) {
-}
-
 void ShipObjectImplementation::sendDestroyTo(SceneObject* player) {
 	SceneObjectImplementation::sendDestroyTo(player);
 }
 
 void ShipObjectImplementation::notifyInsertToZone(Zone* zone) {
-	StringBuffer newName;
-	newName << getDisplayedName() << " -- ID: " << getObjectID() << " - " << zone->getZoneName();
+	if (zone != nullptr) {
+		const auto& zoneName = zone->getZoneName();
 
-	setLoggingName(newName.toString());
+		if (timerTaskCrc != zoneName.hashCode()) {
+			auto timerTask = zone->getTimerTask();
+
+			if (timerTask != nullptr) {
+				timerTaskCrc = timerTask->getTaskCrc();
+				timerTask->addShip(asShipObject());
+			} else {
+				timerTaskCrc = 0;
+			}
+		}
+
+		setLoggingName(getDisplayedName() + " [" + String::valueOf(getObjectID()) + "] " + zoneName);
+	} else {
+		setLoggingName(getDisplayedName() + " [" + String::valueOf(getObjectID()) + "]");
+	}
 
 	TangibleObjectImplementation::notifyInsertToZone(zone);
 
@@ -663,6 +721,8 @@ void ShipObjectImplementation::notifyInsertToZone(Zone* zone) {
 }
 
 void ShipObjectImplementation::notifyRemoveFromZone() {
+	timerTaskCrc = 0;
+
 	TangibleObjectImplementation::notifyRemoveFromZone();
 
 #ifdef DEBUG_COV
@@ -675,9 +735,7 @@ void ShipObjectImplementation::notifyRemoveFromZone() {
 }
 
 void ShipObjectImplementation::updateZone(bool lightUpdate, bool sendPackets) {
-	updatePlayersInShip(lightUpdate, sendPackets);
-
-	SceneObjectImplementation::updateZone(lightUpdate, sendPackets);
+	TangibleObjectImplementation::updateZone(lightUpdate, sendPackets);
 
 #ifdef DEBUG_COV
 	if (isPlayerShip()) {
@@ -686,43 +744,6 @@ void ShipObjectImplementation::updateZone(bool lightUpdate, bool sendPackets) {
 		info(true) << "ShipObjectImplementation::updateZone -- Zone: " << (zone != nullptr ? zone->getZoneName() : "null zone");
 	}
 #endif // DEBUG_COV
-}
-
-void ShipObjectImplementation::updatePlayersInShip(bool lightUpdate, bool sendPackets) {
-	if (getLocalZone() == nullptr) {
-		return;
-	}
-
-	auto zoneServer = getZoneServer();
-
-	if (zoneServer == nullptr) {
-		return;
-	}
-
-	const auto& worldPosition = getWorldPosition();
-
-	for (int i = 0; i < playersOnBoard.size(); ++i) {
-		auto shipMemberID = playersOnBoard.get(i);
-		auto shipMember = cast<CreatureObject*>(zoneServer->getObject(shipMemberID).get());
-
-		if (shipMember == nullptr) {
-			continue;
-		}
-
-		Locker clock(shipMember, asShipObject());
-
-		auto parent = shipMember->getParent().get();
-
-		if (parent == nullptr) {
-			continue;
-		}
-
-		if (parent == asShipObject()) {
-			shipMember->setPosition(worldPosition.getX(), worldPosition.getZ(), worldPosition.getY());
-		}
-
-		shipMember->updateZoneWithParent(parent, lightUpdate, sendPackets);
-	}
 }
 
 void ShipObjectImplementation::broadcastPvpStatusBitmask() {
@@ -780,7 +801,6 @@ void ShipObjectImplementation::doRecovery(int mselapsed) {
 
 	float deltaTime = Math::clamp(0.1f, mselapsed * 0.001f, 10.f);
 
-	auto pilot = getPilot();
 	auto deltaVector = getDeltaVector();
 	auto componentMap = getShipComponentMap();
 
@@ -913,6 +933,8 @@ void ShipObjectImplementation::doRecovery(int mselapsed) {
 						removeComponentFlag(Components::BOOSTER, ShipComponentFlag::ACTIVE, false);
 						restartBooster();
 
+						auto pilot = getPilot();
+
 						if (pilot != nullptr) {
 							pilot->sendSystemMessage("@space/space_interaction:booster_energy_depleted");
 						}
@@ -959,7 +981,7 @@ void ShipObjectImplementation::doRecovery(int mselapsed) {
 	auto targetVector = getTargetVector();
 
 	if (targetVector != nullptr) {
-		targetVector->update();
+		targetVector->update(asShipObject());
 	}
 }
 
@@ -1567,62 +1589,14 @@ ShipObjectTransform* ShipObjectImplementation::getShipTransform() {
 }
 
 void ShipObjectImplementation::destroyObjectFromDatabase(bool destroyContainedObjects) {
-	// Clear the players on board list
-	playersOnBoard.removeAll();
-
-	auto thisShip = asShipObject();
-
-	VectorMap<String, ManagedReference<SceneObject* > > slotted;
-	getSlottedObjects(slotted);
-
-	SortedVector<ManagedReference<SceneObject*>> players;
-
-	// Get the Launch location
-	auto launchZone = getSpaceLaunchZone();
-	auto launchLoc = getSpaceLaunchLocation();
-
-	// This should not be an empty string, but just in case it is, send them to Coronet
-	if (launchZone.isEmpty()) {
-		launchZone = "corellia";
-		launchLoc.set(-66, 28, -4711);
-	}
-
-	// Check slotted objects for players
-	for (int i = slotted.size() - 1; i >= 0 ; --i) {
-		auto object = slotted.get(i);
-
-		if (object == nullptr || !object->isPlayerCreature()) {
-			continue;
-		}
-
-		Locker clock(object, thisShip);
-
-		object->switchZone(launchZone, launchLoc.getX(), launchLoc.getZ(), launchLoc.getY(), 0, false, -1);
-
-		if (hasObjectInContainer(object->getObjectID())) {
-			removeObject(object, nullptr, false);
-		}
-	}
-
-	// Check container for players
-	for (int i = getContainerObjectsSize() - 1; i >= 0 ; --i) {
-		auto object = getContainerObject(i);
-
-		if (object == nullptr || !object->isPlayerCreature()) {
-			continue;
-		}
-
-		Locker clock(object, thisShip);
-
-		object->switchZone(launchZone, launchLoc.getX(), launchLoc.getZ(), launchLoc.getY(), 0, false, -1);
-
-		if (hasObjectInContainer(object->getObjectID())) {
-			removeObject(object, nullptr, false);
-		}
+	// Remove all of the players
+	if (!isPobShip()) {
+		removeAllPlayersFromShip();
 	}
 
 	// Remove and destroy all the components
 	auto playerOwner = owner.get();
+	auto thisShip = asShipObject();
 
 	for (uint32 slot = 0; slot <= Components::FIGHTERSLOTMAX; ++slot) {
 		auto component = components.get(slot);
@@ -1649,6 +1623,102 @@ void ShipObjectImplementation::destroyObjectFromDatabase(bool destroyContainedOb
 	TangibleObjectImplementation::destroyObjectFromDatabase(destroyContainedObjects);
 }
 
+void ShipObjectImplementation::removeAllPlayersFromShip() {
+	// info(true) << getDisplayedName() << " -- ShipObjectImplementation::removeAllPlayersFromShip()";
+
+	auto launchZone = getSpaceLaunchZone();
+	auto launchLoc = getSpaceLaunchLocation();
+
+	// This should not be an empty string, but just in case it is, send them to Coronet
+	if (launchZone.isEmpty()) {
+		launchZone = "corellia";
+		launchLoc.set(-66, 28, -4711);
+	}
+
+	auto thisShip = asShipObject();
+	auto zoneServer = getZoneServer();
+
+	if (zoneServer != nullptr) {
+		Locker lock(&playersOnBoardMutex);
+
+		for (int i = playersOnBoard.size() - 1; i >= 0 ; --i) {
+			auto shipMemberID = playersOnBoard.get(i);
+			auto shipMember = cast<CreatureObject*>(zoneServer->getObject(shipMemberID).get());
+
+			if (shipMember == nullptr) {
+				continue;
+			}
+
+			Locker clock(shipMember, thisShip);
+
+			// Remove droid commands from the player object
+			auto ghost = shipMember->getPlayerObject();
+
+			if (ghost != nullptr) {
+				ghost->removeDroidCommands();
+			}
+
+			// Clear the Players Space States
+			shipMember->clearSpaceStates();
+
+			// Clear the Players Space Mission Objects
+			shipMember->removeAllSpaceMissionObjects(false);
+
+			// info(true) << "Removing ShipMember: " << shipMember->getDisplayedName();
+
+			shipMember->switchZone(launchZone, launchLoc.getX(), launchLoc.getZ(), launchLoc.getY(), 0, false, -1);
+		}
+
+		playersOnBoard.removeAll();
+	}
+
+	// Check Pilot Slot
+	auto pilot = getPilot();
+
+	if (pilot != nullptr) {
+		Locker pClock(pilot, thisShip);
+
+		// Remove droid commands from the player object
+		auto ghost = pilot->getPlayerObject();
+
+		if (ghost != nullptr) {
+			ghost->removeDroidCommands();
+		}
+
+		// Clear the Players Space States
+		pilot->clearSpaceStates();
+
+		// Clear the Players Space Mission Objects
+		pilot->removeAllSpaceMissionObjects(false);
+
+		// info(true) << "Removing Pilot: " << pilot->getDisplayedName();
+
+		pilot->switchZone(launchZone, launchLoc.getX(), launchLoc.getZ(), launchLoc.getY(), 0, false, -1);
+	}
+
+	// Check Gunner Slot
+	auto shipGunner = getShipGunner();
+
+	if (shipGunner != nullptr) {
+		Locker gClock(shipGunner, thisShip);
+
+		// Remove droid commands from the player object
+		auto ghost = shipGunner->getPlayerObject();
+
+		if (ghost != nullptr) {
+			ghost->removeDroidCommands();
+		}
+
+		// Clear the Players Space States
+		shipGunner->clearSpaceStates();
+
+		// Clear the Players Space Mission Objects
+		shipGunner->removeAllSpaceMissionObjects(false);
+
+		shipGunner->switchZone(launchZone, launchLoc.getX(), launchLoc.getZ(), launchLoc.getY(), 0, false, -1);
+	}
+}
+
 CreatureObject* ShipObjectImplementation::getPilot() {
 	auto chair = getPilotChair().get();
 
@@ -1659,6 +1729,10 @@ CreatureObject* ShipObjectImplementation::getPilot() {
 	return getSlottedObject("ship_pilot").castTo<CreatureObject*>();
 }
 
+CreatureObject* ShipObjectImplementation::getShipGunner() {
+	return getSlottedObject("ship_gunner1").castTo<CreatureObject*>();
+}
+
 CreatureObject* ShipObjectImplementation::getShipOperator() {
 	auto chair = getOperationsChair().get();
 
@@ -1666,7 +1740,7 @@ CreatureObject* ShipObjectImplementation::getShipOperator() {
 		return nullptr;
 	}
 
-	return chair->getSlottedObject("ship_operations_station").castTo<CreatureObject*>();
+	return chair->getSlottedObject("ship_operations_pob").castTo<CreatureObject*>();
 }
 
 CreatureObject* ShipObjectImplementation::getTurretOperatorTop() {
@@ -1921,6 +1995,8 @@ CreatureObject* ShipObjectImplementation::getPlayerOnBoard(int index) {
 		return nullptr;
 	}
 
+	Locker lock(&playersOnBoardMutex);
+
 	auto shipMemberID = playersOnBoard.get(index);
 	auto shipMember = cast<CreatureObject*>(zoneServer->getObject(shipMemberID).get());
 
@@ -1938,6 +2014,8 @@ void ShipObjectImplementation::addPlayerOnBoard(CreatureObject* player) {
 
 	uint64 playerID = player->getObjectID();
 
+	Locker lock(&playersOnBoardMutex);
+
 	if (playersOnBoard.contains(playerID)) {
 		return;
 	}
@@ -1952,6 +2030,8 @@ void ShipObjectImplementation::removePlayerOnBoard(CreatureObject* player) {
 
 	uint64 playerID = player->getObjectID();
 
+	Locker lock(&playersOnBoardMutex);
+
 	for (int i = playersOnBoard.size() - 1; i >= 0; i--) {
 		if (playersOnBoard.get(i) != playerID) {
 			continue;
@@ -1962,10 +2042,14 @@ void ShipObjectImplementation::removePlayerOnBoard(CreatureObject* player) {
 }
 
 void ShipObjectImplementation::clearPlayersOnBoard() {
+	Locker lock(&playersOnBoardMutex);
+
 	playersOnBoard.removeAll();
 }
 
 int ShipObjectImplementation::getTotalPlayersOnBoard() {
+	Locker lock(&playersOnBoardMutex);
+
 	return playersOnBoard.size();
 }
 
@@ -1979,6 +2063,8 @@ void ShipObjectImplementation::sendShipMembersMessage(const String& message) {
 	if (zoneServer == nullptr) {
 		return;
 	}
+
+	Locker lock(&playersOnBoardMutex);
 
 	for (int i = 0; i < playersOnBoard.size(); ++i) {
 		auto shipMemberID = playersOnBoard.get(i);
@@ -1999,6 +2085,8 @@ void ShipObjectImplementation::sendShipMembersMusicMessage(const String& message
 		return;
 	}
 
+	Locker lock(&playersOnBoardMutex);
+
 	for (int i = 0; i < playersOnBoard.size(); ++i) {
 		auto shipMemberID = playersOnBoard.get(i);
 		auto shipMember = cast<CreatureObject*>(zoneServer->getObject(shipMemberID).get());
@@ -2017,6 +2105,8 @@ void ShipObjectImplementation::sendMembersHyperspaceBeginMessage(const String& z
 	if (zoneServer == nullptr) {
 		return;
 	}
+
+	Locker lock(&playersOnBoardMutex);
 
 	for (int i = 0; i < playersOnBoard.size(); ++i) {
 		auto shipMemberID = playersOnBoard.get(i);
@@ -2037,6 +2127,8 @@ void ShipObjectImplementation::sendMembersHyperspaceOrientMessage(const String& 
 	if (zoneServer == nullptr) {
 		return;
 	}
+
+	Locker lock(&playersOnBoardMutex);
 
 	for (int i = 0; i < playersOnBoard.size(); ++i) {
 		auto shipMemberID = playersOnBoard.get(i);
@@ -2059,6 +2151,8 @@ void ShipObjectImplementation::sendMembersBaseMessage(BaseMessage* message, bool
 	}
 
 	auto selfObject = owner.get();
+
+	Locker lock(&playersOnBoardMutex);
 
 	for (int i = 0; i < playersOnBoard.size(); ++i) {
 		auto shipMemberID = playersOnBoard.get(i);
@@ -2246,12 +2340,24 @@ float ShipObjectImplementation::getOutOfRangeDistance(uint64 specialRangeID) {
 	return ZoneServer::SPACECLOSEOBJECTRANGE;
 }
 
+float ShipObjectImplementation::getInRangeDistance(bool lightUpdate) {
+	if (!lightUpdate && !isShipAiAgent()) {
+		return ZoneServer::SPACESTATIONRANGE;
+	}
+
+	return ZoneServer::SPACECLOSEOBJECTRANGE;
+}
+
 bool ShipObjectImplementation::isShipDisabled() {
 	return isShipDestroyed() || !isComponentFunctional(Components::REACTOR) || !isComponentFunctional(Components::ENGINE);
 }
 
 bool ShipObjectImplementation::isShipDestroyed() {
 	return getChassisCurrentHealth() <= 0.f;
+}
+
+bool ShipObjectImplementation::isShipDocking() const {
+	return optionsBitmask & OptionBitmask::DOCKING;
 }
 
 bool ShipObjectImplementation::isComponentInstalled(uint32 slot) {
@@ -2591,6 +2697,20 @@ void ShipObjectImplementation::initializeUniqueID(bool notifyClient) {
 	setUniqueID(shipID, notifyClient);
 }
 
+void ShipObjectImplementation::dropUniqueID(bool notifyClient) {
+	auto shipManager = ShipManager::instance();
+
+	if (shipManager == nullptr) {
+		return;
+	}
+
+	if (getUniqueID() != 0) {
+		shipManager->dropShipUniqueID(asShipObject());
+	}
+
+	setUniqueID(0, notifyClient);
+}
+
 bool ShipObjectImplementation::canBePilotedBy(CreatureObject* player) {
 	if (player == nullptr) {
 		return false;
@@ -2652,4 +2772,16 @@ SpaceTransform ShipObjectImplementation::getCurrentTransform() {
 
 SpaceTransform ShipObjectImplementation::getNextTransform() {
 	return shipTransform.getNextTransform();
+}
+
+float ShipObjectImplementation::getNextDistance() {
+	return shipTransform.getNextDistance();
+}
+
+float ShipObjectImplementation::getNextRotation() {
+	return shipTransform.getNextRotation();
+}
+
+Vector3 ShipObjectImplementation::getObjectLocationInShip(SceneObject* object, const Vector3& objectPosition) {
+	return getWorldPosition();
 }

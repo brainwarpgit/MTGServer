@@ -128,16 +128,17 @@ public:
 		lua->setGlobalInt("TARGETSPACE",		BehaviorTreeSlotSpace::TARGETSPACE);
 
 		// Ship Bitmasks in ShipFlag.h
-		lua->setGlobalInt("ESCORT",				ShipFlag::ESCORT);
-		lua->setGlobalInt("FOLLOW",				ShipFlag::FOLLOW);
-		lua->setGlobalInt("TURRETSHIP",			ShipFlag::TURRETSHIP);
-		lua->setGlobalInt("GUARD_PATROL",		ShipFlag::GUARD_PATROL);
-		lua->setGlobalInt("RANDOM_PATROL",		ShipFlag::RANDOM_PATROL);
-		lua->setGlobalInt("FIXED_PATROL",		ShipFlag::FIXED_PATROL);
-		lua->setGlobalInt("SQUADRON_PATROL",	ShipFlag::SQUADRON_PATROL);
-		lua->setGlobalInt("SQUADRON_FOLLOW",	ShipFlag::SQUADRON_FOLLOW);
-		lua->setGlobalInt("WAVE_ATTACK",		ShipFlag::WAVE_ATTACK);
-		lua->setGlobalInt("TEST",				ShipFlag::TEST);
+		lua->setGlobalInt("ESCORT",						ShipFlag::ESCORT);
+		lua->setGlobalInt("FOLLOW",						ShipFlag::FOLLOW);
+		lua->setGlobalInt("TURRETSHIP",					ShipFlag::TURRETSHIP);
+		lua->setGlobalInt("GUARD_PATROL",				ShipFlag::GUARD_PATROL);
+		lua->setGlobalInt("RANDOM_PATROL",				ShipFlag::RANDOM_PATROL);
+		lua->setGlobalInt("FIXED_PATROL",				ShipFlag::FIXED_PATROL);
+		lua->setGlobalInt("WAVE_ATTACK",				ShipFlag::WAVE_ATTACK);
+		lua->setGlobalInt("DISABLED_INVULNERABLE",		ShipFlag::DISABLED_INVULNERABLE);
+		lua->setGlobalInt("ATTACKABLE_SPACE_STATION",	ShipFlag::ATTACKABLE_SPACE_STATION);
+		lua->setGlobalInt("SINGLE_PATROL_ROTATION",		ShipFlag::SINGLE_PATROL_ROTATION);
+		lua->setGlobalInt("TEST",						ShipFlag::TEST);
 
 		lua->setGlobalInt("OBLIVIOUS",			ShipAiAgent::OBLIVIOUS);
 		lua->setGlobalInt("WATCHING",			ShipAiAgent::WATCHING);
@@ -231,11 +232,20 @@ public:
 
 				int num = zone->getSpawnedAiAgents();
 
-				if (num <= 0)
+				if (num <= 0) {
 					continue;
+				}
 
 				String ucFirstZoneName = zone->getZoneName();
 				ucFirstZoneName[0] = toupper(ucFirstZoneName[0]);
+
+				int underIndex = ucFirstZoneName.indexOf("_");
+
+				if (underIndex > -1) {
+					ucFirstZoneName = ucFirstZoneName.replaceFirst("_", "");
+					ucFirstZoneName[underIndex] = toupper(ucFirstZoneName[underIndex]);
+				}
+
 				json["countAiAgents" + ucFirstZoneName] = num;
 
 				totalSpawned += num;
@@ -281,7 +291,8 @@ private:
 		_REGISTERSPACELEAF(CheckRefireRate);
 		_REGISTERSPACELEAF(CheckStopEvading);
 		_REGISTERSPACELEAF(CheckTargetIsValid);
-		_REGISTERSPACELEAF(CheckEnginesDisabled);
+		_REGISTERSPACELEAF(CheckShipDisabled);
+		_REGISTERSPACELEAF(CheckEngineSpeed);
 		_REGISTERSPACELEAF(CheckEvadeChance);
 		_REGISTERSPACELEAF(CheckRetreat);
 		_REGISTERSPACELEAF(CheckProspectLOS);

@@ -29,6 +29,7 @@ include server.zone.objects.ship.ShipPermissionList;
 include server.zone.objects.tangible.TangibleObject;
 
 
+@json
 class PobShipObject extends ShipObject {
 	public static final unsigned int MAX_PLAYER_ITEMS = 100;
 
@@ -107,9 +108,7 @@ class PobShipObject extends ShipObject {
 	public native int notifyObjectRemovedFromChild(SceneObject object, SceneObject child);
 
 	@dirty
-	public native abstract void onEnter(CreatureObject player);
-
-	public native void updatePlayersInShip(boolean lightUpdate, boolean sendPackets = true);
+	public native abstract void onEnter(CreatureObject player, unsigned long skipCellID = 0);
 
 	@local
 	public native void updateZone(boolean lightUpdate, boolean sendPackets = true);
@@ -285,4 +284,11 @@ class PobShipObject extends ShipObject {
 	public native void removeDamagedInteriorComponent(unsigned long interiorComponentID);
 
 	public native boolean hasActivePlasmaLeaks();
+
+	@preLocked
+	public native void removeAllPlayersFromShip();
+
+	@local
+	@dereferenced
+	public abstract native Vector3 getObjectLocationInShip(SceneObject object, @dereferenced final Vector3 objectPosition);
 }

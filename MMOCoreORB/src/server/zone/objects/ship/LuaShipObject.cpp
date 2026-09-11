@@ -34,6 +34,9 @@ Luna<LuaShipObject>::RegType LuaShipObject::Register[] = {
 	{ "getSpawnPointInFrontOfShip", &LuaShipObject::getSpawnPointInFrontOfShip },
 	{ "getSpawnPointBehindShip", &LuaShipObject::getSpawnPointBehindShip },
 	{ "isShipLaunched", &LuaShipObject::isShipLaunched },
+	{ "setCargoString", &LuaShipObject::setCargoString },
+	{ "isShipDisabled", &LuaShipObject::isShipDisabled },
+	{ "isShipDestroyed", &LuaShipObject::isShipDestroyed },
 
 	{ 0, 0}
 };
@@ -373,7 +376,7 @@ int LuaShipObject::setShipFactionString(lua_State* L) {
 
 	Locker lock(realObject);
 
-	realObject->setShipFactionString(factionString);
+	realObject->setShipFactionString(factionString, false);
 	realObject->broadcastPvpStatusBitmask();
 
 	return 0;
@@ -471,6 +474,39 @@ int LuaShipObject::isShipLaunched(lua_State* L) {
 	bool isLaunched = realObject->isShipLaunched();
 
 	lua_pushboolean(L, isLaunched);
+
+	return 1;
+}
+
+int LuaShipObject::setCargoString(lua_State* L) {
+	int numberOfArguments = lua_gettop(L) - 1;
+
+	if (numberOfArguments != 1) {
+		realObject->error() << "Improper number of arguments in LuaShipObject::setCargoString.";
+		return 0;
+	}
+
+	String cargoString = lua_tostring(L, -1);
+
+	Locker lock(realObject);
+
+	realObject->setCargoString(cargoString);
+
+	return 0;
+}
+
+int LuaShipObject::isShipDisabled(lua_State* L) {
+	bool isDisabled = realObject->isShipDisabled();
+
+	lua_pushboolean(L, isDisabled);
+
+	return 1;
+}
+
+int LuaShipObject::isShipDestroyed(lua_State* L) {
+	bool isDestroyed = realObject->isShipDestroyed();
+
+	lua_pushboolean(L, isDestroyed);
 
 	return 1;
 }

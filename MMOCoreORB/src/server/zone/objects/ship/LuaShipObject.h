@@ -45,6 +45,9 @@ public:
 	int getSpawnPointInFrontOfShip(lua_State* L);
 	int getSpawnPointBehindShip(lua_State* L);
 	int isShipLaunched(lua_State* L);
+	int setCargoString(lua_State* L);
+	int isShipDisabled(lua_State* L);
+	int isShipDestroyed(lua_State* L);
 
 private:
 	ShipObject* realObject;

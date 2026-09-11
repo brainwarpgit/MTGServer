@@ -305,7 +305,7 @@ void BuildingObjectImplementation::notifyRemoveFromZone() {
 			Locker objLocker(obj);
 
 			if (obj->isVendor()) {
-				VendorManager::instance()->destroyVendor(obj->asTangibleObject());
+				VendorManager::instance()->destroyVendor(obj->asTangibleObject(), "building removed from world");
 			} else {
 				obj->destroyObjectFromWorld(true);
 			}
@@ -2000,7 +2000,7 @@ float BuildingObjectImplementation::getOutOfRangeDistance(uint64 specialRangeID)
 #ifdef COV_BUILDING_QUAD_RANGE
 	return ZoneServer::CLOSEOBJECTRANGE * 4;
 #else // COV_BUILDING_QUAD_RANGE
-	return ZoneServer::CLOSEOBJECTRANGE + getBoundingRadius();
+	return ZoneServer::CLOSEOBJECTRANGE;
 #endif // COV_BUILDING_QUAD_RANGE
 }
 

@@ -27,7 +27,8 @@ void ShipDockingTask::run() {
 }
 
 void ShipDockingTask::initializeDocking(ShipObject* ship, ShipObject* target) {
-	sendEffectMessage(ship, "clienteffect/space_command/sys_manipulation.cef");
+	sendEffectMessage(ship, "clienteffect/ship_dock_repair_01.cef");
+
 	sendSystemMessage(ship, "@space/cargo:dock_started");
 	setDockingTransform(ship, target);
 
@@ -65,7 +66,6 @@ void ShipDockingTask::updateTransform(ShipObject* ship, ShipObject* target) {
 		return reschedule(INTERVAL_TRANSFORM);
 	}
 
-	sendEffectMessage(ship, "clienteffect/space_command/shp_dock_harddock.cef");
 	sendSystemMessage(ship, interlockStatus ? "@space/cargo:dock_achieved" : "@space/cargo:dock_abort");
 
 	dockingStage = FINALIZE;
@@ -73,28 +73,29 @@ void ShipDockingTask::updateTransform(ShipObject* ship, ShipObject* target) {
 }
 
 void ShipDockingTask::finalizeDocking(ShipObject* ship, ShipObject* target) {
-	sendEffectMessage(ship, "clienteffect/space_command/shp_dock_release.cef");
 	sendSystemMessage(ship, "@space/cargo:dock_complete");
+	sendEffectMessage(ship, "clienteffect/ship_dock_repair_02.cef");
 
 	clearDockingState(ship, target);
 	notifyObservers(ship, target);
 }
 
 void ShipDockingTask::notifyObservers(ShipObject* ship, ShipObject* target) {
-/*
-	Reference<ShipObject*> shipRef = ship;
+	Reference<CreatureObject*> pilotRef = ship->getPilot();
 	Reference<ShipObject*> targetRef = target;
 
-	Core::getTaskManager()->scheduleTask([shipRef, targetRef] () {
-		if (shipRef == nullptr || targetRef == nullptr)
+	Core::getTaskManager()->scheduleTask([pilotRef, targetRef] () {
+		if (pilotRef == nullptr || targetRef == nullptr) {
 			return;
+		}
 
-		Locker lock(shipRef);
-		Locker clocker(targetRef, shipRef);
+		Locker lock(pilotRef);
+		Locker clocker(targetRef, pilotRef);
 
-		targetRef->notifyObservers(ObserverEventType::SHIPDOCKED, shipRef);
-	}, "notifyShipDockedLambda", 200);
-*/
+		pilotRef->notifyObservers(ObserverEventType::SHIPDOCKED, targetRef, targetRef->getCargoString().hashCode());
+	}, "notifyDockedShipLambda", 200);
+
+	sendEffectMessage(ship, "clienteffect/ship_cargo_transfer.cef");
 }
 
 void ShipDockingTask::sendSystemMessage(ShipObject* ship, const String& message) {
@@ -120,17 +121,6 @@ void ShipDockingTask::setDockingTransform(ShipObject* ship, ShipObject* target) 
 	setAppearanceTransform(ship, target);
 	setSpeed(ship);
 	setTimeTotal(ship);
-}
-
-void ShipDockingTask::setBoundingTransform(ShipObject* ship, ShipObject* target) {
-	Vector3 position = getBoundingPosition(target) + getBoundingPosition(ship);
-	Vector3 rotation = target->getCurrentTransform().getRotation();
-
-	position = position * *target->getConjugateMatrix();
-	position = Vector3(position.getX(), position.getZ(), position.getY()) + target->getPosition();
-
-	dockTransform.setPosition(position);
-	dockTransform.setRotation(rotation);
 }
 
 void ShipDockingTask::setAppearanceTransform(ShipObject* ship, ShipObject* target) {
@@ -173,13 +163,16 @@ void ShipDockingTask::setAppearanceTransform(ShipObject* ship, ShipObject* targe
 		}
 	}
 
+	Vector3 axisV = getBoundingAxis(ship, target);
+	Vector3 axisR = getRotationAxis(axisV);
+
 	if (distanceMin == FLT_MAX) {
-		position = getBoundingPosition(target);
+		position = getBoundingPosition(target, axisV);
 	}
 
-	position = (position + getBoundingPosition(ship)) * *target->getConjugateMatrix();
+	position = (position + getBoundingPosition(ship, axisV)) * *target->getConjugateMatrix();
 	position = Vector3(position.getX(), position.getZ(), position.getY()) + target->getPosition();
-	rotation = SpaceMath::getRotationRate(target->getCurrentTransform().getRotation() + rotation);
+	rotation = SpaceMath::getRotationRate(target->getCurrentTransform().getRotation() + rotation + axisR);
 
 	dockTransform.setPosition(position);
 	dockTransform.setRotation(rotation);
@@ -197,7 +190,7 @@ bool ShipDockingTask::checkLineOfSight(ShipObject* ship, ShipObject* target) {
 	return (distance - intersection) <= radius;
 }
 
-Vector3 ShipDockingTask::getBoundingPosition(ShipObject* ship) {
+Vector3 ShipDockingTask::getBoundingPosition(ShipObject* ship, const Vector3& axis) {
 	auto bounding = ship->getBoundingVolume();
 
 	if (bounding == nullptr) {
@@ -205,7 +198,6 @@ Vector3 ShipDockingTask::getBoundingPosition(ShipObject* ship) {
 	}
 
 	Vector3 position = Vector3::ZERO;
-	Vector3 rotation = Vector3::ZERO;
 
 	if (bounding->isBoundingBox()) {
 		const auto& box = bounding->getBoundingBox();
@@ -213,15 +205,61 @@ Vector3 ShipDockingTask::getBoundingPosition(ShipObject* ship) {
 		const auto& boundMin = *box.getMinBound();
 
 		Vector3 center = (boundMin + boundMax) * 0.5f;
-		float radius = (boundMax.getY() - boundMin.getY()) * 0.5f;
-		position = center + Vector3(0,radius+1.f,0);
+		float radius = (((boundMax - boundMin) * 0.5f) * axis).length();
+		position = center + (axis * radius);
 	} else {
 		const auto& sphere = bounding->getBoundingSphere();
 		const auto& center = sphere.getCenter();
 
 		float radius = sphere.getRadius();
-		position = center + Vector3(0,radius+1.f,0);
+		position = center + (axis * radius);
 	}
 
 	return position;
+}
+
+Vector3 ShipDockingTask::getBoundingAxis(ShipObject* ship, ShipObject* target) {
+	auto bounding = target->getBoundingVolume();
+
+	if (bounding == nullptr) {
+		return Vector3::UNIT_Y;
+	}
+
+	Vector3 axis = Vector3::UNIT_Y;
+
+	if (bounding->isBoundingBox()) {
+		const auto& box = bounding->getBoundingBox();
+		const auto& boundMax = *box.getMaxBound();
+		const auto& boundMin = *box.getMinBound();
+
+		float minX = (boundMax.getX() - boundMin.getX()) * 0.5f;
+		float minY = (boundMax.getY() - boundMin.getY()) * 0.5f;
+
+		if (minX < minY && target->getClientGameObjectType() == SceneObjectType::SHIPTRANSPORT) {
+			Vector3 sLocal = ship->getPosition() - target->getPosition();
+			sLocal = SpaceMath::getLocalVector(sLocal, *target->getRotationMatrix());
+
+			axis = sLocal.getX() < 0.f ? Vector3(-1,0,0) : Vector3(1,0,0);
+		} else {
+			axis = fabs(boundMin.getY()) < fabs(boundMax.getY()) ? Vector3(0,-1,0) : Vector3(0,1,0);
+		}
+	}
+
+	return axis;
+}
+
+Vector3 ShipDockingTask::getRotationAxis(const Vector3& boundingAxis) {
+	if (boundingAxis == Vector3(1,0,0)) {
+		return Vector3(0,0,M_PI_2);
+	}
+
+	if (boundingAxis == Vector3(-1,0,0)) {
+		return Vector3(0,0,-M_PI_2);
+	}
+
+	if (boundingAxis == Vector3(0,-1,0)) {
+		return Vector3(0, 0,M_PI);
+	}
+
+	return Vector3(0,0,0);
 }

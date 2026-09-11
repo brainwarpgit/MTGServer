@@ -145,6 +145,15 @@ function SpaceHelpers:setSquadronType(pPlayer, squadron)
 	PlayerObject(pGhost):setSquadronType(squadron)
 end
 
+-- @param pPlayer pointer checks if the player has any type of pilot skills
+function SpaceHelpers:isPilot(pPlayer)
+	if (pPlayer == nil) then
+		return false
+	end
+
+	return (CreatureObject(pPlayer):isNeutralPilot() or CreatureObject(pPlayer):isRebelPilot() or CreatureObject(pPlayer):isImperialPilot())
+end
+
 -- @param pPlayer pointer checked if neutral pilot
 function SpaceHelpers:isNeutralPilot(pPlayer)
 	if (pPlayer == nil) then
@@ -208,7 +217,7 @@ function SpaceHelpers:isRebelPilot(pPlayer)
 	return CreatureObject(pPlayer):isRebelPilot()
 end
 
--- @param pPlayer pointer checked if is in Akron's Havoc Squadron
+-- @param pPlayer pointer checked if is in Arkon's Havoc Squadron
 function SpaceHelpers:isHavocSquadron(pPlayer)
 	if (pPlayer == nil) then
 		return false
@@ -398,15 +407,6 @@ function SpaceHelpers:getPlayerSpaceFactionHash(pPlayer)
 	return factionHash
 end
 
--- @param pPlayer pointer checks if the player has any type of pilot skills
-function SpaceHelpers:isPilot(pPlayer)
-	if (pPlayer == nil) then
-		return false
-	end
-
-	return (CreatureObject(pPlayer):isNeutralPilot() or CreatureObject(pPlayer):isRebelPilot() or CreatureObject(pPlayer):isImperialPilot())
-end
-
 -- @param pPlayer pointer checks if the player has space experience
 function SpaceHelpers:hasEarnedSpaceXP(pPlayer)
 	if (pPlayer == nil) then
@@ -433,6 +433,21 @@ function SpaceHelpers:hasCertifiedShip(pPlayer, skipYacht)
 	return CreatureObject(pPlayer):hasCertifiedShip(skipYacht)
 end
 
+-- @param pPlayer pointer to check if root parent is yacht
+function SpaceHelpers:isInYacht(pPlayer)
+	if (pPlayer == nil) then
+		return false
+	end
+
+	local pRootParent = SceneObject(pPlayer):getRootParent()
+
+	if (pRootParent == nil or SceneObject(pRootParent):getObjectName() == "player_sorosuub_space_yacht") then
+		return true
+	end
+
+	return false
+end
+
 -- @param pPlayer pointer surrenders the entire pilot profession and resets all of the quests
 function SpaceHelpers:surrenderPilot(pPlayer)
 	if (pPlayer == nil) then
@@ -448,16 +463,66 @@ function SpaceHelpers:surrenderPilot(pPlayer)
 	local pilotSquadron = PlayerObject(pGhost):getSquadronType()
 	local pilotProfession = ""
 
-	if (pilotSquadron == CORSEC_SQUADRON or pilotSquadron == SMUGGLER_SQUADRON or pilotSquadron == RSF_SQUADRON) then
+	-- Neutral Pilots
+	if (pilotSquadron == CORSEC_SQUADRON) then
 		pilotProfession = "neutralPilot"
 
-		-- All the Space Quests need to be reset here
+		-- Tier 1
 		CorsecSquadronScreenplay:resetRheaQuests(pPlayer)
+		-- Tier 2
+		CorsecSquadronScreenplay:resetRikkhQuests(pPlayer)
+		-- Tier 3
+		CorsecSquadronScreenplay:resetRamnaQuests(pPlayer)
+		-- Tier 4
+		CorsecSquadronScreenplay:resetTuroldineQuests(pPlayer)
+	elseif (pilotSquadron == SMUGGLER_SQUADRON) then
+		pilotProfession = "neutralPilot"
 
-	elseif (pilotSquadron == BLACK_EPSILON_SQUADRON or pilotSquadron == STORM_SQUADRON or pilotSquadron == INQUISITION_SQUADRON) then
-		pilotProfession = "imperialPilot"
-	elseif (pilotSquadron == HAVOC_SQUADRON or pilotSquadron == VORTEX_SQUADRON or pilotSquadron == CRIMSON_PHOENIX_SQUADRON) then
+		-- TODO: Add SmugglerSquadronScreenplay reset functions
+	elseif (pilotSquadron == RSF_SQUADRON) then
+		pilotProfession = "neutralPilot"
+
+		-- Tier 1
+		RsfSquadronScreenplay:resetDingeQuests(pPlayer)
+		-- Tier 2
+		RsfSquadronScreenplay:resetKaydineQuests(pPlayer)
+		-- Tier 3
+		RsfSquadronScreenplay:resetDuliosQuests(pPlayer)
+
+	-- Rebel Pilots
+	elseif (pilotSquadron == HAVOC_SQUADRON) then
 		pilotProfession = "rebelPilot"
+
+		-- Tier 1
+		HavocSquadronScreenplay:resetKreezoQuests(pPlayer)
+		-- Tier 2
+		HavocSquadronScreenplay:resetViopaQuests(pPlayer)
+		-- Tier 3
+		HavocSquadronScreenplay:resetAqzowQuests(pPlayer)
+		-- Tier 4
+		HavocSquadronScreenplay:resetArkonQuests(pPlayer)
+	elseif (pilotSquadron == VORTEX_SQUADRON) then
+		pilotProfession = "rebelPilot"
+
+		-- TODO: Add VortexSquadronScreenplay reset functions
+	elseif (pilotSquadron == CRIMSON_PHOENIX_SQUADRON) then
+		pilotProfession = "rebelPilot"
+
+		-- TODO: Add CrimsonPhoenixSquadronScreenplay reset functions
+
+	-- Imperial Pilots
+	elseif (pilotSquadron == BLACK_EPSILON_SQUADRON) then
+		pilotProfession = "imperialPilot"
+
+		-- TODO: Add BlackEpsilonSquadronScreenplay reset functions
+	elseif (pilotSquadron == STORM_SQUADRON) then
+		pilotProfession = "imperialPilot"
+
+		-- TODO: Add StormSquadronScreenplay reset functions
+	elseif (pilotSquadron == INQUISITION_SQUADRON) then
+		pilotProfession = "imperialPilot"
+
+		-- TODO: Add InquisitionSquadronScreenplay reset functions
 	end
 
 	local pilotSkills = self.pilotSkills[pilotProfession]
@@ -555,8 +620,23 @@ function SpaceHelpers:addVortexSquadWaypoint(pPlayer)
 	PlayerObject(pGhost):addWaypoint("naboo", "@npc_spawner_n:v3_fx", "@npc_spawner_n:v3_fx", 4764, 0, -4795, WAYPOINT_BLUE, true, true, 0)
 end
 
--- @param pPlayer pointer adds waypoint to the Rebel Akron's Havok Squad Tier1 Trainer
-function SpaceHelpers:addAkronSquadWaypoint(pPlayer)
+-- @param pPlayer pointer adds waypoint to the Rebel Havoc Squad Tier2 Trainer (Lady Viopa on Lok)
+function SpaceHelpers:addViopaWaypoint(pPlayer)
+	if (pPlayer == nil) then
+		return
+	end
+
+	local pGhost = CreatureObject(pPlayer):getPlayerObject()
+
+	if (pGhost == nil) then
+		return
+	end
+
+	PlayerObject(pGhost):addWaypoint("lok", "@npc_spawner_n:viopa", "@npc_spawner_n:viopa", 472, 0, 4779, WAYPOINT_BLUE, true, true, 0)
+end
+
+-- @param pPlayer pointer adds waypoint to the Rebel Arkon's Havok Squad Tier1 Trainer
+function SpaceHelpers:addArkonSquadWaypoint(pPlayer)
 	if (pPlayer == nil) then
 		return
 	end
@@ -667,6 +747,27 @@ end
 
 -- @param pPlayer pointer to check for skills
 -- @param factionString - neutral, rebel_navy, imperial_navy
+-- @param tierNumber
+function SpaceHelpers:getPilotTierSkillCount(pPlayer, factionString, tierNumber)
+	if (pPlayer == nil or factionString == "" or tierNumber < 1 or tierNumber > 5) then
+		return false
+	end
+
+	local skillsTable = {"_droid_0", "_procedures_0", "_starships_0", "_weapons_0"}
+	local tierString = tostring(tierNumber)
+	local count = 0
+
+	for i = 1, 4, 1 do
+		if (CreatureObject(pPlayer):hasSkill("pilot_" .. factionString .. skillsTable[i] .. tierString)) then
+			count = count + 1
+		end
+	end
+
+	return count
+end
+
+-- @param pPlayer pointer to check for skills
+-- @param factionString - neutral, rebel_navy, imperial_navy
 function SpaceHelpers:hasMasterSkill(pPlayer, factionString)
 	if (pPlayer == nil or factionString == "") then
 		return false
@@ -748,7 +849,7 @@ function SpaceHelpers:activateSpaceQuest(pPlayer, pNpc, questType, questName, no
 
 	local pDatapad = SceneObject(pPlayer):getSlottedObject("datapad")
 
-	if (pDatapad == nullptr) then
+	if (pDatapad == nil) then
 		return
 	end
 
@@ -886,11 +987,14 @@ function SpaceHelpers:failSpaceQuest(pPlayer, questType, questName, notifyClient
 			SpaceHelpers:sendQuestUpdate(pPlayer, "@space/quest:patrol_abandoned") -- "You abandoned your patrol!"
 		elseif (questType == "destroy_surpriseattack") then
 			SpaceHelpers:sendQuestUpdate(pPlayer, "@space/quest:destroy_surprise_abandoned") -- "You ran away from the attack and abandoned your duty!"
-		elseif (questType == "escort_duty" or questType == "destroy_duty") then
-			SpaceHelpers:sendDutyUpdate(pPlayer, "@space/quest:mission_abandoned") -- "You abandoned your mission!"
+		elseif (questType == "escort_duty" or questType == "destroy_duty" or questType == "recovery_duty") then
+			SpaceHelpers:sendQuestUpdate(pPlayer, "@space/quest:destroy_abandoned") -- "You have ended your duty mission."
+		elseif (questType == "inspect") then
+			SpaceHelpers:sendQuestUpdate(pPlayer, "@space/quest:inspect_abandoned") -- "You abandoned your inspection mission!"
 		else
 			-- Failed Message
-			SpaceHelpers:sendQuestUpdate(pPlayer, "@quest/quests:task_failure")
+			--SpaceHelpers:sendQuestUpdate(pPlayer, "@quest/quests:task_failure")
+			SpaceHelpers:sendDutyUpdate(pPlayer, "@space/quest:mission_abandoned") -- "You abandoned your mission!"
 		end
 	end
 
@@ -1186,7 +1290,7 @@ function SpaceHelpers:clearQuestWaypoint(pPlayer, questClass)
 
 	local pGhost = CreatureObject(pPlayer):getPlayerObject()
 
-	if (pGhost == nullptr) then
+	if (pGhost == nil) then
 		return
 	end
 
@@ -1209,7 +1313,7 @@ function SpaceHelpers:clearQuestWaypoints(pPlayer, questClass)
 
 	local pGhost = CreatureObject(pPlayer):getPlayerObject()
 
-	if (pGhost == nullptr) then
+	if (pGhost == nil) then
 		return
 	end
 
@@ -1349,6 +1453,16 @@ end
 -- @param minRange - min distance to find the location
 -- @param maxRange - max distance to find the location
 function SpaceHelpers:getRandomPositionInSphere(x, z, y, minRange, maxRange)
+	if x == nil or z == nil or y == nil or minRange == nil or maxRange == nil then
+		Logger:log("SpaceHelpers:getRandomPositionInSphere -- nil parameter passed. x: " .. tostring(x) .. " z: " .. tostring(z) .. " y: " .. tostring(y) .. " minRange: " .. tostring(minRange) .. " maxRange: " .. tostring(maxRange), LT_ERROR)
+
+		if x ~= nil and z ~= nil and y ~= nil then
+			return x, z, y
+		end
+
+		return nil
+	end
+
 	local bound = 7500
 	local minBound, maxBound = -bound, bound
 

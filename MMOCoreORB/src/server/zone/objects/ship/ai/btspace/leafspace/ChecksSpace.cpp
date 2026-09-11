@@ -110,8 +110,9 @@ template<> bool CheckStopEvading::check(ShipAiAgent* agent) const {
 	int pointSize = agent->getPatrolPointSize();
 
 	// No evade points set or agents engines are disabled
-	if (pointSize <= 0 || (agent->getCurrentSpeed() == 0.f))
+	if (pointSize <= 0 || (agent->getCurrentSpeed() == 0.f)) {
 		return true;
+	}
 
 	ManagedReference<ShipObject*> targetShip = agent->getTargetShipObject();
 
@@ -121,8 +122,9 @@ template<> bool CheckStopEvading::check(ShipAiAgent* agent) const {
 		ShipAiAgent* targetAgent = targetShip->asShipAiAgent();
 
 		// Target Agent is already evading, lets not do it at the same time;
-		if (targetAgent != nullptr && targetAgent->getMovementState() == ShipAiAgent::EVADING)
+		if (targetAgent != nullptr && targetAgent->getMovementState() == ShipAiAgent::EVADING) {
 			return true;
+		}
 	}
 
 	SpacePatrolPoint evadePoint = agent->getFinalPosition();
@@ -148,23 +150,15 @@ template<> bool CheckTargetIsValid::check(ShipAiAgent* agent) const {
 	return agent->validateTarget(targetShip);
 }
 
-template<> bool CheckEnginesDisabled::check(ShipAiAgent* agent) const {
-	auto componentOptMap = agent->getComponentOptionsMap();
+template<> bool CheckShipDisabled::check(ShipAiAgent* agent) const {
+	return agent->isShipDisabled();
+}
 
-	if (componentOptMap == nullptr)
-		return false;
-
-	uint32 flags = componentOptMap->get(Components::ENGINE);
-
-	return (flags & ShipComponentFlag::DISABLED) || (flags & ShipComponentFlag::DEMOLISHED);
+template<> bool CheckEngineSpeed::check(ShipAiAgent* agent) const {
+	return agent->getCurrentSpeed() > 0.f;
 }
 
 template<> bool CheckEvadeChance::check(ShipAiAgent* agent) const {
-	// Agent engines are disabled, no evading
-	if (agent->getCurrentSpeed() == 0.f) {
-		return false;
-	}
-
 	// Don't immediately evade again
 	if (!agent->isEvadeDelayPast()) {
 		return false;
@@ -173,6 +167,13 @@ template<> bool CheckEvadeChance::check(ShipAiAgent* agent) const {
 	ManagedReference<ShipObject*> targetShip = agent->getTargetShipObject();
 
 	if (targetShip == nullptr) {
+		return false;
+	}
+
+	auto evadeDelay = agent->getEvadeDelay();
+
+	// Ship just successfully evaded. Wait until the delay has passed
+	if (evadeDelay != nullptr && evadeDelay->isFuture()) {
 		return false;
 	}
 
@@ -186,12 +187,14 @@ template<> bool CheckEvadeChance::check(ShipAiAgent* agent) const {
 	float attackDistanceMax = ShipAiAgent::MAX_ATTACK_DISTANCE + attackDistanceMin;
 
 	float homeDistanceSqr = homePosition.squaredDistanceTo(targetPosition);
+
 	// evade if target distance to home position exceeds max attack distance
 	if (homeDistanceSqr > Math::sqr(attackDistanceMax)) {
 		return true;
 	}
 
 	float targetDistanceSqr = agentPosition.squaredDistanceTo(targetPosition);
+
 	// evade if target distance to agent is less than 1/sec to collision
 	if (targetDistanceSqr < Math::sqr(attackDistanceMin)) {
 		return true;
@@ -208,7 +211,7 @@ template<> bool CheckEvadeChance::check(ShipAiAgent* agent) const {
 
 			// if target is attacking agent, roll for who breaks off the attack first.
 			if (targetAgent->getMovementState() == ShipAiAgent::ATTACKING && targetAgent->getTargetShipObject() == agent) {
-				return System::random(1000) < ShipAiAgent::BEHAVIORINTERVAL;
+				return System::random(1000) < (ShipAiAgent::BEHAVIORINTERVAL / 10);
 			}
 		}
 	}

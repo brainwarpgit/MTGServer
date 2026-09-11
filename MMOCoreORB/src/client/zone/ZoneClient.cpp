@@ -3,14 +3,16 @@
 		See file COPYING for copying conditions.*/
 
 #include "ZoneClient.h"
+#include "Zone.h"
 #include "ClientCore.h"
 #include "ZonePacketHandler.h"
 #include "ZoneMessageProcessorTask.h"
+#include "ClientProxy.h"
 
 ZoneClient::ZoneClient(const String& address, int port) {
 	packetCount.set(0);
 
-	client = new BaseClient(address, port);
+	client = new ClientProxy(address, port);
 	client->setHandler(this);
 
 	client->setLogging(true);
@@ -36,7 +38,7 @@ void ZoneClient::handleMessage(ServiceClient* client, Packet* message) {
 }
 
 void ZoneClient::initialize() {
-	zonePacketHandler = new ZonePacketHandler("ZonePacketHandler", zone);
+	zonePacketHandler = new ZonePacketHandler("ZonePacketHandler", zone, zone->getClientCore());
 
 	client->initialize();
 }
