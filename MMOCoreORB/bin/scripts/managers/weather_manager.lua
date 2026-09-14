@@ -264,3 +264,8 @@ yavin4 = {
 	weatherStability = 70, -- Range 0 - 100, Higher = Less weather changes, Overall better weather
 }
 
+
+
+
+
+

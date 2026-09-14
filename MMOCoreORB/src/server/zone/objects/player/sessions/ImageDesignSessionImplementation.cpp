@@ -237,7 +237,7 @@ void ImageDesignSessionImplementation::updateImageDesign(CreatureObject* updater
 			strongReferenceDesigner->notifyObservers(ObserverEventType::IMAGEDESIGNHAIR, nullptr, 0);
 
 			if (xpGranted < 100)
-					xpGranted = 100;
+				xpGranted = 100;
 		}
 
 		int bodyAttSize= bodyAttributes->size();
