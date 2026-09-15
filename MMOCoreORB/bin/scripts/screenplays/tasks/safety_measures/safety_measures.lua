@@ -87,7 +87,7 @@ function SafetyMeasures:spawnBrigandCamp1()
 		spawnSceneObject(self.planet, object[1], object[2] + x, object[3] + 151, object[4] + y, 0, object[5])
 	end
 
-	--createNavMesh(self.planet, x, y, 64, true, "brigand_camp1")
+	createNavMesh(self.planet, x, y, 64, true, "brigand_camp1")
 end
 
 function SafetyMeasures:spawnBrigandCamp2()
@@ -104,8 +104,7 @@ function SafetyMeasures:spawnBrigandCamp2()
 		spawnSceneObject(self.planet, object[1], object[2] + x, object[3] + 188, object[4] + y, 0, object[5])
 	end
 
-	-- This is giving a mesh building error, might be due to the objects in the camp
-	--createNavMesh(self.planet, x, y, 64, true, "brigand_camp2")
+	createNavMesh(self.planet, x, y, 64, true, "brigand_camp2")
 end
 
 function SafetyMeasures:spawnBrigandLeaderCamp()
@@ -122,7 +121,7 @@ function SafetyMeasures:spawnBrigandLeaderCamp()
 		spawnSceneObject(self.planet, object[1], object[2] + x, object[3] + 180, object[4] + y, 0, object[5])
 	end
 
-	--createNavMesh(self.planet, x, y, 64, true, "brigand_leader_camp")
+	createNavMesh(self.planet, x, y, 64, true, "brigand_leader_camp")
 end
 
 function SafetyMeasures:spawnMobiles()

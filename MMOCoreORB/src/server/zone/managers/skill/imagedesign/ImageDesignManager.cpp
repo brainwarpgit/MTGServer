@@ -416,10 +416,10 @@ TangibleObject* ImageDesignManager::createHairObject(CreatureObject* imageDesign
 	if (imageDesigner->getSkillMod("hair") < skillMod)
 		return oldHair;
 
-	/*if (hairAssetData->getServerPlayerTemplate().hashCode() != targetObject->getObjectTemplate()->getFullTemplateString().hashCode()) {
+	if (hairAssetData->getServerPlayerTemplate().hashCode() != targetObject->getObjectTemplate()->getFullTemplateString().hashCode()) {
 		error("hair " + hairTemplate + " is not compatible with this creature player " + targetObject->getObjectTemplate()->getFullTemplateString());
 		return oldHair;
-	}*/
+	}
 
 	ManagedReference<SceneObject*> hair = imageDesigner->getZoneServer()->createObject(hairTemplate.hashCode(), 1);
 
