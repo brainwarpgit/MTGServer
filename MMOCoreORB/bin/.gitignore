@@ -3,3 +3,7 @@ core3client
 odb3
 testsuite3
 o_screenlog*
+
+# Local server files
+/conf/config-local.lua
+/scripts/managers/resource_manager_spawns.lua
