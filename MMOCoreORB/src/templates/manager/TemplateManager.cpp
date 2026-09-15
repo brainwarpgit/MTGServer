@@ -902,10 +902,10 @@ AppearanceTemplate* TemplateManager::getAppearanceTemplate(const String& fileNam
 }
 
 AppearanceTemplate* TemplateManager::instantiateAppearanceTemplate(IffStream* iffStream) {
-	uint32 formType = iffStream->getNextFormType();
 	AppearanceTemplate* appTemplate = nullptr;
 
 	try {
+		uint32 formType = iffStream->getNextFormType();
 		switch (formType) {
 		case 'MESH':
 			appTemplate = new MeshAppearanceTemplate();
@@ -938,6 +938,8 @@ AppearanceTemplate* TemplateManager::instantiateAppearanceTemplate(IffStream* if
 			appTemplate->readObject(iffStream);
 
 	} catch (Exception& e) {
+		delete appTemplate;
+		appTemplate = nullptr;
 		error(e.getMessage());
 		e.printStackTrace();
 	}

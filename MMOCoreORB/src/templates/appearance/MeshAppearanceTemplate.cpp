@@ -8,18 +8,38 @@
 #include "MeshAppearanceTemplate.h"
 
 void MeshAppearanceTemplate::parse(IffStream* iffStream) {
-	//file = iffStream->getFileName();
-
 	iffStream->openForm('MESH');
 
 	uint32 version = iffStream->getNextFormType();
 	iffStream->openForm(version);
 
-	AppearanceTemplate::readObject(iffStream);
+	const bool legacy = version == '0003';
+	if (!legacy) {
+		AppearanceTemplate::readObject(iffStream);
+	}
 
-	parseSPS(iffStream);
+	parseSPS(iffStream, legacy);
+
+	if (legacy) {
+		// Version 0003 stores its extent after the mesh version form. The
+		// center/radius here are duplicated in that extent.
+		Chunk* center = iffStream->openChunk('CNTR');
+		if (center == nullptr || center->getChunkSize() != 12) {
+			throw Exception("Invalid legacy mesh center in " + iffStream->getFileName());
+		}
+		iffStream->closeChunk('CNTR');
+
+		Chunk* radius = iffStream->openChunk('RADI');
+		if (radius == nullptr || radius->getChunkSize() != 4) {
+			throw Exception("Invalid legacy mesh radius in " + iffStream->getFileName());
+		}
+		iffStream->closeChunk('RADI');
+	}
 
 	iffStream->closeForm(version);
+	if (legacy) {
+		readLegacyMeshBounds(iffStream);
+	}
 	iffStream->closeForm('MESH');
 
 	if (meshes.size() != 0) {
@@ -53,7 +73,9 @@ void MeshAppearanceTemplate::createAABB() {
 		}
 	}
 
-	//meshes.removeAll();
+	if (triangles.size() == 0) {
+		return;
+	}
 
 	//Logger::console.info("creating mesh aabb for triangles " + String::valueOf(triangles.size()), true);
 
@@ -86,30 +108,40 @@ bool MeshAppearanceTemplate::testCollide(float x, float z, float y, float radius
 
 	//Logger::console.info("checking collide in mesh", true);
 
-	return aabbTree->testCollide(sphere);
+	return aabbTree != nullptr && aabbTree->testCollide(sphere);
 }
 
-void MeshAppearanceTemplate::parseSPS(IffStream* iffStream) {
-	iffStream->openForm('SPS ');
-	iffStream->openForm('0001');
+void MeshAppearanceTemplate::parseSPS(IffStream* iffStream, bool legacy) {
+	if (iffStream->openForm('SPS ') == nullptr) {
+		throw Exception("Missing mesh shader groups in " + iffStream->getFileName());
+	}
+	const uint32 version = legacy ? '0000' : '0001';
+	if (iffStream->getNextFormType() != version) {
+		throw Exception("Unsupported mesh shader group version in " + iffStream->getFileName());
+	}
+	iffStream->openForm(version);
 
-	int count = 0;
-
-	iffStream->openChunk('CNT ');
-
-	count = iffStream->getInt();
-
-	iffStream->closeChunk();
-
-	for (int i = 1; i <= count; ++i) {
-		parseVertexData(iffStream, i);
+	Chunk* countChunk = iffStream->openChunk('CNT ');
+	if (countChunk == nullptr || countChunk->getChunkSize() != 4) {
+		throw Exception("Invalid mesh shader group count in " + iffStream->getFileName());
 	}
 
-	iffStream->closeForm('0001');
+	int count = iffStream->getInt();
+
+	iffStream->closeChunk();
+	if (count < 0 || count > iffStream->getRemainingSubChunksNumber()) {
+		throw Exception("Invalid mesh shader group count in " + iffStream->getFileName());
+	}
+
+	for (int i = 1; i <= count; ++i) {
+		parseVertexData(iffStream, i, legacy);
+	}
+
+	iffStream->closeForm(version);
 	iffStream->closeForm('SPS ');
 }
 
-void MeshAppearanceTemplate::parseVertexData(IffStream* iffStream, int idx) {
+void MeshAppearanceTemplate::parseVertexData(IffStream* iffStream, int idx, bool legacy) {
 	int formVersion = 0;'0000';// + idx;
 
 	String idxText = String::valueOf(idx);
@@ -144,7 +176,7 @@ void MeshAppearanceTemplate::parseVertexData(IffStream* iffStream, int idx) {
 	iffStream->closeChunk();
 
 	Reference<MeshData*> meshData = new MeshData;
-	meshData->readObject(iffStream);
+	meshData->readObject(iffStream, legacy);
 	meshes.emplace(std::move(meshData));
 
 	iffStream->closeForm(nextVersion);

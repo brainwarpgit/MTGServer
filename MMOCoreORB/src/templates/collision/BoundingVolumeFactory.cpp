@@ -1,11 +1,12 @@
 #include "BoundingVolumeFactory.h"
 #include "BaseBoundingVolume.h"
 #include "templates/collision/BoundingVolumes.h"
+#include <memory>
 
 BaseBoundingVolume* BoundingVolumeFactory::getVolume(IffStream *iff) {
 	static Logger logger("BoundingVolumeFactory");
 
-	BaseBoundingVolume *volume = nullptr;
+	std::unique_ptr<BaseBoundingVolume> volume;
 	uint32 type = iff->getNextFormType();
 	switch(type) {
 		case 'NULL':
@@ -13,28 +14,28 @@ BaseBoundingVolume* BoundingVolumeFactory::getVolume(IffStream *iff) {
 			iff->closeForm('NULL');
 			return nullptr;
 		case 'EXBX':
-			volume = new BoxVolume();
+			volume.reset(new BoxVolume());
 			volume->read(iff);
-			return volume;
+			return volume.release();
 		case 'CPST':
-			volume = new CompositeVolume();
+			volume.reset(new CompositeVolume());
 			break;
 		case 'CMSH':
-			volume = new CollisionMeshVolume();
+			volume.reset(new CollisionMeshVolume());
 			break;
 		case 'CMPT':
-			volume = new ComponentVolume();
+			volume.reset(new ComponentVolume());
 			break;
 		case 'DTAL':
-			volume = new DetailVolume();
+			volume.reset(new DetailVolume());
 			break;
 		case 'XCYL':
-			volume = new CylinderVolume();
+			volume.reset(new CylinderVolume());
 			break;
 		case 'EXSP':
-			volume = new SphereVolume();
+			volume.reset(new SphereVolume());
 			volume->read(iff);
-			return volume;
+			return volume.release();
 		default: {
 			logger.error(iff->getFileName() + " - INVALID VOLUME TYPE " + String::hexvalueOf((int64)type));
 			iff->openForm(type);
@@ -46,5 +47,5 @@ BaseBoundingVolume* BoundingVolumeFactory::getVolume(IffStream *iff) {
 	volume->read(iff);
 	iff->closeForm(type);
 
-	return volume;
+	return volume.release();
 }

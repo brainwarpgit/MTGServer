@@ -85,7 +85,7 @@ public:
 		triangles = data.triangles;
 	}
 
-	void readObject(IffStream* iffStream);
+	void readObject(IffStream* iffStream, bool legacy = false);
 
 	Vector <Vector3>* getVerts() {
 		return &vertices;
