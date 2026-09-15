@@ -20,12 +20,17 @@ void CustomizationIdManager::loadHairAssetsSkillMods(IffStream* iffStream) {
 		HairAssetData* data = new HairAssetData();
 		data->readObject(dataTable.getRow(i));
 
-		hairAssetSkillMods.put(data->getServerTemplate(), data);
+		auto entry = hairAssetSkillMods.getEntry(data->getServerTemplate());
+		if (entry == nullptr) {
+			hairAssetSkillMods.put(data->getServerTemplate(), VectorMap<String, Reference<HairAssetData*> >());
+			entry = hairAssetSkillMods.getEntry(data->getServerTemplate());
+		}
+		entry->getValue().put(data->getServerPlayerTemplate(), data);
 
 		debug() << "adding " << data->getServerTemplate();
 	}
 
-	info() << "loaded " << paletteColumns.size() << " hair assets";
+	info() << "loaded " << dataTable.getTotalRows() << " hair asset compatibility records";
 }
 
 void CustomizationIdManager::loadAllowBald(IffStream* iffStream) {
@@ -85,4 +90,3 @@ void CustomizationIdManager::readObject(IffStream* iffStream) {
 
 	info() << "loaded " << customizationIds.size() << " customization ids";
 }
-

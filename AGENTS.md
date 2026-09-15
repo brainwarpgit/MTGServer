@@ -13,6 +13,13 @@ These instructions apply throughout this project. Paths below are relative to th
 
 - Do not create commits unless the user explicitly asks you to commit.
 
+## Building, running, and testing
+
+- Leave building and running Core3 to the user. The user will report build errors, warnings, and runtime errors for investigation.
+- Do not compile Core3 or its components, link or install a rebuilt executable, or run `core3`, including under GDB or through `runUnitTests`, unless the user explicitly requests it.
+- Perform as much relevant validation as possible before that point, within the allowed folders: review changes and callers, check diffs and whitespace, use available syntax or static checks, and run standalone tests that do not build or execute Core3.
+- Add or update regression tests when appropriate, even when executing them requires the user's Core3 build. Clearly distinguish checks actually run from build-dependent or runtime checks left for the user.
+
 ## Maintaining this guidance
 
 - Keep this root file as the single running record of project instructions and preferences provided by the user.

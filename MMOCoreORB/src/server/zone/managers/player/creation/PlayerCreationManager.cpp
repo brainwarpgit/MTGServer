@@ -831,20 +831,12 @@ void PlayerCreationManager::addHair(CreatureObject* creature,
 	if (hairInfo == nullptr)
 		hairInfo = hairStyleInfo.get(0);
 
+	const String& playerTemplate = creature->getObjectTemplate()->getFullTemplateString();
 	HairAssetData* hairAssetData =
-			CustomizationIdManager::instance()->getHairAssetData(hairTemplate);
+			CustomizationIdManager::instance()->getHairAssetData(hairTemplate, playerTemplate);
 
 	if (hairAssetData == nullptr) {
-		error("no hair asset data detected for " + hairTemplate);
-		return;
-	}
-
-	if (hairAssetData->getServerPlayerTemplate()
-			!= creature->getObjectTemplate()->getFullTemplateString()) {
-		error(
-				"hair " + hairTemplate
-						+ " is not compatible with this creature player "
-						+ creature->getObjectTemplate()->getFullTemplateString());
+		error("hair " + hairTemplate + " is not compatible with this creature player " + playerTemplate);
 		return;
 	}
 

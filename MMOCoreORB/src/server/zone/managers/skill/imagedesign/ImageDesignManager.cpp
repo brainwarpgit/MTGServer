@@ -396,8 +396,6 @@ const Vector<CustomizationData>* ImageDesignManager::getCustomizationData(uint32
 TangibleObject* ImageDesignManager::createHairObject(CreatureObject* imageDesigner, CreatureObject* targetObject, const String& hairTemplate, const String& hairCustomization) {
 	Reference<TangibleObject*> oldHair = targetObject->getSlottedObject("hair").castTo<TangibleObject*>();
 
-	HairAssetData* hairAssetData = CustomizationIdManager::instance()->getHairAssetData(hairTemplate);
-
 	if (hairTemplate.isEmpty()) {
 		if (!CustomizationIdManager::instance()->canBeBald(targetObject->getServerObjectCRC())) {
 			return oldHair;
@@ -407,6 +405,9 @@ TangibleObject* ImageDesignManager::createHairObject(CreatureObject* imageDesign
 		}
 	}
 
+	HairAssetData* hairAssetData = CustomizationIdManager::instance()->getHairAssetData(
+			hairTemplate, targetObject->getObjectTemplate()->getFullTemplateString());
+
 	if (hairAssetData == nullptr) {
 		return oldHair;
 	}
@@ -415,11 +416,6 @@ TangibleObject* ImageDesignManager::createHairObject(CreatureObject* imageDesign
 
 	if (imageDesigner->getSkillMod("hair") < skillMod)
 		return oldHair;
-
-	if (hairAssetData->getServerPlayerTemplate().hashCode() != targetObject->getObjectTemplate()->getFullTemplateString().hashCode()) {
-		error("hair " + hairTemplate + " is not compatible with this creature player " + targetObject->getObjectTemplate()->getFullTemplateString());
-		return oldHair;
-	}
 
 	ManagedReference<SceneObject*> hair = imageDesigner->getZoneServer()->createObject(hairTemplate.hashCode(), 1);
 

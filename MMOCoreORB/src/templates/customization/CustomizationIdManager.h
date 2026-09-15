@@ -17,7 +17,9 @@ class CustomizationIdManager : public Object, public Logger, public Singleton<Cu
 	HashTable<String, int> customizationIds;
 	HashTable<int, String> reverseIds;
 	HashTable<String, Reference<PaletteData*> > paletteColumns;
-	HashTable<String, Reference<HairAssetData*> > hairAssetSkillMods;
+	// A hairstyle can be shared by multiple player templates, each with its
+	// own creation availability and image-design skill requirement.
+	HashTable<String, VectorMap<String, Reference<HairAssetData*> > > hairAssetSkillMods;
 	HashTable<int, bool> allowBald;
 
 public:
@@ -40,8 +42,13 @@ public:
 		return paletteColumns.get(palette);
 	}
 
-	HairAssetData* getHairAssetData(const String& hairServerTemplate) {
-		return hairAssetSkillMods.get(hairServerTemplate);
+	HairAssetData* getHairAssetData(const String& hairServerTemplate, const String& playerServerTemplate) {
+		auto entry = hairAssetSkillMods.getEntry(hairServerTemplate);
+		if (entry == nullptr) {
+			return nullptr;
+		}
+
+		return entry->getValue().get(playerServerTemplate);
 	}
 
 	bool canBeBald(const int objectCRC) {
