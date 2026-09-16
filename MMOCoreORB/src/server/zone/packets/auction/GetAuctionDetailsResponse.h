@@ -20,5 +20,5 @@ public:
 			System::out << "Sending an GetAuctionDetailsResponse" << endl;
 	}
 };
-		
+
 #endif /*GETAUCTIONDETAILSRESPONSEMESSAGE_H_*/

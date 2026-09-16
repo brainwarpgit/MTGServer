@@ -49,4 +49,3 @@ uint64 FrsManagerDataImplementation::getDemoteTime(uint64 playerID) const {
 uint64 FrsManagerDataImplementation::getDemoteDuration(uint64 playerID) const {
 	return (Time().getMiliTime() - getDemoteTime(playerID));
 }
-

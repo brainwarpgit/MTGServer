@@ -38,7 +38,7 @@ public:
 		absorption = templateData->getFloatField("absorption");
 		duration = templateData->getFloatField("duration");
 		attribute = templateData->getIntField("attribute");
-    }
+	}
 
 	inline int getMedicineUse() {
 		return medicineUse;

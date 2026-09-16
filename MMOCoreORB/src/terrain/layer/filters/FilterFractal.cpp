@@ -76,4 +76,3 @@ void FilterFractal::parseFromIffStream(engine::util::IffStream* iffStream, Versi
 
 	iffStream->closeForm('DATA');
 }
-

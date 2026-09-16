@@ -22,7 +22,3 @@ void ForageCleanupEvent::run() {
 		forageManager->deleteForageAreaCollection(playerName);
 
 }
-
-
-
-

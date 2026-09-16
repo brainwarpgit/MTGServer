@@ -384,4 +384,3 @@ bool dtIntersectSegSeg2D(const float* ap, const float* aq,
 	t = vperpXZ(u,w) / d;
 	return true;
 }
-

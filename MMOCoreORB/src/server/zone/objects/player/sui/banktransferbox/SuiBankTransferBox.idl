@@ -20,38 +20,38 @@ class SuiBankTransferBox extends SuiBox {
 	protected string convertRatioFrom;
 	protected string convertRatioTo;
 	protected SceneObject bank;
-	
+
 	public SuiBankTransferBox(SceneObject bankObject, CreatureObject player, unsigned int windowtype) {
 		super(player, windowtype, super.BANKTRANSFERBOX);
-		
+
 		bank = bankObject;
-		
+
 	}
 
 	public void addCash(int cash) {
 		lblFrom = "Cash";
 		lblStartingFrom = String.valueOf(cash);
-		
+
 		lblInputFrom = lblStartingFrom;
-		
+
 		convertRatioFrom = "1";
 	}
 
 	public void addBank(int bank) {
 		lblTo = "Bank";
-		
+
 		lblStartingTo = String.valueOf(bank);
 		lblInputTo = lblStartingTo;
 		convertRatioTo = "1";
 	}
-	
+
 	public SceneObject getBank() {
 		return bank;
 	}
-	
+
 	@local
 	public native BaseMessage generateMessage();
-	
+
 	public boolean isBankTransferBox() {
 		return true;
 	}

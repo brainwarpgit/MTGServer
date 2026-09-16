@@ -21,7 +21,7 @@ class Instrument extends TangibleObject {
 
 	@weakReference
 	protected CreatureObject spawnerPlayer;
-	
+
 	@dereferenced
 	protected transient Reference<InstrumentPulseTask> instrumentPulse;
 
@@ -101,10 +101,10 @@ class Instrument extends TangibleObject {
 
 	@dirty
 	public native boolean isActiveInstrument(CreatureObject player);
-	
+
 	@dirty
 	public native boolean isEquipped();
-	
+
 	@dirty
 	public native boolean canBeTransferred(SceneObject newContainer);
 
@@ -122,7 +122,7 @@ class Instrument extends TangibleObject {
 	public void setSpawnerPlayer(CreatureObject pla) {
 		spawnerPlayer = pla;
 	}
-	
+
 	public boolean isUnequippable() {
 		return instrumentType == NALARGON || instrumentType == OMNIBOX;
 	}

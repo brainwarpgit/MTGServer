@@ -20,7 +20,7 @@ public:
 
 		setCompression(false);
 	}
-	
+
 };
 
 #endif /*CLIENTRANDOMNAMERESPONSE_H_*/

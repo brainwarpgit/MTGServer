@@ -26,7 +26,7 @@ void DetailAppearanceTemplate::parse(IffStream* iffStream) {
 	//}
 
 	Chunk* infoChunk = iffStream->openChunk('INFO');
-	
+
 	iffStream->closeChunk('INFO');
 
 	Chunk* dataChunk = iffStream->openForm('DATA');

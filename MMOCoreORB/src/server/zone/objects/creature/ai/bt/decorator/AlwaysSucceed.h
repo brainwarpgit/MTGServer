@@ -1,4 +1,4 @@
-#ifndef ALWAYSSUCCEED_H_ 
+#ifndef ALWAYSSUCCEED_H_
 #define ALWAYSSUCCEED_H_
 
 #include "server/zone/objects/creature/ai/bt/decorator/Decorator.h"

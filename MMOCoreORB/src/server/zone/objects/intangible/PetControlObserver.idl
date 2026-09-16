@@ -14,10 +14,10 @@ include templates.params.ObserverEventType;
 
 
 class PetControlObserver extends Observer {
-	
+
 	@weakReference
 	PetControlDevice petControlDevice;
-	
+
 	public PetControlObserver(PetControlDevice device) {
 		petControlDevice = device;
 	}
@@ -27,14 +27,14 @@ class PetControlObserver extends Observer {
 		if (eventType != ObserverEventType.STARTCOMBAT) {
 			return 0;
 		}
-		
+
 		PetControlDevice strongRef = petControlDevice;
-		
+
 		if (strongRef) {
 			CreatureObject creature = (CreatureObject) observable;
 			strongRef.cancelSpawnObject(creature);
 		}
-		
+
 		return 1;
 	}
 

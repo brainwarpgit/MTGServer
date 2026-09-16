@@ -39,4 +39,3 @@ public:
 };
 
 #endif //LEAVEGROUPCOMMAND_H_
-

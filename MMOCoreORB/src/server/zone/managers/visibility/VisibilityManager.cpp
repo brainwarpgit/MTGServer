@@ -208,4 +208,3 @@ void VisibilityManager::loadConfiguration() {
 		error(e.getMessage());
 	}
 }
-

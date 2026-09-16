@@ -89,4 +89,3 @@ private:
 	void setRecycleToolType(ResourceTreeEntry* entry);
 
 };
-

@@ -21,39 +21,39 @@ public:
 
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
-		
-		if (!creature->hasSkill("outdoors_squadleader_support_03")) {
-//			StringIdChatParameter params("@error_message:prose_nsf_skill_cmd"); //You lack sufficient skill to use the %TO command.	
-//			params.setTO("@skl_n:" + skill->getSkillName());
-			creature->sendSystemMessage("You lack sufficient skill to use the SetRetreat command."); //SetRetreat isn't a skill...		
-			return GENERALERROR;
-		}			
-			
-        ManagedReference<CreatureObject*> player = (creature);
-        ManagedReference<PlayerObject*> playerObject = player->getPlayerObject();	
 
-		String message = arguments.toString();		
-		
+		if (!creature->hasSkill("outdoors_squadleader_support_03")) {
+//			StringIdChatParameter params("@error_message:prose_nsf_skill_cmd"); //You lack sufficient skill to use the %TO command.
+//			params.setTO("@skl_n:" + skill->getSkillName());
+			creature->sendSystemMessage("You lack sufficient skill to use the SetRetreat command."); //SetRetreat isn't a skill...
+			return GENERALERROR;
+		}
+
+        ManagedReference<CreatureObject*> player = (creature);
+        ManagedReference<PlayerObject*> playerObject = player->getPlayerObject();
+
+		String message = arguments.toString();
+
 		if (message.length()>128){
 			player->sendSystemMessage("Your Retreat message can only be up to 128 characters long.");
 			return false;
-		}	
-		
+		}
+
 		ZoneProcessServer* zps = player->getZoneProcessServer();
 		NameManager* nameManager = zps->getNameManager();
 
 		if (nameManager->isProfane(message)){
 			player->sendSystemMessage("Your Retreat message has failed the profanity filter.");
-			return false;				
+			return false;
 		}
-		
+
         if(message.isEmpty()) {
             playerObject->removeCommandMessageString(STRING_HASHCODE("retreat"));
 			player->sendSystemMessage("Your Retreat message has been removed.");
 		} else {
             playerObject->setCommandMessageString(STRING_HASHCODE("retreat"), message);
 			player->sendSystemMessage("Your Retreat message was set to :-\n" + message);
-		}	
+		}
 
 		return SUCCESS;
 

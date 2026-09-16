@@ -32,9 +32,9 @@ public:
 		return animation;
 	}
 
-	 bool isDroidEffectsModuleTemplate() {
-		 return true;
-	 }
+	bool isDroidEffectsModuleTemplate() {
+		return true;
+	}
 };
 
 #endif /*DROIDEFFECTSMODULETEMPLATE_H_*/

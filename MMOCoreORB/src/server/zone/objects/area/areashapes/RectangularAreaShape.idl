@@ -157,7 +157,7 @@ class RectangularAreaShape extends AreaShape {
 	public float getArea() {
 		return getHeight() * getWidth();
 	}
-	
+
 	@read
 	public native float getRadius();
 }

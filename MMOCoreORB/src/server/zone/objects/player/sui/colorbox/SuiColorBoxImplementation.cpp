@@ -37,4 +37,3 @@ BaseMessage* SuiColorBoxImplementation::generateMessage() {
 
 	return message;
 }
-

@@ -45,7 +45,7 @@ class ScreenPlayObserver extends Observer implements Logger {
 	public string getScreenKey() {
 		return key;
 	}
-	
+
 	public float getFloatValue(unsigned long dataKey) {
 		return floatData.get(dataKey);
 	}

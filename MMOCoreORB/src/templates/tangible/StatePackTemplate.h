@@ -29,7 +29,7 @@ public:
 
 		medicineUse = templateData->getIntField("medicineUse");
 		state = templateData->getLongField("state");
-    }
+	}
 
 	inline int getMedicineUse() {
 		return medicineUse;

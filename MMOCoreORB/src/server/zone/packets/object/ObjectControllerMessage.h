@@ -26,4 +26,3 @@ public:
 
 
 #endif /*OBJECTCONTROLLERMESSAGE_H_*/
-

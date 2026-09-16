@@ -22,4 +22,3 @@ void CampStructureTemplate::readObject(LuaObject* templateData) {
 	actionWoundRegenRate = templateData->getIntField("actionWoundRegenRate");
 	mindWoundRegenRate = templateData->getIntField("mindWoundRegenRate");
 }
-

@@ -157,4 +157,3 @@ class SpaceZone extends Zone {
 	@local
 	public native ShipObjectTimerTask getTimerTask();
 }
-

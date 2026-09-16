@@ -147,4 +147,3 @@ void SuiBoxImplementation::setForceCloseDistance(float dist) {
 void SuiBoxImplementation::setForceCloseDisabled() {
 	forceCloseDistance = 0;
 }
-

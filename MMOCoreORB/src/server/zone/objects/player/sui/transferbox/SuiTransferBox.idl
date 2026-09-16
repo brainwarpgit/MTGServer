@@ -15,7 +15,7 @@ class SuiTransferBox extends SuiBox {
 	protected string lblTo;
 	protected string lblStartingTo;
 	protected string lblInputTo;
-	
+
 	protected string convertRatioFrom;
 	protected string convertRatioTo;
 
@@ -29,7 +29,7 @@ class SuiTransferBox extends SuiBox {
 
 	public native void addFrom(final string from, final string startingFrom, final string inputFrom, final string rFrom);
 	public native void addTo(final string to, final string startingTo, final string inputTo, final string rTo);
-	
+
 	public boolean isTransferBox() {
 		return true;
 	}

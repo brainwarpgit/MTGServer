@@ -98,4 +98,3 @@ string/en/error_message.stf	122	sys_eject_fail_move	The ejection attempt failed 
 };
 
 #endif //EJECTCOMMAND_H_
-

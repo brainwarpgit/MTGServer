@@ -249,5 +249,3 @@ int GuildTerminalImplementation::handleObjectMenuSelect(CreatureObject* player, 
 
 	return 0;
 }
-
-

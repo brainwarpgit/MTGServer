@@ -99,27 +99,27 @@ bool ResourceSpawnImplementation::isUnknownType() const {
 }
 
 String ResourceSpawnImplementation::getFamilyName() const {
-   	int offset = 2;
+	int offset = 2;
 
-   	if(isUnknownType())
-   		offset = 1;
+	if(isUnknownType())
+		offset = 1;
 
-   	if(spawnClasses.size() > offset)
-   		return spawnClasses.get(spawnClasses.size() - offset);
-   	else
-   		return "";
+	if(spawnClasses.size() > offset)
+		return spawnClasses.get(spawnClasses.size() - offset);
+	else
+		return "";
 }
 
 String ResourceSpawnImplementation::getSurveyMissionSpawnFamilyName() const {
-   	int offset = 3;
+	int offset = 3;
 
-   	if(isUnknownType() || isType("chemical"))
-   		offset = 2;
+	if(isUnknownType() || isType("chemical"))
+		offset = 2;
 
-   	if(spawnClasses.size() > offset)
-   		return spawnClasses.get(spawnClasses.size() - offset);
-   	else
-   		return "";
+	if(spawnClasses.size() > offset)
+		return spawnClasses.get(spawnClasses.size() - offset);
+	else
+		return "";
 }
 
 void ResourceSpawnImplementation::createSpawnMaps(bool jtl, int minpool, int maxpool,
@@ -224,29 +224,29 @@ void ResourceSpawnImplementation::extractResource(const String& zoneName, int un
 }
 
 Reference<ResourceContainer*> ResourceSpawnImplementation::createResource(int units) {
-   	Reference<ResourceContainer*> newResource = nullptr;
+	Reference<ResourceContainer*> newResource = nullptr;
 
-   	newResource = (getZoneServer()->createObject(containerCRC, 2)).castTo<ResourceContainer*>();
+	newResource = (getZoneServer()->createObject(containerCRC, 2)).castTo<ResourceContainer*>();
 
-   	if(newResource == nullptr) {
-   		error("Unable to create resource container, using generic.  CRC attempted was: " + String::valueOf(containerCRC));
-   		print();
-   		String genericContainer = "object/resource_container/organic_food.iff";
-   		newResource = (getZoneServer()->createObject(genericContainer.hashCode(), 2)).castTo<ResourceContainer*>();
-   	}
+	if(newResource == nullptr) {
+		error("Unable to create resource container, using generic.  CRC attempted was: " + String::valueOf(containerCRC));
+		print();
+		String genericContainer = "object/resource_container/organic_food.iff";
+		newResource = (getZoneServer()->createObject(genericContainer.hashCode(), 2)).castTo<ResourceContainer*>();
+	}
 
-   	Locker locker(newResource);
+	Locker locker(newResource);
 
-   	newResource->setSpawnObject(_this.getReferenceUnsafeStaticCast());
+	newResource->setSpawnObject(_this.getReferenceUnsafeStaticCast());
 
-   	if (units != 0)
-   		newResource->setQuantity(units);
+	if (units != 0)
+		newResource->setQuantity(units);
 
-   	newResource->setCustomObjectName(getFamilyName(), false);
+	newResource->setCustomObjectName(getFamilyName(), false);
 
-   	++containerReferenceCount;
+	++containerReferenceCount;
 
-   	return newResource;
+	return newResource;
 }
 
 void ResourceSpawnImplementation::decreaseContainerReferenceCount() {

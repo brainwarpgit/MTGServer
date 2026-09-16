@@ -698,7 +698,7 @@ void dtFreeNavMesh(dtNavMesh* navmesh);
 @typedef dtPolyRef
 @par
 
-Polygon references are subject to the same invalidate/preserve/restore 
+Polygon references are subject to the same invalidate/preserve/restore
 rules that apply to #dtTileRef's.  If the #dtTileRef for the polygon's
 tile changes, the polygon reference becomes invalid.
 
@@ -714,7 +714,7 @@ The following changes will invalidate a tile reference:
 - The navigation mesh has been initialized using a different set
   of #dtNavMeshParams.
 
-A tile reference is preserved/restored if the tile is added to a navigation 
+A tile reference is preserved/restored if the tile is added to a navigation
 mesh initialized with the original #dtNavMeshParams and is added at the
 original reference location. (E.g. The lastRef parameter is used with
 dtNavMesh::addTile.)
@@ -726,14 +726,14 @@ tile reference changes.
 @var unsigned short dtPoly::neis[DT_VERTS_PER_POLYGON]
 @par
 
-Each entry represents data for the edge starting at the vertex of the same index. 
+Each entry represents data for the edge starting at the vertex of the same index.
 E.g. The entry at index n represents the edge data for vertex[n] to vertex[n+1].
 
-A value of zero indicates the edge has no polygon connection. (It makes up the 
+A value of zero indicates the edge has no polygon connection. (It makes up the
 border of the navigation mesh.)
 
-The information can be extracted as follows: 
-@code 
+The information can be extracted as follows:
+@code
 neighborRef = neis[n] & 0xff; // Get the neighbor polygon reference.
 
 if (neis[n] & #DT_EX_LINK)
@@ -767,18 +767,18 @@ Tiles generally only exist within the context of a dtNavMesh object.
 Some tile content is optional.  For example, a tile may not contain any
 off-mesh connections.  In this case the associated pointer will be null.
 
-If a detail mesh exists it will share vertices with the base polygon mesh.  
+If a detail mesh exists it will share vertices with the base polygon mesh.
 Only the vertices unique to the detail mesh will be stored in #detailVerts.
 
 @warning Tiles returned by a dtNavMesh object are not guarenteed to be populated.
 For example: The tile at a location might not have been loaded yet, or may have been removed.
-In this case, pointers will be null.  So if in doubt, check the polygon count in the 
+In this case, pointers will be null.  So if in doubt, check the polygon count in the
 tile's header to determine if a tile has polygons defined.
 
 @var float dtOffMeshConnection::pos[6]
 @par
 
-For a properly built navigation mesh, vertex A will always be within the bounds of the mesh. 
+For a properly built navigation mesh, vertex A will always be within the bounds of the mesh.
 Vertex B is not required to be within the bounds of the mesh.
 
 */

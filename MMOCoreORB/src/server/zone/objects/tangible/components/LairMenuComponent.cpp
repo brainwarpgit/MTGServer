@@ -56,4 +56,3 @@ int LairMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject, Creature
 
 	return TangibleObjectMenuComponent::handleObjectMenuSelect(sceneObject, player, selectedID);
 }
-

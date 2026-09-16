@@ -158,4 +158,3 @@ int BankTerminalMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject, 
 
 	return 0;
 }
-

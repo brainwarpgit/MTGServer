@@ -12,11 +12,11 @@ import server.zone.objects.tangible.eventperk.Jukebox;
 class JukeboxObserver extends Observer {
 	@weakReference
 	protected Jukebox jukebox;
-	
+
 	public JukeboxObserver(Jukebox jbox) {
 		jukebox = jbox;
 	}
 
 	@dirty
-	public native int notifyObserverEvent(unsigned int eventType, Observable observable, ManagedObject arg1, long arg2);	
+	public native int notifyObserverEvent(unsigned int eventType, Observable observable, ManagedObject arg1, long arg2);
 }

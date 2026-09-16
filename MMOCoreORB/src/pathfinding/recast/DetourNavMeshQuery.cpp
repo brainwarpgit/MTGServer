@@ -30,32 +30,32 @@
 /// @class dtQueryFilter
 ///
 /// <b>The Default Implementation</b>
-/// 
+///
 /// At construction: All area costs default to 1.0.  All flags are included
 /// and none are excluded.
-/// 
+///
 /// If a polygon has both an include and an exclude flag, it will be excluded.
-/// 
-/// The way filtering works, a navigation mesh polygon must have at least one flag 
+///
+/// The way filtering works, a navigation mesh polygon must have at least one flag
 /// set to ever be considered by a query. So a polygon with no flags will never
 /// be considered.
 ///
 /// Setting the include flags to 0 will result in all polygons being excluded.
 ///
 /// <b>Custom Implementations</b>
-/// 
+///
 /// DT_VIRTUAL_QUERYFILTER must be defined in order to extend this class.
-/// 
-/// Implement a custom query filter by overriding the virtual passFilter() 
-/// and getCost() functions. If this is done, both functions should be as 
-/// fast as possible. Use cached local copies of data rather than accessing 
+///
+/// Implement a custom query filter by overriding the virtual passFilter()
+/// and getCost() functions. If this is done, both functions should be as
+/// fast as possible. Use cached local copies of data rather than accessing
 /// your own objects where possible.
-/// 
-/// Custom implementations do not need to adhere to the flags or cost logic 
-/// used by the default implementation.  
-/// 
+///
+/// Custom implementations do not need to adhere to the flags or cost logic
+/// used by the default implementation.
+///
 /// In order for A* searches to work properly, the cost should be proportional to
-/// the travel distance. Implementing a cost modifier less than 1.0 is likely 
+/// the travel distance. Implementing a cost modifier less than 1.0 is likely
 /// to lead to problems during pathfinding.
 ///
 /// @see dtNavMeshQuery
@@ -121,15 +121,15 @@ void dtFreeNavMeshQuery(dtNavMeshQuery* navmesh)
 
 /// @class dtNavMeshQuery
 ///
-/// For methods that support undersized buffers, if the buffer is too small 
-/// to hold the entire result set the return status of the method will include 
+/// For methods that support undersized buffers, if the buffer is too small
+/// to hold the entire result set the return status of the method will include
 /// the #DT_BUFFER_TOO_SMALL flag.
 ///
 /// Constant member functions can be used by multiple clients without side
 /// effects. (E.g. No change to the closed list. No impact on an in-progress
 /// sliced path query. Etc.)
-/// 
-/// Walls and portals: A @e wall is a polygon segment that is 
+///
+/// Walls and portals: A @e wall is a polygon segment that is
 /// considered impassable. A @e portal is a passable segment between polygons.
 /// A portal may be treated as a wall based on the dtQueryFilter used for a query.
 ///
@@ -157,7 +157,7 @@ dtNavMeshQuery::~dtNavMeshQuery()
 	dtFree(m_openList);
 }
 
-/// @par 
+/// @par
 ///
 /// Must be the first function called after construction, before other
 /// functions are used.
@@ -529,13 +529,13 @@ dtStatus dtNavMeshQuery::closestPointOnPoly(dtPolyRef ref, const float* pos, flo
 ///
 /// Much faster than closestPointOnPoly().
 ///
-/// If the provided position lies within the polygon's xz-bounds (above or below), 
+/// If the provided position lies within the polygon's xz-bounds (above or below),
 /// then @p pos and @p closest will be equal.
 ///
 /// The height of @p closest will be the polygon boundary.  The height detail is not used.
-/// 
+///
 /// @p pos does not have to be within the bounds of the polybon or the navigation mesh.
-/// 
+///
 dtStatus dtNavMeshQuery::closestPointOnPolyBoundary(dtPolyRef ref, const float* pos, float* closest) const
 {
 	dtAssert(m_nav);
@@ -588,7 +588,7 @@ dtStatus dtNavMeshQuery::closestPointOnPolyBoundary(dtPolyRef ref, const float* 
 
 /// @par
 ///
-/// Will return #DT_FAILURE | DT_INVALID_PARAM if the provided position is outside the xz-bounds 
+/// Will return #DT_FAILURE | DT_INVALID_PARAM if the provided position is outside the xz-bounds
 /// of the polygon.
 ///
 dtStatus dtNavMeshQuery::getPolyHeight(dtPolyRef ref, const float* pos, float* height) const
@@ -682,8 +682,8 @@ public:
 
 /// @par
 ///
-/// @note If the search box does not intersect any polygons the search will 
-/// return #DT_SUCCESS, but @p nearestRef will be zero. So if in doubt, check 
+/// @note If the search box does not intersect any polygons the search will
+/// return #DT_SUCCESS, but @p nearestRef will be zero. So if in doubt, check
 /// @p nearestRef before using @p nearestPt.
 ///
 dtStatus dtNavMeshQuery::findNearestPoly(const float* center, const float* halfExtents,
@@ -876,13 +876,13 @@ public:
 	}
 };
 
-/// @par 
+/// @par
 ///
 /// If no polygons are found, the function will return #DT_SUCCESS with a
 /// @p polyCount of zero.
 ///
-/// If @p polys is too small to hold the entire result set, then the array will 
-/// be filled to capacity. The method of choosing which polygons from the 
+/// If @p polys is too small to hold the entire result set, then the array will
+/// be filled to capacity. The method of choosing which polygons from the
 /// full set are included in the partial result set is undefined.
 ///
 dtStatus dtNavMeshQuery::queryPolygons(const float* center, const float* halfExtents,
@@ -953,10 +953,10 @@ dtStatus dtNavMeshQuery::queryPolygons(const float* center, const float* halfExt
 /// If the end polygon cannot be reached through the navigation graph,
 /// the last polygon in the path will be the nearest the end polygon.
 ///
-/// If the path array is to small to hold the full result, it will be filled as 
+/// If the path array is to small to hold the full result, it will be filled as
 /// far as possible from the start polygon toward the end polygon.
 ///
-/// The start and end positions are used to calculate traversal costs. 
+/// The start and end positions are used to calculate traversal costs.
 /// (The y-values impact the result.)
 ///
 dtStatus dtNavMeshQuery::findPath(dtPolyRef startRef, dtPolyRef endRef,
@@ -1048,7 +1048,7 @@ dtStatus dtNavMeshQuery::findPath(dtPolyRef startRef, dtPolyRef endRef,
 			// The API input has been cheked already, skip checking internal data.
 			const dtMeshTile* neighbourTile = 0;
 			const dtPoly* neighbourPoly = 0;
-			m_nav->getTileAndPolyByRefUnsafe(neighbourRef, &neighbourTile, &neighbourPoly);	
+			m_nav->getTileAndPolyByRefUnsafe(neighbourRef, &neighbourTile, &neighbourPoly);
 
 			if (!filter->passFilter(neighbourRef, neighbourTile, neighbourPoly))
 				continue;
@@ -1196,7 +1196,7 @@ dtStatus dtNavMeshQuery::getPathToNode(dtNode* endNode, dtPolyRef* path, int* pa
 
 /// @par
 ///
-/// @warning Calling any non-slice methods before calling finalizeSlicedFindPath() 
+/// @warning Calling any non-slice methods before calling finalizeSlicedFindPath()
 /// or finalizeSlicedFindPathPartial() may result in corrupted data!
 ///
 /// The @p filter pointer is stored and used for the duration of the sliced
@@ -1234,7 +1234,7 @@ dtStatus dtNavMeshQuery::initSlicedFindPath(dtPolyRef startRef, dtPolyRef endRef
 	// trade quality with performance?
 	if (options & DT_FINDPATH_ANY_ANGLE)
 	{
-		// limiting to several times the character radius yields nice results. It is not sensitive 
+		// limiting to several times the character radius yields nice results. It is not sensitive
 		// so it is enough to compute it from the first tile.
 		const dtMeshTile* tile = m_nav->getTileByRef(startRef);
 		float agentRadius = tile->header->walkableRadius;
@@ -1361,7 +1361,7 @@ dtStatus dtNavMeshQuery::updateSlicedFindPath(const int maxIter, int* doneIters)
 			// The API input has been cheked already, skip checking internal data.
 			const dtMeshTile* neighbourTile = 0;
 			const dtPoly* neighbourPoly = 0;
-			m_nav->getTileAndPolyByRefUnsafe(neighbourRef, &neighbourTile, &neighbourPoly);	
+			m_nav->getTileAndPolyByRefUnsafe(neighbourRef, &neighbourTile, &neighbourPoly);
 
 			if (!m_query.filter->passFilter(neighbourRef, neighbourTile, neighbourPoly))
 				continue;
@@ -1763,20 +1763,20 @@ dtStatus dtNavMeshQuery::appendPortals(const int startIdx, const int endIdx, con
 }
 
 /// @par
-/// 
+///
 /// This method peforms what is often called 'string pulling'.
 ///
-/// The start position is clamped to the first polygon in the path, and the 
-/// end position is clamped to the last. So the start and end positions should 
+/// The start position is clamped to the first polygon in the path, and the
+/// end position is clamped to the last. So the start and end positions should
 /// normally be within or very near the first and last polygons respectively.
 ///
-/// The returned polygon references represent the reference id of the polygon 
-/// that is entered at the associated path position. The reference id associated 
-/// with the end point will always be zero.  This allows, for example, matching 
+/// The returned polygon references represent the reference id of the polygon
+/// that is entered at the associated path position. The reference id associated
+/// with the end point will always be zero.  This allows, for example, matching
 /// off-mesh link points to their representative polygons.
 ///
-/// If the provided result buffers are too small for the entire result set, 
-/// they will be filled as far as possible from the start toward the end 
+/// If the provided result buffers are too small for the entire result set,
+/// they will be filled as far as possible from the start toward the end
 /// position.
 ///
 dtStatus dtNavMeshQuery::findStraightPath(const float* startPos, const float* endPos,
@@ -2012,22 +2012,22 @@ dtStatus dtNavMeshQuery::findStraightPath(const float* startPos, const float* en
 
 /// @par
 ///
-/// This method is optimized for small delta movement and a small number of 
-/// polygons. If used for too great a distance, the result set will form an 
+/// This method is optimized for small delta movement and a small number of
+/// polygons. If used for too great a distance, the result set will form an
 /// incomplete path.
 ///
-/// @p resultPos will equal the @p endPos if the end is reached. 
+/// @p resultPos will equal the @p endPos if the end is reached.
 /// Otherwise the closest reachable position will be returned.
-/// 
-/// @p resultPos is not projected onto the surface of the navigation 
+///
+/// @p resultPos is not projected onto the surface of the navigation
 /// mesh. Use #getPolyHeight if this is needed.
 ///
-/// This method treats the end position in the same manner as 
-/// the #raycast method. (As a 2D point.) See that method's documentation 
+/// This method treats the end position in the same manner as
+/// the #raycast method. (As a 2D point.) See that method's documentation
 /// for details.
-/// 
-/// If the @p visited array is too small to hold the entire result set, it will 
-/// be filled as far as possible from the start position toward the end 
+///
+/// If the @p visited array is too small to hold the entire result set, it will
+/// be filled as far as possible from the start position toward the end
 /// position.
 ///
 dtStatus dtNavMeshQuery::moveAlongSurface(dtPolyRef startRef, const float* startPos, const float* endPos,
@@ -2360,16 +2360,16 @@ dtStatus dtNavMeshQuery::getEdgeMidPoint(dtPolyRef from, const dtPoly* fromPoly,
 ///
 /// This method is meant to be used for quick, short distance checks.
 ///
-/// If the path array is too small to hold the result, it will be filled as 
+/// If the path array is too small to hold the result, it will be filled as
 /// far as possible from the start postion toward the end position.
 ///
 /// <b>Using the Hit Parameter (t)</b>
-/// 
-/// If the hit parameter is a very high value (FLT_MAX), then the ray has hit 
-/// the end position. In this case the path represents a valid corridor to the 
+///
+/// If the hit parameter is a very high value (FLT_MAX), then the ray has hit
+/// the end position. In this case the path represents a valid corridor to the
 /// end position and the value of @p hitNormal is undefined.
 ///
-/// If the hit parameter is zero, then the start position is on the wall that 
+/// If the hit parameter is zero, then the start position is on the wall that
 /// was hit and the value of @p hitNormal is undefined.
 ///
 /// If 0 < t < 1.0 then the following applies:
@@ -2381,15 +2381,15 @@ dtStatus dtNavMeshQuery::getEdgeMidPoint(dtPolyRef from, const dtPoly* fromPoly,
 ///
 /// <b>Use Case Restriction</b>
 ///
-/// The raycast ignores the y-value of the end position. (2D check.) This 
+/// The raycast ignores the y-value of the end position. (2D check.) This
 /// places significant limits on how it can be used. For example:
 ///
-/// Consider a scene where there is a main floor with a second floor balcony 
-/// that hangs over the main floor. So the first floor mesh extends below the 
-/// balcony mesh. The start position is somewhere on the first floor. The end 
+/// Consider a scene where there is a main floor with a second floor balcony
+/// that hangs over the main floor. So the first floor mesh extends below the
+/// balcony mesh. The start position is somewhere on the first floor. The end
 /// position is on the balcony.
 ///
-/// The raycast will search toward the end position along the first floor mesh. 
+/// The raycast will search toward the end position along the first floor mesh.
 /// If it reaches the end position's xz-coordinates it will indicate FLT_MAX
 /// (no wall hit), meaning it reached the end position. This is one example of why
 /// this method is meant for short distance checks.
@@ -2418,16 +2418,16 @@ dtStatus dtNavMeshQuery::raycast(dtPolyRef startRef, const float* startPos, cons
 ///
 /// This method is meant to be used for quick, short distance checks.
 ///
-/// If the path array is too small to hold the result, it will be filled as 
+/// If the path array is too small to hold the result, it will be filled as
 /// far as possible from the start postion toward the end position.
 ///
 /// <b>Using the Hit Parameter t of RaycastHit</b>
-/// 
-/// If the hit parameter is a very high value (FLT_MAX), then the ray has hit 
-/// the end position. In this case the path represents a valid corridor to the 
+///
+/// If the hit parameter is a very high value (FLT_MAX), then the ray has hit
+/// the end position. In this case the path represents a valid corridor to the
 /// end position and the value of @p hitNormal is undefined.
 ///
-/// If the hit parameter is zero, then the start position is on the wall that 
+/// If the hit parameter is zero, then the start position is on the wall that
 /// was hit and the value of @p hitNormal is undefined.
 ///
 /// If 0 < t < 1.0 then the following applies:
@@ -2439,15 +2439,15 @@ dtStatus dtNavMeshQuery::raycast(dtPolyRef startRef, const float* startPos, cons
 ///
 /// <b>Use Case Restriction</b>
 ///
-/// The raycast ignores the y-value of the end position. (2D check.) This 
+/// The raycast ignores the y-value of the end position. (2D check.) This
 /// places significant limits on how it can be used. For example:
 ///
-/// Consider a scene where there is a main floor with a second floor balcony 
-/// that hangs over the main floor. So the first floor mesh extends below the 
-/// balcony mesh. The start position is somewhere on the first floor. The end 
+/// Consider a scene where there is a main floor with a second floor balcony
+/// that hangs over the main floor. So the first floor mesh extends below the
+/// balcony mesh. The start position is somewhere on the first floor. The end
 /// position is on the balcony.
 ///
-/// The raycast will search toward the end position along the first floor mesh. 
+/// The raycast will search toward the end position along the first floor mesh.
 /// If it reaches the end position's xz-coordinates it will indicate FLT_MAX
 /// (no wall hit), meaning it reached the end position. This is one example of why
 /// this method is meant for short distance checks.
@@ -2683,29 +2683,29 @@ dtStatus dtNavMeshQuery::raycast(dtPolyRef startRef, const float* startPos, cons
 ///
 /// The order of the result set is from least to highest cost to reach the polygon.
 ///
-/// A common use case for this method is to perform Dijkstra searches. 
+/// A common use case for this method is to perform Dijkstra searches.
 /// Candidate polygons are found by searching the graph beginning at the start polygon.
 ///
-/// If a polygon is not found via the graph search, even if it intersects the 
+/// If a polygon is not found via the graph search, even if it intersects the
 /// search circle, it will not be included in the result set. For example:
 ///
 /// polyA is the start polygon.
 /// polyB shares an edge with polyA. (Is adjacent.)
 /// polyC shares an edge with polyB, but not with polyA
-/// Even if the search circle overlaps polyC, it will not be included in the 
+/// Even if the search circle overlaps polyC, it will not be included in the
 /// result set unless polyB is also in the set.
-/// 
-/// The value of the center point is used as the start position for cost 
-/// calculations. It is not projected onto the surface of the mesh, so its 
+///
+/// The value of the center point is used as the start position for cost
+/// calculations. It is not projected onto the surface of the mesh, so its
 /// y-value will effect the costs.
 ///
-/// Intersection tests occur in 2D. All polygons and the search circle are 
-/// projected onto the xz-plane. So the y-value of the center point does not 
+/// Intersection tests occur in 2D. All polygons and the search circle are
+/// projected onto the xz-plane. So the y-value of the center point does not
 /// effect intersection tests.
 ///
-/// If the result arrays are to small to hold the entire result set, they will be 
+/// If the result arrays are to small to hold the entire result set, they will be
 /// filled to capacity.
-/// 
+///
 dtStatus dtNavMeshQuery::findPolysAroundCircle(dtPolyRef startRef, const float* centerPos, const float radius,
 											   const dtQueryFilter* filter,
 											   dtPolyRef* resultRef, dtPolyRef* resultParent, float* resultCost,
@@ -2861,23 +2861,23 @@ dtStatus dtNavMeshQuery::findPolysAroundCircle(dtPolyRef startRef, const float* 
 /// @par
 ///
 /// The order of the result set is from least to highest cost.
-/// 
+///
 /// At least one result array must be provided.
 ///
-/// A common use case for this method is to perform Dijkstra searches. 
-/// Candidate polygons are found by searching the graph beginning at the start 
+/// A common use case for this method is to perform Dijkstra searches.
+/// Candidate polygons are found by searching the graph beginning at the start
 /// polygon.
-/// 
+///
 /// The same intersection test restrictions that apply to findPolysAroundCircle()
 /// method apply to this method.
-/// 
-/// The 3D centroid of the search polygon is used as the start position for cost 
+///
+/// The 3D centroid of the search polygon is used as the start position for cost
 /// calculations.
-/// 
-/// Intersection tests occur in 2D. All polygons are projected onto the 
+///
+/// Intersection tests occur in 2D. All polygons are projected onto the
 /// xz-plane. So the y-values of the vertices do not effect intersection tests.
-/// 
-/// If the result arrays are is too small to hold the entire result set, they will 
+///
+/// If the result arrays are is too small to hold the entire result set, they will
 /// be filled to capacity.
 ///
 dtStatus dtNavMeshQuery::findPolysAroundShape(dtPolyRef startRef, const float* verts, const int nverts,
@@ -3058,26 +3058,26 @@ dtStatus dtNavMeshQuery::getPathFromDijkstraSearch(dtPolyRef endRef, dtPolyRef* 
 
 /// @par
 ///
-/// This method is optimized for a small search radius and small number of result 
+/// This method is optimized for a small search radius and small number of result
 /// polygons.
 ///
-/// Candidate polygons are found by searching the navigation graph beginning at 
+/// Candidate polygons are found by searching the navigation graph beginning at
 /// the start polygon.
 ///
-/// The same intersection test restrictions that apply to the findPolysAroundCircle 
+/// The same intersection test restrictions that apply to the findPolysAroundCircle
 /// mehtod applies to this method.
 ///
-/// The value of the center point is used as the start point for cost calculations. 
-/// It is not projected onto the surface of the mesh, so its y-value will effect 
+/// The value of the center point is used as the start point for cost calculations.
+/// It is not projected onto the surface of the mesh, so its y-value will effect
 /// the costs.
-/// 
-/// Intersection tests occur in 2D. All polygons and the search circle are 
-/// projected onto the xz-plane. So the y-value of the center point does not 
+///
+/// Intersection tests occur in 2D. All polygons and the search circle are
+/// projected onto the xz-plane. So the y-value of the center point does not
 /// effect intersection tests.
-/// 
-/// If the result arrays are is too small to hold the entire result set, they will 
+///
+/// If the result arrays are is too small to hold the entire result set, they will
 /// be filled to capacity.
-/// 
+///
 dtStatus dtNavMeshQuery::findLocalNeighbourhood(dtPolyRef startRef, const float* centerPos, const float radius,
 												const dtQueryFilter* filter,
 												dtPolyRef* resultRef, dtPolyRef* resultParent,
@@ -3291,15 +3291,15 @@ static void insertInterval(dtSegInterval* ints, int& nints, const int maxInts,
 
 /// @par
 ///
-/// If the @p segmentRefs parameter is provided, then all polygon segments will be returned. 
+/// If the @p segmentRefs parameter is provided, then all polygon segments will be returned.
 /// Otherwise only the wall segments are returned.
-/// 
-/// A segment that is normally a portal will be included in the result set as a 
+///
+/// A segment that is normally a portal will be included in the result set as a
 /// wall if the @p filter results in the neighbor polygon becoomming impassable.
-/// 
-/// The @p segmentVerts and @p segmentRefs buffers should normally be sized for the 
+///
+/// The @p segmentVerts and @p segmentRefs buffers should normally be sized for the
 /// maximum segments per polygon of the source navigation mesh.
-/// 
+///
 dtStatus dtNavMeshQuery::getPolyWallSegments(dtPolyRef ref, const dtQueryFilter* filter,
 											 float* segmentVerts, dtPolyRef* segmentRefs, int* segmentCount,
 											 const int maxSegments) const
@@ -3450,7 +3450,7 @@ dtStatus dtNavMeshQuery::getPolyWallSegments(dtPolyRef ref, const dtQueryFilter*
 ///
 /// @p hitPos is not adjusted using the height detail data.
 ///
-/// @p hitDist will equal the search radius if there is no wall within the 
+/// @p hitDist will equal the search radius if there is no wall within the
 /// radius. In this case the values of @p hitPos and @p hitNormal are
 /// undefined.
 ///
@@ -3659,9 +3659,9 @@ bool dtNavMeshQuery::isValidPolyRef(dtPolyRef ref, const dtQueryFilter* filter) 
 
 /// @par
 ///
-/// The closed list is the list of polygons that were fully evaluated during 
+/// The closed list is the list of polygons that were fully evaluated during
 /// the last navigation graph search. (A* or Dijkstra)
-/// 
+///
 bool dtNavMeshQuery::isInClosedList(dtPolyRef ref) const
 {
 	if (!m_nodePool) return false;

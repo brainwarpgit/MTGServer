@@ -22,6 +22,3 @@ public:
 };
 
 #endif /*CONNECTIONSERVERTESTMESSAGE_H__*/
-
-
-

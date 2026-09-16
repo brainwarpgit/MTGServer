@@ -21,4 +21,3 @@ int HolocronMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject, Crea
 
 	return 0;
 }
-

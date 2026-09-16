@@ -523,4 +523,3 @@ public:
 		System::out << "Survey Tool Type = " << surveyToolType  << endl;
 	}
 };
-

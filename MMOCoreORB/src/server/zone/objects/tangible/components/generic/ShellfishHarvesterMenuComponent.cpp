@@ -39,4 +39,3 @@ int ShellfishHarvesterMenuComponent::handleObjectMenuSelect(SceneObject* sceneOb
 
 	return TangibleObjectMenuComponent::handleObjectMenuSelect(sceneObject, player, selectedID);
 }
-

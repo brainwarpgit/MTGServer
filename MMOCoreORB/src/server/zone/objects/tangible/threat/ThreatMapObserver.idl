@@ -10,10 +10,10 @@ import engine.util.Observable;
 import server.zone.objects.tangible.TangibleObject;
 
 class ThreatMapObserver extends Observer {
-	
+
 	@weakReference
 	protected TangibleObject self;
-	
+
 	public ThreatMapObserver(TangibleObject me) {
 		self = me;
 	}

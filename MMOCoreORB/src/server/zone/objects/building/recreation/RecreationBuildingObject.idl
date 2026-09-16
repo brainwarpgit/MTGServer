@@ -8,11 +8,11 @@ import server.zone.objects.building.BuildingObject;
 
 class RecreationBuildingObject extends BuildingObject {
 
-	public RecreationBuildingObject() {		
+	public RecreationBuildingObject() {
 		Logger.setLoggingName("RecreationBuildingObject");
 	}
-	
-	@read	
+
+	@read
 	public boolean isRecreationalBuildingObject() {
 		return true;
 	}

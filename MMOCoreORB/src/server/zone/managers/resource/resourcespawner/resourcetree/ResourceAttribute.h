@@ -93,5 +93,3 @@ public:
 		return index;
 	}
 };
-
-

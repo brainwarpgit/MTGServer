@@ -29,18 +29,18 @@ public:
 			insertByte((int8)object->asCreatureObject()->getCurrentSpeed());
 		else
 			insertByte(0);
-		
+
 		// add direction
 		insertByte((int8) object->getSpecialDirectionAngle());
-		
-		/*System::out << "Position Update [" << player->getObjectID() << "] (" 
-			 << (int) (player->getPositionX()) << "," << (int) (player->getPositionZ()) << "," 
+
+		/*System::out << "Position Update [" << player->getObjectID() << "] ("
+			 << (int) (player->getPositionX()) << "," << (int) (player->getPositionZ()) << ","
 			 << (int) (player->getPositionY()) << ") - Dir = " << (int) (player->getDirectionAngle()) << "\n";*/
 	}
-	
-	UpdateTransformWithParentMessage(SceneObject* object, float posX, float posZ, float posY, uint64 parentID) : 
+
+	UpdateTransformWithParentMessage(SceneObject* object, float posX, float posZ, float posY, uint64 parentID) :
 		BaseMessage(50) {
-		
+
 		insertShort(0x08);
 		insertInt(0xC867AB5A);
 		insertLong(parentID);
@@ -62,8 +62,8 @@ public:
 		// add direction
 		insertByte((int8) object->getSpecialDirectionAngle());
 
-		/*System::out << "Position Update [" << player->getObjectID() << "] (" 
-				 << (int) (player->getPositionX()) << "," << (int) (player->getPositionZ()) << "," 
+		/*System::out << "Position Update [" << player->getObjectID() << "] ("
+				 << (int) (player->getPositionX()) << "," << (int) (player->getPositionZ()) << ","
 				 << (int) (player->getPositionY()) << ") - Dir = " << (int) (player->getDirectionAngle()) << "\n";*/
 	}
 

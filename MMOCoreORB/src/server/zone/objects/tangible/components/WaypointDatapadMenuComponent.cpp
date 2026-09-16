@@ -36,4 +36,3 @@ int WaypointDatapadMenuComponent::handleObjectMenuSelect(SceneObject* sceneObjec
 
 	return 0;
 }
-

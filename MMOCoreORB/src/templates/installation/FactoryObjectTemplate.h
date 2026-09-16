@@ -36,7 +36,7 @@ public:
 
 	Vector<int> getCraftingTabsSupported()
 	{
-	    return craftingTabsSupported;
+		return craftingTabsSupported;
 	}
 
 	bool isFactoryObjectTemplate() {

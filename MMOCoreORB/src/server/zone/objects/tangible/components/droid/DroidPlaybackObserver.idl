@@ -20,12 +20,12 @@ class DroidPlaybackObserver extends Observer {
 		module = m;
 		slot = -1;
 	}
-	
+
 	@dirty
 	public void setSlot(int i) {
 		slot = i;
 	}
-	
+
 	@dirty
-	public native int notifyObserverEvent(unsigned int eventType, Observable observable, ManagedObject arg1, long arg2);	
+	public native int notifyObserverEvent(unsigned int eventType, Observable observable, ManagedObject arg1, long arg2);
 }

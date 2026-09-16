@@ -52,4 +52,3 @@ public:
 };
 
 #endif /*SEARCHKNOWLEDGEBASERESPONSEMESSAGE_H_*/
-

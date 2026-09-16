@@ -50,4 +50,3 @@ int FireworkMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject,
 
 	return 0;
 }
-

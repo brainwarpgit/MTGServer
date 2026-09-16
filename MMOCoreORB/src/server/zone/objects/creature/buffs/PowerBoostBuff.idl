@@ -50,4 +50,3 @@ class PowerBoostBuff extends Buff {
 	public native void clearBuffEvent();
 
 }
-

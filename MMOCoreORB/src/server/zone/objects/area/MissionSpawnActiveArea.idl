@@ -54,4 +54,3 @@ class MissionSpawnActiveArea extends ActiveArea {
 		destroyMissionObjective = mission;
 	}
 }
-

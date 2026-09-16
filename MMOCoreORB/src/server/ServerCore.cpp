@@ -1204,4 +1204,3 @@ void coredetail::ConsoleReaderService::run() {
 		core->queueConsoleCommand(cmd);
 	}
 }
-

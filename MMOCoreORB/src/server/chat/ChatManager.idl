@@ -482,4 +482,3 @@ class ChatManager extends ManagedService implements Logger {
 	@reference
 	public native PendingMessageList getPendingMessages(unsigned long oid);
 }
-

@@ -54,7 +54,7 @@ public:
 		player->sendMessage(gr);
 
 		InstallationObject* inso = cast<InstallationObject*>( object.get());
-		
+
 		if (inso == nullptr)
 			return;
 

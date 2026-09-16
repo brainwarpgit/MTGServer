@@ -38,24 +38,24 @@ public:
 	}
 
 	int find(const String& fileName) const {
-	    int l = 0, r = Vector<Reference<TreeFileRecord*> >::elementCount - 1;
-	    int m = 0, cmp = 0;
+		int l = 0, r = Vector<Reference<TreeFileRecord*> >::elementCount - 1;
+		int m = 0, cmp = 0;
 
-	    while (l <= r) {
-        	m = (l + r) / 2;
+		while (l <= r) {
+			m = (l + r) / 2;
 
-        	const Reference<TreeFileRecord*>& obj = Vector<Reference<TreeFileRecord*> >::elementData[m];
-        	cmp = compare(obj, fileName);
+			const Reference<TreeFileRecord*>& obj = Vector<Reference<TreeFileRecord*> >::elementData[m];
+			cmp = compare(obj, fileName);
 
-        	if (cmp == 0)
-            	return m;
-        	else if (cmp > 0)
-	            l = m + 1;
-        	else
-	            r = m - 1;
-	    }
+			if (cmp == 0)
+				return m;
+			else if (cmp > 0)
+				l = m + 1;
+			else
+				r = m - 1;
+		}
 
-	    return -1;
+		return -1;
 	}
 };
 

@@ -24,7 +24,7 @@ if(ENABLE_MULTITHREADED_LINKER)
 endif(ENABLE_MULTITHREADED_LINKER)
 
 add_custom_command(
-        TARGET core3client POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy
-        $<TARGET_FILE:core3client>
-        ${CMAKE_SOURCE_DIR}/bin/)
+	TARGET core3client POST_BUILD
+	COMMAND ${CMAKE_COMMAND} -E copy
+	$<TARGET_FILE:core3client>
+	${CMAKE_SOURCE_DIR}/bin/)

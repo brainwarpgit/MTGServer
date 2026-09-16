@@ -188,4 +188,3 @@ void DiceMenuComponent::doRoll(CreatureObject* player, DiceTemplate* diceTemplat
 	player->broadcastMessage(msg, false);
 	player->sendSystemMessage(self);
 }
-

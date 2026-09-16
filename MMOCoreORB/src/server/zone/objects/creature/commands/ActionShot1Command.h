@@ -28,4 +28,3 @@ public:
 };
 
 #endif //ACTIONSHOT1COMMAND_H_
-

@@ -147,5 +147,3 @@ void LoginPacketHandler::handleDeleteCharacterMessage(LoginClient* client, Messa
 	auto* msg = new DeleteCharacterReplyMessage(dbDelete);
 	client->sendMessage(msg);
 }
-
-

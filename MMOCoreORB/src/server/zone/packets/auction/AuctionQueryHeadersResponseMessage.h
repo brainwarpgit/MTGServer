@@ -64,8 +64,8 @@ public:
 		for (int i = 0; i < itemList.size(); i++) {
 			AuctionItem* il = itemList.get(i);
 
-	    	UnicodeString name = il->getItemName();
-	    	insertUnicode(name); //name
+			UnicodeString name = il->getItemName();
+			insertUnicode(name); //name
 		}
 	}
 
@@ -100,42 +100,42 @@ public:
 
 			insertInt(expire);
 
-	    	if (il->isAuction())
-	    		insertByte(0);
-	    	else
-	    		insertByte(1);
+			if (il->isAuction())
+				insertByte(0);
+			else
+				insertByte(1);
 
-	    	insertShort(locationList.find(il->getVendorUID()));
+			insertShort(locationList.find(il->getVendorUID()));
 
-	    	insertLong(il->getOwnerID()); // seller ID
+			insertLong(il->getOwnerID()); // seller ID
 
-	    	insertShort(locationList.find(il->getOwnerName()));
+			insertShort(locationList.find(il->getOwnerName()));
 
-	    	if(il->isAuction() && il->getStatus() == AuctionItem::FORSALE) {
-	    		insertLong(0);
-	    		insertShort(locationList.find(""));
-	    	} else {
-	    		insertLong(il->getBuyerID()); // buyer ID
-	    		insertShort(locationList.find(il->getBidderName()));
-	    	}
+			if(il->isAuction() && il->getStatus() == AuctionItem::FORSALE) {
+				insertLong(0);
+				insertShort(locationList.find(""));
+			} else {
+				insertLong(il->getBuyerID()); // buyer ID
+				insertShort(locationList.find(il->getBidderName()));
+			}
 
-	    	insertInt(il->getProxy()); // my proxy not implemented yet
-	    	insertInt(il->getPrice()); // my bid default to price
+			insertInt(il->getProxy()); // my proxy not implemented yet
+			insertInt(il->getPrice()); // my bid default to price
 
-	    	insertInt(il->getItemType());
+			insertInt(il->getItemType());
 
-	    	//insertInt(il->getAuctionOptions()); // autionOptions 0x400 = Premium, 0x800 = withdraw
-	    	int additionalValues = 0;
+			//insertInt(il->getAuctionOptions()); // autionOptions 0x400 = Premium, 0x800 = withdraw
+			int additionalValues = 0;
 
-	    	if (il->getOwnerID() == player->getObjectID() &&
-	    			(il->getStatus() == AuctionItem::FORSALE || il->getStatus() == AuctionItem::OFFERED)) {
-	    		additionalValues |= 0x800;
-	    	}
+			if (il->getOwnerID() == player->getObjectID() &&
+					(il->getStatus() == AuctionItem::FORSALE || il->getStatus() == AuctionItem::OFFERED)) {
+				additionalValues |= 0x800;
+			}
 
-	    	insertInt(il->getAuctionOptions() | additionalValues);
-	    	//insertInt(10);
+			insertInt(il->getAuctionOptions() | additionalValues);
+			//insertInt(10);
 
-	    	insertInt(accessFee);
+			insertInt(accessFee);
 		}
 	}
 

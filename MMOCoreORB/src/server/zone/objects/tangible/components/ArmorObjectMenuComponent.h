@@ -8,7 +8,7 @@
 
 #ifndef ARMOROBJECTMENUCOMPONENT_H_
 #define ARMOROBJECTMENUCOMPONENT_H_
- 
+
 #include "WearableObjectMenuComponent.h"
 
 class ArmorObjectMenuComponent : public WearableObjectMenuComponent {
@@ -35,4 +35,3 @@ public:
 };
 
 #endif /* ARMOROBJECTMENUCOMPONENT_H_ */
-

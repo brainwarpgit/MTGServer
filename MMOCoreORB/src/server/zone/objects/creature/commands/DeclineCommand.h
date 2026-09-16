@@ -50,4 +50,3 @@ public:
 };
 
 #endif //DECLINECOMMAND_H_
-

@@ -56,4 +56,3 @@ void VendorOutfitManager::loadLuaOutfits() {
 
 	Luaoutfits.pop();
 }
-

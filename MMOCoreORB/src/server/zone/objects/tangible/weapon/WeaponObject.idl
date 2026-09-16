@@ -248,7 +248,7 @@ class WeaponObject extends TangibleObject {
 	@mock
 	@read
 	public abstract native int getIdealRange(boolean withPup);
-	
+
 	@mock
 	@read
 	public abstract int getIdealRange() {

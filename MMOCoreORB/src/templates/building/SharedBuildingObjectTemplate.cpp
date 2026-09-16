@@ -184,9 +184,9 @@ void SharedBuildingObjectTemplate::readObject(LuaObject* templateData) {
 
 	int i = 0;
 
-	lua_pushnil(L);  
+	lua_pushnil(L);
 	while (lua_next(L, -2) != 0) {
-		// 'key' is at index -2 and 'value' at index -1 
+		// 'key' is at index -2 and 'value' at index -1
 		//printf("%s - %s\n",
 		//		lua_tostring(L, -2), lua_typename(L, lua_type(L, -1)));
 
@@ -199,11 +199,11 @@ void SharedBuildingObjectTemplate::readObject(LuaObject* templateData) {
 			parseVariableData(varName, templateData);
 		} else
 			lua_pop(L, 1);
-		
+
 
 		++i;
 	}
-	
+
 	return;
 
 	/*terrainModificationFileName = templateData->getStringField("terrainModificationFileName");

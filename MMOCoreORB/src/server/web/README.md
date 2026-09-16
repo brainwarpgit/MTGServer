@@ -151,7 +151,7 @@ The is the skeleton of a game proxy object, the intent is to isolate game calls 
 
 ### APIProxyPlayerManager
 
-This is an example implementation of a game proxy, it uses the PlayerManager to proxy calls to URI's at the ../admin/account/.. endpoints. The role of this object is to handle all calls in/out of PlayerManager and focus on execution of the transaction requested by the API user within the game context. The interface to the API client is through the APIRequest object (described above) and game specific objects can be used here. Proxy objects are executed in the engine thread context and should **NOT** utilize any cpprestsdk or RESTServer related objects. 
+This is an example implementation of a game proxy, it uses the PlayerManager to proxy calls to URI's at the ../admin/account/.. endpoints. The role of this object is to handle all calls in/out of PlayerManager and focus on execution of the transaction requested by the API user within the game context. The interface to the API client is through the APIRequest object (described above) and game specific objects can be used here. Proxy objects are executed in the engine thread context and should **NOT** utilize any cpprestsdk or RESTServer related objects.
 
 ## Summary
 

@@ -46,4 +46,3 @@ public:
 #endif
 
 #endif /* end of include guard COREPROCESS_H */
-

@@ -109,4 +109,3 @@ int TangibleObjectMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject
 		return ObjectMenuComponent::handleObjectMenuSelect(sceneObject, player, selectedID);
 
 }
-

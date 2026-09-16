@@ -70,4 +70,3 @@ int TicketCollectorImplementation::handleObjectMenuSelect(CreatureObject* player
 
 	return 0;
 }
-

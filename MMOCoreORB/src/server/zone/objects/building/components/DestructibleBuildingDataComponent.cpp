@@ -268,4 +268,3 @@ bool DestructibleBuildingDataComponent::readObjectMember(ObjectInputStream* stre
 
 	return false;
 }
-

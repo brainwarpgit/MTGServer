@@ -56,7 +56,7 @@ public:
 
 		if (player == nullptr)
 			return;
-			
+
 		Locker locker(player);
 
 		AuctionManager* auctionManager = server->getZoneServer()->getAuctionManager();

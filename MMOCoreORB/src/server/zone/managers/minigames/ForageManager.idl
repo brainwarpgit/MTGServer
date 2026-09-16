@@ -36,14 +36,14 @@ class ForageManager extends Observer implements Logger {
 	 * Checks if the player is inside a structure. If so, cancels forage.
 	 * Deducts the foraging action cost from the player.
 	 * Collects the player's current position so we can compare it after the forage animation is done.
-	 * Creates the forage task and puts it into the player's pending tasks, it will activate in 8.5 
+	 * Creates the forage task and puts it into the player's pending tasks, it will activate in 8.5
 	 * seconds and will activate finishForaging().
 	 * @pre { this object is not locked, player is locked }
 	 * @post { this object is not locked, player is not locked }
 	 * @param player CreatureObject who is trying to forage.
 	 * @param scoutForage Determines if the player is using /forage or /medicalforage.
 	 */
-	public native void startForaging(CreatureObject player, int forageType); 
+	public native void startForaging(CreatureObject player, int forageType);
 
 	/**
 	 * Finishes foraging.
@@ -91,4 +91,3 @@ class ForageManager extends Observer implements Logger {
 	@local
 	private native boolean forageGiveResource(@dereferenced TransactionLog trx, CreatureObject player, float forageX, float forageY, final string planet, string resType);
 }
-

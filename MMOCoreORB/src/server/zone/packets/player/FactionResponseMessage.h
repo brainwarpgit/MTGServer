@@ -15,7 +15,7 @@ public:
 		insertInt(0x5DD53957);  // CRC
 
 		fpl->insertToMessage(this);
-		
+
 		setCompression(true);
 
 	}

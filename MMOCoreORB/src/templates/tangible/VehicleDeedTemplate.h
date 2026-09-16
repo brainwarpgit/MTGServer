@@ -27,7 +27,7 @@ public:
 		DeedTemplate::readObject(templateData);
 
 		controlDeviceObjectTemplate = templateData->getStringField("controlDeviceObjectTemplate");
-    }
+	}
 
 	String getControlDeviceObjectTemplate()
 	{

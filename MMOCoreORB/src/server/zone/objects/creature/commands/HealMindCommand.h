@@ -100,7 +100,7 @@ public:
 		if (creatureTarget == creature) {
 			creature->sendSystemMessage("@healing:no_heal_mind_self"); //You can not heal your own mind.
 			return GENERALERROR;
-		}		
+		}
 
 		if (creatureTarget->isDead() || (creatureTarget->isAiAgent() && !creatureTarget->isPet()) || creatureTarget->isDroidObject()) {
 			creature->sendSystemMessage("@healing:heal_mind_invalid_target"); // Target must be a player or a creature pet in order to heal mind.
@@ -126,7 +126,7 @@ public:
 			if (creatureTarget->isPlayerCreature()) {
 				StringIdChatParameter stringId("healing", "no_mind_to_heal_target"); //%NT has no mind to heal.
 				stringId.setTT(creatureTarget->getObjectID());
-				creature->sendSystemMessage(stringId); 
+				creature->sendSystemMessage(stringId);
 			} else {
 				StringBuffer message;
 				message << creatureTarget->getDisplayedName() << " has no mind to heal.";

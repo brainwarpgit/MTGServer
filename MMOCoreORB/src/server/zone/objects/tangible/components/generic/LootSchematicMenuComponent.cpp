@@ -93,4 +93,3 @@ int LootSchematicMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject,
 
 	return 0;
 }
-

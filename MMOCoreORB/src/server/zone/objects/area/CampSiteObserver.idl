@@ -14,23 +14,23 @@ import engine.core.ManagedObject;
 class CampSiteObserver extends Observer implements Logger {
 	@weakReference
 	protected CampSiteActiveArea campArea;
-	
+
 	public CampSiteObserver(CampSiteActiveArea area) {
 		campArea = area;
-		
+
 		Logger.setLoggingName("CampSiteObserver");
 	}
-	
+
 	@dirty
 	public int notifyObserverEvent(unsigned int eventType, Observable observable, ManagedObject arg1, long arg2) {
 		CampSiteActiveArea strongRef = campArea;
 
 		if(strongRef && eventType == ObserverEventType.HEALINGRECEIVED)
 			return strongRef.notifyHealEvent(arg2);
-		
+
 		if(strongRef && eventType == ObserverEventType.STARTCOMBAT)
 			return strongRef.notifyCombatEvent();
-		
+
 		return 0;
 	}
 }

@@ -173,4 +173,3 @@ int LuaSuiManager::sendTransferBox(lua_State* L) {
 
 	return 0;
 }
-

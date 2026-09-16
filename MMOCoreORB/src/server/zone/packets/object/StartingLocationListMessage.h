@@ -17,4 +17,3 @@ public:
 };
 
 #endif /*STARTINGLOCATIONLISTMESSAGE_H_*/
-

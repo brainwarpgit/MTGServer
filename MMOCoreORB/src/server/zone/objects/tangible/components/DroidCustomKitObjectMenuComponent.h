@@ -7,7 +7,7 @@
 
 #ifndef DROIDCUSTOMKITOBJECTMENUCOMPONENT_H_
 #define DROIDCUSTOMKITOBJECTMENUCOMPONENT_H_
- 
+
 #include "TangibleObjectMenuComponent.h"
 
 class DroidCustomKitObjectMenuComponent : public TangibleObjectMenuComponent {
@@ -34,4 +34,3 @@ public:
 };
 
 #endif /* DROIDCUSTOMKITOBJECTMENUCOMPONENT_H_ */
-

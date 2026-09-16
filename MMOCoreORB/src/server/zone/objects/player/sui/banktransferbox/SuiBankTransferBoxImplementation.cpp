@@ -43,4 +43,3 @@ BaseMessage* SuiBankTransferBoxImplementation::generateMessage() {
 
 	return message;
 }
-

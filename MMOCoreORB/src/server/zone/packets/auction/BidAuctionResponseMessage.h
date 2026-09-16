@@ -8,10 +8,10 @@
 /*
  * Status codes
  * 0  - Suceeded
- * 1  - Auctioner is invalid 
- * 2  - Invalid item 
+ * 1  - Auctioner is invalid
+ * 2  - Invalid item
  * 9  - Not enough credits
- * 
+ *
  */
 
 #include "engine/service/proto/BaseMessage.h"
@@ -32,11 +32,11 @@ public:
     BidAuctionResponseMessage(uint64 objectid, int status) : BaseMessage() {
 		insertShort(0x03);
 		insertInt(0x8FCBEF4A);  // opcode
-		
+
 		insertLong(objectid); //ObjectID player is bidding on.
 		insertInt(status);
 	}
-	
+
 };
 
 #endif /*BIDAUCTIONRESPONSEMESSAGE_H_*/

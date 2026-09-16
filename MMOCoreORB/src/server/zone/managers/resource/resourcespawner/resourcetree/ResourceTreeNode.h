@@ -59,4 +59,3 @@ private:
 			const Vector<String> excludes) const;
 
 };
-

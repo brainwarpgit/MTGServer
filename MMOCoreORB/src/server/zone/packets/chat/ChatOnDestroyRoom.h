@@ -33,4 +33,3 @@ public:
 };
 
 #endif /*CHATONDESTROYROOM_H_*/
-

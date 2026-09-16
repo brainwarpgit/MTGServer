@@ -59,19 +59,19 @@ public:
 		rootNode->readLuaObject(luaItemList, true);
 
 		luaItemList.pop();
-    }
+	}
 
-    inline const CharacterBuilderMenuNode* getItemList() const {
-        return rootNode;
-    }
+	inline const CharacterBuilderMenuNode* getItemList() const {
+		return rootNode;
+	}
 
-    inline const Vector<int>& getGlowyBadgeIds() const {
-        return glowyBadgeIds;
-    }
+	inline const Vector<int>& getGlowyBadgeIds() const {
+		return glowyBadgeIds;
+	}
 
-    inline const Vector<String>& getVillageBranchUnlocks() const {
-        return villageBranchUnlocks;
-    }
+	inline const Vector<String>& getVillageBranchUnlocks() const {
+		return villageBranchUnlocks;
+	}
 };
 
 

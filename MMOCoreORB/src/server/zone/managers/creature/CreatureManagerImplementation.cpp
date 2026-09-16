@@ -89,28 +89,28 @@ SceneObject* CreatureManagerImplementation::spawnLair(unsigned int lairTemplate,
 	if (lairTmpl == nullptr || lairTmpl->getBuildingType() != LairTemplate::LAIR)
 		return nullptr;
 
- 	String buildingToSpawn;
+	String buildingToSpawn;
 
- 	const Vector<String>* mobiles = lairTmpl->getWeightedMobiles();
+	const Vector<String>* mobiles = lairTmpl->getWeightedMobiles();
 
- 	if (mobiles->size() == 0)
- 		return nullptr;
+	if (mobiles->size() == 0)
+		return nullptr;
 
- 	buildingToSpawn = lairTmpl->getBuilding(Math::max(1, (lairBuildingLevel - 1)));
+	buildingToSpawn = lairTmpl->getBuilding(Math::max(1, (lairBuildingLevel - 1)));
 
- 	if (buildingToSpawn.isEmpty()) {
- 		error("error spawning " + buildingToSpawn);
- 		return nullptr;
- 	}
+	if (buildingToSpawn.isEmpty()) {
+		error("error spawning " + buildingToSpawn);
+		return nullptr;
+	}
 
- 	Reference<LairObject*> building = zoneServer->createObject(buildingToSpawn.hashCode(), 0).castTo<LairObject*>();
+	Reference<LairObject*> building = zoneServer->createObject(buildingToSpawn.hashCode(), 0).castTo<LairObject*>();
 
- 	if (building == nullptr) {
- 		error() << "Failed to create lair spawn: " << buildingToSpawn;
- 		return nullptr;
- 	}
+	if (building == nullptr) {
+		error() << "Failed to create lair spawn: " << buildingToSpawn;
+		return nullptr;
+	}
 
- 	Locker blocker(building);
+	Locker blocker(building);
 
 	float baseCondition = CreatureManager::CREATURE_LAIR_MIN;
 
@@ -140,38 +140,38 @@ SceneObject* CreatureManagerImplementation::spawnLair(unsigned int lairTemplate,
 	building->setMaxCondition(conditionCalc);
 	building->setConditionDamage(0, false);
 
- 	building->setFaction(lairTmpl->getFaction());
- 	building->setPvpStatusBitmask(ObjectFlag::ATTACKABLE);
- 	building->setOptionsBitmask(0, false);
+	building->setFaction(lairTmpl->getFaction());
+	building->setPvpStatusBitmask(ObjectFlag::ATTACKABLE);
+	building->setOptionsBitmask(0, false);
 
- 	building->initializePosition(x, z, y);
- 	building->setDespawnOnNoPlayersInRange(true);
+	building->initializePosition(x, z, y);
+	building->setDespawnOnNoPlayersInRange(true);
 
- 	ManagedReference<LairObserver*> lairObserver = new LairObserver();
+	ManagedReference<LairObserver*> lairObserver = new LairObserver();
 
 	if (lairObserver == nullptr) {
 		return nullptr;
 	}
 
- 	lairObserver->deploy();
- 	lairObserver->setLairTemplate(lairTmpl);
- 	lairObserver->setDifficulty(lairBuildingLevel);
- 	lairObserver->setObserverType(ObserverType::LAIR);
- 	lairObserver->setSize(size);
+	lairObserver->deploy();
+	lairObserver->setLairTemplate(lairTmpl);
+	lairObserver->setDifficulty(lairBuildingLevel);
+	lairObserver->setObserverType(ObserverType::LAIR);
+	lairObserver->setSize(size);
 
- 	building->registerObserver(ObserverEventType::OBJECTDESTRUCTION, lairObserver);
- 	building->registerObserver(ObserverEventType::DAMAGERECEIVED, lairObserver);
- 	building->registerObserver(ObserverEventType::AIMESSAGE, lairObserver);
- 	building->registerObserver(ObserverEventType::OBJECTREMOVEDFROMZONE, lairObserver);
+	building->registerObserver(ObserverEventType::OBJECTDESTRUCTION, lairObserver);
+	building->registerObserver(ObserverEventType::DAMAGERECEIVED, lairObserver);
+	building->registerObserver(ObserverEventType::AIMESSAGE, lairObserver);
+	building->registerObserver(ObserverEventType::OBJECTREMOVEDFROMZONE, lairObserver);
 	building->registerObserver(ObserverEventType::NOPLAYERSINRANGE, lairObserver);
 	building->registerObserver(ObserverEventType::CREATUREDESPAWNED, lairObserver);
 	building->registerObserver(ObserverEventType::HEALINGRECEIVED, lairObserver);
 
- 	zone->transferObject(building, -1, true);
+	zone->transferObject(building, -1, true);
 
 	lairObserver->checkForNewSpawns(building, nullptr, true);
 
- 	return building;
+	return building;
 }
 
 SceneObject* CreatureManagerImplementation::spawnTheater(unsigned int lairTemplate, int difficulty, float x, float z, float y, float size) {
@@ -180,46 +180,46 @@ SceneObject* CreatureManagerImplementation::spawnTheater(unsigned int lairTempla
 	if (lairTmpl == nullptr || lairTmpl->getBuildingType() != LairTemplate::THEATER)
 		return nullptr;
 
- 	const Vector<String>* mobiles = lairTmpl->getWeightedMobiles();
+	const Vector<String>* mobiles = lairTmpl->getWeightedMobiles();
 
- 	if (mobiles->size() == 0)
- 		return nullptr;
+	if (mobiles->size() == 0)
+		return nullptr;
 
- 	String buildingToSpawn = lairTmpl->getBuilding((uint32)difficulty);
+	String buildingToSpawn = lairTmpl->getBuilding((uint32)difficulty);
 
- 	if (buildingToSpawn.isEmpty()) {
- 		error("error spawning " + buildingToSpawn);
- 		return nullptr;
- 	}
+	if (buildingToSpawn.isEmpty()) {
+		error("error spawning " + buildingToSpawn);
+		return nullptr;
+	}
 
- 	Reference<PoiBuilding*> building = zoneServer->createObject(buildingToSpawn.hashCode(), 0).castTo<PoiBuilding*>();
+	Reference<PoiBuilding*> building = zoneServer->createObject(buildingToSpawn.hashCode(), 0).castTo<PoiBuilding*>();
 
- 	if (building == nullptr) {
- 		error("error spawning " + buildingToSpawn);
- 		return nullptr;
- 	}
+	if (building == nullptr) {
+		error("error spawning " + buildingToSpawn);
+		return nullptr;
+	}
 
- 	Locker blocker(building);
+	Locker blocker(building);
 
- 	building->initializePosition(x, z, y);
- 	building->setDespawnOnNoPlayersInRange(true);
+	building->initializePosition(x, z, y);
+	building->setDespawnOnNoPlayersInRange(true);
 
- 	ManagedReference<DynamicSpawnObserver*> theaterObserver = new DynamicSpawnObserver();
- 	theaterObserver->deploy();
- 	theaterObserver->setLairTemplate(lairTmpl);
- 	theaterObserver->setDifficulty(difficulty);
- 	theaterObserver->setObserverType(ObserverType::LAIR);
- 	theaterObserver->setSize(size);
+	ManagedReference<DynamicSpawnObserver*> theaterObserver = new DynamicSpawnObserver();
+	theaterObserver->deploy();
+	theaterObserver->setLairTemplate(lairTmpl);
+	theaterObserver->setDifficulty(difficulty);
+	theaterObserver->setObserverType(ObserverType::LAIR);
+	theaterObserver->setSize(size);
 
- 	building->registerObserver(ObserverEventType::CREATUREDESPAWNED, theaterObserver);
- 	building->registerObserver(ObserverEventType::OBJECTREMOVEDFROMZONE, theaterObserver);
+	building->registerObserver(ObserverEventType::CREATUREDESPAWNED, theaterObserver);
+	building->registerObserver(ObserverEventType::OBJECTREMOVEDFROMZONE, theaterObserver);
 
 
- 	zone->transferObject(building, -1, true);
+	zone->transferObject(building, -1, true);
 
- 	theaterObserver->spawnInitialMobiles(building);
+	theaterObserver->spawnInitialMobiles(building);
 
- 	return building;
+	return building;
 }
 
 SceneObject* CreatureManagerImplementation::spawnDynamicSpawn(unsigned int lairTemplate, int difficulty, float x, float z, float y, float size) {

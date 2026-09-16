@@ -19,13 +19,13 @@ protected:
 
 public:
 	ForageAreaCollection(CreatureObject* player, short forageX, short forageY, const String& planet, int forageAreaType ) {
-    	//Player is foraging for the first time, so make a new forage area.
+		//Player is foraging for the first time, so make a new forage area.
 		Reference<ForageArea*> newArea = new ForageArea(forageX, forageY, planet, forageAreaType);
-    	forageAreas.add(newArea);
+		forageAreas.add(newArea);
 
-    	//Queue cleanup event.
-    	cleanupEvent = new ForageCleanupEvent(player->getFirstName(), player->getZoneProcessServer());
-    	cleanupEvent->schedule(1800000); //30 minutes
+		//Queue cleanup event.
+		cleanupEvent = new ForageCleanupEvent(player->getFirstName(), player->getZoneProcessServer());
+		cleanupEvent->schedule(1800000); //30 minutes
 	}
 
 
@@ -66,19 +66,19 @@ public:
 		}
 
 		//Check if a zone gave permission to forage.
-	    if (authorized != -1) {
-	    	forageArea = forageAreas.get(authorized);
-	    	forageArea->uses += 1; //Add 1 use to the last zone to allow forage (zones can overlap).
+		if (authorized != -1) {
+			forageArea = forageAreas.get(authorized);
+			forageArea->uses += 1; //Add 1 use to the last zone to allow forage (zones can overlap).
 
-	    } else { //Player is not in any zones, so make a new one.
-	    	if (forageAreas.size() == 120) //Cap how many zones we remember.
-	    		forageAreas.remove(0); //If at capacity, delete the oldest zone.
+		} else { //Player is not in any zones, so make a new one.
+			if (forageAreas.size() == 120) //Cap how many zones we remember.
+				forageAreas.remove(0); //If at capacity, delete the oldest zone.
 
-	    	Reference<ForageArea*> newArea = new ForageArea(forageX, forageY, planet, forageAreaType);
-	    	forageAreas.add(newArea);
-	    }
+			Reference<ForageArea*> newArea = new ForageArea(forageX, forageY, planet, forageAreaType);
+			forageAreas.add(newArea);
+		}
 
-	    return true;
+		return true;
 	}
 
 };

@@ -219,7 +219,7 @@ public:
 		int healedMind = creatureTarget->healDamage(creature, CreatureAttribute::MIND, mindToHeal);
 
 		creatureTarget->setPosture(CreaturePosture::UPRIGHT);
-		
+
 		creatureTarget->removeFeignedDeath();
 
 		int healedHealthWounds = creatureTarget->healWound(creature, CreatureAttribute::HEALTH, (int) (round(revivePack->getHealthWoundHealed())));

@@ -7,7 +7,7 @@
 
 #ifndef VEHICLECUSTOMKITOBJECTMENUCOMPONENT_H_
 #define VEHICLECUSTOMKITOBJECTMENUCOMPONENT_H_
- 
+
 #include "TangibleObjectMenuComponent.h"
 
 class VehicleCustomKitObjectMenuComponent : public TangibleObjectMenuComponent {
@@ -34,4 +34,3 @@ public:
 };
 
 #endif /* VEHICLECUSTOMKITOBJECTMENUCOMPONENT_H_ */
-

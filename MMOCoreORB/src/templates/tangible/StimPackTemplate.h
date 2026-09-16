@@ -50,7 +50,7 @@ public:
 		}
 
 		atts.pop();
-    }
+	}
 
 	inline int getMedicineUse() {
 		return medicineUse;

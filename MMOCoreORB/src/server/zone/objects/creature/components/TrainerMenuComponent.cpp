@@ -38,4 +38,3 @@ int TrainerMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject, Creat
 
 	return TangibleObjectMenuComponent::handleObjectMenuSelect(sceneObject, player, selectedID);
 }
-

@@ -23,7 +23,7 @@ public:
 
 	void readObject(LuaObject* templateData) {
 		SharedTangibleObjectTemplate::readObject(templateData);
-    }
+	}
 
 	bool isDroidComponentTemplate() {
 		return true;

@@ -228,4 +228,3 @@ int HQMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject, CreatureOb
 
 	return 0;
 }
-

@@ -376,5 +376,3 @@ bool StructurePermissionList::isListFull(const String& listName) const {
 
 	return list.size() >= MAX_ENTRIES;
 }
-
-

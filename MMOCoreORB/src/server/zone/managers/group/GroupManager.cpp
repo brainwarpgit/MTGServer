@@ -907,4 +907,3 @@ void GroupManager::transferLoot(GroupObject* group, CreatureObject* winner, Scen
 		}
 
 	}
-

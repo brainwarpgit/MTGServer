@@ -53,24 +53,24 @@ public:
 		insertInt(mailid);
 
 		insertByte(type);
-		
+
 		if (type == 0x00)
 			insertUnicode(body);
 		else
 			insertInt(0);
-		
+
 		insertUnicode(subject);
-		
+
 		insertInt(0); //empty chat parameter size ACTUALLY!
-		
+
 		insertByte(status); // status 'N' 'U' or 'R'
-		
+
 		if (timestamp == 0) {
 			Time systemTime;
 			timestamp = systemTime.getMiliTime() / 1000;
 		}
 		insertInt(timestamp);
-		
+
 		insertInt(0x00);
 
 		setCompression(true);

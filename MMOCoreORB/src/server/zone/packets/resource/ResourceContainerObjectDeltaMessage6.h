@@ -22,11 +22,11 @@ public:
 		startUpdate(0x06);
 		insertUnicode(resource_name);
 	}
-	
+
 	void setResourceType(String& resource_type) {
 		startUpdate(0x05);
 		insertAscii(resource_type);
 	}
-	
+
 };
 #endif /*RESOURCECONTAINEROBJECTDELTAMESSAGE6_H_*/

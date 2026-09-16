@@ -22,7 +22,7 @@ class PlayerBounty extends ManagedObject {
 
 	@dereferenced
 	protected SortedVector<unsigned long> bountyHunterIDs;
-	
+
 	@dereferenced
 	protected VectorMap<unsigned long, unsigned long> missionCooldownList;
 
@@ -100,7 +100,7 @@ class PlayerBounty extends ManagedObject {
 	public void setLastBountyDebuff(unsigned long newTime) {
 	    lastBountyDebuff = newTime;
 	}
-	
+
 	public native boolean canTakeMission(unsigned long enemyID, unsigned long cooldownTime);
 	public void addMissionCooldown(unsigned long enemyID, unsigned long newTime) {
 		missionCooldownList.put(enemyID, newTime);

@@ -66,4 +66,3 @@ void PlayerCreatureTemplate::readObject(LuaObject* templateData) {
 
 	return;
 }
-

@@ -13,10 +13,10 @@ include templates.params.ObserverEventType;
 
 
 class VehicleControlObserver extends Observer {
-	
+
 	@weakReference
 	VehicleControlDevice vehicleControlDevice;
-	
+
 	public VehicleControlObserver(VehicleControlDevice device) {
 		vehicleControlDevice = device;
 	}
@@ -26,14 +26,14 @@ class VehicleControlObserver extends Observer {
 		if (eventType != ObserverEventType.STARTCOMBAT) {
 			return 0;
 		}
-		
+
 		VehicleControlDevice dev = vehicleControlDevice;
 
 		if (dev) {
 			CreatureObject creature = (CreatureObject) observable;
 			dev.cancelSpawnObject(creature);
 		}
-		
+
 		return 1;
 	}
 

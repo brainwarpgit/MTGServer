@@ -104,5 +104,3 @@ void SuiListBoxImplementation::addMenuItem(const String& name, unsigned long lon
 	item->deploy();
 	menuItems.add(item);
 }
-
-

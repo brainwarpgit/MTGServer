@@ -30,13 +30,13 @@ public:
 		isShow = templateData->getBooleanField("showPackage");
 	}
 
-    inline String getFireworkObject() const {
-       return fireworkObject;
-    }
+	inline String getFireworkObject() const {
+		return fireworkObject;
+	}
 
-    bool isFireworkShow() {
-    	return isShow;
-    }
+	bool isFireworkShow() {
+		return isShow;
+	}
 
 	bool isFireworkObjectTemplate() {
 		return true;

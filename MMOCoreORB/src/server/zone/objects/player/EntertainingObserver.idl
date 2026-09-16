@@ -11,7 +11,7 @@ import server.zone.objects.creature.CreatureObject;
 include templates.params.ObserverEventType;
 
 class EntertainingObserver extends Observer {
-	
+
 	public EntertainingObserver() {
 		;
 	}
@@ -21,10 +21,10 @@ class EntertainingObserver extends Observer {
 		if (eventType != ObserverEventType.POSTURECHANGED) {
 			return 0;
 		}
-		
+
 		CreatureObject creature = (CreatureObject) observable;
 		creature.stopEntertaining();
-		
+
 		return 1;
 	}
 

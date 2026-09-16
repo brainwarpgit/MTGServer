@@ -74,7 +74,7 @@ public:
 
 		custValues.pop();
 
-    }
+	}
 
 	inline String getHairFile(int idx) {
 		if (idx < 0 || idx >= hairFile.size())

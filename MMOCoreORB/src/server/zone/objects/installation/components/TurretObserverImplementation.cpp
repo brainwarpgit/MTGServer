@@ -24,9 +24,3 @@ int TurretObserverImplementation::notifyObserverEvent(uint32 eventType, Observab
 
 	return 0;
 }
-
-
-
-
-
-

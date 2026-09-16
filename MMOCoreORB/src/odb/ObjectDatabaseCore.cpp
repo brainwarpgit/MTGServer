@@ -273,7 +273,7 @@ int ObjectDatabaseCore::getJSONString(uint64 oid, ObjectDatabase* database, std:
 }
 
 void dispatchWriterTask(std::stringstream* data, const String& fileName, int writerThread) {
-	 Core::getTaskManager()->executeTask([data, fileName]() {
+	Core::getTaskManager()->executeTask([data, fileName]() {
 		UniqueReference<std::stringstream*> guard(data);
 
 		static ThreadLocal<std::ofstream*> jsonFile;
@@ -288,7 +288,7 @@ void dispatchWriterTask(std::stringstream* data, const String& fileName, int wri
 
 		*file << data->str();
 		file->flush();
-	 }, "WriteJSONTask", ("Writer" + String::valueOf(writerThread)).toCharArray());
+	}, "WriteJSONTask", ("Writer" + String::valueOf(writerThread)).toCharArray());
 }
 
 void ObjectDatabaseCore::dispatchTask(const Vector<uint64>& currentObjects, ObjectDatabase* database, const String& fileName, int maxWriterThreads, int dispatcher) {
@@ -795,4 +795,3 @@ void ObjectDatabaseCore::dumpObjectToJSON(uint64_t objectID) {
 		}
 	}
 }
-

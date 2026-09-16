@@ -27,4 +27,3 @@ public:
 };
 
 #endif //MAKESURVEYCOMMAND_H_
-

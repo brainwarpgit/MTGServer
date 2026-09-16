@@ -118,5 +118,3 @@ int CreatureHabitatMenuComponent::handleObjectMenuSelect(SceneObject* sceneObjec
 		return TangibleObjectMenuComponent::handleObjectMenuSelect(sceneObject,	player, selectedID);
 	}
 }
-
-

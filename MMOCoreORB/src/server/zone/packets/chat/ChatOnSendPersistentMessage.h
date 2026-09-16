@@ -16,10 +16,10 @@ public:
 		insertInt(0x94E7A7AE);  // CRC
 
 		insertInt(returnCode);
-			
+
 		insertInt(seq);
-	} 
-	
+	}
+
 };
 
 #endif /*CHATONSENDPERSISTENTMESSAGE_H_*/

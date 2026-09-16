@@ -68,8 +68,3 @@ int CityDecorationMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject
 bool CityDecorationMenuComponent::isInInventory(SceneObject* sceneObject, CreatureObject* player) const {
 	return sceneObject->isASubChildOf(player);
 }
-
-
-
-
-

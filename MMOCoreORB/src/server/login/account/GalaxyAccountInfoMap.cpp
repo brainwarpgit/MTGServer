@@ -46,4 +46,3 @@ void to_json(nlohmann::json& j, const GalaxyAccountInfoMap& p) {
 		j[key.toCharArray()] = *value;
 	}
 }
-

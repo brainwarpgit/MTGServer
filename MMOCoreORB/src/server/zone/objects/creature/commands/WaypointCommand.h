@@ -232,7 +232,7 @@ public:
 #endif
 
 		bool isValid = false;
-	
+
 		if (requiredArg != nullptr) {
 			if (isalpha(requiredArg->toCharArray()[0]) == 0) {
 				*position = atof(requiredArg->toCharArray());

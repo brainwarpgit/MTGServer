@@ -114,5 +114,3 @@ int InstallationObjectMenuComponent::handleObjectMenuSelect(SceneObject* sceneOb
 
 	return 0;
 }
-
-

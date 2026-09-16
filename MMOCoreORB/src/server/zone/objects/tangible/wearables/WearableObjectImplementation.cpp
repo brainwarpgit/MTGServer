@@ -251,4 +251,3 @@ String WearableObjectImplementation::repairAttempt(int repairChance) {
 
 	return message;
 }
-

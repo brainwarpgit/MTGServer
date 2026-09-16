@@ -308,4 +308,3 @@ void SharedCreatureObjectTemplate::readObject(LuaObject* templateData) {
 	speedTempl.pop();*/
 
 }
-

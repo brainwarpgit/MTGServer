@@ -18,12 +18,12 @@ class CreateVendorSession extends Facade {
 	protected CreatureObject player;
 
 	VendorSelectionNode currentNode;
-	
+
 	protected SuiListBox suiSelectVendor;
 	protected SuiInputBox suiNameVendor;
 
 	private string templatePath;
-		
+
 	public CreateVendorSession(CreatureObject play) {
 		Logger.setLoggingName("CreateVendorSession");
 		Logger.setLogging(true);

@@ -10,9 +10,9 @@
 
 class FactoryCrateObjectMessage6 : public BaseLineMessage {
 public:
-	FactoryCrateObjectMessage6(TangibleObject* tano) 
+	FactoryCrateObjectMessage6(TangibleObject* tano)
 			: BaseLineMessage(tano->getObjectID(), 0x46435954, 6, 0x06) {
-		
+
 		insertShort(3);
 
 		insertInt(0);
@@ -31,7 +31,7 @@ public:
 
 		setSize();
 	}
-	
+
 };
 
 #endif /*FACTORYCRATEOBJECTMESSAGE6_H_*/

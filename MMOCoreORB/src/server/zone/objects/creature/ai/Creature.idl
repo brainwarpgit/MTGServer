@@ -231,4 +231,3 @@ class Creature extends AiAgent {
 	@read
 	public native boolean hasBeenMilked();
 }
-

@@ -18,7 +18,7 @@ public:
 		insertInt(0x00); //Unicode String, used instead of stf file. We'll never use it.
 		insertAscii("ui", 0x02); //ui file used for the client to pull the error message from - static
 		insertInt(0x00); //static spacer
-		insertAscii(error_String); 
+		insertAscii(error_String);
 		//Please note, error_String must be a specefic error String from table.
 		//See: ClientCreateCharacterFailed
 

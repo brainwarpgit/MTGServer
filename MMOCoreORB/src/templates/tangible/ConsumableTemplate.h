@@ -115,49 +115,49 @@ public:
 		speciesRestriction = templateData->getStringField("speciesRestriction");
 		//consumableType = templateData->getIntField("consumableType");
 		foragedFood = templateData->getIntField("foragedFood");
-    }
+	}
 
-    inline uint32 getBuffCRC() const {
+	inline uint32 getBuffCRC() const {
 		return buffCRC;
 	}
 
-    inline String& getBuffName() {
+	inline String& getBuffName() {
 		return buffName;
 	}
 
-    inline int getConsumableType() const {
+	inline int getConsumableType() const {
 		return consumableType;
 	}
 
-    inline int getForagedFood() const {
+	inline int getForagedFood() const {
 		return foragedFood;
 	}
 
-    inline int getDuration() const {
+	inline int getDuration() const {
 		return duration;
 	}
 
-    inline int getEffectType() const {
+	inline int getEffectType() const {
 		return effectType;
 	}
 
-    inline int getFilling() const {
+	inline int getFilling() const {
 		return filling;
 	}
 
-    inline int getFillingMax() const {
+	inline int getFillingMax() const {
 		return fillingMax;
 	}
 
-    inline int getFillingMin() const {
+	inline int getFillingMin() const {
 		return fillingMin;
 	}
 
-    inline int getFlavorMax() const {
+	inline int getFlavorMax() const {
 		return flavorMax;
 	}
 
-    inline int getFlavorMin() const {
+	inline int getFlavorMin() const {
 		return flavorMin;
 	}
 

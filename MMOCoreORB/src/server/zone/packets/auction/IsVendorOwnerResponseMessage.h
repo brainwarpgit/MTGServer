@@ -62,19 +62,19 @@ public:
 		insertInt(rights);
 
 		insertInt(errorCode);
-		
+
 		insertLong(objectID);
 
 		StringBuffer title;
 		title << planet << ".";
-		
+
 		int x = vendor->getWorldPositionX();
 		int y = vendor->getWorldPositionY();
 
 		String uuid = auctionManager->getVendorUID(vendor);
 
 		insertAscii(uuid);
-		
+
 		insertShort(0x64); // ?? 64
 	}
 

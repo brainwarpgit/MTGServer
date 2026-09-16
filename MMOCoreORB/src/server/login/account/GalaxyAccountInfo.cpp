@@ -48,5 +48,3 @@ bool GalaxyAccountInfo::toBinaryStream(ObjectOutputStream* stream) {
 void to_json(nlohmann::json& j, const GalaxyAccountInfo& p) {
 	j["chosenVeteranRewards"] = p.chosenVeteranRewards.getMapUnsafe();
 }
-
-

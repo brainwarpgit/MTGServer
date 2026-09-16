@@ -246,4 +246,3 @@ void FireworkObjectImplementation::beginShowLaunch(CreatureObject* player) {
 	fireworkShowLaunchFireworkEvent->schedule(launchDelay);
 
 }
-

@@ -26,15 +26,15 @@ public:
 		SharedTangibleObjectTemplate::readObject(templateData);
 
 		machineType = templateData->getIntField("machineType");
-    }
+	}
 
-    inline int getMachineType() const {
-        return machineType;
-    }
+	inline int getMachineType() const {
+		return machineType;
+	}
 
-    void setMachineType(int machineType) {
-    	this->machineType = machineType;
-    }
+	void setMachineType(int machineType) {
+		this->machineType = machineType;
+	}
 
 	bool isGamblingTerminalTemplate() {
 		return true;

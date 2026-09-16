@@ -33,7 +33,7 @@ public:
 		SharedTangibleObjectTemplate::readObject(templateData);
 
 		movementType = templateData->getByteField("movementType");
-    }
+	}
 
 	inline byte getMovementType() {
 		return movementType;

@@ -26,4 +26,3 @@ Octree* OctreeReference::operator=(Octree* obj) {
 
 	return obj;
 }
-

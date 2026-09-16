@@ -63,7 +63,7 @@ public:
 			tokenizer.finalToken(restOfArguments);
 
 		ServerCommand* unconst = const_cast<ServerCommand*>(this);
-		
+
 		int ret = unconst->methodFactory.runMethod(commandName, creature, target, restOfArguments);
 
 		return SUCCESS;

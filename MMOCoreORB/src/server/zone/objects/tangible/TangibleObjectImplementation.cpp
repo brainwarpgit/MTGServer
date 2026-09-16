@@ -1187,23 +1187,23 @@ Reference<FactoryCrate*> TangibleObjectImplementation::createFactoryCrate(int ma
 
 	if (crateType == "") {
 		if(type & SceneObjectType::ARMOR)
-        		crateType = "object/factory/factory_crate_armor.iff";
-    		else if(type == SceneObjectType::CHEMICAL || type == SceneObjectType::PHARMACEUTICAL || type == SceneObjectType::PETMEDECINE)
-        		crateType = "object/factory/factory_crate_chemicals.iff";
-    		else if(type & SceneObjectType::CLOTHING)
-        		crateType = "object/factory/factory_crate_clothing.iff";
-    		else if(type == SceneObjectType::ELECTRONICS)
-        		crateType = "object/factory/factory_crate_electronics.iff";
-    		else if(type == SceneObjectType::FOOD || type == SceneObjectType::DRINK)
-        		crateType = "object/factory/factory_crate_food.iff";
-    		else if(type == SceneObjectType::FURNITURE)
-        		crateType = "object/factory/factory_crate_furniture.iff";
-    		else if(type & SceneObjectType::INSTALLATION)
-        		crateType = "object/factory/factory_crate_installation.iff";
-    		else if(type & SceneObjectType::WEAPON)
-        		crateType = "object/factory/factory_crate_weapon.iff";
-    		else
-        	crateType = "object/factory/factory_crate_generic_items.iff";
+			crateType = "object/factory/factory_crate_armor.iff";
+		else if(type == SceneObjectType::CHEMICAL || type == SceneObjectType::PHARMACEUTICAL || type == SceneObjectType::PETMEDECINE)
+			crateType = "object/factory/factory_crate_chemicals.iff";
+		else if(type & SceneObjectType::CLOTHING)
+			crateType = "object/factory/factory_crate_clothing.iff";
+		else if(type == SceneObjectType::ELECTRONICS)
+			crateType = "object/factory/factory_crate_electronics.iff";
+		else if(type == SceneObjectType::FOOD || type == SceneObjectType::DRINK)
+			crateType = "object/factory/factory_crate_food.iff";
+		else if(type == SceneObjectType::FURNITURE)
+			crateType = "object/factory/factory_crate_furniture.iff";
+		else if(type & SceneObjectType::INSTALLATION)
+			crateType = "object/factory/factory_crate_installation.iff";
+		else if(type & SceneObjectType::WEAPON)
+			crateType = "object/factory/factory_crate_weapon.iff";
+		else
+			crateType = "object/factory/factory_crate_generic_items.iff";
 	}
 
 	Reference<FactoryCrate*> crate = (getZoneServer()->createObject(crateType.hashCode(), 2)).castTo<FactoryCrate*>();

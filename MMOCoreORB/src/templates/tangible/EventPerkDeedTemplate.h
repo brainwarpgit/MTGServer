@@ -45,7 +45,7 @@ public:
 		}
 
 		allowzones.pop();
-    }
+	}
 
 	int getPerkType() {
 		return perkType;

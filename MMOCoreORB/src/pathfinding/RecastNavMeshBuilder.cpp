@@ -134,10 +134,10 @@ void RecastNavMeshBuilder::rebuildAreas(const Vector<AABB>& buildAreas, NavArea*
 	existingMesh->copyMeshTo(m_navMesh);
 	rLocker.release();
 
-    for (int i = buildAreas.size() - 1; i >= 0; i--) {
-        const AABB &aabb = buildAreas.get(i);
-        rebuildArea(aabb);
-    }
+	for (int i = buildAreas.size() - 1; i >= 0; i--) {
+		const AABB &aabb = buildAreas.get(i);
+		rebuildArea(aabb);
+	}
 }
 
 void RecastNavMeshBuilder::rebuildArea(const AABB& buildArea) {

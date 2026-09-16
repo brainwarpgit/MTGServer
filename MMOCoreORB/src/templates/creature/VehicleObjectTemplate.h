@@ -20,7 +20,7 @@ public:
 		SharedCreatureObjectTemplate::readObject(templateData);
 		decayRate = templateData->getIntField("decayRate");
 		decayCycle = templateData->getIntField("decayCycle");
-    }
+	}
 
 	bool isVehicleObjectTemplate() {
 		return true;

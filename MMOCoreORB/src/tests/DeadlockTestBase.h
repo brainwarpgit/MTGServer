@@ -45,7 +45,7 @@
 	void lock(Lockable* lockable) { \
 		\
 		if (lockable == nullptr) \
-		 	 throw DeadlockException(this, "Trying to crosslock against a null lockable!"); \
+			throw DeadlockException(this, "Trying to crosslock against a null lockable!"); \
 		\
 		if (!lockable->isLockedByCurrentThread()) \
 			throw DeadlockException(this, "Trying to crosslock against an unlocked lockable!"); \
@@ -59,7 +59,7 @@
 	void lock(ManagedObject* obj) { \
 		\
 		if (obj == nullptr) \
-		 	 throw DeadlockException(this, "Trying to crosslock against a null lockable!"); \
+			throw DeadlockException(this, "Trying to crosslock against a null lockable!"); \
 		\
 		if (!obj->isLockedByCurrentThread()) \
 			throw DeadlockException(this, "Trying to crosslock against an unlocked lockable!"); \

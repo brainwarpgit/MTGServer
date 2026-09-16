@@ -1,4 +1,4 @@
-#ifndef ALWAYSFAIL_H_ 
+#ifndef ALWAYSFAIL_H_
 #define ALWAYSFAIL_H_
 
 #include "server/zone/objects/creature/ai/bt/decorator/Decorator.h"

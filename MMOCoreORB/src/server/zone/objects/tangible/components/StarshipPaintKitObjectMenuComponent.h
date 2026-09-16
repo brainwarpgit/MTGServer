@@ -34,4 +34,3 @@ public:
 };
 
 #endif /* StarshipPaintKitObjectMenuComponent_H_ */
-

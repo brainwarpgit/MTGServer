@@ -14,10 +14,10 @@ public:
 		insertInt(0x88DBB381);  // CRC
 
 		insertInt(result);
-			
+
 		insertInt(seq);
-	} 
-	
+	}
+
 };
 
 #endif /*CHATONSENDINSTANTMESSAGE_H_*/

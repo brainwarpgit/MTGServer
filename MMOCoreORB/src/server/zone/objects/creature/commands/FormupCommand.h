@@ -83,7 +83,7 @@ public:
 
 			if (member->isDizzied())
 				member->removeStateBuff(CreatureState::DIZZY);
-					
+
 			if (member->isStunned())
 				member->removeStateBuff(CreatureState::STUNNED);
 

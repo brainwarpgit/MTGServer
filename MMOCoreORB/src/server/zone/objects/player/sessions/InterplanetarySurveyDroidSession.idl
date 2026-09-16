@@ -14,36 +14,36 @@ include server.zone.objects.player.sui.listbox.SuiListBox;
 class InterplanetarySurveyDroidSession extends Facade {
 	@weakReference
 	protected CreatureObject player;
-	
+
 	@weakReference
 	protected transient TangibleObject droidObject;
 
 	protected string targetPlanet;
-	
+
 	@weakReference
 	protected transient SurveyTool toolObject;
 
-	protected SuiListBox droidSuiBox;		
-	
+	protected SuiListBox droidSuiBox;
+
 	public InterplanetarySurveyDroidSession(CreatureObject parent) {
 		Logger.setLoggingName("InterplanetarySurveyDroidSession");
 		Logger.setLogging(true);
-		player = parent;	
+		player = parent;
 		step = 0;
 	}
-	
+
 	public void setPlanet(string planet) {
 		targetPlanet = planet;
 	}
-	
+
 	public string getPlanet() {
 		return targetPlanet;
 	}
-	
+
 	public void setTool(SurveyTool t) {
 		toolObject = t;
 	}
-	
+
 	public int clearSession() {
 		player = null;
 		droidObject = null;
@@ -51,12 +51,12 @@ class InterplanetarySurveyDroidSession extends Facade {
 		return 0;
 	}
 	protected byte step;
-	
+
 	public native int cancelSession();
 	public native boolean hasSurveyTool();
 	@local
 	public native void initalizeDroid(TangibleObject droid);
 	@local
 	public native void handleMenuSelect(CreatureObject pl, unsigned long menuID, SuiListBox suiBox);
-	
+
 }

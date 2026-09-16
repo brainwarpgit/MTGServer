@@ -356,5 +356,3 @@ void* AssetCustomizationManagerTemplate::searchLidx(uint16 cidxKey) {
 void* AssetCustomizationManagerTemplate::searchUidx(uint16 cidxKey) {
 	return bsearch(&cidxKey, uidxTable, uidxTableCount, 5, lidxCompareFunction);
 }
-
-

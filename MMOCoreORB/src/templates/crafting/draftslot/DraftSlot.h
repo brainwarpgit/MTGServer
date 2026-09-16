@@ -75,59 +75,59 @@ public:
 		}
 	}
 
-    float getContribution() const
-    {
-        return contribution;
-    }
-	
+	float getContribution() const
+	{
+		return contribution;
+	}
+
 	String getStringIdFile() const {
 		return stringIdFile;
 	}
-	
+
 	String getStringIdName() const {
 		return stringIdName;
 	}
 
-    uint32 getQuantity() const
-    {
-        return quantity;
-    }
+	uint32 getQuantity() const
+	{
+		return quantity;
+	}
 
-    String getResourceType() const
-    {
-        return resourceType;
-    }
+	String getResourceType() const
+	{
+		return resourceType;
+	}
 
-    int getSlotType() const
-    {
-        return slotType;
-    }
+	int getSlotType() const
+	{
+		return slotType;
+	}
 
-    void setContribution(float contribution)
-    {
-        this->contribution = (contribution / 100.0f);
-    }
+	void setContribution(float contribution)
+	{
+		this->contribution = (contribution / 100.0f);
+	}
 
-    void setQuantity(uint32 quantity)
-    {
-        this->quantity = quantity;
-    }
+	void setQuantity(uint32 quantity)
+	{
+		this->quantity = quantity;
+	}
 
-    void setResourceType(String resourceType)
-    {
-        this->resourceType = resourceType;
-    }
+	void setResourceType(String resourceType)
+	{
+		this->resourceType = resourceType;
+	}
 
-    void setSlotType(int slotType)
-    {
-        this->slotType = slotType;
-    }
+	void setSlotType(int slotType)
+	{
+		this->slotType = slotType;
+	}
 
-    void setStringId(String file, String name)
-    {
+	void setStringId(String file, String name)
+	{
 		stringIdFile = file;
 		stringIdName = name;
-    }
+	}
 };
 
 #endif /* DRAFTSLOT_H_ */

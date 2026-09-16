@@ -60,7 +60,7 @@ public:
 			return GENERALERROR;
 
 		if (weapon->isJediWeapon())
-			return GENERALERROR;			
+			return GENERALERROR;
 
 		if((weapon->isRangedWeapon() && pup->isRanged()) ||
 				(weapon->isMeleeWeapon() && pup->isMelee()) ||

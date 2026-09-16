@@ -60,4 +60,3 @@ int LootContainerComponent::canAddObject(SceneObject* sceneObject, SceneObject* 
 
 	return 1;
 }
-

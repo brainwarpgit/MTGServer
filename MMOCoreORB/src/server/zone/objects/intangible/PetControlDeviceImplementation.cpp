@@ -919,43 +919,43 @@ void PetControlDeviceImplementation::fillAttributeList(AttributeListMessage* alm
 	if (petType == PetManager::FLIGHTCOMPUTER) {
 		auto flightComputerDatapad = getDatapad();
 
- 		if (flightComputerDatapad == nullptr) {
- 			return;
- 		}
+		if (flightComputerDatapad == nullptr) {
+			return;
+		}
 
- 		int containerSize = flightComputerDatapad->getContainerObjectsSize();
- 		int currentDataSize = 0;
- 		Vector<String> storedCommands;
+		int containerSize = flightComputerDatapad->getContainerObjectsSize();
+		int currentDataSize = 0;
+		Vector<String> storedCommands;
 
- 		for (int i = 0; i < containerSize; i++) {
- 			auto commandModule = flightComputerDatapad->getContainerObject(i).castTo<IntangibleObject*>();
+		for (int i = 0; i < containerSize; i++) {
+			auto commandModule = flightComputerDatapad->getContainerObject(i).castTo<IntangibleObject*>();
 
- 			if (commandModule == nullptr) {
- 				continue;
- 			}
+			if (commandModule == nullptr) {
+				continue;
+			}
 
- 			currentDataSize += commandModule->getDataSize();
- 			storedCommands.add(commandModule->getItemIdentifier());
- 		}
+			currentDataSize += commandModule->getDataSize();
+			storedCommands.add(commandModule->getItemIdentifier());
+		}
 
- 		// Used Memory
- 		alm->insertAttribute("droid_program_expended_memory", currentDataSize);
+		// Used Memory
+		alm->insertAttribute("droid_program_expended_memory", currentDataSize);
 
- 		// Loaded Droid Programs
- 		int totalPrograms = storedCommands.size();
+		// Loaded Droid Programs
+		int totalPrograms = storedCommands.size();
 
- 		if (totalPrograms > 0) {
- 			alm->insertAttribute("droid_program_loaded", "");
+		if (totalPrograms > 0) {
+			alm->insertAttribute("droid_program_loaded", "");
 
- 			for (int i = 0; i < totalPrograms; i++) {
- 				String programName = storedCommands.get(i);
- 
- 				alm->insertAttribute("droid_program", "@space/droid_commands:" + programName);
- 			}
- 		}
+			for (int i = 0; i < totalPrograms; i++) {
+				String programName = storedCommands.get(i);
 
- 		// Pilot's Required Cert
- 		//alm->insertAttribute("data_module_cert_needed", getStorageRating());
+				alm->insertAttribute("droid_program", "@space/droid_commands:" + programName);
+			}
+		}
+
+		// Pilot's Required Cert
+		//alm->insertAttribute("data_module_cert_needed", getStorageRating());
 	}
 
 	if (petType == PetManager::DROIDPET) {

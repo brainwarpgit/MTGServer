@@ -62,4 +62,3 @@ void server::zone::to_json(nlohmann::json& j, const ZoneReference& p) {
 		j = "";
 #endif
 }
-

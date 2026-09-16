@@ -32,7 +32,7 @@ public:
 	virtual bool isCompositeVolume() const { return false; }
 	virtual bool isComponentVolume() const { return false; }
 	virtual bool isDetailVolume() const { return false; }
-	
+
 	virtual void read(IffStream *iff);
 };
 

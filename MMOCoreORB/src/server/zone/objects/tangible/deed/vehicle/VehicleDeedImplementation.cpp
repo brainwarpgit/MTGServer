@@ -131,4 +131,3 @@ int VehicleDeedImplementation::handleObjectMenuSelect(CreatureObject* player, by
 
 	return DeedImplementation::handleObjectMenuSelect(player, selectedID);
 }
-

@@ -64,4 +64,3 @@ Reference<Task*> PendingTasksMap::popNextOrderedTask() {
 
 	return strongTaskReference;
 }
-

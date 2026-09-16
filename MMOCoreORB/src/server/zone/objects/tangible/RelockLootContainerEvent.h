@@ -16,10 +16,10 @@ class RelockLootContainerEvent: public Task {
 
 public:
 	RelockLootContainerEvent(Container* object) {
-		
+
 		container = object;
 		container->setRelockingStatus(true);
-		
+
 	}
 
 	void run() {

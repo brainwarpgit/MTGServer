@@ -15,4 +15,3 @@
 ObjectController::ObjectController(Zone* zn) {
 	zone = zn;
 }
-

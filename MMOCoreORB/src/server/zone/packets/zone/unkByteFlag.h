@@ -19,7 +19,7 @@ public:
 	static void parse(Packet* pack) {
 		uint16 ackSequence = pack->parseShort();
 	}
-	
+
 };
 
 #endif /*UNKBYTEFLAG_H_*/

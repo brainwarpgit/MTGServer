@@ -226,7 +226,7 @@ void MissionObjectImplementation::updateMissionLocation() {
 	}
 
 	ManagedReference<CreatureObject*> playerCreature = getMissionObjective()->getPlayerOwner();
-	
+
 	ManagedReference<WaypointObject* > waypointToMission = this->waypointToMission;
 
 	if (playerCreature != nullptr && waypointToMission != nullptr) {

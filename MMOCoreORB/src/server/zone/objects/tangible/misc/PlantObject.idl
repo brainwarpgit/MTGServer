@@ -60,7 +60,7 @@ class PlantObject extends TangibleObject {
 		super.initializeTransientMembers();
 		startPulse();
 	}
-	
+
 	public native void finalize();
 
 	/**

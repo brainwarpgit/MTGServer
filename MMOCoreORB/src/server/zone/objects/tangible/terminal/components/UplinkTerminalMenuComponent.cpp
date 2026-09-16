@@ -141,5 +141,3 @@ int UplinkTerminalMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject
 
 	return 0;
 }
-
-

@@ -12,14 +12,14 @@ include server.zone.packets.ui.SuiCreatePageMessage;
 class SuiSlotMachineBox extends SuiListBox {
 
 	protected unsigned int payoutBoxID;
-	
+
 	public SuiSlotMachineBox(CreatureObject player, unsigned int windowType, unsigned int payoutBox, unsigned int listBoxType = 0) {
 		super(player, windowType, listBoxType);
 		payoutBoxID = payoutBox;
 	}
-	
+
 	public unsigned int getPayoutBoxID() {
 		return payoutBoxID;
 	}
-	
+
 }

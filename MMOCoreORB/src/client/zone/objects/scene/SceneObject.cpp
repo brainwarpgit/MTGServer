@@ -82,4 +82,3 @@ SceneObject::~SceneObject() {
 		zone->getObjectManager()->destroyObject(object->getObjectID());
 	}*/
 }
-

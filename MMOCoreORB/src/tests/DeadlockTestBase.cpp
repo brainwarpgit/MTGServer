@@ -211,4 +211,3 @@ void DeadlockDetector::detectDeadlock() {
 			locked.removeElement(lock->lockable);
 	}
 }
-

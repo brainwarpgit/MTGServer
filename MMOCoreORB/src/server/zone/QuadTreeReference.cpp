@@ -45,4 +45,3 @@ QuadTree* QuadTreeReference::operator=(QuadTree* obj) {
 
 	return obj;
 }
-

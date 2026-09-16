@@ -96,5 +96,3 @@ int ScavengerChestContainerComponent::notifyObjectRemoved(SceneObject* container
 
 	return 0;
 }
-
-

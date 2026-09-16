@@ -471,4 +471,3 @@ float TreeEntryImplementation::getWorldPositionY() const {
 float TreeEntryImplementation::getWorldPositionZ() const {
 	return worldCoordinates.getPositionZ();
 }
-

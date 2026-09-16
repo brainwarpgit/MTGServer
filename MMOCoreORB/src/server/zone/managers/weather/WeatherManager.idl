@@ -14,13 +14,13 @@ import system.util.Vector;
 
 @dirty
 class WeatherManager extends ManagedService implements Logger {
-	
+
 	public static final int CLEAR = 0;
 	public static final int LIGHTSTORM = 1;
 	public static final int STORM = 2;
 	public static final int HEAVYSTORM = 3;
 	public static final int EXTREMESTORM = 4;
-	
+
 	private transient Zone zone;
 
 	private transient boolean weatherEnabled;
@@ -30,20 +30,20 @@ class WeatherManager extends ManagedService implements Logger {
 	private transient unsigned int averageWeatherDuration;
 
 	private transient unsigned int weatherStability;
-	
+
 	private transient boolean hasDamagingSandstorms;
 
 	private transient WeatherMap currentMap;
-	
+
 	@dereferenced
 	private transient Vector<float> windX;
-	
+
 	@dereferenced
 	private transient Vector<float> windY;
-	
+
 	@dereferenced
 	private transient Vector<float> windMagnitude;
-	
+
 	private transient int sandstormDamage;
 
 	protected transient WeatherChangeEvent weatherChangeEvent;
@@ -52,10 +52,10 @@ class WeatherManager extends ManagedService implements Logger {
 		zone = planet;
 	}
 
-	
+
 	/**
 	 * Initializes the weather manager events and some of the customization variables.
-	 * Calls loadLuaConfig() to read in the lua values and schedules the weather change event. 
+	 * Calls loadLuaConfig() to read in the lua values and schedules the weather change event.
 	 */
 	public native void initialize();
 
@@ -101,11 +101,11 @@ class WeatherManager extends ManagedService implements Logger {
 	 * @pre Weather Manager and player are locked.
 	 * @post Weather Manager and player are locked.
 	 * @param player The player we are applying sandstorm effects to.
-	 * @param sandstormCoverings A Vector created in applySandstormDamage() that will store 
+	 * @param sandstormCoverings A Vector created in applySandstormDamage() that will store
 	 * the number of clothing and armour pieces the player is wearing.
 	 */
 	private native int calculateSandstormProtection(CreatureObject player);
-	
+
 	public native void enableWeather(CreatureObject player);
 	public native void disableWeather(CreatureObject player);
 	public native void changeWeather(CreatureObject player, int newWeather);
@@ -117,7 +117,6 @@ class WeatherManager extends ManagedService implements Logger {
 	public void setWeatherEnabled(boolean value) {
 		weatherEnabled = value;
 	}
-	
+
 	public native void printInfo(CreatureObject player);
 }
-

@@ -593,7 +593,7 @@ void SceneObjectImplementation::sendAttributeListTo(CreatureObject* object) {
 	AttributeListMessage* alm = new AttributeListMessage(asSceneObject());
 
 	try {
-        	if (attributeListComponent == nullptr) {
+		if (attributeListComponent == nullptr) {
 			throw Exception("nullptr attribute list component");
 		}
 

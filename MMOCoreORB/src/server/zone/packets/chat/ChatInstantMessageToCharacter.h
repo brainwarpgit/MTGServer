@@ -31,14 +31,14 @@ public:
 		pack->parseAscii(galaxy);
 
 		pack->parseAscii(name);
-		
+
 		pack->parseUnicode(message);
-		
+
 		pack->shiftOffset(4);
-		
+
 		sequence = pack->parseInt();
 	}
-	
+
 	void run() {
 		ChatManager* chatManager = server->getChatManager();
 

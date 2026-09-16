@@ -121,7 +121,7 @@ if(WIN32)
 	set(whole_archive_start "")
 	set(whole_archive_end "")
 
-	set (CMAKE_LINK_WHAT_YOU_USE OFF) 
+	set (CMAKE_LINK_WHAT_YOU_USE OFF)
 elseif(APPLE)
 	set(whole_archive_start "-Wl,-all_load")
 	set(whole_archive_end "") #-Wl,-noall_load deprecated
@@ -159,20 +159,20 @@ if(ENABLE_ODB)
 		${DB_LIBRARIES} ${OPENSSL_LIBRARIES}
 		${ZLIB_LIBRARIES} ${CMAKE_DL_LIBS})
 
-if (NOT ENABLE_ASAN AND NOT ENABLE_TSAN AND NOT ENABLE_UBSAN AND JEMALLOC_FOUND AND ENABLE_JEMALLOC_LINK)
-	target_link_libraries(odb3 ${JEMALLOC_LIBRARIES})
-endif()
+	if (NOT ENABLE_ASAN AND NOT ENABLE_TSAN AND NOT ENABLE_UBSAN AND JEMALLOC_FOUND AND ENABLE_JEMALLOC_LINK)
+		target_link_libraries(odb3 ${JEMALLOC_LIBRARIES})
+	endif()
 
-if(ENABLE_MULTITHREADED_LINKER)
-	use_gold(odb3)
-endif(ENABLE_MULTITHREADED_LINKER)
+	if(ENABLE_MULTITHREADED_LINKER)
+		use_gold(odb3)
+	endif(ENABLE_MULTITHREADED_LINKER)
 
-# Copy core3 binary
-add_custom_command(
-	TARGET odb3 POST_BUILD
-	COMMAND ${CMAKE_COMMAND} -E copy
-	$<TARGET_FILE:odb3>
-	${CMAKE_SOURCE_DIR}/bin/)
+	# Copy core3 binary
+	add_custom_command(
+		TARGET odb3 POST_BUILD
+		COMMAND ${CMAKE_COMMAND} -E copy
+		$<TARGET_FILE:odb3>
+		${CMAKE_SOURCE_DIR}/bin/)
 
 endif(ENABLE_ODB)
 # Copy core3 binary
@@ -183,9 +183,9 @@ add_custom_command(
 	${CMAKE_SOURCE_DIR}/bin/)
 
 if(GIT_FOUND AND RUN_GIT)
-    add_custom_command(
-        TARGET core3 POST_BUILD
-        COMMAND ${GIT_EXECUTABLE} log --no-merges --pretty=format:"%h was %an, %ar, message: %s" -10 > ${CMAKE_SOURCE_DIR}/bin/conf/rev.txt
+	add_custom_command(
+		TARGET core3 POST_BUILD
+		COMMAND ${GIT_EXECUTABLE} log --no-merges --pretty=format:"%h was %an, %ar, message: %s" -10 > ${CMAKE_SOURCE_DIR}/bin/conf/rev.txt
 		WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
 		VERBATIM)
 endif()
@@ -199,14 +199,14 @@ endif(COMPILE_TESTS)
 add_custom_target(idl
 	COMMAND ${Java_JAVA_EXECUTABLE} ${IDLC_JAVA_ARGS} ${IDL_DIRECTIVES} -sd src anyadEclipse
 	WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-        COMMENT "Building idl sources"
-        VERBATIM)
+	COMMENT "Building idl sources"
+	VERBATIM)
 
 add_custom_target(rebuild-idl
 	COMMAND ${Java_JAVA_EXECUTABLE} ${IDLC_JAVA_ARGS} ${IDL_DIRECTIVES} -rb -sd src anyadEclipse
 	WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
 	COMMENT "Rebuilding idl sources"
-        VERBATIM)
+	VERBATIM)
 
 if (ENABLE_REST_SERVER OR ENABLE_SWGREALMS)
 	find_package(cpprestsdk QUIET NAMES cpprestsdk cpprest)

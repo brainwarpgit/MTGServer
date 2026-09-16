@@ -254,4 +254,3 @@ Task* ZonePacketHandler::generateMessageTask(ZoneClientSession* client, Message*
 
 	return nullptr;
 }
-

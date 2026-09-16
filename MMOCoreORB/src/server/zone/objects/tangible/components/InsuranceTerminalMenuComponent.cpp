@@ -87,4 +87,3 @@ int InsuranceTerminalMenuComponent::handleObjectMenuSelect(SceneObject* sceneObj
 
 	return 0;
 }
-

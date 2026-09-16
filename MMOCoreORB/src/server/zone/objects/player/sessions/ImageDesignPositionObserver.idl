@@ -14,11 +14,11 @@ class ImageDesignPositionObserver extends Observer {
 
 	@weakReference
 	ImageDesignSession session;
-	
+
 	public ImageDesignPositionObserver(ImageDesignSession designSession) {
 		session = designSession;
 		setObserverType(ObserverType.IMAGEDESIGNPOSITION);
 	}
-	
+
 	public native int notifyObserverEvent(unsigned int eventType, Observable observable, ManagedObject arg1, long arg2);
 }

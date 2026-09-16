@@ -45,13 +45,13 @@ public:
 
 		buffCRC = templateData->getIntField("buffCRC");
 
-    }
+	}
 
-    inline String& getBuffName() {
+	inline String& getBuffName() {
 		return buffName;
 	}
 
-    inline int getDuration() const {
+	inline int getDuration() const {
 		return duration;
 	}
 

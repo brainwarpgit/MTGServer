@@ -44,9 +44,9 @@ public:
 		return personalityStf;
 	}
 
-	 bool isDroidPersonalityModuleTemplate() {
-		 return true;
-	 }
+	bool isDroidPersonalityModuleTemplate() {
+		return true;
+	}
 };
 
 #endif /*DROIDPERSONALITYMODULETEMPLATE_H_*/

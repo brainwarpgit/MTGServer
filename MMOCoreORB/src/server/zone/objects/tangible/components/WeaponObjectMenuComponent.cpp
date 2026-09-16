@@ -86,7 +86,7 @@ int WeaponObjectMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject, 
 			pup->destroyObjectFromDatabase( true );
 
 			StringIdChatParameter message("powerup", "prose_remove_powerup"); //You detach your powerup from %TT.
-			message.setTT(weapon->getDisplayedName()); 
+			message.setTT(weapon->getDisplayedName());
 			player->sendSystemMessage(message);
 
 			return 1;

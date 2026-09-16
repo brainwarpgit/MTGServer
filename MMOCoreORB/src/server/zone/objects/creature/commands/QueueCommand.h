@@ -431,5 +431,3 @@ public:
 using namespace server::zone::objects::creature::commands;
 
 #endif //SLASHCOMMAND_H_
-
-

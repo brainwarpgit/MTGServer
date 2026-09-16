@@ -42,7 +42,7 @@ public:
 
 		if (itemToRepair == nullptr )
 			return;
-                
+
 		Locker _lock(repairTool, player);
 			itemToRepair->repair(player, repairTool);
 	}

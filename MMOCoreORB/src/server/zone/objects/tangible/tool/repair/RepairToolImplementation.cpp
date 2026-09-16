@@ -55,10 +55,10 @@ void RepairToolImplementation::sendRepairListTo(CreatureObject* player) {
 
 	if ( repairToolData == nullptr )
 		return;
-                
+
 	Vector<ManagedReference<SceneObject*> > repairableItems = playerManager->getInventoryItemsOfType(player, repairToolData -> getRepairType());
-	
-	
+
+
 	ManagedReference<SuiListBox*> listbox = new SuiListBox(player, SuiWindowType::REPAIR_TOOL_DIALOG);
 
 	for (int i = 0; i < repairableItems.size(); i++) {

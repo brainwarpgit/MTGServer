@@ -27,7 +27,7 @@ public:
 
 		lock = templateData->getByteField("locked");
 
-    }
+	}
 
 	inline bool getLocked() const {
 		return lock;

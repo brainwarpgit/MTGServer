@@ -56,6 +56,3 @@ void PrivateSkillMultiplierBuffImplementation::removeSkillModifiers() {
 
 	strongCreo->updateSpeedAndAccelerationMods();
 }
-
-
-

@@ -30,5 +30,3 @@ bool ShuttleInstallationImplementation::checkRequisitesForPlacement(CreatureObje
 
 	return true;
 }
-
-

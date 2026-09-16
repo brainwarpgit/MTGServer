@@ -491,4 +491,3 @@ int ContainerComponent::notifyObjectInserted(SceneObject* sceneObject, SceneObje
 int ContainerComponent::notifyObjectRemoved(SceneObject* sceneObject, SceneObject* object, SceneObject* destination) const {
 	return sceneObject->notifyObjectRemoved(object);
 }
-

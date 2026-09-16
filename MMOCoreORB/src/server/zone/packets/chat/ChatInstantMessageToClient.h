@@ -21,8 +21,8 @@ public:
 		insertInt(0x00);
 
 		setCompression(true);
-	} 
-	
+	}
+
 };
 
 #endif /*CHATINSTANTMESSAGETOCLIENT_H_*/

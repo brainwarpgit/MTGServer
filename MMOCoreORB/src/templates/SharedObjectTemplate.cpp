@@ -491,4 +491,3 @@ bool SharedObjectTemplate::isDerivedFrom(const String& iffPath, bool includeSelf
 
 	return false;
 }
-

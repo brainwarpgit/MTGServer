@@ -20,4 +20,3 @@ int ElevatorDownMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject, 
 
 	return ElevatorMenuComponent::handleObjectMenuSelect(sceneObject, creature, selectedID);
 }
-

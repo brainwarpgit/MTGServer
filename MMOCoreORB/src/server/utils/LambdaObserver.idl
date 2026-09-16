@@ -23,18 +23,17 @@ include server.utils.LambdaObserverFunction;
  * }, "TestObserver")));
 */
 class LambdaObserver extends Observer {
-	
+
 	LambdaObserverFunction function;
-	
+
 	public abstract int notifyObserverEvent(unsigned int eventType, Observable observable, ManagedObject arg1, long arg2) {
 		if(function)
 			return function.notifyObserverEvent(eventType, observable, arg1, arg2);
-        	else
-                	return 1;
+		else
+			return 1;
 	}
-	
+
 	public LambdaObserver(LambdaObserverFunction f) {
 		function = f;
 	}
 }
-

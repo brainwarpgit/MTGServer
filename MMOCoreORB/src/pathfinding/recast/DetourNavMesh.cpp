@@ -177,9 +177,9 @@ The general build process is as follows:
 Notes:
 
 - This class is usually used in conjunction with the dtNavMeshQuery class for pathfinding.
-- Technically, all navigation meshes are tiled. A 'solo' mesh is simply a navigation mesh initialized 
+- Technically, all navigation meshes are tiled. A 'solo' mesh is simply a navigation mesh initialized
   to have only a single tile.
-- This class does not implement any asynchronous methods. So the ::dtStatus result of all methods will 
+- This class does not implement any asynchronous methods. So the ::dtStatus result of all methods will
   always contain either a success or failure flag.
 
 @see dtNavMeshQuery, dtCreateNavMeshData, dtNavMeshCreateParams, #dtAllocNavMesh, #dtFreeNavMesh
@@ -1455,10 +1455,10 @@ dtStatus dtNavMesh::restoreTileState(dtMeshTile* tile, const unsigned char* data
 
 /// @par
 ///
-/// Off-mesh connections are stored in the navigation mesh as special 2-vertex 
-/// polygons with a single edge. At least one of the vertices is expected to be 
-/// inside a normal polygon. So an off-mesh connection is "entered" from a 
-/// normal polygon at one of its endpoints. This is the polygon identified by 
+/// Off-mesh connections are stored in the navigation mesh as special 2-vertex
+/// polygons with a single edge. At least one of the vertices is expected to be
+/// inside a normal polygon. So an off-mesh connection is "entered" from a
+/// normal polygon at one of its endpoints. This is the polygon identified by
 /// the prevRef parameter.
 dtStatus dtNavMesh::getOffMeshConnectionPolyEndPoints(dtPolyRef prevRef, dtPolyRef polyRef, float* startPos, float* endPos) const
 {
@@ -1592,4 +1592,3 @@ dtStatus dtNavMesh::getPolyArea(dtPolyRef ref, unsigned char* resultArea) const
 
 	return DT_SUCCESS;
 }
-

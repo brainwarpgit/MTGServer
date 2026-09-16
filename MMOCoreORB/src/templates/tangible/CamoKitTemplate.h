@@ -32,9 +32,9 @@ public:
 		return effectiveZone;
 	}
 
-    bool isCamoKitTemplate() {
-    	return true;
-    }
+	bool isCamoKitTemplate() {
+		return true;
+	}
 
 };
 

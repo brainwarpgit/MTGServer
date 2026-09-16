@@ -72,7 +72,7 @@ bool FactionRecruiterContainerComponent::transferObject(SceneObject* sceneObject
 	AiAgent* recruiter = cast<AiAgent*>(sceneObject);
 
 	String recruiterFaction = recruiter->getFactionString().toLowerCase();
-	
+
 	const Badge* badge = BadgeList::instance()->get("event_project_dead_eye_1");
 
 	if (badge == nullptr)

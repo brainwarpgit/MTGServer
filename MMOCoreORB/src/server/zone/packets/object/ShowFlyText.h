@@ -29,7 +29,7 @@ public:
 		  * 0x0004, -- ???
 		  */
 		insertByte(5); // FLAGS. 5 = Displayed on target, possible bitmask of 1+4?
-		
+
 	}
 
 };

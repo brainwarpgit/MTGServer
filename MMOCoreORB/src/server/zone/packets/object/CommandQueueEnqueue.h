@@ -10,7 +10,7 @@
 
 class CommandQueueEnqueue : public ObjectControllerMessage {
 public:
-	CommandQueueEnqueue(CreatureObject* creo, uint32 actioncnt, uint32 actionCRC) 
+	CommandQueueEnqueue(CreatureObject* creo, uint32 actioncnt, uint32 actionCRC)
 			: ObjectControllerMessage(creo->getObjectID(), 0x0B, 0x116) {
 		insertInt(actioncnt);
 		insertInt(actionCRC);

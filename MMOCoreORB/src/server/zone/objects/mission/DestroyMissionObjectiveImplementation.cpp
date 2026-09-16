@@ -194,49 +194,49 @@ void DestroyMissionObjectiveImplementation::spawnLair() {
 	if (lairObject == nullptr) {
 		String buildingToSpawn = lair->getMissionBuilding(difficulty);
 
-	 	if (buildingToSpawn.isEmpty()) {
-	 		error("error spawning " + buildingToSpawn);
-	 		abort();
-	 		return;
-	 	}
+		if (buildingToSpawn.isEmpty()) {
+			error("error spawning " + buildingToSpawn);
+			abort();
+			return;
+		}
 
 		lairObject = zone->getZoneServer()->createObject(buildingToSpawn.hashCode(), 0).castTo<LairObject*>();
 
-	 	if (lairObject == nullptr) {
-	 		error("error spawning " + buildingToSpawn);
-	 		abort();
-	 		return;
-	 	}
+		if (lairObject == nullptr) {
+			error("error spawning " + buildingToSpawn);
+			abort();
+			return;
+		}
 
 		String lairName = lair->getName();
 
-	 	Locker llocker(lairObject);
+		Locker llocker(lairObject);
 
 		lairObject->setObjectName("@lair_n:" + lairName, false);
-	 	lairObject->setFaction(lair->getFaction());
-	 	lairObject->setPvpStatusBitmask(ObjectFlag::ATTACKABLE);
-	 	lairObject->setOptionsBitmask(0, false);
-	 	lairObject->setMaxCondition(difficultyLevel * (900 + System::random(200)));
-	 	lairObject->setConditionDamage(0, false);
-	 	lairObject->initializePosition(pos.getX(), pos.getZ(), pos.getY());
-	 	lairObject->setDespawnOnNoPlayersInRange(false);
+		lairObject->setFaction(lair->getFaction());
+		lairObject->setPvpStatusBitmask(ObjectFlag::ATTACKABLE);
+		lairObject->setOptionsBitmask(0, false);
+		lairObject->setMaxCondition(difficultyLevel * (900 + System::random(200)));
+		lairObject->setConditionDamage(0, false);
+		lairObject->initializePosition(pos.getX(), pos.getZ(), pos.getY());
+		lairObject->setDespawnOnNoPlayersInRange(false);
 
 		ManagedReference<MissionObserver*> observer = new MissionObserver(_this.getReferenceUnsafeStaticCast());
 		addObserver(observer, true);
 
 		lairObject->registerObserver(ObserverEventType::OBJECTDESTRUCTION, observer);
 
-	 	ManagedReference<DestroyMissionLairObserver*> lairObserver = new DestroyMissionLairObserver();
-	 	lairObserver->deploy();
-	 	lairObserver->setLairTemplate(lair);
-	 	lairObserver->setDifficulty(difficulty);
-	 	lairObserver->setObserverType(ObserverType::LAIR);
-	 	lairObserver->setSize(mission->getSize());
+		ManagedReference<DestroyMissionLairObserver*> lairObserver = new DestroyMissionLairObserver();
+		lairObserver->deploy();
+		lairObserver->setLairTemplate(lair);
+		lairObserver->setDifficulty(difficulty);
+		lairObserver->setObserverType(ObserverType::LAIR);
+		lairObserver->setSize(mission->getSize());
 
-	 	lairObject->registerObserver(ObserverEventType::OBJECTDESTRUCTION, lairObserver);
-	 	lairObject->registerObserver(ObserverEventType::DAMAGERECEIVED, lairObserver);
-	 	lairObject->registerObserver(ObserverEventType::AIMESSAGE, lairObserver);
-	 	lairObject->registerObserver(ObserverEventType::OBJECTREMOVEDFROMZONE, lairObserver);
+		lairObject->registerObserver(ObserverEventType::OBJECTDESTRUCTION, lairObserver);
+		lairObject->registerObserver(ObserverEventType::DAMAGERECEIVED, lairObserver);
+		lairObject->registerObserver(ObserverEventType::AIMESSAGE, lairObserver);
+		lairObject->registerObserver(ObserverEventType::OBJECTREMOVEDFROMZONE, lairObserver);
 		lairObject->registerObserver(ObserverEventType::NOPLAYERSINRANGE, lairObserver);
 		lairObject->registerObserver(ObserverEventType::CREATUREDESPAWNED, lairObserver);
 

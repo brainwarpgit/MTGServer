@@ -33,8 +33,3 @@ int PlaceableLootContainerComponent::canAddObject(SceneObject* sceneObject, Scen
 
 	return 1;
 }
-
-
-
-
-

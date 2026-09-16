@@ -60,7 +60,7 @@ public:
 			insertAscii(room->getModeratorName(i));
 		}
 	}
-	
+
 	void addToUserList(ChatRoom* room) {
 		int size = room->getPlayerSize();
 		insertInt(size);

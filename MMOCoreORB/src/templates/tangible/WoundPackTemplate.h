@@ -32,7 +32,7 @@ public:
 		medicineUse = templateData->getIntField("medicineUse");
 		effectiveness = templateData->getFloatField("effectiveness");
 		attribute = templateData->getIntField("attribute");
-    }
+	}
 
 	inline int getMedicineUse() {
 		return medicineUse;

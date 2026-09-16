@@ -55,7 +55,7 @@ public:
 		dotType = templateData->getIntField("dotType");
 		potency = templateData->getFloatField("potency");
 		commandToExecute = templateData->getStringField("commandToExecute");
-    }
+	}
 
 	inline int getMedicineUse() {
 		return medicineUse;

@@ -9,27 +9,27 @@ include server.zone.objects.scene.SessionFacadeType;
 class CityRemoveMilitiaSession extends Facade {
 	@weakReference
 	protected CreatureObject creatureObject;
-	
+
 	@weakReference
 	protected CityRegion cityRegion;
-	
+
 	@weakReference
 	protected SceneObject terminalObject;
-	
+
 	protected unsigned long militiaID;
-	
+
 	public CityRemoveMilitiaSession(CreatureObject creature, CityRegion city, unsigned long militiaid, SceneObject terminal = null) {
 		Logger.setLoggingName("CityRemoveMilitiaSession");
 		Logger.setLogging(true);
-		
+
 		creatureObject = creature;
 		cityRegion = city;
 		terminalObject = terminal;
-		
+
 		militiaID = militiaid;
-		
+
 	}
-	
+
 	public unsigned long getMilitiaID() {
 		return militiaID;
 	}
@@ -41,10 +41,10 @@ class CityRemoveMilitiaSession extends Facade {
 
 		if (creature)
 			creature.dropActiveSession(SessionFacadeType.CITYMILITIA);
-		
+
 		return 0;
 	}
-	
+
 	public int clearSession() {
 		return 0;
 	}

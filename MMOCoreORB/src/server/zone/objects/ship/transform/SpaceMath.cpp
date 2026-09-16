@@ -239,4 +239,3 @@ Quaternion SpaceMath::rotationToQuaternion(const Vector3& rotation, bool precisi
 
 	return qDirection;
 }
-
