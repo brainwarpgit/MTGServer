@@ -43,7 +43,7 @@ sentellus_gavrel = Creature:new {
 					"object/mobile/dressed_commoner_naboo_zabrak_male_01.iff",
 					"object/mobile/dressed_commoner_naboo_zabrak_male_02.iff"
 					},
-				
+
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -51,7 +51,7 @@ sentellus_gavrel = Creature:new {
 	primaryWeapon = "unarmed",
 	secondaryWeapon = "none",
 	conversationTemplate = "mullud_bombo_mission_target_convotemplate",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = {},

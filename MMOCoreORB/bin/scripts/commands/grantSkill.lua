@@ -46,4 +46,3 @@ GrantSkillCommand = {
 }
 
 AddCommand(GrantSkillCommand)
-

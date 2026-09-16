@@ -10,4 +10,3 @@ yavin4_whisper_bird_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("yavin4_whisper_bird_lair_neutral_medium", yavin4_whisper_bird_lair_neutral_medium)
-

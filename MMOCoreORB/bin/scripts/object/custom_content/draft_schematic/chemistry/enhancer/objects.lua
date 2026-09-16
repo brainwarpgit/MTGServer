@@ -92,5 +92,3 @@ object_draft_schematic_chemistry_enhancer_shared_enhancer_traumatize = SharedDra
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_chemistry_enhancer_shared_enhancer_traumatize, "object/draft_schematic/chemistry/enhancer/shared_enhancer_traumatize.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

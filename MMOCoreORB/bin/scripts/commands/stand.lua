@@ -46,4 +46,3 @@ StandCommand = {
 }
 
 AddCommand(StandCommand)
-

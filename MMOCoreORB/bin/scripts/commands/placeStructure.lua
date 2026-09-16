@@ -46,4 +46,3 @@ PlaceStructureCommand = {
 }
 
 AddCommand(PlaceStructureCommand)
-

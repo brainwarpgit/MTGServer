@@ -84,5 +84,3 @@ object_draft_schematic_vehicle_civilian_shared_speeder_stap = SharedDraftSchemat
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_vehicle_civilian_shared_speeder_stap, "object/draft_schematic/vehicle/civilian/shared_speeder_stap.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

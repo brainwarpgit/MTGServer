@@ -47,4 +47,3 @@ HealWoundCommand = {
 }
 
 AddCommand(HealWoundCommand)
-

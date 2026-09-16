@@ -15,8 +15,3 @@ includeFile("custom_content/weapon/serverobjects.lua")
 
 -- Server Objects
 --includeFile("custom_content/new.lua")
-
-
-
-
-

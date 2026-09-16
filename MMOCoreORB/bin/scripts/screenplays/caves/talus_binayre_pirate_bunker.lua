@@ -28,9 +28,9 @@ TalusBinayrePirateBunkerScreenPlay = ScreenPlay:new {
 
 	lootContainerRespawn = 1800
 }
- 
+
 registerScreenPlay("TalusBinayrePirateBunkerScreenPlay", true)
- 
+
 function TalusBinayrePirateBunkerScreenPlay:start()
 	if (isZoneEnabled("talus")) then
                 self:spawnMobiles()
@@ -46,10 +46,10 @@ function TalusBinayrePirateBunkerScreenPlay:spawnMobiles()
 	spawnMobile("talus", "binayre_swindler", 300, 14.1, -13.8, 3.8, -60, 6075879)
 	spawnMobile("talus", "binayre_smuggler", 300, 16.7, -13.8, 7.6, 42, 6075879)
 	spawnMobile("talus", "binayre_pirate", 300, 14.4, -13.8, 14.3, -80, 6075879)
-	spawnMobile("talus", "binayre_ruffian", 300, 8.4, -13.8, 11.8, -44, 6075878)	
-	spawnMobile("talus", "binayre_ruffian", 300, 5.7, -13.8, 12.2, -90, 6075878)	
-	spawnMobile("talus", "binayre_scalawag", 300, -3.3, -13.8, 9.2, 178, 6075878)	
-	spawnMobile("talus", "binayre_ruffian", 300, -4.9, -13.7, 1.6, 165, 6075877)	
+	spawnMobile("talus", "binayre_ruffian", 300, 8.4, -13.8, 11.8, -44, 6075878)
+	spawnMobile("talus", "binayre_ruffian", 300, 5.7, -13.8, 12.2, -90, 6075878)
+	spawnMobile("talus", "binayre_scalawag", 300, -3.3, -13.8, 9.2, 178, 6075878)
+	spawnMobile("talus", "binayre_ruffian", 300, -4.9, -13.7, 1.6, 165, 6075877)
 	spawnMobile("talus", "binayre_pirate", 300, -3.6, -13.7, -1.7, -31, 6075877)
 	spawnMobile("talus", "binayre_ruffian", 300, -2.4, -13.7, -7.9, 143, 6075877)
 	spawnMobile("talus", "binayre_pirate", 300, -1.7, -13.7, -10.6, -7, 6075877)

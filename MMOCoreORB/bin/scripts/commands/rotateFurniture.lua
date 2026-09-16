@@ -46,4 +46,3 @@ RotateFurnitureCommand = {
 }
 
 AddCommand(RotateFurnitureCommand)
-

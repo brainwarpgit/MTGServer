@@ -10,4 +10,3 @@ yavin4_gackle_bat_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("yavin4_gackle_bat_lair_neutral_medium", yavin4_gackle_bat_lair_neutral_medium)
-

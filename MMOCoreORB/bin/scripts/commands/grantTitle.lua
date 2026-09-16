@@ -46,4 +46,3 @@ GrantTitleCommand = {
 }
 
 AddCommand(GrantTitleCommand)
-

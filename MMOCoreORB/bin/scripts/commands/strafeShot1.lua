@@ -65,15 +65,14 @@ StrafeShot1Command = {
 	  )
 	},
 
-	animation = "fire_5_special_single", 
+	animation = "fire_5_special_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "strafeshot",
-	
+
 	weaponType = RIFLEWEAPON,
 
 	range = -1
 }
 
 AddCommand(StrafeShot1Command)
-

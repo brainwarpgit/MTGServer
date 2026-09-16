@@ -139,4 +139,3 @@ object_tangible_wearables_armor_snowtrooper_shared_armor_snowtrooper_leggings = 
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_snowtrooper_shared_armor_snowtrooper_leggings, "object/tangible/wearables/armor/snowtrooper/shared_armor_snowtrooper_leggings.iff")
 
 --****************************************************************************************************************************************************************************
-

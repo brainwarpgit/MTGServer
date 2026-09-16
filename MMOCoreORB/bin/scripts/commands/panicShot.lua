@@ -77,4 +77,3 @@ PanicShotCommand = {
 }
 
 AddCommand(PanicShotCommand)
-

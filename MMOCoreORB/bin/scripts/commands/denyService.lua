@@ -46,4 +46,3 @@ DenyServiceCommand = {
 }
 
 AddCommand(DenyServiceCommand)
-

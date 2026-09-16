@@ -46,4 +46,3 @@ MaskscentCommand = {
 }
 
 AddCommand(MaskscentCommand)
-

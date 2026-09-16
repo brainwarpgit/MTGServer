@@ -36,7 +36,7 @@ thrackan_sal_solo = Creature:new {
 	secondaryWeapon = "none",
 	conversationTemplate = "thrackan_sal_solo_mission_giver_convotemplate",
 	outfit = "thracken_sal_solo_outfit",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = {},

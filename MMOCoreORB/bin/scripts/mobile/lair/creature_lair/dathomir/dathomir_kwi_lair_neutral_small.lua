@@ -10,4 +10,3 @@ dathomir_kwi_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("dathomir_kwi_lair_neutral_small", dathomir_kwi_lair_neutral_small)
-

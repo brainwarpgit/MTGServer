@@ -53,4 +53,3 @@ AimCommand = {
 }
 
 AddCommand(AimCommand)
-

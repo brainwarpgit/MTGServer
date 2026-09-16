@@ -46,4 +46,3 @@ ServerCommand = {
 }
 
 AddCommand(ServerCommand)
-

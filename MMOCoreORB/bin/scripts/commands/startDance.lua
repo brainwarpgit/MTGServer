@@ -47,4 +47,3 @@ StartDanceCommand = {
 }
 
 AddCommand(StartDanceCommand)
-

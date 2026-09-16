@@ -20,5 +20,3 @@ object_tangible_item_market_shared_yoda_bobble_head = SharedTangibleObjectTempla
 
 ObjectTemplates:addClientTemplate(object_tangible_item_market_shared_yoda_bobble_head, "object/tangible/item/market/shared_yoda_bobble_head.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

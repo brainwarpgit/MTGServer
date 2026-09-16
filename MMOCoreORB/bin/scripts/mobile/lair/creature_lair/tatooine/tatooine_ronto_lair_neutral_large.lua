@@ -10,4 +10,3 @@ tatooine_ronto_lair_neutral_large = Lair:new {
 }
 
 addLairTemplate("tatooine_ronto_lair_neutral_large", tatooine_ronto_lair_neutral_large)
-

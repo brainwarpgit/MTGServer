@@ -46,4 +46,3 @@ RequestDraftSlotsCommand = {
 }
 
 AddCommand(RequestDraftSlotsCommand)
-

@@ -3,11 +3,11 @@ TuskenBunkerScreenPlay = ScreenPlay:new {
 
 	screenplayName = "TuskenBunkerScreenPlay",
 
- 	lootContainers = {
-			5995601,
-        	5995605,
-        	5995608,
-			5995609
+	lootContainers = {
+		5995601,
+		5995605,
+		5995608,
+		5995609
 	},
 
 	lootLevel = 26,

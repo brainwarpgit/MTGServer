@@ -46,4 +46,3 @@ ServerDestroyObjectCommand = {
 }
 
 AddCommand(ServerDestroyObjectCommand)
-

@@ -10,4 +10,3 @@ yavin4_crystal_snake_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("yavin4_crystal_snake_lair_neutral_medium", yavin4_crystal_snake_lair_neutral_medium)
-

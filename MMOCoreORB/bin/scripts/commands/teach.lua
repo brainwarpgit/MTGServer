@@ -46,4 +46,3 @@ TeachCommand = {
 }
 
 AddCommand(TeachCommand)
-

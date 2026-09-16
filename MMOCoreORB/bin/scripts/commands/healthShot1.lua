@@ -53,28 +53,27 @@ HealthShot1Command = {
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
-	animation = "fire_1_special_single", 
+	animation = "fire_1_special_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "sapshot",
-	
+
 	dotEffects = {
-	  DotEffect( 
-		BLEEDING, 
+	  DotEffect(
+		BLEEDING,
 		{ "resistance_bleeding", "bleed_resist" },
 		HEALTH,
 		true,
 		0,
 		100,
-		60, 
+		60,
 		60
 	  )
-	},	
-	
+	},
+
 	weaponType = PISTOLWEAPON,
 
 	range = -1
 }
 
 AddCommand(HealthShot1Command)
-

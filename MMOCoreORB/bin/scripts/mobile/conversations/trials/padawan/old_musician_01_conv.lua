@@ -69,7 +69,7 @@ padawan_old_musician_01_convo_template:addScreen(booking_agent);
 
 lady_luck_left_me = ConvoScreen:new {
 	id = "lady_luck_left_me",
-	leftDialog = "@conversation/padawan_old_musician_01:s_246ed1c7", -- Don't much have to tell me that.  Lady luck left me many years ago.  
+	leftDialog = "@conversation/padawan_old_musician_01:s_246ed1c7", -- Don't much have to tell me that.  Lady luck left me many years ago.
 	stopConversation = "true",
 	options = {}
 }

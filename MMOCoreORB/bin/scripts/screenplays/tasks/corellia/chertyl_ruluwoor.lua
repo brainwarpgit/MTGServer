@@ -28,7 +28,7 @@ chertyl_ruluwoor_missions =
 				{ npcTemplate = "thug", npcName = "a thug" }
 			},
 			itemSpawns = {},
-			rewards = 
+			rewards =
 			{
 				{ rewardType = "credits", amount = 500 }
 			}

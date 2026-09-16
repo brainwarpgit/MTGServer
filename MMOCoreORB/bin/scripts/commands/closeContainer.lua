@@ -46,4 +46,3 @@ CloseContainerCommand = {
 }
 
 AddCommand(CloseContainerCommand)
-

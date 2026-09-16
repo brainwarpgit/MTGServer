@@ -46,4 +46,3 @@ UnCityBanCommand = {
 }
 
 AddCommand(UnCityBanCommand)
-

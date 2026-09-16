@@ -10,4 +10,3 @@ tatooine_desert_squill_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("tatooine_desert_squill_lair_neutral_small", tatooine_desert_squill_lair_neutral_small)
-

@@ -46,4 +46,3 @@ ClaimVeteranRewardCommand = {
 }
 
 AddCommand(ClaimVeteranRewardCommand)
-

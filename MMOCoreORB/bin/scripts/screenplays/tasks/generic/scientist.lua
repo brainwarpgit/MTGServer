@@ -6,7 +6,7 @@ generic_scientist_missions =
 			{
 				{ npcTemplate = "scientist_target_robber", npcName = "random" }
 			},
-			secondarySpawns = 
+			secondarySpawns =
 			{
 				{ npcTemplate = "thug", npcName = "a Thug" }
 			},

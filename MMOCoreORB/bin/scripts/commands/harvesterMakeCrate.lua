@@ -46,4 +46,3 @@ HarvesterMakeCrateCommand = {
 }
 
 AddCommand(HarvesterMakeCrateCommand)
-

@@ -46,4 +46,3 @@ DeployTrapCommand = {
 }
 
 AddCommand(DeployTrapCommand)
-

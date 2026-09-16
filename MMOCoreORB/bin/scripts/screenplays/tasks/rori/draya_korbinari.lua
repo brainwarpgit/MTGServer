@@ -3,7 +3,7 @@ draya_korbinari_missions =
 	{
 		missionType = "assassinate",
 		primarySpawns =
-		{ 
+		{
 			{ npcTemplate = "tusk_cat", npcName = "a Tusk Cat" }
 		},
 		secondarySpawns =
@@ -13,9 +13,9 @@ draya_korbinari_missions =
 		itemSpawns =
 		{
 
-		}, 
+		},
 		rewards =
-		{ 
+		{
 			{ rewardType = "credits", amount = 50 },
 			{ rewardType = "faction", faction = "naboo", amount = 5 }
 		}
@@ -29,52 +29,52 @@ draya_korbinari_missions =
 		secondarySpawns =
 		{
 
-		}, 
-		itemSpawns = 
+		},
+		itemSpawns =
 		{
 
-		}, 
-		rewards = 
+		},
+		rewards =
 		{
 			{ rewardType = "credits", amount = 30 },
 			{ rewardType = "faction", faction = "naboo", amount = 5 }
 		}
 	},
 	{
-		missionType = "confiscate", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "draya_korbinari_smuggler", npcName = "a Smuggler" }	
+		missionType = "confiscate",
+		primarySpawns =
+		{
+			{ npcTemplate = "draya_korbinari_smuggler", npcName = "a Smuggler" }
 		},
 		secondarySpawns =
 		{
 
-		}, 
-		itemSpawns = 
+		},
+		itemSpawns =
 		{
 			{ itemTemplate = "object/tangible/mission/quest_item/draya_korbinari_q3_needed.iff", itemName = "" }
 		},
-		rewards = 
+		rewards =
 		{
 			{ rewardType = "credits", amount = 30 },
 			{ rewardType = "faction", faction = "naboo", amount = 5 }
 		}
 	},
 	{
-		missionType = "assassinate", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "draya_korbinari_bounty_hunter", npcName = "a Bounty Hunter" }	
-		}, 
+		missionType = "assassinate",
+		primarySpawns =
+		{
+			{ npcTemplate = "draya_korbinari_bounty_hunter", npcName = "a Bounty Hunter" }
+		},
 		secondarySpawns =
 		{
 
-		}, 
-		itemSpawns = 
+		},
+		itemSpawns =
 		{
 
-		}, 
-		rewards = 
+		},
+		rewards =
 		{
 			{ rewardType = "credits", amount = 40 },
 			{ rewardType = "faction", faction = "naboo", amount = 5 }
@@ -82,11 +82,11 @@ draya_korbinari_missions =
 	}
 }
 
-npcMapDrayaKorbinari = 
-{ 
-	{ 
+npcMapDrayaKorbinari =
+{
+	{
 		spawnData = { npcTemplate = "draya_korbinari", x = -18, z = 0, y = 18, direction = 120, cellID = 4635705, position = STAND },
-		worldPosition = { x = 5305, y = 5859 }, 
+		worldPosition = { x = 5305, y = 5859 },
 		npcNumber = 1,
 		stfFile = "@static_npc/rori/rori_restuss_draya_korbinari",
 		missions = draya_korbinari_missions

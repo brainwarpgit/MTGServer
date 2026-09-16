@@ -20,5 +20,3 @@ object_draft_schematic_space_shields_shared_shield_high_capacity_projector_mk5 =
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_space_shields_shared_shield_high_capacity_projector_mk5, "object/draft_schematic/space/shields/shared_shield_high_capacity_projector_mk5.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

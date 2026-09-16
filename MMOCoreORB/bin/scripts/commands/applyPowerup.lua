@@ -46,4 +46,3 @@ ApplyPowerupCommand = {
 }
 
 AddCommand(ApplyPowerupCommand)
-

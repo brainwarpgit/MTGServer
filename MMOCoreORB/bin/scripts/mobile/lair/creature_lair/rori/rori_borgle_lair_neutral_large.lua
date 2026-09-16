@@ -10,4 +10,3 @@ rori_borgle_lair_neutral_large = Lair:new {
 }
 
 addLairTemplate("rori_borgle_lair_neutral_large", rori_borgle_lair_neutral_large)
-

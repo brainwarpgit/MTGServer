@@ -46,4 +46,3 @@ HarvesterSelectResourceCommand = {
 }
 
 AddCommand(HarvesterSelectResourceCommand)
-

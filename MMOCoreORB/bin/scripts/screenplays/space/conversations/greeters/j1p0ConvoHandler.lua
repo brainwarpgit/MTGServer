@@ -17,4 +17,3 @@ function j1p0ConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, select
 
 	return pConvScreen
 end
-

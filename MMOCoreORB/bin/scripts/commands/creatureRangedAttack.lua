@@ -1,6 +1,6 @@
 CreatureRangedAttackCommand = {
 	name = "creaturerangedattack",
-	animation = "creature_attack_ranged", 
+	animation = "creature_attack_ranged",
 	animType = GENERATE_INTENSITY,
 	damageMultiplier = 1,
 	speedMultiplier = 1,

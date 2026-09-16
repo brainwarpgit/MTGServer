@@ -70,7 +70,7 @@ object_tangible_wearables_armor_mandalorian_imperial_armor_mandalorian_imperial_
 				"object/mobile/vendor/weequay_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
 				"object/mobile/vendor/zabrak_male.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 
@@ -78,7 +78,7 @@ object_tangible_wearables_armor_mandalorian_imperial_armor_mandalorian_imperial_
 	healthEncumbrance = 15,
 	actionEncumbrance = 15,
 	mindEncumbrance = 15,
-	
+
 	maxCondition = 30000,
 
 	-- LIGHT, MEDIUM, HEAVY
@@ -93,7 +93,7 @@ object_tangible_wearables_armor_mandalorian_imperial_armor_mandalorian_imperial_
 	cold = 62,
 	acid = 62,
 	lightSaber = 0,
-	
+
 	skillMods = {
         {"slope_move", 2},
         {"dizzy_defense", 2},

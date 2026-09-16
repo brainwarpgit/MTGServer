@@ -18508,5 +18508,3 @@ addOutfit(
 	"object/tangible/wearables/pants/pants_s33.iff",	-- Pants
 	"object/tangible/wearables/shoes/shoes_s07.iff"	-- Shoes
 }))
-
-

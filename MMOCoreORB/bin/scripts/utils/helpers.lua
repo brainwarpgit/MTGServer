@@ -47,4 +47,3 @@ end
 function first(theTable, theMatchFunction)
 	return filter(theTable, theMatchFunction)[1]
 end
-

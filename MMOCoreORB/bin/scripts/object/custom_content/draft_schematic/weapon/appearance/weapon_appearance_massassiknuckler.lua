@@ -5,15 +5,15 @@ object_draft_schematic_weapon_appearance_weapon_appearance_massassiknuckler = ob
    customObjectName = "Massassi Knuckler",
 
    craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 25, 
-   size = 2, 
+   complexity = 25,
+   size = 2,
 
-   xpType = "crafting_weapons_general", 
-   xp = 65, 
+   xpType = "crafting_weapons_general",
+   xp = 65,
 
-   assemblySkill = "weapon_assembly", 
-   experimentingSkill = "weapon_experimentation", 
-   customizationSkill = "weapon_customization", 
+   assemblySkill = "weapon_assembly",
+   experimentingSkill = "weapon_experimentation",
+   customizationSkill = "weapon_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

@@ -46,4 +46,3 @@ SetMatchMakingCharacterIdCommand = {
 }
 
 AddCommand(SetMatchMakingCharacterIdCommand)
-

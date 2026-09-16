@@ -10,7 +10,7 @@ MinefieldAttackCommand = {
 	range = -1,
 	coneAction = false,
 	areaRange = -1, -- default to the weapon range
-	
+
 }
 
 AddCommand(MinefieldAttackCommand)

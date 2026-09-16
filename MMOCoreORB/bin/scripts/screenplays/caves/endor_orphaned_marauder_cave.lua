@@ -27,9 +27,9 @@ EndorOrphanedMarauderCaveScreenPlay = ScreenPlay:new {
 
 	lootContainerRespawn = 1800
 }
- 
+
 registerScreenPlay("EndorOrphanedMarauderCaveScreenPlay", true)
- 
+
 function EndorOrphanedMarauderCaveScreenPlay:start()
 	if (isZoneEnabled("endor")) then
                 self:spawnMobiles()

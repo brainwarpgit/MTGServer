@@ -1,5 +1,5 @@
 band_fizz_outfit = {
-	{ 
+	{
 		{objectTemplate = "object/tangible/wearables/shirt/shirt_s03.iff", customizationVariables = {{"/private/index_color_1", 90}} },
 		{objectTemplate = "object/tangible/wearables/pants/pants_s12.iff", customizationVariables = {} },
 		{objectTemplate = "object/tangible/wearables/shoes/shoes_s01.iff", customizationVariables = {} },

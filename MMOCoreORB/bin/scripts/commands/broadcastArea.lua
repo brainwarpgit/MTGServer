@@ -46,4 +46,3 @@ BroadcastAreaCommand = {
 }
 
 AddCommand(BroadcastAreaCommand)
-

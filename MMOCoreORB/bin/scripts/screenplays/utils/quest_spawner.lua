@@ -14,7 +14,7 @@ spawnList = {
 	-- { "template", minToSpawn, maxSpawn, weight }
 	-- Number to spawn per pulse will be random between minToSpawn and maxSpawn, unless the number would exceed maxPopulation or maxSpawn in the dataTable
 	{ "mobile1", 1, 2, 1 },
-	{ "mobile2", 2, 3, 2 } 
+	{ "mobile2", 2, 3, 2 }
 }
 ]]
 

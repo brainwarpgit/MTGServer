@@ -20,5 +20,3 @@ object_tangible_quest_nova_orion_shared_nova_orion_katiara_grave_node = SharedTa
 
 ObjectTemplates:addClientTemplate(object_tangible_quest_nova_orion_shared_nova_orion_katiara_grave_node, "object/tangible/quest/nova_orion/shared_nova_orion_katiara_grave_node.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

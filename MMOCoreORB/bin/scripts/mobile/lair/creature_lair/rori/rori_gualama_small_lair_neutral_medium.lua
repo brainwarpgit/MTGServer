@@ -10,4 +10,3 @@ rori_gualama_small_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("rori_gualama_small_lair_neutral_medium", rori_gualama_small_lair_neutral_medium)
-

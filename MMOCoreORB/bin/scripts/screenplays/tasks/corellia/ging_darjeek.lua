@@ -22,7 +22,7 @@ ging_darjeek_missions =
 			{
 				{ npcTemplate = "sivrool_linnaie", npcName = "Siv'rool Linnaie" }
 			},
-			secondarySpawns =	
+			secondarySpawns =
 			{
 				{ npcTemplate = "thug", npcName = "a thug" },
 				{ npcTemplate = "thug", npcName = "a thug" }
@@ -39,7 +39,7 @@ ging_darjeek_missions =
 			{
 				{ npcTemplate = "thug", npcName = "Listening Post Guy" }
 			},
-			secondarySpawns =	
+			secondarySpawns =
 			{
 				{ npcTemplate = "smuggler", npcName = "a smuggler" },
 				{ npcTemplate = "smuggler", npcName = "a smuggler" },

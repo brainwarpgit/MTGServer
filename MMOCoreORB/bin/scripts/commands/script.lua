@@ -46,4 +46,3 @@ ScriptCommand = {
 }
 
 AddCommand(ScriptCommand)
-

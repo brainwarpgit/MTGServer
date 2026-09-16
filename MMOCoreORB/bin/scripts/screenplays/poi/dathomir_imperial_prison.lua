@@ -9,7 +9,7 @@ ImperialPrisonScreenPlay = ScreenPlay:new {
 		3295524,
 		3295525
         },
-        
+
         lootLevel = 43,
 
         lootGroups = {

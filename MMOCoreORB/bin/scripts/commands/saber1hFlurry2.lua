@@ -98,4 +98,3 @@ Saber1hFlurry2Command = {
 }
 
 AddCommand(Saber1hFlurry2Command)
-

@@ -48,7 +48,7 @@ object_mobile_vendor_ithorian_female = object_mobile_vendor_shared_ithorian_fema
 	pvpStatusBitmask = 0,
 
 	objectMenuComponent = "VendorMenuComponent",
-	dataObjectComponent = "VendorDataComponent",	
+	dataObjectComponent = "VendorDataComponent",
 	containerComponent = "VendorContainerComponent",
 	groundZoneComponent = "VendorZoneComponent",
 
@@ -85,7 +85,7 @@ object_mobile_vendor_ithorian_female = object_mobile_vendor_shared_ithorian_fema
 			"Ithorian271","Ithorian272","Ithorian273","Ithorian274","Ithorian275","Ithorian276","Ithorian277","Ithorian278","Ithorian279","Ithorian280",
 			"Ithorian281","Ithorian282","Ithorian283","Ithorian284","Ithorian285","Ithorian286","Ithorian287","Ithorian288","Ithorian289","Ithorian290",
 			"Ithorian291","Ithorian292","Ithorian293","Ithorian294"},
-			
+
 	customizationStringNames = {
 		-- Strings containing comma-separated names are mutually exclusive names:  Only one will be set to a non-zero value
 		"/private/index_color_3",
@@ -110,10 +110,10 @@ object_mobile_vendor_ithorian_female = object_mobile_vendor_shared_ithorian_fema
 		"/shared_owner/index_style_hair",
 		"/shared_owner/index_texture"
 	},
-	
+
 	customizationValues = {
 		--/private/index_color_3,36,
-		{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35},		
+		{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35},
 		--/private/index_color_hair,36,
 		{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35},
 		--/shared_owner/blend_cheeks_0,256,/shared_owner/blend_cheeks_1,256,
@@ -151,10 +151,10 @@ object_mobile_vendor_ithorian_female = object_mobile_vendor_shared_ithorian_fema
 		--/shared_owner/index_style_eyebrow,12,
 		{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11},
 		--/shared_owner/index_style_hair,12,
-		{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11},		
+		{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11},
 		--/shared_owner/index_texture,12,
-		{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11},		
-	}			
+		{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11},
+	}
 
 }
 

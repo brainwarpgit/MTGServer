@@ -10,4 +10,3 @@ corellia_slice_hound_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("corellia_slice_hound_lair_neutral_medium", corellia_slice_hound_lair_neutral_medium)
-

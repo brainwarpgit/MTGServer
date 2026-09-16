@@ -46,4 +46,3 @@ ForceOfWillCommand = {
 }
 
 AddCommand(ForceOfWillCommand)
-

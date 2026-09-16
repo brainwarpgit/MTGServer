@@ -252,5 +252,3 @@ object_tangible_holiday_empire_day_shared_wedge_antilles_poster = SharedTangible
 
 ObjectTemplates:addClientTemplate(object_tangible_holiday_empire_day_shared_wedge_antilles_poster, "object/tangible/holiday/empire_day/shared_wedge_antilles_poster.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

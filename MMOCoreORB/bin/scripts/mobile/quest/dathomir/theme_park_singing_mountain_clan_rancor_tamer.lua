@@ -33,7 +33,7 @@ theme_park_singing_mountain_clan_rancor_tamer = Creature:new {
   primaryWeapon = "mixed_force_weapons",
 	secondaryWeapon = "unarmed",
   conversationTemplate = "theme_park_smc_vhaunda_izaryx_mission_target_convotemplate",
-  
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(brawlermaster,pikemanmaster),

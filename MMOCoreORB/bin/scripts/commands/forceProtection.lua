@@ -46,4 +46,3 @@ ForceProtectionCommand = {
 }
 
 AddCommand(ForceProtectionCommand)
-

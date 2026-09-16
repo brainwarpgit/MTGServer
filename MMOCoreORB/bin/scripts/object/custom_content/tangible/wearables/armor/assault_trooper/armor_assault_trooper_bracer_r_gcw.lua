@@ -68,7 +68,7 @@ object_tangible_wearables_armor_assault_trooper_armor_assault_trooper_bracer_r_g
 				"object/mobile/vendor/weequay_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
 				"object/mobile/vendor/zabrak_male.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 

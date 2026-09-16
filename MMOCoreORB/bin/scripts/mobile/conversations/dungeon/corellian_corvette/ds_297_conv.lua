@@ -52,7 +52,7 @@ corvetteDS297ConvoTemplate:addScreen(wrong_faction_too_many);
 
 continue = ConvoScreen:new {
 	id = "continue",
-	leftDialog = "@conversation/corvette_imperial_pilot:s_6cca850b", -- Really. Where would you hear that, I wonder. Just out of curiosity, any particular blockade runner? 
+	leftDialog = "@conversation/corvette_imperial_pilot:s_6cca850b", -- Really. Where would you hear that, I wonder. Just out of curiosity, any particular blockade runner?
 	stopConversation = "false",
 	options = {}
 }

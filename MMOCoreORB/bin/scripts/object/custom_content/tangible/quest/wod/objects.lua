@@ -12,5 +12,3 @@ object_tangible_quest_wod_shared_wod_spider_eggs = SharedTangibleObjectTemplate:
 
 ObjectTemplates:addClientTemplate(object_tangible_quest_wod_shared_wod_spider_eggs, "object/tangible/quest/wod/shared_wod_spider_eggs.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

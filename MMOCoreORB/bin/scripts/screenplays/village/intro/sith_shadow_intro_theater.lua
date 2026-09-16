@@ -131,7 +131,7 @@ function SithShadowIntroTheater:onTheaterCreated(pPlayer)
 	if (pPlayer == nil) then
 		return
 	end
-	
+
 	QuestManager.activateQuest(pPlayer, QuestManager.quests.FS_THEATER_CAMP)
 end
 

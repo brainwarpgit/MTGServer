@@ -59,4 +59,3 @@ DefaultAttackCommand = {
 }
 
 AddCommand(DefaultAttackCommand)
-

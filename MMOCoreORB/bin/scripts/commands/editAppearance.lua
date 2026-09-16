@@ -46,4 +46,3 @@ EditAppearanceCommand = {
 }
 
 AddCommand(EditAppearanceCommand)
-

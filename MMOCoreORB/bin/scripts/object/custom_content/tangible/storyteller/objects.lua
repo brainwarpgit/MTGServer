@@ -76,5 +76,3 @@ object_tangible_storyteller_shared_story_token_vet_reward = SharedTangibleObject
 
 ObjectTemplates:addClientTemplate(object_tangible_storyteller_shared_story_token_vet_reward, "object/tangible/storyteller/shared_story_token_vet_reward.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

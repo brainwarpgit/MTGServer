@@ -1,7 +1,7 @@
 dathomir_nightsister_spell_weaver_camp_neutral_large_theater = Lair:new {
 	mobiles = {
-		{"nightsister_spell_weaver",1},	
-		{"nightsister_sentinel",3},	
+		{"nightsister_spell_weaver",1},
+		{"nightsister_sentinel",3},
 		{"nightsister_initiate",3}
 	},
 	spawnLimit = 15,

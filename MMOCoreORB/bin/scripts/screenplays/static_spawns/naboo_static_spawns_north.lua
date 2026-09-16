@@ -5,7 +5,7 @@ NabooStaticSpawnsNorthScreenPlay = ScreenPlay:new {
 	screenplayName = "NabooStaticSpawnsNorthScreenPlay",
 
 	lootContainers = {
-		
+
 	},
 
 	lootLevel = 19,

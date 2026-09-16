@@ -4,7 +4,7 @@ endor_korga_battlelord_neutral_none = Lair:new {
 		{"korga_battlelord",1},
 		{"enraged_korga",1},
 		{"frenzied_korga",1},
-		{"vile_korga_battlelord",1}	
+		{"vile_korga_battlelord",1}
 	},
 	spawnLimit = 9,
 	buildingsVeryEasy = {},

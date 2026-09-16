@@ -46,4 +46,3 @@ SetHueCommand = {
 }
 
 AddCommand(SetHueCommand)
-

@@ -46,4 +46,3 @@ PermissionListModifyCommand = {
 }
 
 AddCommand(PermissionListModifyCommand)
-

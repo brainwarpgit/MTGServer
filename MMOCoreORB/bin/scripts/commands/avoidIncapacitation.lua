@@ -50,4 +50,3 @@ AvoidIncapacitationCommand = {
 }
 
 AddCommand(AvoidIncapacitationCommand)
-

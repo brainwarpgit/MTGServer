@@ -23,4 +23,3 @@ function ioTsomcrenConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, 
 
 	return pConvScreen
 end
-

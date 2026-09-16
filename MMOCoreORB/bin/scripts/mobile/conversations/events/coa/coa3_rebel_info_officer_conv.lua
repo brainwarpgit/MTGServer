@@ -88,7 +88,7 @@ coa3RebelInfoOfficerConvoTemplate:addScreen(sent_briefings);
 
 didnt_mean_to_bore = ConvoScreen:new {
 	id = "didnt_mean_to_bore",
-	leftDialog = "@conversation/coa3winfoofficer:s_36b24b81", -- Oh, well I didn't mean to bore you. If you ever want a recap of what is going on, just let me know. You may want to go and see if the coordinator is ready for you. 
+	leftDialog = "@conversation/coa3winfoofficer:s_36b24b81", -- Oh, well I didn't mean to bore you. If you ever want a recap of what is going on, just let me know. You may want to go and see if the coordinator is ready for you.
 	stopConversation = "true",
 	options = {}
 }

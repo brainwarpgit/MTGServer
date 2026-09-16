@@ -13,4 +13,3 @@ dantooine_janta_shaman_camp_neutral_medium_theater = Lair:new {
 }
 
 addLairTemplate("dantooine_janta_shaman_camp_neutral_medium_theater", dantooine_janta_shaman_camp_neutral_medium_theater)
-

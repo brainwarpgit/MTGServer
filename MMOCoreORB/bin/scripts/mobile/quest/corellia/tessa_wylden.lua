@@ -43,7 +43,7 @@ tessa_wylden = Creature:new {
 					"object/mobile/dressed_commoner_naboo_zabrak_female_01.iff",
 					"object/mobile/dressed_commoner_naboo_zabrak_female_02.iff",
 					},
-				
+
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)

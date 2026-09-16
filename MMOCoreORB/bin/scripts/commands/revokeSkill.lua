@@ -46,4 +46,3 @@ RevokeSkillCommand = {
 }
 
 AddCommand(RevokeSkillCommand)
-

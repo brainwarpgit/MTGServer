@@ -1,15 +1,15 @@
 NightSisterLaborCampScreenPlay = ScreenPlay:new {
 	numberOfActs = 1,
-	
+
 	screenplayName = "NightSisterLaborCampScreenPlay",
-	
+
 	lootContainers = {
 		8715535,
-		8715534,		
+		8715534,
 		164440
 	},
-	
-	lootLevel = 38,	
+
+	lootLevel = 38,
 
 	lootGroups = {
 		{
@@ -22,9 +22,9 @@ NightSisterLaborCampScreenPlay = ScreenPlay:new {
 				{group = "armor_attachments", chance = 500000}
 			},
 			lootChance = 8000000
-		}					
+		}
 	},
-	
+
 	lootContainerRespawn = 1800 -- 30 minutes
 }
 
@@ -46,17 +46,17 @@ function NightSisterLaborCampScreenPlay:spawnMobiles()
 	spawnMobile("dathomir", "nightsister_sentry",900,2469,126.7,-1670,-110,0)
 	spawnMobile("dathomir", "nightsister_sentry",900,2500,117.7,-1745,6,0)
 	spawnMobile("dathomir", "nightsister_sentry",900,2619,130.4,-1614,-100,0)
-	spawnMobile("dathomir", "escaped_nightsister_slave",900,2450,110.0,-1600,80,0)		
-	
+	spawnMobile("dathomir", "escaped_nightsister_slave",900,2450,110.0,-1600,80,0)
 
-	spawnMobile("dathomir", "nightsister_sentry",900,26.2,-39.1,-39.0,5,8575576)	
+
+	spawnMobile("dathomir", "nightsister_sentry",900,26.2,-39.1,-39.0,5,8575576)
 	spawnMobile("dathomir", "nightsister_sentry",900,22.2,-39.3,-40.3,7,8575576)
-	spawnMobile("dathomir", "nightsister_sentry",900,21.1,-41.4,-70.1,2,8575576)	
+	spawnMobile("dathomir", "nightsister_sentry",900,21.1,-41.4,-70.1,2,8575576)
 	spawnMobile("dathomir", "nightsister_sentry",900,23.3,-41.9,-70.4,7,8575576)
 	spawnMobile("dathomir", "nightsister_sentry",900,40.9,-47.2,-36.9,177,8575576)
 	spawnMobile("dathomir", "nightsister_sentry",900,45.6,-47.7,-37.0,176,8575576)
 	spawnMobile("dathomir", "nightsister_sentry",900,48.4,-47.6,-70.9,-118,8575576)
-	spawnMobile("dathomir", "nightsister_sentry",900,53.5,-47.5,-69.8,-32,8575576)	
+	spawnMobile("dathomir", "nightsister_sentry",900,53.5,-47.5,-69.8,-32,8575576)
 	spawnMobile("dathomir", "nightsister_ranger",900,48.0,-47.3,-11.4,133,8575576)
 	spawnMobile("dathomir", "nightsister_ranger",900,82.6,-46.2,-118.0,20,8575579)
 	spawnMobile("dathomir", "nightsister_ranger",900,96.4,-46.7,-114.9,-68,8575579)
@@ -66,13 +66,13 @@ function NightSisterLaborCampScreenPlay:spawnMobiles()
 	spawnMobile("dathomir", "nightsister_elder",3600,72.1,-45.7,-142.8,86,8575585)
 	spawnMobile("dathomir", "nightsister_initiate",900,90.2,-61.2,-7.9,-153,8575577)
 	spawnMobile("dathomir", "nightsister_slave",900,83.6,-65.3,-28.6,7,8575577)
-	spawnMobile("dathomir", "nightsister_slave",900,84.9,-64.0,-24.5,2,8575577)	
+	spawnMobile("dathomir", "nightsister_slave",900,84.9,-64.0,-24.5,2,8575577)
 	spawnMobile("dathomir", "nightsister_slave",900,86.2,-65.0,-28.9,2,8575577)
 	spawnMobile("dathomir", "nightsister_sentry",900,94.6,-67.7,-38.1,7,8575577)
 	spawnMobile("dathomir", "nightsister_sentry",900,95.0,-66.3,-34.5,2,8575577)
 	spawnMobile("dathomir", "nightsister_initiate",900,71.8,-68.0,-36.0,2,8575577)
 	spawnMobile("dathomir", "nightsister_initiate",900,70.5,-69.3,-39.4,2,8575577)
-	spawnMobile("dathomir", "nightsister_initiate",900,85.1,-76.2,-59.7,0,8575578)	
+	spawnMobile("dathomir", "nightsister_initiate",900,85.1,-76.2,-59.7,0,8575578)
 	spawnMobile("dathomir", "nightsister_initiate",900,68.6,-76.7,-69.1,2,8575578)
 	spawnMobile("dathomir", "nightsister_initiate",900,63.8,-75.7,-69.0,2,8575578)
 	spawnMobile("dathomir", "nightsister_rancor_tamer",900,91.0,-76.4,-86.9,2,8575578)
@@ -101,7 +101,7 @@ function NightSisterLaborCampScreenPlay:spawnMobiles()
 	spawnMobile("dathomir", "nightsister_stalker",900,137.4,-67.2,-95.3,112,8575582)
 	spawnMobile("dathomir", "nightsister_spell_weaver",900,183.3,-66.0,-95.5,-103,8575583)
 	spawnMobile("dathomir", "nightsister_spell_weaver",900,183.9,-65.7,-105.8,2,8575583)
-	spawnMobile("dathomir", "nightsister_protector",900,192.5,-66.7,-99.4,-90,8575583)	
+	spawnMobile("dathomir", "nightsister_protector",900,192.5,-66.7,-99.4,-90,8575583)
 	spawnMobile("dathomir", "nightsister_protector",900,52.2,-67.9,-41.0,77,8575576)
-	spawnMobile("dathomir", "nightsister_stalker",900,129.5,-66.3,-114.0,55,8575582)	
+	spawnMobile("dathomir", "nightsister_stalker",900,129.5,-66.3,-114.0,55,8575582)
 end

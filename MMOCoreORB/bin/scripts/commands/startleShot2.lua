@@ -78,4 +78,3 @@ StartleShot2Command = {
 }
 
 AddCommand(StartleShot2Command)
-

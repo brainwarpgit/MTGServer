@@ -1180,5 +1180,3 @@ object_draft_schematic_weapon_shared_victor_baton_gaderiffi = SharedDraftSchemat
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_victor_baton_gaderiffi, "object/draft_schematic/weapon/shared_victor_baton_gaderiffi.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -6,5 +6,3 @@ includeFile("custom_content/building/tatooine/junkshop_watto.lua")
 includeFile("custom_content/building/tatooine/lucky_despot.lua")
 includeFile("custom_content/building/tatooine/poi_darklighter_estate.lua")
 includeFile("custom_content/building/tatooine/poi_tosche_station.lua")
-
-

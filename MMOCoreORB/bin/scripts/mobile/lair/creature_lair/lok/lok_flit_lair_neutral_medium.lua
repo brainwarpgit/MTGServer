@@ -10,4 +10,3 @@ lok_flit_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("lok_flit_lair_neutral_medium", lok_flit_lair_neutral_medium)
-

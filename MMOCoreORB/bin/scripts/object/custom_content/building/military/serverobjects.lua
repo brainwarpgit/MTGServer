@@ -9,4 +9,3 @@ includeFile("custom_content/building/military/military_rebel_clone_tent_small.lu
 includeFile("custom_content/building/military/outpost_starport_nonworking.lua")
 includeFile("custom_content/building/military/prolog_content_impl_bunker_recon_outpost.lua")
 includeFile("custom_content/building/military/talus_coa_aclo_office.lua")
-

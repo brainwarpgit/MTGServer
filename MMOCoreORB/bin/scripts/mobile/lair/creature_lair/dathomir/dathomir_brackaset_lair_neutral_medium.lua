@@ -10,4 +10,3 @@ dathomir_brackaset_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("dathomir_brackaset_lair_neutral_medium", dathomir_brackaset_lair_neutral_medium)
-

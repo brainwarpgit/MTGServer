@@ -46,4 +46,3 @@ RequestResourceWeightsBatchCommand = {
 }
 
 AddCommand(RequestResourceWeightsBatchCommand)
-

@@ -10,4 +10,3 @@ endor_lantern_bird_neutral_small = Lair:new {
 }
 
 addLairTemplate("endor_lantern_bird_neutral_small", endor_lantern_bird_neutral_small)
-

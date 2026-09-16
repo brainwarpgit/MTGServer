@@ -46,4 +46,3 @@ SetSpokenLanguageCommand = {
 }
 
 AddCommand(SetSpokenLanguageCommand)
-

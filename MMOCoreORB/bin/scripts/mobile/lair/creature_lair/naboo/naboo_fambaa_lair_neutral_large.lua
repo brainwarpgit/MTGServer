@@ -10,4 +10,3 @@ naboo_fambaa_lair_neutral_large = Lair:new {
 }
 
 addLairTemplate("naboo_fambaa_lair_neutral_large", naboo_fambaa_lair_neutral_large)
-

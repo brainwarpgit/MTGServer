@@ -75,4 +75,3 @@ SuppressionFire2Command = {
 }
 
 AddCommand(SuppressionFire2Command)
-

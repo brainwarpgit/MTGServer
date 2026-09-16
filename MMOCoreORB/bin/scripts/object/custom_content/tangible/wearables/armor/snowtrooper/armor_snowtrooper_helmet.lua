@@ -32,7 +32,7 @@ object_tangible_wearables_armor_snowtrooper_armor_snowtrooper_helmet = object_ta
 				"object/creature/player/twilek_female.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 

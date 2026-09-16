@@ -10,4 +10,3 @@ dantooine_graul_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("dantooine_graul_lair_neutral_medium", dantooine_graul_lair_neutral_medium)
-

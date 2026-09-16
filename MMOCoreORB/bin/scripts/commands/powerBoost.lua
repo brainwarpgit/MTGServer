@@ -46,4 +46,3 @@ PowerBoostCommand = {
 }
 
 AddCommand(PowerBoostCommand)
-

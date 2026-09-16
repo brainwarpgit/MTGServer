@@ -10,4 +10,3 @@ rori_deranged_squall_warren_neutral_medium = Lair:new {
 }
 
 addLairTemplate("rori_deranged_squall_warren_neutral_medium", rori_deranged_squall_warren_neutral_medium)
-

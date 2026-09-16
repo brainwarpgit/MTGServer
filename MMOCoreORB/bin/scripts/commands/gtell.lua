@@ -46,4 +46,3 @@ GtellCommand = {
 }
 
 AddCommand(GtellCommand)
-

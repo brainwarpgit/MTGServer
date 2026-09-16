@@ -46,4 +46,3 @@ PlaceBattlefieldStructureCommand = {
 }
 
 AddCommand(PlaceBattlefieldStructureCommand)
-

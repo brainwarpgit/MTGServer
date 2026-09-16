@@ -1,7 +1,7 @@
 global_imperial_probot_handler_drone_camp_imperial_small_theater = Lair:new {
 	mobiles = {
 		{"droid_corps_junior_technician",1},
-		{"imperial_probe_drone",3},	
+		{"imperial_probe_drone",3},
 	},
 	spawnLimit = 9,
 	buildingsVeryEasy = {"object/building/poi/anywhere_imperial_base_small_1.iff","object/building/poi/lok_imperial_small1.iff","object/building/poi/lok_imperial_small2.iff"},

@@ -46,4 +46,3 @@ CoupDeGraceCommand = {
 }
 
 AddCommand(CoupDeGraceCommand)
-

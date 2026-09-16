@@ -46,4 +46,3 @@ AddFriendCommand = {
 }
 
 AddCommand(AddFriendCommand)
-

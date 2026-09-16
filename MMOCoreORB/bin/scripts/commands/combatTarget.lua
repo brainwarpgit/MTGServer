@@ -46,4 +46,3 @@ CombatTargetCommand = {
 }
 
 AddCommand(CombatTargetCommand)
-

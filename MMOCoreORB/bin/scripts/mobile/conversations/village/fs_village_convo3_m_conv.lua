@@ -30,7 +30,7 @@ fsVillageConvo3MaleTemplate:addScreen(work_the_land);
 
 blew_up_a_planet = ConvoScreen:new {
 	id = "blew_up_a_planet",
-	leftDialog = "@conversation/fs_village_convo3_m:s_4ac0f748", -- Would we need a reason other than the war? I mean they blew up a planet! 
+	leftDialog = "@conversation/fs_village_convo3_m:s_4ac0f748", -- Would we need a reason other than the war? I mean they blew up a planet!
 	stopConversation = "false",
 	options = {
 		{ "@conversation/fs_village_convo3_m:s_e14b17f4", "spare_me_zeal" }, -- Which means it's even more important to fight. We cannot let a regime with so little regard for sapient life continue to hold the galaxy hostage. We must stop them!
@@ -68,7 +68,7 @@ fsVillageConvo3MaleTemplate:addScreen(most_of_us_have);
 
 wont_risk_children = ConvoScreen:new {
 	id = "wont_risk_children",
-	leftDialog = "@conversation/fs_village_convo3_m:s_116fa06f", -- I'll not risk my children to this frenzy of destruction. 
+	leftDialog = "@conversation/fs_village_convo3_m:s_116fa06f", -- I'll not risk my children to this frenzy of destruction.
 	stopConversation = "true",
 	options = {}
 }

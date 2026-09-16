@@ -46,4 +46,3 @@ CityInfoCommand = {
 }
 
 AddCommand(CityInfoCommand)
-

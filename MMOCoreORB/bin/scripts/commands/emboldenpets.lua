@@ -46,4 +46,3 @@ EmboldenpetsCommand = {
 }
 
 AddCommand(EmboldenpetsCommand)
-

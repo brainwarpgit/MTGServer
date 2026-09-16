@@ -10,4 +10,3 @@ dathomir_baz_nitch_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("dathomir_baz_nitch_lair_neutral_small", dathomir_baz_nitch_lair_neutral_small)
-

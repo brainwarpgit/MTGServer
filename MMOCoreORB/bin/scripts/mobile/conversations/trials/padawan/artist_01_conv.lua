@@ -17,7 +17,7 @@ padawan_artist_01_convo_template:addScreen(intro);
 
 aspiring_artist = ConvoScreen:new {
 	id = "aspiring_artist",
-	leftDialog = "@conversation/padawan_artist_01:s_76f9d659", -- I'm an aspiring artist working on some paintings using natural materials as the base for my paints.  The texture and brilliance of the colors I get using them echoes the emotions I try to express in my work. 
+	leftDialog = "@conversation/padawan_artist_01:s_76f9d659", -- I'm an aspiring artist working on some paintings using natural materials as the base for my paints.  The texture and brilliance of the colors I get using them echoes the emotions I try to express in my work.
 	stopConversation = "false",
 	options = {
 		{"@conversation/padawan_artist_01:s_bdf1fbc8", "need_supplies"} -- Sounds... interesting.

@@ -248,4 +248,3 @@ cant_give_reward = ConvoScreen:new {
 corvetteTallonConvoTemplate:addScreen(cant_give_reward);
 
 addConversationTemplate("corvetteTallonConvoTemplate", corvetteTallonConvoTemplate);
-

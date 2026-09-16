@@ -139,4 +139,3 @@ object_tangible_wearables_armor_marine_shared_armor_marine_leggings_gcw = Shared
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_marine_shared_armor_marine_leggings_gcw, "object/tangible/wearables/armor/marine/shared_armor_marine_leggings_gcw.iff")
 
 --****************************************************************************************************************************************************************************
-

@@ -4,5 +4,3 @@ object_tangible_loot_quest_npe_shared_npe_artisan_metal_plate = SharedTangibleOb
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_quest_npe_shared_npe_artisan_metal_plate, "object/tangible/loot/quest/npe/shared_npe_artisan_metal_plate.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

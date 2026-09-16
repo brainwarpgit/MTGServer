@@ -46,4 +46,3 @@ EditBankCommand = {
 }
 
 AddCommand(EditBankCommand)
-

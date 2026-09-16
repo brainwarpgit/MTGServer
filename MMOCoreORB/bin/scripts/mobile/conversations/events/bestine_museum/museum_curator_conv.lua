@@ -66,7 +66,7 @@ museumCuratorConvoTemplate:addScreen(find_giaal_itotr);
 
 find_kahfr_oladi = ConvoScreen:new {
 	id = "find_kahfr_oladi",
-	leftDialog = "@conversation/lilas_dinhint:s_1057c81b", -- Try Mos Eisley to find Kahfr Oladi. You'll probably find her near the bank. 
+	leftDialog = "@conversation/lilas_dinhint:s_1057c81b", -- Try Mos Eisley to find Kahfr Oladi. You'll probably find her near the bank.
 	stopConversation = "false",
 	options = {}
 }
@@ -98,7 +98,7 @@ museumCuratorConvoTemplate:addScreen(pleasure_all_mine);
 
 thanks_for_visiting = ConvoScreen:new {
 	id = "thanks_for_visiting",
-	leftDialog = "@conversation/lilas_dinhint:s_fb2eead4", -- Very well. Thank you for visiting the museum. 
+	leftDialog = "@conversation/lilas_dinhint:s_fb2eead4", -- Very well. Thank you for visiting the museum.
 	stopConversation = "true",
 	options = {}
 }

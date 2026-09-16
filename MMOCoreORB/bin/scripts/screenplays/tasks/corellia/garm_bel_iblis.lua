@@ -33,7 +33,7 @@ irenez_missions =
 		},
 		{
 			missionType = "assassinate",
-			primarySpawns = 
+			primarySpawns =
 			{
 				{ npcTemplate = "tough_thug_male_rodian", npcName = "a thug" },
 			},

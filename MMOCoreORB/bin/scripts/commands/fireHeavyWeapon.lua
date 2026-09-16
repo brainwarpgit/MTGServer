@@ -58,4 +58,3 @@ FireHeavyWeaponCommand = {
 }
 
 AddCommand(FireHeavyWeaponCommand)
-

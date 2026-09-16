@@ -10,4 +10,3 @@ endor_bordok_stud_mare_neutral_small = Lair:new {
 }
 
 addLairTemplate("endor_bordok_stud_mare_neutral_small", endor_bordok_stud_mare_neutral_small)
-

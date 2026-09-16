@@ -76,5 +76,3 @@ object_tangible_quest_meatlump_shared_mtp_hideout_quest07_plans = SharedTangible
 
 ObjectTemplates:addClientTemplate(object_tangible_quest_meatlump_shared_mtp_hideout_quest07_plans, "object/tangible/quest/meatlump/shared_mtp_hideout_quest07_plans.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

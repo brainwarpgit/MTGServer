@@ -28,7 +28,7 @@ eg6_crafted = Creature:new {
 
 	templates = {
 		"object/creature/npc/droid/crafted/eg_6_power_droid.iff"
-	},		
+	},
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)

@@ -46,4 +46,3 @@ PlanetsayCommand = {
 }
 
 AddCommand(PlanetsayCommand)
-

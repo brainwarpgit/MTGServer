@@ -36,5 +36,3 @@ object_draft_schematic_furniture_city_shared_wod_trilithon = SharedDraftSchemati
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_city_shared_wod_trilithon, "object/draft_schematic/furniture/city/shared_wod_trilithon.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

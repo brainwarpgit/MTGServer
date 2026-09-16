@@ -62,4 +62,3 @@ ThreatenShotCommand = {
 }
 
 AddCommand(ThreatenShotCommand)
-

@@ -46,4 +46,3 @@ NewbiehelperCommand = {
 }
 
 AddCommand(NewbiehelperCommand)
-

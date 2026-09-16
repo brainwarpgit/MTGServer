@@ -11,4 +11,3 @@ endor_gurreck_neutral_none = Lair:new {
 }
 
 addLairTemplate("endor_gurreck_neutral_none", endor_gurreck_neutral_none)
-

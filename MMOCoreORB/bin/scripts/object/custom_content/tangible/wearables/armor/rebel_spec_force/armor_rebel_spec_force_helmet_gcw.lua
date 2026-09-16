@@ -32,7 +32,7 @@ object_tangible_wearables_armor_rebel_spec_force_armor_rebel_spec_force_helmet_g
 				"object/creature/player/twilek_female.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 

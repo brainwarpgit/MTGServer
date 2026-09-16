@@ -46,4 +46,3 @@ SetMoodCommand = {
 }
 
 AddCommand(SetMoodCommand)
-

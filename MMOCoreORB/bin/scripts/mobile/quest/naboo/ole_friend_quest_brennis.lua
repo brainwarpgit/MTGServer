@@ -39,7 +39,7 @@ ole_friend_quest_brennis = Creature:new {
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "brennis_doore_mission_target_convotemplate",
 	reactionStf = "@npc_reaction/slang",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(marksmannovice,brawlernovice),

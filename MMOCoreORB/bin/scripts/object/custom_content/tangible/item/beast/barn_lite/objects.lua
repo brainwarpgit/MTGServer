@@ -4,5 +4,3 @@ object_tangible_item_beast_barn_lite_shared_beast_dna_storage_device = SharedTan
 
 ObjectTemplates:addClientTemplate(object_tangible_item_beast_barn_lite_shared_beast_dna_storage_device, "object/tangible/item/beast/barn_lite/shared_beast_dna_storage_device.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

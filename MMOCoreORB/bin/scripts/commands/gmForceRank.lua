@@ -46,4 +46,3 @@ GmForceRankCommand = {
 }
 
 AddCommand(GmForceRankCommand)
-

@@ -46,4 +46,3 @@ SetLoginTitleCommand = {
 }
 
 AddCommand(SetLoginTitleCommand)
-

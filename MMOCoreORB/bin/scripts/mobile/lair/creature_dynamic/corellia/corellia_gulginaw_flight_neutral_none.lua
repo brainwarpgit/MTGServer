@@ -11,4 +11,3 @@ corellia_gulginaw_flight_neutral_none = Lair:new {
 }
 
 addLairTemplate("corellia_gulginaw_flight_neutral_none", corellia_gulginaw_flight_neutral_none)
-

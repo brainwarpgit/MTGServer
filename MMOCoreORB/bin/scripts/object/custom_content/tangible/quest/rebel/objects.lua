@@ -244,5 +244,3 @@ object_tangible_quest_rebel_shared_rtp_wedge_security_terminal = SharedTangibleO
 
 ObjectTemplates:addClientTemplate(object_tangible_quest_rebel_shared_rtp_wedge_security_terminal, "object/tangible/quest/rebel/shared_rtp_wedge_security_terminal.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

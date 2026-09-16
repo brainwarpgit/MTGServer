@@ -1,11 +1,11 @@
 magur_torigai_missions =
 {
-	{ 
+	{
 		missionType = "assassinate",
-		primarySpawns = 
-		{ 
+		primarySpawns =
+		{
 			{ npcTemplate = "giant_gubbur", npcName = "" }
-		}, 
+		},
 		secondarySpawns =
 		{
 
@@ -13,36 +13,36 @@ magur_torigai_missions =
 		itemSpawns =
 		{
 
-		}, 
-		rewards = 
-		{ 
+		},
+		rewards =
+		{
 			{ rewardType = "credits", amount = 40 },
 		}
 	},
 	{
-		missionType = "assassinate", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "guf_drolg", npcName = "" }	
-		}, 
+		missionType = "assassinate",
+		primarySpawns =
+		{
+			{ npcTemplate = "guf_drolg", npcName = "" }
+		},
 		secondarySpawns =
 		{
 
-		}, 
-		itemSpawns = 
+		},
+		itemSpawns =
 		{
 
-		}, 
-		rewards = 
+		},
+		rewards =
 		{
 			{ rewardType = "credits", amount = 75 },
 		}
 	},
 }
 
-npcMapMagurTorigai = 
-{ 
-	{ 
+npcMapMagurTorigai =
+{
+	{
 		spawnData = { npcTemplate = "magur_torigai", x = 5132, z = 80, y = 5729, direction = 0, cellID = 0, position = STAND },
 		npcNumber = 1,
 		stfFile = "@static_npc/rori/rori_restuss_magur_torigai",

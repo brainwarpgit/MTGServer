@@ -7,7 +7,7 @@ mullud_bombo_missions =
 				{ npcTemplate = "sentellus_gavrel", npcName = "Sentellus Gavrel" }
 			},
 			secondarySpawns = {},
-			itemSpawns = 
+			itemSpawns =
 			{
 				{ itemTemplate = "object/tangible/mission/quest_item/mullud_bombo_q1_needed.iff", itemName = "Some survey equipment." }
 			},

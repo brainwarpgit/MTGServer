@@ -53,15 +53,14 @@ StoppingShotCommand = {
 
 	poolsToDamage = RANDOM_ATTRIBUTE,
 
-	animation = "fire_1_special_single", 
+	animation = "fire_1_special_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "stoppingshot",
-	
+
 	weaponType = PISTOLWEAPON,
 
 	range = -1
 }
 
 AddCommand(StoppingShotCommand)
-

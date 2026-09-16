@@ -10,7 +10,7 @@ sigrix_slix_missions =
 			{
 				{ npcTemplate = "sigrix_thug", npcName = "a Thug" },
 			},
-			itemSpawns = 
+			itemSpawns =
 			{
 				{ itemTemplate = "object/tangible/mission/quest_item/sigrix_slix_q1_needed.iff", itemName = "Um... Ambient Wildlife Calls... yeah." }
 			},
@@ -29,7 +29,7 @@ sigrix_slix_missions =
 			{
 				{ npcTemplate = "sigrix_selonian_warrior", npcName = "a Selonian Warrior" },
 			},
-			itemSpawns = 
+			itemSpawns =
 			{
 				{ itemTemplate = "object/tangible/mission/quest_item/sigrix_slix_q2_needed.iff", itemName = "Selonian Verovakin" }
 			},

@@ -10,4 +10,3 @@ tatooine_dewback_lair_neutral_large = Lair:new {
 }
 
 addLairTemplate("tatooine_dewback_lair_neutral_large", tatooine_dewback_lair_neutral_large)
-

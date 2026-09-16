@@ -68,5 +68,3 @@ object_tangible_furniture_nym_themepark_collection_shared_table_work_bench = Sha
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_nym_themepark_collection_shared_table_work_bench, "object/tangible/furniture/nym_themepark/collection/shared_table_work_bench.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

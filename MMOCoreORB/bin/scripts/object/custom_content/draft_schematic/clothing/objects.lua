@@ -444,5 +444,3 @@ object_draft_schematic_clothing_shared_clothing_wke_shirt_s05 = SharedDraftSchem
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_wke_shirt_s05, "object/draft_schematic/clothing/shared_clothing_wke_shirt_s05.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

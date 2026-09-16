@@ -47,4 +47,3 @@ CenterOfBeingCommand = {
 }
 
 AddCommand(CenterOfBeingCommand)
-

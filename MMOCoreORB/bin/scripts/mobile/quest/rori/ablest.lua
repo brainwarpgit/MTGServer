@@ -28,7 +28,7 @@ ablest = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dressed_ranger_trainer_01.iff"},
-	lootGroups = {				
+	lootGroups = {
 	},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -36,7 +36,7 @@ ablest = Creature:new {
 	primaryWeapon = "rebel_weapons_medium",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "sloan_rusper_mission_target_convotemplate",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(brawlernovice,marksmannovice),

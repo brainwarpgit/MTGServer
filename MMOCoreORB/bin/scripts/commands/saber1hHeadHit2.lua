@@ -66,4 +66,3 @@ Saber1hHeadHit2Command = {
 }
 
 AddCommand(Saber1hHeadHit2Command)
-

@@ -27,7 +27,7 @@ rageon_vart = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 	scale = 1.15,
-	
+
 	templates = {"object/mobile/dressed_death_watch_grey.iff"},
 	lootGroups = {
 		{
@@ -35,7 +35,7 @@ rageon_vart = Creature:new {
 				{group = "rageon_vart_drop", chance = 10000000}
 			},
 			lootChance = 10000000
-		} 
+		}
 	},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -43,7 +43,7 @@ rageon_vart = Creature:new {
 	primaryWeapon = "death_watch_commander_weapons",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(carbineermaster,marksmanmaster,brawlermaster,pistoleermaster),

@@ -50,4 +50,3 @@ SteadyaimCommand = {
 }
 
 AddCommand(SteadyaimCommand)
-

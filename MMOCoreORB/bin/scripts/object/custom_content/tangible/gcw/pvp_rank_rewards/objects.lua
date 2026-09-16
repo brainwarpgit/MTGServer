@@ -36,5 +36,3 @@ object_tangible_gcw_pvp_rank_rewards_shared_rebel_battle_banner = SharedTangible
 
 ObjectTemplates:addClientTemplate(object_tangible_gcw_pvp_rank_rewards_shared_rebel_battle_banner, "object/tangible/gcw/pvp_rank_rewards/shared_rebel_battle_banner.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

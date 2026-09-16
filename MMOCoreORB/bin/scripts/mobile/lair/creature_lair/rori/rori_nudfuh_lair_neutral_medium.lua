@@ -10,4 +10,3 @@ rori_nudfuh_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("rori_nudfuh_lair_neutral_medium", rori_nudfuh_lair_neutral_medium)
-

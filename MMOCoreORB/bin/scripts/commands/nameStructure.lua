@@ -46,4 +46,3 @@ NameStructureCommand = {
 }
 
 AddCommand(NameStructureCommand)
-

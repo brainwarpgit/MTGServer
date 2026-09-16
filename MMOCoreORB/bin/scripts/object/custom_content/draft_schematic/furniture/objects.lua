@@ -1372,5 +1372,3 @@ object_draft_schematic_furniture_shared_wod_witch_banner_s03 = SharedDraftSchema
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_witch_banner_s03, "object/draft_schematic/furniture/shared_wod_witch_banner_s03.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

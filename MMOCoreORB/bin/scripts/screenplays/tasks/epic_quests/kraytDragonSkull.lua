@@ -222,9 +222,9 @@ function KraytSkullContainerComponent:transferObject(pContainer, pObj, slot)
 			spatialChat(pContainer, "Good")
 			CreatureObject(pPlayer):setScreenPlayState(1, "krayt_skull_epic_quest")
 
-		if (not SceneObject(pObj):isPlayerCreature()) then
-			 SceneObject(pObj):destroyObjectFromWorld()
-			 SceneObject(pObj):destroyObjectFromDatabase()
+			if (not SceneObject(pObj):isPlayerCreature()) then
+				SceneObject(pObj):destroyObjectFromWorld()
+				SceneObject(pObj):destroyObjectFromDatabase()
 			end
 			return 1
 		else
@@ -239,9 +239,9 @@ function KraytSkullContainerComponent:transferObject(pContainer, pObj, slot)
 			CreatureObject(pPlayer):setScreenPlayState(2, "krayt_skull_epic_quest")
 
 			if (not SceneObject(pObj):isPlayerCreature()) then
-			 SceneObject(pObj):destroyObjectFromWorld()
-			 SceneObject(pObj):destroyObjectFromDatabase()
-		  end
+				SceneObject(pObj):destroyObjectFromWorld()
+				SceneObject(pObj):destroyObjectFromDatabase()
+			end
 			return 1
 		else
 			spatialChat(pContainer, "@epic_quest/krayt_skull/huff_darklighter:notit")

@@ -12,4 +12,3 @@ moveWaveattack = {
 	{id="2990870941",	name="CheckDestination",	pid="2548093309"},
 	{id="4112371132",	name="FindNextPosition",	pid="1232766482"}}
 addAiTemplate("moveWaveattack", moveWaveattack)
-

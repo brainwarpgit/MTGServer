@@ -108,5 +108,3 @@ object_draft_schematic_space_engine_shared_orion_eng_01 = SharedDraftSchematicOb
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_space_engine_shared_orion_eng_01, "object/draft_schematic/space/engine/shared_orion_eng_01.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

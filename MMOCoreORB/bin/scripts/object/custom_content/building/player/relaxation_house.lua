@@ -17,7 +17,7 @@ object_building_player_relaxation_house = object_building_player_shared_relaxati
 			{templateFile = "object/tangible/sign/player/house_address.iff", x = -3.41172, z = 4.22656, y = 10.5745, ow = -4.37114e-08, ox = 0, oz = 0, oy = 1, cellid = -1, containmentType = -1},
 	},
 	shopSigns = {
-			{templateFile = "object/tangible/sign/player/house_address.iff", x = -3.41172, z = 4.22656, y = 10.5745, ow = -4.37114, ox = 0, oz = 0, oy = 1, cellid = -1, containmentType = -1, requiredSkill = "", suiItem = "@player_structure:house_address"},	
+			{templateFile = "object/tangible/sign/player/house_address.iff", x = -3.41172, z = 4.22656, y = 10.5745, ow = -4.37114, ox = 0, oz = 0, oy = 1, cellid = -1, containmentType = -1, requiredSkill = "", suiItem = "@player_structure:house_address"},
 			{templateFile = "object/tangible/sign/player/shop_sign_s01.iff", x = -2.09652, z = 0.986563, y = 10.954, ow = 1, ox = 0, oz = 0, oy = 0, cellid = -1, containmentType = -1, requiredSkill = "crafting_merchant_management_01", suiItem = "@player_structure:shop_sign1"},
 			{templateFile = "object/tangible/sign/player/shop_sign_s02.iff", x = -2.09652, z = 0.986563, y = 10.954, ow = 1, ox = 0, oz = 0, oy = 0, cellid = -1, containmentType = -1, requiredSkill = "crafting_merchant_management_02", suiItem = "@player_structure:shop_sign2"},
 			{templateFile = "object/tangible/sign/player/shop_sign_s03.iff", x = -2.09652, z = 0.986563, y = 10.954, ow = 1, ox = 0, oz = 0, oy = 0, cellid = -1, containmentType = -1, requiredSkill = "crafting_merchant_management_03", suiItem = "@player_structure:shop_sign3"},

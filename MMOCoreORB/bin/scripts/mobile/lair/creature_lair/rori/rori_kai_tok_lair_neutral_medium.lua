@@ -10,4 +10,3 @@ rori_kai_tok_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("rori_kai_tok_lair_neutral_medium", rori_kai_tok_lair_neutral_medium)
-

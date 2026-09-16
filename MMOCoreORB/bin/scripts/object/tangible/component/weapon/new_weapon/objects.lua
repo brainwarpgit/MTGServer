@@ -52,4 +52,3 @@ object_tangible_component_weapon_new_weapon_shared_enhancement_ranged_slot_two_b
 
 ObjectTemplates:addClientTemplate(object_tangible_component_weapon_new_weapon_shared_enhancement_ranged_slot_two_base, "object/tangible/component/weapon/new_weapon/shared_enhancement_ranged_slot_two_base.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-

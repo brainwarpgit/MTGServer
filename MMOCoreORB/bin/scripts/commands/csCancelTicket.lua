@@ -46,4 +46,3 @@ CsCancelTicketCommand = {
 }
 
 AddCommand(CsCancelTicketCommand)
-

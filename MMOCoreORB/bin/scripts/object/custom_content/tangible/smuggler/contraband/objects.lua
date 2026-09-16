@@ -215,5 +215,3 @@ object_tangible_smuggler_contraband_shared_contraband_general_2 = SharedTangible
 
 ObjectTemplates:addClientTemplate(object_tangible_smuggler_contraband_shared_contraband_general_2, "object/tangible/smuggler/contraband/shared_contraband_general_2.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

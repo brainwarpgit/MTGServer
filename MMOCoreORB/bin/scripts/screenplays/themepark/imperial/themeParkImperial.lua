@@ -838,4 +838,3 @@ theme_park_imperial_mission_giver_conv_handler = mission_giver_conv_handler:new 
 theme_park_imperial_mission_target_conv_handler = mission_target_conv_handler:new {
 	themePark = ThemeParkImperial
 }
-

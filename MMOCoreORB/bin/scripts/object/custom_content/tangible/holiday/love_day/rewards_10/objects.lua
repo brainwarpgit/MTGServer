@@ -20,5 +20,3 @@ object_tangible_holiday_love_day_rewards_10_shared_love_day_prop_2010_flowers = 
 
 ObjectTemplates:addClientTemplate(object_tangible_holiday_love_day_rewards_10_shared_love_day_prop_2010_flowers, "object/tangible/holiday/love_day/rewards_10/shared_love_day_prop_2010_flowers.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

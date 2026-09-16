@@ -18,10 +18,10 @@ shibb_nisshil_missions =
 	{
 		missionType = "assassinate",
 			primarySpawns =
-			 {
+			{
 				{ npcTemplate = "brigand_leader", npcName = "Rancor Thief" },
-			 },
-			 secondarySpawns =
+			},
+			secondarySpawns =
 			{
 				{ npcTemplate = "brigand_assassin", npcName = "random" },
 				{ npcTemplate = "brigand_assassin", npcName = "random" },
@@ -81,4 +81,3 @@ shibb_nisshil_mission_giver_conv_handler = mission_giver_conv_handler:new {
 shibb_nisshil_mission_target_conv_handler = mission_target_conv_handler:new {
 	themePark = ShibbNisshil
 }
-

@@ -57,7 +57,7 @@ object_tangible_wearables_armor_galactic_marine_armor_galactic_marine_bracer_r =
 				"object/creature/player/wookiee_female.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 
@@ -65,7 +65,7 @@ object_tangible_wearables_armor_galactic_marine_armor_galactic_marine_bracer_r =
 	healthEncumbrance = 15,
 	actionEncumbrance = 25,
 	mindEncumbrance = 15,
-	
+
 	maxCondition = 30000,
 
 	-- LIGHT, MEDIUM, HEAVY
@@ -80,7 +80,7 @@ object_tangible_wearables_armor_galactic_marine_armor_galactic_marine_bracer_r =
 	cold = 62,
 	acid = 73,
 	lightSaber = 0,
-	
+
 	skillMods = {
         {"slope_move", 2},
         {"dizzy_defense", 2},

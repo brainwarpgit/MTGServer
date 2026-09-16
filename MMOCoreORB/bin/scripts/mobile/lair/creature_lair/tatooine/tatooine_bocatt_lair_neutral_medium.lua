@@ -10,4 +10,3 @@ tatooine_bocatt_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("tatooine_bocatt_lair_neutral_medium", tatooine_bocatt_lair_neutral_medium)
-

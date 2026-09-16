@@ -46,4 +46,3 @@ RescueCommand = {
 }
 
 AddCommand(RescueCommand)
-

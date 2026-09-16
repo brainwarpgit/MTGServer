@@ -46,4 +46,3 @@ ClearVeteranRewardCommand = {
 }
 
 AddCommand(ClearVeteranRewardCommand)
-

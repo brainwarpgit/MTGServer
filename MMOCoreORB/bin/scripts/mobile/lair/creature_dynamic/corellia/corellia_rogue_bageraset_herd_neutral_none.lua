@@ -11,4 +11,3 @@ corellia_rogue_bageraset_herd_neutral_none = Lair:new {
 }
 
 addLairTemplate("corellia_rogue_bageraset_herd_neutral_none", corellia_rogue_bageraset_herd_neutral_none)
-

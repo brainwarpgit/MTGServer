@@ -5,63 +5,63 @@ object_static_item_shared_eqp_platform_stage = SharedStaticObjectTemplate:new {
 
 ObjectTemplates:addClientTemplate(object_static_item_shared_eqp_platform_stage, "object/static/item/shared_eqp_platform_stage.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_eqp_camping_cot_s2 = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_eqp_camping_cot_s2.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_eqp_camping_cot_s2, "object/static/item/shared_eqp_camping_cot_s2.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_eqp_camping_cot_s3 = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_eqp_camping_cot_s3.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_eqp_camping_cot_s3, "object/static/item/shared_eqp_camping_cot_s3.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_eqp_camping_crate_s1 = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_eqp_camping_crate_s1.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_eqp_camping_crate_s1, "object/static/item/shared_eqp_camping_crate_s1.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_eqp_camping_grill_s1 = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_eqp_camping_grill_s1.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_eqp_camping_grill_s1, "object/static/item/shared_eqp_camping_grill_s1.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_eqp_camping_grill_s2 = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_eqp_camping_grill_s2.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_eqp_camping_grill_s2, "object/static/item/shared_eqp_camping_grill_s2.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_eqp_camping_pavilion_s1 = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_eqp_camping_pavilion_s1.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_eqp_camping_pavilion_s1, "object/static/item/shared_eqp_camping_pavilion_s1.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_eqp_camping_pavilion_s2 = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_eqp_camping_pavilion_s2.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_eqp_camping_pavilion_s2, "object/static/item/shared_eqp_camping_pavilion_s2.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_eqp_camping_tent_s3 = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_eqp_camping_tent_s3.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_eqp_camping_tent_s3, "object/static/item/shared_eqp_camping_tent_s3.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_eqp_camping_tent_s4 = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_eqp_camping_tent_s4.iff"
@@ -367,63 +367,63 @@ object_static_item_shared_lair_bones = SharedStaticObjectTemplate:new {
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_lair_bones, "object/static/item/shared_lair_bones.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_lair_bones_large = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_lair_bones_large.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_lair_bones_large, "object/static/item/shared_lair_bones_large.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_lair_bramble = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_lair_bramble.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_lair_bramble, "object/static/item/shared_lair_bramble.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_lair_fake_cave_small = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_lair_fake_cave_small.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_lair_fake_cave_small, "object/static/item/shared_lair_fake_cave_small.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_lair_firepit = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_lair_firepit.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_lair_firepit, "object/static/item/shared_lair_firepit.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_lair_garbage_mound = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_lair_garbage_mound.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_lair_garbage_mound, "object/static/item/shared_lair_garbage_mound.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_lair_leaf_mound = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_lair_leaf_mound.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_lair_leaf_mound, "object/static/item/shared_lair_leaf_mound.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_lair_rock_shelter_small = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_lair_rock_shelter_small.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_lair_rock_shelter_small, "object/static/item/shared_lair_rock_shelter_small.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_lair_wooden_tent = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_lair_wooden_tent.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_lair_wooden_tent, "object/static/item/shared_lair_wooden_tent.iff")
 
---Made with Skyyyr's Wrench Tool 
+--Made with Skyyyr's Wrench Tool
 
 object_static_item_shared_lair_wooden_tent_destroyed = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_lair_wooden_tent_destroyed.iff"
@@ -501,14 +501,14 @@ object_static_item_shared_wp_mle_lance_massassi = SharedStaticObjectTemplate:new
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_wp_mle_lance_massassi, "object/static/item/shared_wp_mle_lance_massassi.iff")
 
---********************************************************************************************************************************** 
+--**********************************************************************************************************************************
 
 object_static_item_shared_wp_mle_sword_acid = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_wp_mle_sword_acid.iff"
 }
 ObjectTemplates:addClientTemplate(object_static_item_shared_wp_mle_sword_acid, "object/static/item/shared_wp_mle_sword_acid.iff")
 
---********************************************************************************************************************************** 
+--**********************************************************************************************************************************
 
 object_static_item_shared_wp_mle_sword_massassi = SharedStaticObjectTemplate:new {
 	clientTemplateFileName = "object/static/item/shared_wp_mle_sword_massassi.iff"

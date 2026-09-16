@@ -10,4 +10,3 @@ naboo_hermit_spider_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("naboo_hermit_spider_lair_neutral_small", naboo_hermit_spider_lair_neutral_small)
-

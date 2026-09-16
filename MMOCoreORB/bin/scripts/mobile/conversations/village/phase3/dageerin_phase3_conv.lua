@@ -18,7 +18,7 @@ villageDageerinPhase3ConvoTemplate:addScreen(intro);
 
 taking_fight_to_enemy = ConvoScreen:new {
 	id = "taking_fight_to_enemy",
-	leftDialog = "@conversation/fs_quests_sad2_conv:s_1d03bd79", -- We're taking the fight to the enemy while we prepare our invincible shield defense.  Because of the preparations, and the scale of the conflict, our normal militia is overworked.  We're recruiting auxiliaries to be frontline combat troops.  We know the location of a number of Shadow bases that we want taken out to keep them on the run.  
+	leftDialog = "@conversation/fs_quests_sad2_conv:s_1d03bd79", -- We're taking the fight to the enemy while we prepare our invincible shield defense.  Because of the preparations, and the scale of the conflict, our normal militia is overworked.  We're recruiting auxiliaries to be frontline combat troops.  We know the location of a number of Shadow bases that we want taken out to keep them on the run.
 	stopConversation = "false",
 	options = {
 		{"@conversation/fs_quests_sad2_conv:s_4ae25b38", "understand_this"}, -- I would be honored to serve you and the Force.
@@ -28,7 +28,7 @@ villageDageerinPhase3ConvoTemplate:addScreen(taking_fight_to_enemy);
 
 understand_this = ConvoScreen:new {
 	id = "understand_this",
-	leftDialog = "@conversation/fs_quests_sad2_conv:s_b39e716", -- Understand this, my friend.  This mission is going to carry you out into the field as an operative for our militia.  You're going to be too busy to help us in any other way for a while -- possibly as much as 3 weeks.  This is your chance to back out. 
+	leftDialog = "@conversation/fs_quests_sad2_conv:s_b39e716", -- Understand this, my friend.  This mission is going to carry you out into the field as an operative for our militia.  You're going to be too busy to help us in any other way for a while -- possibly as much as 3 weeks.  This is your chance to back out.
 	stopConversation = "false",
 	options = {
 		{"@conversation/fs_quests_sad2_conv:s_faedbf19", "good_luck"}, -- No, I understand.  I'm committed.

@@ -131,4 +131,3 @@ object_tangible_wearables_armor_stormtrooper_shared_armor_stormtrooper_utility_b
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_stormtrooper_shared_armor_stormtrooper_utility_belt_gcw, "object/tangible/wearables/armor/stormtrooper/shared_armor_stormtrooper_utility_belt_gcw.iff")
 --****************************************************************************************************************************************************************************
 --****************************************************************************************************************************************************************************
-

@@ -35,7 +35,7 @@ shaki_smuggler_q1 = Creature:new {
 	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
 	primaryWeapon = "pirate_weapons_medium",
 	secondaryWeapon = "unarmed",
-	conversationTemplate = "shaki_hamachil_mission_target_convotemplate",	
+	conversationTemplate = "shaki_hamachil_mission_target_convotemplate",
 }
 
 CreatureTemplates:addCreatureTemplate(shaki_smuggler_q1, "shaki_smuggler_q1")

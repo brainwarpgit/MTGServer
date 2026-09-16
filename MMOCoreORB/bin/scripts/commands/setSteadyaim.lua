@@ -49,4 +49,3 @@ SetSteadyaimCommand = {
 }
 
 AddCommand(SetSteadyaimCommand)
-

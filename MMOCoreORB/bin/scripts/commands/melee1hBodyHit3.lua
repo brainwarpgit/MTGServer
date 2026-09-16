@@ -54,7 +54,7 @@ Melee1hBodyHit3Command = {
 	poolsToDamage = HEALTH_ATTRIBUTE,
 	weaponType = ONEHANDMELEEWEAPON,
 
-	animation = "combo_3a", 
+	animation = "combo_3a",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "saitok",
@@ -63,4 +63,3 @@ Melee1hBodyHit3Command = {
 }
 
 AddCommand(Melee1hBodyHit3Command)
-

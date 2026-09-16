@@ -816,7 +816,7 @@ function Coa3Screenplay:enteredLookoutArea(pArea, pPlayer)
 		self:abortMission(pPlayer, missionNum, 1)
 	end
 
-	 return 1
+	return 1
 end
 
 function Coa3Screenplay:onLootCaravanLeader(pLootedCreature, pLooter, nothing)

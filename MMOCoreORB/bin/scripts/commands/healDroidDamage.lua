@@ -46,4 +46,3 @@ HealDroidDamageCommand = {
 }
 
 AddCommand(HealDroidDamageCommand)
-

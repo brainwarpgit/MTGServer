@@ -346,7 +346,7 @@ CorelliaTyrenaScreenPlay = CityScreenPlay:new {
 
 		--JTL Rebel Trainer
 		{"kreezo", 60, -4.4, 0.6, -3.6, -130, 3375654, "neutral"},
-		
+
 		--Space Greeters
 		{"larek_tatham", 60, -5050.23, 21, -2291.69, 113.059, 0, "neutral"},
 		{"cll_8_space", 60, -5050, 21, -2288, 145, 0, ""},

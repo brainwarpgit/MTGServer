@@ -12,5 +12,3 @@ object_draft_schematic_space_reverse_engineering_shared_interdiction_generator =
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_space_reverse_engineering_shared_interdiction_generator, "object/draft_schematic/space/reverse_engineering/shared_interdiction_generator.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

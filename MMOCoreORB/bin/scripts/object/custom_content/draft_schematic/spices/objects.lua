@@ -132,5 +132,3 @@ object_draft_schematic_spices_shared_spice_yarrock_s01 = SharedDraftSchematicObj
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_spices_shared_spice_yarrock_s01, "object/draft_schematic/spices/shared_spice_yarrock_s01.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

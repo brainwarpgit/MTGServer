@@ -23,4 +23,3 @@ function vincieKalhoonConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, pNp
 
 	return pConvScreen
 end
-

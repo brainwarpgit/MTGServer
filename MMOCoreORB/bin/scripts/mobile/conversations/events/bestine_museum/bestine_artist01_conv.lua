@@ -15,7 +15,7 @@ bestineArtist01ConvoTemplate:addScreen(init_curvote);
 
 init_wonvote = ConvoScreen:new {
 	id = "init_wonvote",
-	leftDialog = "@conversation/bestine_artist01:s_b7a88f36", -- Are you here to collect a debt? No fear... I've got a work of art that's being featured in the Bestine Museum. It can't be long before riches follow. Oh, you're not here about money... well, even better. 
+	leftDialog = "@conversation/bestine_artist01:s_b7a88f36", -- Are you here to collect a debt? No fear... I've got a work of art that's being featured in the Bestine Museum. It can't be long before riches follow. Oh, you're not here about money... well, even better.
 	stopConversation = "false",
 	options = {}
 }
@@ -31,7 +31,7 @@ bestineArtist01ConvoTemplate:addScreen(init_novote);
 
 passby_response_curvote = ConvoScreen:new {
 	id = "passby_response_curvote",
-	leftDialog = "@conversation/bestine_artist01:s_e60617b5", -- Oh. Okay then. I apologize. It's just that... well, no point in going into the dirty little details. Let's just forget the whole thing. 
+	leftDialog = "@conversation/bestine_artist01:s_e60617b5", -- Oh. Okay then. I apologize. It's just that... well, no point in going into the dirty little details. Let's just forget the whole thing.
 	stopConversation = "true",
 	options = {}
 }
@@ -39,7 +39,7 @@ bestineArtist01ConvoTemplate:addScreen(passby_response_curvote);
 
 passby_response_wonvote = ConvoScreen:new {
 	id = "passby_response_wonvote",
-	leftDialog = "@conversation/bestine_artist01:s_62dd13f8", -- Just wait and see... my time has come. You'll see. Soon I'll be famous all across the galaxy. Well, maybe not on Dantooine... but no one there really matters anyway. 
+	leftDialog = "@conversation/bestine_artist01:s_62dd13f8", -- Just wait and see... my time has come. You'll see. Soon I'll be famous all across the galaxy. Well, maybe not on Dantooine... but no one there really matters anyway.
 	stopConversation = "true",
 	options = {}
 }
@@ -63,7 +63,7 @@ bestineArtist01ConvoTemplate:addScreen(painting_response_wonvote_prev);
 
 painting_response_curvote = ConvoScreen:new {
 	id = "painting_response_curvote",
-	leftDialog = "@conversation/bestine_artist01:s_f58736af", -- Oh... well... why didn't you say so earlier. In my paintings, I bring to life the image of a single plant in each of my paintings. These are mostly plants I've encountered in youth when I was more of a traveller. My work is painterly, yet accurately depicts its subject. 
+	leftDialog = "@conversation/bestine_artist01:s_f58736af", -- Oh... well... why didn't you say so earlier. In my paintings, I bring to life the image of a single plant in each of my paintings. These are mostly plants I've encountered in youth when I was more of a traveller. My work is painterly, yet accurately depicts its subject.
 	stopConversation = "true",
 	options = {}
 }

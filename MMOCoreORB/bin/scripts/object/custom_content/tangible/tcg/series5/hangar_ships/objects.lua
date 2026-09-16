@@ -289,4 +289,3 @@ object_tangible_tcg_series5_hangar_ships_shared_z95 = SharedTangibleObjectTempla
 	clientTemplateFileName = "object/tangible/tcg/series5/hangar_ships/shared_z95.iff"
 }
 ObjectTemplates:addClientTemplate(object_tangible_tcg_series5_hangar_ships_shared_z95, "object/tangible/tcg/series5/hangar_ships/shared_z95.iff")
-

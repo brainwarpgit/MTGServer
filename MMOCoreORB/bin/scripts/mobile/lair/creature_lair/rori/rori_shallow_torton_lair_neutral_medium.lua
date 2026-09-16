@@ -10,4 +10,3 @@ rori_shallow_torton_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("rori_shallow_torton_lair_neutral_medium", rori_shallow_torton_lair_neutral_medium)
-

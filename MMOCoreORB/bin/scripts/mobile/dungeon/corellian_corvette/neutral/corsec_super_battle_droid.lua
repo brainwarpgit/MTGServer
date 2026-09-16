@@ -31,7 +31,7 @@ corsec_super_battle_droid = Creature:new {
     "object/mobile/super_battle_droid.iff",
   },
   lootGroups = {
-    
+
   },
   conversationTemplate = "",
   defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",

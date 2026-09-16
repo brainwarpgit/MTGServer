@@ -56,7 +56,7 @@ biogenic_construction_ConversationTemplate:addScreen(dont_have_much);
 
 excavating_passage = ConvoScreen:new {
 	id = "excavating_passage",
-	leftDialog = "@conversation/biogenic_construction:s_75118515", -- I was working on excavating this passage when the earthquake hit. Not long after, the spiders attacked. Now I just want to get out of here. 
+	leftDialog = "@conversation/biogenic_construction:s_75118515", -- I was working on excavating this passage when the earthquake hit. Not long after, the spiders attacked. Now I just want to get out of here.
 	stopConversation = "false",
 	options = {
 		--{"@conversation/biogenic_construction:s_5fe23666","bye_good_luck"}, -- OK. Good-bye then.
@@ -91,5 +91,3 @@ bye_check_engineering = ConvoScreen:new {
 biogenic_construction_ConversationTemplate:addScreen(bye_check_engineering);
 
 addConversationTemplate("biogenic_construction_ConversationTemplate", biogenic_construction_ConversationTemplate);
-
-

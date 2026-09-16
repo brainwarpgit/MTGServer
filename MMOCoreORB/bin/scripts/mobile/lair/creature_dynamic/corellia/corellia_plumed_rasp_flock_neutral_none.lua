@@ -11,4 +11,3 @@ corellia_plumed_rasp_flock_neutral_none = Lair:new {
 }
 
 addLairTemplate("corellia_plumed_rasp_flock_neutral_none", corellia_plumed_rasp_flock_neutral_none)
-

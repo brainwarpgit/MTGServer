@@ -10,4 +10,3 @@ corellia_durni_warren_neutral_small = Lair:new {
 }
 
 addLairTemplate("corellia_durni_warren_neutral_small", corellia_durni_warren_neutral_small)
-

@@ -15,9 +15,9 @@ KobolaBunkerScreenPlay = ScreenPlay:new {
 		479956
 
         },
-        
-        lootLevel = 18, 
- 
+
+        lootLevel = 18,
+
         lootGroups = {
                 {
                         groups = {
@@ -32,9 +32,9 @@ KobolaBunkerScreenPlay = ScreenPlay:new {
                                 {group = "armor_attachments", chance = 600000}
                         },
                         lootChance = 8000000
-                }                                       
+                }
         },
-        
+
         lootContainerRespawn = 1800 -- 30 minutes
 }
 

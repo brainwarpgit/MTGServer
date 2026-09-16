@@ -54,7 +54,7 @@ Melee1hSpinAttack1Command = {
 	animation = "attack_high_right_medium_2",
 
 	combatSpam = "slashspin",
-	
+
 	weaponType = ONEHANDMELEEWEAPON,
 
 	areaAction = true,
@@ -64,4 +64,3 @@ Melee1hSpinAttack1Command = {
 }
 
 AddCommand(Melee1hSpinAttack1Command)
-

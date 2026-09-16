@@ -12,5 +12,3 @@ object_tangible_component_food_shared_ingredient_cereal_flakes = SharedTangibleO
 
 ObjectTemplates:addClientTemplate(object_tangible_component_food_shared_ingredient_cereal_flakes, "object/tangible/component/food/shared_ingredient_cereal_flakes.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

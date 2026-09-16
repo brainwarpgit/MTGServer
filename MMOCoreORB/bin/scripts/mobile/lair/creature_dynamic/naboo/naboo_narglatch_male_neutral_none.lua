@@ -11,4 +11,3 @@ naboo_narglatch_male_neutral_none = Lair:new {
 }
 
 addLairTemplate("naboo_narglatch_male_neutral_none", naboo_narglatch_male_neutral_none)
-

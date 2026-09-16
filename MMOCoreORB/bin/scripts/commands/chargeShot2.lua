@@ -59,23 +59,22 @@ ChargeShot2Command = {
 	coneAction = true,
 
 	stateEffects = {
-	  StateEffect( 
-		KNOCKDOWN_EFFECT, 
-		{ "knockdownRecovery", "lastKnockdown" }, 
-		{ "knockdown_defense" }, 
-		{}, 
-		100, 
-		0, 
-		0 
+	  StateEffect(
+		KNOCKDOWN_EFFECT,
+		{ "knockdownRecovery", "lastKnockdown" },
+		{ "knockdown_defense" },
+		{},
+		100,
+		0,
+		0
 	  )
 	},
 
 	poolsToDamage = RANDOM_ATTRIBUTE,
-	
+
 	weaponType = CARBINEWEAPON,
 
 	range = -1
 }
 
 AddCommand(ChargeShot2Command)
-

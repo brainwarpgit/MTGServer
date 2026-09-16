@@ -12,5 +12,3 @@ object_tangible_item_quest_force_sensitive_shared_fs_crystal_health = SharedTang
 
 ObjectTemplates:addClientTemplate(object_tangible_item_quest_force_sensitive_shared_fs_crystal_health, "object/tangible/item/quest/force_sensitive/shared_fs_crystal_health.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

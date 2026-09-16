@@ -68,7 +68,7 @@ object_tangible_wearables_armor_marine_armor_marine_belt_gcw = object_tangible_w
 				"object/mobile/vendor/weequay_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
 				"object/mobile/vendor/zabrak_male.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 

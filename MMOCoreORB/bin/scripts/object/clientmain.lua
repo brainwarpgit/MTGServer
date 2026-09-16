@@ -2,11 +2,11 @@ ObjectTemplates = { }
 
 function ObjectTemplates:addClientTemplate(obj, file)
 	crc = crcString(file)
-	
+
 	--addTemplateCRC(file, obj)
-	
+
 	if self[crc] == nil then
-		self[crc] = obj 
+		self[crc] = obj
 	else
 		print("error conflicting server template crc " .. crc .. " file " .. file)
 	end

@@ -1,9 +1,9 @@
 Lair = {
 	mobiles = {}, -- mobile template, weighting
 	bossMobiles = {}, -- mobile template, number to spawn
-	
+
 	spawnLimit = 0,
-	
+
 	buildingsVeryEasy = {},
 	buildingsEasy = {},
 	buildingsMedium = {},

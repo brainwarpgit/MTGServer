@@ -20,5 +20,3 @@ object_tangible_component_dna_shared_dna_playersample_very_high = SharedTangible
 
 ObjectTemplates:addClientTemplate(object_tangible_component_dna_shared_dna_playersample_very_high, "object/tangible/component/dna/shared_dna_playersample_very_high.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

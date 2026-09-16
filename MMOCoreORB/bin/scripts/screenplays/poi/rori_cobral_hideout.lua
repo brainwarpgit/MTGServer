@@ -11,9 +11,9 @@ CobralHideoutScreenPlay = ScreenPlay:new {
 		6475953,
 		6475954
         },
-        
-        lootLevel = 13, 
- 
+
+        lootLevel = 13,
+
         lootGroups = {
                 {
                         groups = {
@@ -28,9 +28,9 @@ CobralHideoutScreenPlay = ScreenPlay:new {
                                 {group = "armor_attachments", chance = 300000}
                         },
                         lootChance = 8000000
-                }                                       
+                }
         },
-        
+
         lootContainerRespawn = 1800 -- 30 minutes
 }
 

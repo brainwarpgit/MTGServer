@@ -10,4 +10,3 @@ talus_kima_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("talus_kima_lair_neutral_medium", talus_kima_lair_neutral_medium)
-

@@ -46,4 +46,3 @@ Berserk2Command = {
 }
 
 AddCommand(Berserk2Command)
-

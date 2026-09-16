@@ -46,4 +46,3 @@ GetPrototypeCommand = {
 }
 
 AddCommand(GetPrototypeCommand)
-

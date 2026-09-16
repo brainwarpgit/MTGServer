@@ -11,4 +11,3 @@ corellia_plumed_rasp_howling_large_neutral_none = Lair:new {
 }
 
 addLairTemplate("corellia_plumed_rasp_howling_large_neutral_none", corellia_plumed_rasp_howling_large_neutral_none)
-

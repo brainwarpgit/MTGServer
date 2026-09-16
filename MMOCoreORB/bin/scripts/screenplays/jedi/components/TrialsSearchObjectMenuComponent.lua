@@ -22,7 +22,7 @@ function TrialsSearchObjectMenuComponent:handleObjectMenuSelect(pObject, pPlayer
 	if (trialOwnerID ~= playerID or selectedID ~= 120) then
 		return 0
 	end
-	
+
 	if (readData(objectID .. ":JediTrials:objectSearched") == 1) then
 		CreatureObject(pPlayer):sendSystemMessage("@jedi_trials:already_searched")
 		return 0

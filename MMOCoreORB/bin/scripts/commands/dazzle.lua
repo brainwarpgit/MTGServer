@@ -46,4 +46,3 @@ DazzleCommand = {
 }
 
 AddCommand(DazzleCommand)
-

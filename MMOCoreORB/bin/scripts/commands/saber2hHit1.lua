@@ -66,4 +66,3 @@ Saber2hHit1Command = {
 }
 
 AddCommand(Saber2hHit1Command)
-

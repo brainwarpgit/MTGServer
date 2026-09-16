@@ -9,7 +9,7 @@ dantooine_janta_scout_neutral_none = Lair:new {
 	missionBuilding = "object/tangible/lair/base/objective_dantari_fire_pit.iff",
 	mobType = "npc",
 	buildingType = "none"
-	
+
 }
 
 addLairTemplate("dantooine_janta_scout_neutral_none", dantooine_janta_scout_neutral_none)

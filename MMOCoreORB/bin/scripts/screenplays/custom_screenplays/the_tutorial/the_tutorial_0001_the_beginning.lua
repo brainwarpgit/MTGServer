@@ -90,9 +90,9 @@ function tutorial_0001_han_solo_convo_handler:getInitialScreen(pPlayer, pNpc, pC
 
 	-- The if statements check what screenplay state the player has and returns the correct screen so the screenplay flows correctly.
 	if (CreatureObject(pPlayer):hasScreenPlayState(1, "tutorial_one")) then
-        
-        return convoTemplate:getScreen("task_one_active")
-    
+
+		return convoTemplate:getScreen("task_one_active")
+
 	elseif (CreatureObject(pPlayer):hasScreenPlayState(2, "tutorial_one")) then
 
 		-- Gives player 10,000 credits, plays a sound and sends a completion message.
@@ -110,7 +110,7 @@ function tutorial_0001_han_solo_convo_handler:getInitialScreen(pPlayer, pNpc, pC
 		return convoTemplate:getScreen("quest_complete")
 
 	else
-		-- If the player has no relevant screenplay states, it returns the first screen.	
+		-- If the player has no relevant screenplay states, it returns the first screen.
 		return convoTemplate:getScreen("first_screen")
 	end
 end
@@ -123,12 +123,12 @@ function tutorial_0001_han_solo_convo_handler:runScreenHandlers(pConvTemplate, p
 
 	-- This checks what the player has chosen and runs the code accordingly.
 	if (screenID == "accept_task_one") then
-		
+
 		-- Sets screenplay state, plays a sound message and sends an on screem message to the player.
 		CreatureObject(pPlayer):setScreenPlayState(1, "tutorial_one")-- set screenplay state that player has accepted task
 		CreatureObject(pPlayer):playMusicMessage("sound/ui_npe2_quest_received.snd")  -- Plays a sound message
 		CreatureObject(pPlayer):sendSystemMessage(" \\#FFFF00\\Quest received:  \\#FFFFFF\\Checking the Falcon.") -- Sends an on screen system message.
 	end
-	
-    return pConvScreen
+
+	return pConvScreen
 end

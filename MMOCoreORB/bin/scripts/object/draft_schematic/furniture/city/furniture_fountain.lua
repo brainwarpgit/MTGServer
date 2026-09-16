@@ -52,7 +52,7 @@ object_draft_schematic_furniture_city_furniture_fountain = object_draft_schemati
 	size = 2,
 	factoryCrateSize = 10,
 	factoryCrateType = "object/factory/factory_crate_furniture.iff",
-   
+
 	xpType = "crafting_structure_general",
 	xp = 3300,
 

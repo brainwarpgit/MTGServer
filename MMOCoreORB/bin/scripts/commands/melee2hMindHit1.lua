@@ -53,21 +53,21 @@ Melee2hMindHit1Command = {
 	poolsToDamage = MIND_ATTRIBUTE,
 
 	dotEffects = {
-	  DotEffect( 
-		BLEEDING, 
+	  DotEffect(
+		BLEEDING,
 		{ "resistance_bleeding", "bleed_resist" },
 		MIND,
 		true,
 		0,
 		100,
-		30, 
+		30,
 		30
 	  )
 	},
-	
+
 	weaponType = TWOHANDMELEEWEAPON,
 
-	animation = "combo_2b", 
+	animation = "combo_2b",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "mindstrike",
@@ -76,4 +76,3 @@ Melee2hMindHit1Command = {
 }
 
 AddCommand(Melee2hMindHit1Command)
-

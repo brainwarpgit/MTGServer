@@ -4,5 +4,3 @@ object_intangible_data_item_shared_guild_stone = SharedIntangibleObjectTemplate:
 
 ObjectTemplates:addClientTemplate(object_intangible_data_item_shared_guild_stone, "object/intangible/data_item/shared_guild_stone.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

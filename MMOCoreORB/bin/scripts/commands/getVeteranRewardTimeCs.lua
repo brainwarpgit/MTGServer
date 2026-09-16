@@ -46,4 +46,3 @@ GetVeteranRewardTimeCsCommand = {
 }
 
 AddCommand(GetVeteranRewardTimeCsCommand)
-

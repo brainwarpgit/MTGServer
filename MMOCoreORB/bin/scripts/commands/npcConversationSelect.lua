@@ -46,4 +46,3 @@ NpcConversationSelectCommand = {
 }
 
 AddCommand(NpcConversationSelectCommand)
-

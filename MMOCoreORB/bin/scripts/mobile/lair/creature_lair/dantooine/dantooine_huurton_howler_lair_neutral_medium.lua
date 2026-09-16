@@ -10,4 +10,3 @@ dantooine_huurton_howler_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("dantooine_huurton_howler_lair_neutral_medium", dantooine_huurton_howler_lair_neutral_medium)
-

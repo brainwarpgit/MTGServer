@@ -10,4 +10,3 @@ lok_gurk_lair_neutral_small_01 = Lair:new {
 }
 
 addLairTemplate("lok_gurk_lair_neutral_small_01", lok_gurk_lair_neutral_small_01)
-

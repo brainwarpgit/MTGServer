@@ -10,4 +10,3 @@ lok_kusak_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("lok_kusak_lair_neutral_medium", lok_kusak_lair_neutral_medium)
-

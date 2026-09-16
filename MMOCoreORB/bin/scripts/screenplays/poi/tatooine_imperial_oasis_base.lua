@@ -79,4 +79,3 @@ function TatooineImperialOasisBaseScreenPlay:spawnMobiles()
 	spawnMobile("tatooine", "stormtrooper_sniper",360,-5339.1,7.5,2673.3,-97,0)
 
 end
-

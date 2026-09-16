@@ -7,4 +7,3 @@ idleEventcontrol = {
 	{id="2811013882",	name="FindNextPosition",	pid="353070738"},
 	{id="3440948677",	name="TreeSocket",	pid="353070738",	args={slot=MOVE}}}
 addAiTemplate("idleEventcontrol", idleEventcontrol)
-

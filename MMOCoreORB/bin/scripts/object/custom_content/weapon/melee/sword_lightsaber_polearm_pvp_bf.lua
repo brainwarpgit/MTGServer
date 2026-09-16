@@ -70,7 +70,7 @@ object_weapon_melee_polearm_crafted_saber_sword_lightsaber_polearm_pvp_bf = obje
 			"object/mobile/vendor/zabrak_male.iff"
 			},
 
-	-- RANGEDATTACK, MELEEATTACK, FORCEATTACK, TRAPATTACK, GRENADEATTACK, HEAVYACIDBEAMATTACK, 
+	-- RANGEDATTACK, MELEEATTACK, FORCEATTACK, TRAPATTACK, GRENADEATTACK, HEAVYACIDBEAMATTACK,
 	-- HEAVYLIGHTNINGBEAMATTACK, HEAVYPARTICLEBEAMATTACK, HEAVYROCKETLAUNCHERATTACK, HEAVYLAUNCHERATTACK
 	attackType = MELEEATTACK,
 
@@ -84,7 +84,7 @@ object_weapon_melee_polearm_crafted_saber_sword_lightsaber_polearm_pvp_bf = obje
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
 	-- combat_meleespecialize_twohandlightsaber, jedi_general, combat_meleespecialize_onehandlightsaber
 	xpType = "jedi_general",
-	
+
 	-- See http://www.ocdsoft.com/files/certifications.xls
 	certificationsRequired = { "cert_polearmlightsaber_gen4" },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
@@ -101,7 +101,7 @@ object_weapon_melee_polearm_crafted_saber_sword_lightsaber_polearm_pvp_bf = obje
 
 	-- Leave blank for now
 	damageModifiers = { },
-	
+
 	defenderToughnessModifiers = { "lightsaber_toughness" },
 
 

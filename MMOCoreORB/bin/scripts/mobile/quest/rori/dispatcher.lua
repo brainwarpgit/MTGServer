@@ -35,7 +35,7 @@ dispatcher = Creature:new {
 			"object/mobile/dressed_commoner_naboo_human_male_07.iff",
 			"object/mobile/dressed_commoner_naboo_human_male_08.iff",
 			},
-				
+
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)

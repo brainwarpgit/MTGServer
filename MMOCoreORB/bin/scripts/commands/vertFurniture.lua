@@ -46,4 +46,3 @@ VertFurnitureCommand = {
 }
 
 AddCommand(VertFurnitureCommand)
-

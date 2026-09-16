@@ -46,4 +46,3 @@ JoinGameCommand = {
 }
 
 AddCommand(JoinGameCommand)
-

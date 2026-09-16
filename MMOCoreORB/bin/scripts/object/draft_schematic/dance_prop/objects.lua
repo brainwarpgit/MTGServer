@@ -836,5 +836,3 @@ object_draft_schematic_dance_prop_shared_prop_torch_r = SharedDraftSchematicObje
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_dance_prop_shared_prop_torch_r, "object/draft_schematic/dance_prop/shared_prop_torch_r.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

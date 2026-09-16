@@ -37,7 +37,7 @@ function FsOutro:hasDelayPassed(pPlayer)
 	if (stepDelay == nil or stepDelay == 0) then
 		return true
 	end
-	
+
 	return os.time() >= stepDelay
 end
 
@@ -74,7 +74,7 @@ function FsOutro:startOldMan(pPlayer)
 	end
 
 	local stepData = self.stepDelay[self.OLDMANWAIT]
-	
+
 	if (stepData == nil) then
 		printLuaError("FsOutro:startOldMan, invalid step data.")
 		return

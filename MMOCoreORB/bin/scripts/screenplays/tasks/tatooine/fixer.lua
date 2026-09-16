@@ -35,7 +35,7 @@ fixer_missions =
 			{
 				{ npcTemplate = "camie", npcName = "Camie" }
 			},
-			secondarySpawns =	
+			secondarySpawns =
 			{
 				{ npcTemplate = "dewback", npcName = "a Dewback" }
 			},

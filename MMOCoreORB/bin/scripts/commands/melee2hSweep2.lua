@@ -58,21 +58,20 @@ Melee2hSweep2Command = {
 	combatSpam = "sword2_knockdown",
 
 	stateEffects = {
-	  StateEffect( 
-		POSTUREDOWN_EFFECT, 
-		{ "postureDownRecovery" }, 
-		{ "posture_change_down_defense" }, 
+	  StateEffect(
+		POSTUREDOWN_EFFECT,
+		{ "postureDownRecovery" },
+		{ "posture_change_down_defense" },
 		{},
-		100, 
-		0, 
-		0 
+		100,
+		0,
+		0
 	  )
 	},
-	
+
 	weaponType = TWOHANDMELEEWEAPON,
 
 	range = -1
 }
 
 AddCommand(Melee2hSweep2Command)
-

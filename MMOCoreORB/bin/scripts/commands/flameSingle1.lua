@@ -53,27 +53,26 @@ FlameSingle1Command = {
 
 	poolsToDamage = RANDOM_ATTRIBUTE,
 
-	animation = "fire_flame_thrower_single_1", 
+	animation = "fire_flame_thrower_single_1",
 	animType = GENERATE_INTENSITY,
 	combatSpam = "flamesingle1",
 	dotEffects = {
-	  DotEffect( 
-		ONFIRE, 
+	  DotEffect(
+		ONFIRE,
 		{"resistance_fire", "fire_resist"},
 		HEALTH,
 		true,
 		0,
 		100,
-		100, 
+		100,
 		60,
 		10,
 		2
 	  )
 	},
-	
+
 	weaponType = SPECIALHEAVYWEAPON,
-	
+
 	range = 16
 }
 AddCommand(FlameSingle1Command)
-

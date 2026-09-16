@@ -46,4 +46,3 @@ GrantBadgeCommand = {
 }
 
 AddCommand(GrantBadgeCommand)
-

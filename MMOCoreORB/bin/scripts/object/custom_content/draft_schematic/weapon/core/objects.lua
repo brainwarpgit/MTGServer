@@ -60,5 +60,3 @@ object_draft_schematic_weapon_core_shared_weapon_core_ranged_standard = SharedDr
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_core_shared_weapon_core_ranged_standard, "object/draft_schematic/weapon/core/shared_weapon_core_ranged_standard.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

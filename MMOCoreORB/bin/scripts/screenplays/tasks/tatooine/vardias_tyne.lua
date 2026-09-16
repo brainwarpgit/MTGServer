@@ -1,43 +1,43 @@
 vardias_tyne_missions =
 {
-	{ 
+	{
 		missionType = "assassinate",
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "rhalia_jinsari", npcName = "Rhalia Jinsari" } 
-		}, 
+		primarySpawns =
+		{
+			{ npcTemplate = "rhalia_jinsari", npcName = "Rhalia Jinsari" }
+		},
 		secondarySpawns = {},
-		itemSpawns = {}, 
-		rewards = 
-		{ 
-			{ rewardType = "credits", amount = 4000 } 
+		itemSpawns = {},
+		rewards =
+		{
+			{ rewardType = "credits", amount = 4000 }
 		}
 	},
 	{
-		missionType = "deliver", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "chonar", npcName = "Brother Chonar" } 
-		}, 
-		secondarySpawns = {}, 
-		itemSpawns = 
+		missionType = "deliver",
+		primarySpawns =
+		{
+			{ npcTemplate = "chonar", npcName = "Brother Chonar" }
+		},
+		secondarySpawns = {},
+		itemSpawns =
 		{
 			{ itemTemplate = "object/tangible/mission/quest_item/vardias_tyne_q2_needed.iff", itemName = "Bantha Statue" }
-		}, 
-		rewards = 
-		{ 
+		},
+		rewards =
+		{
 			{ rewardType = "loot", lootGroup = "task_reward_vardias_tyne" },
 		}
 	}
 }
 
-npcMapVardiasTyne = 
-{ 
-	{ 
+npcMapVardiasTyne =
+{
+	{
 		spawnData = { npcTemplate = "vardias_tyne", x = 104, z = 44.1, y = -5382, direction = 96, cellID = 0, position = STAND },
 		npcNumber = 1,
 		stfFile = "@static_npc/tatooine/vardias_tyne",
-		missions = vardias_tyne_missions 
+		missions = vardias_tyne_missions
 	},
 }
 

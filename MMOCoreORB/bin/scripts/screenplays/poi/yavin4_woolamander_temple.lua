@@ -1,16 +1,16 @@
 WoolamanderTempleScreenPlay = ScreenPlay:new {
 	numberOfActs = 1,
-	
+
 	screenplayName = "WoolamanderTempleScreenPlay",
-	
+
 	lootContainers = {
 		568340,
 		468343,
 		468334,
 		468338
 	},
-	
-	lootLevel = 26,	
+
+	lootLevel = 26,
 
 	lootGroups = {
 		{
@@ -22,9 +22,9 @@ WoolamanderTempleScreenPlay = ScreenPlay:new {
 				{group = "armor_attachments", chance = 200000}
 			},
 			lootChance = 8000000
-		}					
+		}
 	},
-	
+
 	lootContainerRespawn = 1800 -- 30 minutes
 }
 
@@ -46,10 +46,10 @@ function WoolamanderTempleScreenPlay:spawnMobiles()
 	spawnMobile("yavin4", "woolamander_gatherer",300,18.5,2,1,-91,3705355)
 	spawnMobile("yavin4", "woolamander_gatherer",300,62.4,2,18.5,137,3705362)
 	spawnMobile("yavin4", "woolamander_gatherer",300,62.4,2,-7.6,43,3705362)
-	
+
 	spawnMobile("yavin4", "woolamander_harrower",900,-83.6,2,22.5,-179,3705359)
 	spawnMobile("yavin4", "woolamander_harrower",900,-83.6,2,-12.5,-2,3705359)
-	
+
 	spawnMobile("yavin4", "woolamander_harvester",480,-73,2,-12,0,3705359)
 	spawnMobile("yavin4", "woolamander_harvester",480,-73,2,22.1,178,3705359)
 	spawnMobile("yavin4", "woolamander_harvester",480,-60.5,2,22,178,3705359)

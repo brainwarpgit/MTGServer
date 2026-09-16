@@ -53,4 +53,3 @@ ForceFeedback2Command = {
 }
 
 AddCommand(ForceFeedback2Command)
-

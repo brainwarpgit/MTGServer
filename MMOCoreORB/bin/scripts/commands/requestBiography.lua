@@ -46,4 +46,3 @@ RequestBiographyCommand = {
 }
 
 AddCommand(RequestBiographyCommand)
-

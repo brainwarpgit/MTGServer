@@ -12,5 +12,3 @@ object_tangible_lair_base_shared_eow_power_transformer_imperial = SharedTangible
 
 ObjectTemplates:addClientTemplate(object_tangible_lair_base_shared_eow_power_transformer_imperial, "object/tangible/lair/base/shared_eow_power_transformer_imperial.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

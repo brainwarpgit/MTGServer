@@ -488,4 +488,3 @@ function TatooineJabbasPalaceMobsScreenPlay:jabbaPatrolDestReached(pMobile)
 
 	return 0
 end
-

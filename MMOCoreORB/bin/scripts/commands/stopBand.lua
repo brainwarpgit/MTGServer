@@ -46,4 +46,3 @@ StopBandCommand = {
 }
 
 AddCommand(StopBandCommand)
-

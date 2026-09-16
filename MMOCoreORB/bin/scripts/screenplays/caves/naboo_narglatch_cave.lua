@@ -3,7 +3,7 @@ NarglatchCaveScreenPlay = ScreenPlay:new {
 	--location 5840 -4635
 	screenplayName = "NarglatchCaveScreenPlay",
 
- 	lootContainers = {
+	lootContainers = {
 		6336292,
 		6336293,
 		6336295,

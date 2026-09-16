@@ -46,4 +46,3 @@ ManufactureCommand = {
 }
 
 AddCommand(ManufactureCommand)
-

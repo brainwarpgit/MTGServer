@@ -50,4 +50,3 @@ ForceSpeed2Command = {
 }
 
 AddCommand(ForceSpeed2Command)
-

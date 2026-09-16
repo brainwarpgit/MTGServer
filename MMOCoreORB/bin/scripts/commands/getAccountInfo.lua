@@ -46,4 +46,3 @@ GetAccountInfoCommand = {
 }
 
 AddCommand(GetAccountInfoCommand)
-

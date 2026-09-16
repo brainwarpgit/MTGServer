@@ -46,4 +46,3 @@ RevokeBadgeCommand = {
 }
 
 AddCommand(RevokeBadgeCommand)
-

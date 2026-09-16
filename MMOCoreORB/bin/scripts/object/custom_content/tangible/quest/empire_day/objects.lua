@@ -236,5 +236,3 @@ object_tangible_quest_empire_day_shared_crash_site_requisition_container = Share
 
 ObjectTemplates:addClientTemplate(object_tangible_quest_empire_day_shared_crash_site_requisition_container, "object/tangible/quest/empire_day/shared_crash_site_requisition_container.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

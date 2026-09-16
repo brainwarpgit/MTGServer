@@ -46,4 +46,3 @@ StartCitySpawnerCommand = {
 }
 
 AddCommand(StartCitySpawnerCommand)
-

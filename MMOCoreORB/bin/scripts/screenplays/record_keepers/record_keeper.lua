@@ -78,4 +78,3 @@ function RecordKeeper:hasFaction(faction, pCreature)
 		return false
 	end
 end
-

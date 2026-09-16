@@ -396,5 +396,3 @@ object_draft_schematic_droid_component_shared_item_storage_module_7 = SharedDraf
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_droid_component_shared_item_storage_module_7, "object/draft_schematic/droid/component/shared_item_storage_module_7.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

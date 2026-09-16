@@ -20,5 +20,3 @@ object_tangible_component_structure_shared_turbo_fluidic_drilling_pumping_unit_a
 
 ObjectTemplates:addClientTemplate(object_tangible_component_structure_shared_turbo_fluidic_drilling_pumping_unit_advanced, "object/tangible/component/structure/shared_turbo_fluidic_drilling_pumping_unit_advanced.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

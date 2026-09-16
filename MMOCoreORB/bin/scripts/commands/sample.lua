@@ -46,4 +46,3 @@ SampleCommand = {
 }
 
 AddCommand(SampleCommand)
-

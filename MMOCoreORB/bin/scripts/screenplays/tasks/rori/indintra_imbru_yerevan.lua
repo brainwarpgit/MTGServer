@@ -2,10 +2,10 @@ indintra_imbru_yerevan_missions =
 {
 	{
 		missionType = "deliver",
-		primarySpawns = 
-		{ 
+		primarySpawns =
+		{
 			{ npcTemplate = "briska_gil", npcName = "Briska Gil" }
-		}, 
+		},
 		secondarySpawns =
 		{
 
@@ -13,38 +13,38 @@ indintra_imbru_yerevan_missions =
 		itemSpawns =
 		{
 			{ itemTemplate = "object/tangible/mission/quest_item/indintra_imbru_yerevan_q1_needed.iff", itemName = "" }
-		}, 
-		rewards = 
-		{ 
+		},
+		rewards =
+		{
 			{ rewardType = "credits", amount = 40 }
 		}
 	},
 	{
-		missionType = "deliver", 
-		primarySpawns = 
-		{ 
+		missionType = "deliver",
+		primarySpawns =
+		{
 			{ npcTemplate = "shaultra_loraweet", npcName = "Shaultra Loraweet" }
-		}, 
+		},
 		secondarySpawns =
 		{
 
-		}, 
-		itemSpawns = 
+		},
+		itemSpawns =
 		{
 			{ itemTemplate = "object/tangible/mission/quest_item/indintra_imbru_yerevan_q2_needed.iff", itemName = "" }
-		}, 
-		rewards = 
+		},
+		rewards =
 		{
 			{ rewardType = "credits", amount = 75 }
 		}
 	}
 }
 
-npcMapIndintraImbruYerevan = 
-{ 
-	{ 
+npcMapIndintraImbruYerevan =
+{
+	{
 		spawnData = { npcTemplate = "indintra_imbru_yerevan", x = -6.5, z = 1.6, y = -14, direction = 0, cellID = 4635647, position = STAND },
-		worldPosition = { x = 5143.5, y = 5639 }, 
+		worldPosition = { x = 5143.5, y = 5639 },
 		npcNumber = 1,
 		stfFile = "@static_npc/rori/rori_narmle_indintra_imbru_yerevan",
 		missions = indintra_imbru_yerevan_missions

@@ -46,4 +46,3 @@ DetonateDroidCommand = {
 }
 
 AddCommand(DetonateDroidCommand)
-

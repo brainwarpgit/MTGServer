@@ -12,4 +12,3 @@ naboo_gungan_hermit_neutral_small_theater = Lair:new {
 }
 
 addLairTemplate("naboo_gungan_hermit_neutral_small_theater", naboo_gungan_hermit_neutral_small_theater)
-

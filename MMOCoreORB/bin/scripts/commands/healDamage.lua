@@ -46,4 +46,3 @@ HealDamageCommand = {
 }
 
 AddCommand(HealDamageCommand)
-

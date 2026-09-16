@@ -140,5 +140,3 @@ object_tangible_powerup_weapon_shared_ranged_wound = SharedTangibleObjectTemplat
 
 ObjectTemplates:addClientTemplate(object_tangible_powerup_weapon_shared_ranged_wound, "object/tangible/powerup/weapon/shared_ranged_wound.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

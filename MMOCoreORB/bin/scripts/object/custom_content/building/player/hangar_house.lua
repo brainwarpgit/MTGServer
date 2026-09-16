@@ -44,7 +44,7 @@ object_building_player_hangar_house = object_building_player_shared_hangar_house
 		{templateFile = "object/tangible/sign/player/house_address_halloween_sign.iff", x = -9.46, z = 3.75, y = 1.12, ow = 0, ox = 0, oz = 0, oy = 1, cellid = -1, containmentType = -1, requiredSkill = "", suiItem = "Halloween Sign Hanging"},
 		{templateFile = "object/tangible/sign/player/imperial_empire_day_2009_sign_hanging.iff", x = -9.46, z = 3.75, y = 1.12, ow = 0, ox = 0, oz = 0, oy = 1, cellid = -1, containmentType = -1, requiredSkill = "", suiItem = "Imperial Emblem Sign Hanging"},
 		{templateFile = "object/tangible/sign/player/rebel_remembrance_day_2009_sign_hanging.iff", x = -9.46, z = 3.75, y = 1.12, ow = 0, ox = 0, oz = 0, oy = 1, cellid = -1, containmentType = -1, requiredSkill = "", suiItem = "Rebel Emblem Sign Hanging"},
-	},	
+	},
 }
 
 ObjectTemplates:addTemplate(object_building_player_hangar_house, "object/building/player/hangar_house.iff")

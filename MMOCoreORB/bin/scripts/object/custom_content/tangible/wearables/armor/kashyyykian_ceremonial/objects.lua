@@ -64,7 +64,3 @@ object_tangible_wearables_armor_kashyyykian_ceremonial_shared_armor_kashyyykian_
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_kashyyykian_ceremonial_shared_armor_kashyyykian_ceremonial_chestplate, "object/tangible/wearables/armor/kashyyykian_ceremonial/shared_armor_kashyyykian_ceremonial_chestplate.iff")
-
-
-
-

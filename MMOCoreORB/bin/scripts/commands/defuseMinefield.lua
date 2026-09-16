@@ -46,4 +46,3 @@ DefuseMinefieldCommand = {
 }
 
 AddCommand(DefuseMinefieldCommand)
-

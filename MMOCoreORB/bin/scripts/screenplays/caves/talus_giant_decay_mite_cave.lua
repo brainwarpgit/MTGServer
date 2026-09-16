@@ -1,5 +1,5 @@
 TalusGiantDecayMiteCaveScreenPlay = ScreenPlay:new {
-	numberOfActs = 1, 
+	numberOfActs = 1,
 
 	screenplayName = "TalusGiantDecayMiteCaveScreenPlay",
 
@@ -13,9 +13,9 @@ TalusGiantDecayMiteCaveScreenPlay = ScreenPlay:new {
 		5995665,
 		5995664
         },
-        
-        lootLevel = 25, 
- 
+
+        lootLevel = 25,
+
         lootGroups = {
                 {
                         groups = {
@@ -26,14 +26,14 @@ TalusGiantDecayMiteCaveScreenPlay = ScreenPlay:new {
                                 {group = "armor_attachments", chance = 300000}
                         },
                         lootChance = 8000000
-                }                                       
+                }
         },
-        
+
         lootContainerRespawn = 1800
 }
- 
+
 registerScreenPlay("TalusGiantDecayMiteCaveScreenPlay", true)
- 
+
 function TalusGiantDecayMiteCaveScreenPlay:start()
 	if (isZoneEnabled("talus")) then
                 self:spawnMobiles()

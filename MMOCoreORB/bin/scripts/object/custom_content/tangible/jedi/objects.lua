@@ -20,5 +20,3 @@ object_tangible_jedi_shared_jedi_holocron_generic = SharedTangibleObjectTemplate
 
 ObjectTemplates:addClientTemplate(object_tangible_jedi_shared_jedi_holocron_generic, "object/tangible/jedi/shared_jedi_holocron_generic.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

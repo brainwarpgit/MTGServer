@@ -46,4 +46,3 @@ RequestCharacterSheetInfoCommand = {
 }
 
 AddCommand(RequestCharacterSheetInfoCommand)
-

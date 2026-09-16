@@ -46,4 +46,3 @@ GetGameTimeCommand = {
 }
 
 AddCommand(GetGameTimeCommand)
-

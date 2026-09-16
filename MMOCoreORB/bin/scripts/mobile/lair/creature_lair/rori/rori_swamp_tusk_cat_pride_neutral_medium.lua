@@ -10,4 +10,3 @@ rori_swamp_tusk_cat_pride_neutral_medium = Lair:new {
 }
 
 addLairTemplate("rori_swamp_tusk_cat_pride_neutral_medium", rori_swamp_tusk_cat_pride_neutral_medium)
-

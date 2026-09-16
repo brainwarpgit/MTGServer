@@ -46,4 +46,3 @@ StartBandCommand = {
 }
 
 AddCommand(StartBandCommand)
-

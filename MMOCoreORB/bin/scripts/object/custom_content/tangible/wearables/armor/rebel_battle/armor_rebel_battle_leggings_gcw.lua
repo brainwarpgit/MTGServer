@@ -57,7 +57,7 @@ object_tangible_wearables_armor_rebel_battle_armor_rebel_battle_leggings_gcw = o
 				"object/creature/player/wookiee_female.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 

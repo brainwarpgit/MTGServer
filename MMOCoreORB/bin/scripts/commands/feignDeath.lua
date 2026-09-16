@@ -46,4 +46,3 @@ FeignDeathCommand = {
 }
 
 AddCommand(FeignDeathCommand)
-

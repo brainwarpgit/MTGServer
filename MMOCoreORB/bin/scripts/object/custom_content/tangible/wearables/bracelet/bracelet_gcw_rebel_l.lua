@@ -1,7 +1,7 @@
 object_tangible_wearables_bracelet_bracelet_gcw_rebel_l = object_tangible_wearables_bracelet_shared_bracelet_gcw_rebel_l:new {
 
 	faction = "Rebel",
-	
+
 	playerRaces = { 	"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",
 				"object/creature/player/talz_male.iff",

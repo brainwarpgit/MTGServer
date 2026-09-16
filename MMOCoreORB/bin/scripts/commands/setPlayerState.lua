@@ -46,4 +46,3 @@ SetPlayerStateCommand = {
 }
 
 AddCommand(SetPlayerStateCommand)
-

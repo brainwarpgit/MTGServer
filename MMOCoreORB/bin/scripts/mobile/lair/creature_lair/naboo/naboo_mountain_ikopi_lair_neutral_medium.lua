@@ -10,4 +10,3 @@ naboo_mountain_ikopi_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("naboo_mountain_ikopi_lair_neutral_medium", naboo_mountain_ikopi_lair_neutral_medium)
-

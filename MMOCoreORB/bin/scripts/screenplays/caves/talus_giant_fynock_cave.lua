@@ -1,5 +1,5 @@
 TalusGiantFynockCaveScreenPlay = ScreenPlay:new {
-       numberOfActs = 1, 
+       numberOfActs = 1,
 
 	screenplayName = "TalusGiantFynockCaveScreenPlay",
 
@@ -11,9 +11,9 @@ TalusGiantFynockCaveScreenPlay = ScreenPlay:new {
 		7955728,
 		7955686
         },
-        
-        lootLevel = 25, 
- 
+
+        lootLevel = 25,
+
         lootGroups = {
                 {
                         groups = {
@@ -24,14 +24,14 @@ TalusGiantFynockCaveScreenPlay = ScreenPlay:new {
                                 {group = "armor_attachments", chance = 300000}
                         },
                         lootChance = 8000000
-                }                                       
+                }
         },
-        
+
         lootContainerRespawn = 1800
 }
- 
+
 registerScreenPlay("TalusGiantFynockCaveScreenPlay", true)
- 
+
 function TalusGiantFynockCaveScreenPlay:start()
 	if (isZoneEnabled("talus")) then
                 self:spawnMobiles()
@@ -39,7 +39,7 @@ function TalusGiantFynockCaveScreenPlay:start()
         end
 end
 
-function TalusGiantFynockCaveScreenPlay:spawnMobiles()    
+function TalusGiantFynockCaveScreenPlay:spawnMobiles()
         spawnMobile("talus", "fearful_fynock_youth", 300, 1550.4, 43.9, -912.0, -55, 0)
         spawnMobile("talus", "fearful_fynock_youth", 300, 1551.5, 43.2, -904.0, -150, 0)
         spawnMobile("talus", "fearful_fynock_youth", 300, 1543.8, 43.6, -907.4, 98, 0)
@@ -71,7 +71,7 @@ function TalusGiantFynockCaveScreenPlay:spawnMobiles()
 	spawnMobile("talus", "feared_fynock_youth", 300, 51.8, -37.9, -91.5, -135, 5625519)
 	spawnMobile("talus", "feared_fynock_youth", 300, 52.5, -37.8, -97.3, 175, 5625519)
 	spawnMobile("talus", "feared_fynock_youth", 300, 50.8, -37.2, -102.4, -55, 5625519)
-	spawnMobile("talus", "feared_fynock_youth", 300, 40.2, -38.0, -99.7, 60, 5625519)	
+	spawnMobile("talus", "feared_fynock_youth", 300, 40.2, -38.0, -99.7, 60, 5625519)
 	spawnMobile("talus", "feared_fynock_youth", 300, 45.1, -38.6, -89.9, 134, 5625519)
 
 	spawnMobile("talus", "frenzied_fynock_guardian", 300, -9.1, -37.7, -147.4, 31, 5625520)
@@ -154,4 +154,3 @@ function TalusGiantFynockCaveScreenPlay:spawnMobiles()
 
 	spawnMobile("talus", "giant_fynock", 300, -91.9, -92.9, -97.5, 175, 5625526)
 end
-

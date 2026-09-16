@@ -46,4 +46,3 @@ TeleportTargetCommand = {
 }
 
 AddCommand(TeleportTargetCommand)
-

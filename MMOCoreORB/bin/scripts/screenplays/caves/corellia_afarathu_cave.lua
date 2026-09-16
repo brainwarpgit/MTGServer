@@ -1,8 +1,8 @@
 AfarathuCaveScreenPlay = ScreenPlay:new {
 	numberOfActs = 1,
-	
+
 	screenplayName = "AfarathuCaveScreenPlay",
-	
+
 	lootContainers = {
 		8075612,
 		8075613,
@@ -10,8 +10,8 @@ AfarathuCaveScreenPlay = ScreenPlay:new {
 		8075615,
 		8075616
 	},
-	
-	lootLevel = 26,	
+
+	lootLevel = 26,
 
 	lootGroups = {
 		{
@@ -26,9 +26,9 @@ AfarathuCaveScreenPlay = ScreenPlay:new {
 				{group = "armor_attachments", chance = 100000}
 			},
 			lootChance = 8000000
-		}					
+		}
 	},
-	
+
 	lootContainerRespawn = 1800 -- 30 minutes
 }
 

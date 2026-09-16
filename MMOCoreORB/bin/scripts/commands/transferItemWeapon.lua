@@ -46,4 +46,3 @@ TransferItemWeaponCommand = {
 }
 
 AddCommand(TransferItemWeaponCommand)
-

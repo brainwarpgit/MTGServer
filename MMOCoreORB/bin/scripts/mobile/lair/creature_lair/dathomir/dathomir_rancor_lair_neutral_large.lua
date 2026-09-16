@@ -10,4 +10,3 @@ dathomir_rancor_lair_neutral_large = Lair:new {
 }
 
 addLairTemplate("dathomir_rancor_lair_neutral_large", dathomir_rancor_lair_neutral_large)
-

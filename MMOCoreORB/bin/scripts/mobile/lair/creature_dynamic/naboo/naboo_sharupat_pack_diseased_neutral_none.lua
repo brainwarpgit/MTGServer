@@ -8,5 +8,5 @@ naboo_sharupat_pack_diseased_neutral_none = Lair:new {
 	buildingsVeryHard = {},
 	buildingType = "none",
 }
---Client has sharupat, so don't change to back shaupaut, future reference. 
+--Client has sharupat, so don't change to back shaupaut, future reference.
 addLairTemplate("naboo_sharupat_pack_diseased_neutral_none", naboo_sharupat_pack_diseased_neutral_none)

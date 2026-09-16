@@ -23,4 +23,3 @@ function guilloParootchieConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, 
 
 	return pConvScreen
 end
-

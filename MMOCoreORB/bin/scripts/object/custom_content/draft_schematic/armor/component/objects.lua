@@ -244,5 +244,3 @@ object_draft_schematic_armor_component_shared_test_an_armor_segment = SharedDraf
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_armor_component_shared_test_an_armor_segment, "object/draft_schematic/armor/component/shared_test_an_armor_segment.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

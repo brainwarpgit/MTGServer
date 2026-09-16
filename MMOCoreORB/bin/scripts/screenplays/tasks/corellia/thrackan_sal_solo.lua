@@ -19,7 +19,7 @@ thrackan_sal_solo_missions =
 			{
 				{ npcTemplate = "jermo_tharrn", npcName = "Jermo Tharrn" }
 			},
-			secondarySpawns =	
+			secondarySpawns =
 			{
 				{ npcTemplate = "selonian_sentinel", npcName = "a Selonian sentinel" },
 				{ npcTemplate = "selonian_sentinel", npcName = "a Selonian sentinel" }
@@ -37,7 +37,7 @@ thrackan_sal_solo_missions =
 				{ npcTemplate = "tormyll_fassoola", npcName = "Tormyll Fassoola" }
 			},
 			secondarySpawns =	{},
-			itemSpawns = 
+			itemSpawns =
 			{
 				{ itemTemplate = "object/tangible/mission/quest_item/thrackan_salsolo_q3_needed.iff", itemName = "Diktat's Death Squad" }
 			},
@@ -52,7 +52,7 @@ thrackan_sal_solo_missions =
 			{
 				{ npcTemplate = "selonian_champion", npcName = "a Selonian leader" }
 			},
-			secondarySpawns =	
+			secondarySpawns =
 			{
 				{ npcTemplate = "selonian_sentinel", npcName = "a Selonian sentinel" },
 				{ npcTemplate = "selonian_sentinel", npcName = "a Selonian sentinel" },

@@ -77,6 +77,6 @@ object_tangible_wearables_cybernetic_cybernetic_crafted_hand_r_01 = object_tangi
 				"object/mobile/vendor/wookiee_female.iff",
 				"object/mobile/vendor/wookiee_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
-				"object/mobile/vendor/zabrak_male.iff" }, 
+				"object/mobile/vendor/zabrak_male.iff" },
 }
 ObjectTemplates:addTemplate(object_tangible_wearables_cybernetic_cybernetic_crafted_hand_r_01, "object/tangible/wearables/cybernetic/cybernetic_crafted_hand_r_01.iff")

@@ -44,21 +44,20 @@
 KnockdownAttackCommand = {
         name = "knockdownattack",
 	combatSpam = "attack",
-	animation = "creature_attack_special_1", 
+	animation = "creature_attack_special_1",
 	animType = GENERATE_INTENSITY,
 
 	stateEffects = {
-	  StateEffect( 
-		KNOCKDOWN_EFFECT, 
-		{ "knockdownRecovery", "lastKnockdown" }, 
-		{ "knockdown_defense" }, 
+	  StateEffect(
+		KNOCKDOWN_EFFECT,
+		{ "knockdownRecovery", "lastKnockdown" },
+		{ "knockdown_defense" },
 		{},
-		85, 
-		0, 
-		0 
+		85,
+		0,
+		0
 	  )
 	}
 }
 
 AddCommand(KnockdownAttackCommand)
-

@@ -46,4 +46,3 @@ ResourceContainerTransferCommand = {
 }
 
 AddCommand(ResourceContainerTransferCommand)
-

@@ -46,4 +46,3 @@ ItemmoveupCommand = {
 }
 
 AddCommand(ItemmoveupCommand)
-

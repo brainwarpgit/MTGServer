@@ -12,5 +12,3 @@ object_draft_schematic_food_component_shared_ingredient_cereal_flakes = SharedDr
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_food_component_shared_ingredient_cereal_flakes, "object/draft_schematic/food/component/shared_ingredient_cereal_flakes.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

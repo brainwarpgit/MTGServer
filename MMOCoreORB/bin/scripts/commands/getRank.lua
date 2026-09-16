@@ -46,4 +46,3 @@ GetRankCommand = {
 }
 
 AddCommand(GetRankCommand)
-

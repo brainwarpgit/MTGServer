@@ -196,5 +196,3 @@ object_draft_schematic_genetic_engineering_shared_processor_use_mold = SharedDra
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_genetic_engineering_shared_processor_use_mold, "object/draft_schematic/genetic_engineering/shared_processor_use_mold.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

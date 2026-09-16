@@ -28,7 +28,7 @@ le_repair_crafted_advanced = Creature:new {
 
 	templates = {
 		"object/creature/npc/droid/crafted/le_repair_droid_advanced.iff"
-	},		
+	},
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)

@@ -10,4 +10,3 @@ lok_vesp_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("lok_vesp_lair_neutral_medium", lok_vesp_lair_neutral_medium)
-

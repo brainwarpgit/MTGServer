@@ -10,4 +10,3 @@ endor_bark_mite_burrower_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("endor_bark_mite_burrower_lair_neutral_small", endor_bark_mite_burrower_lair_neutral_small)
-

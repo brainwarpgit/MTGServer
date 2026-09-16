@@ -20,5 +20,3 @@ object_tangible_component_weapon_lightsaber_shared_lightsaber_module_permafrost_
 
 ObjectTemplates:addClientTemplate(object_tangible_component_weapon_lightsaber_shared_lightsaber_module_permafrost_crystal, "object/tangible/component/weapon/lightsaber/shared_lightsaber_module_permafrost_crystal.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -46,4 +46,3 @@ KneelCommand = {
 }
 
 AddCommand(KneelCommand)
-

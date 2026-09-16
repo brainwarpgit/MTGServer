@@ -46,4 +46,3 @@ CsSearchKnowledgeBaseCommand = {
 }
 
 AddCommand(CsSearchKnowledgeBaseCommand)
-

@@ -10,4 +10,3 @@ naboo_capper_spineflap_nest_neutral_large = Lair:new {
 }
 
 addLairTemplate("naboo_capper_spineflap_nest_neutral_large", naboo_capper_spineflap_nest_neutral_large)
-

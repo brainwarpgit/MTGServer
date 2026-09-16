@@ -17,7 +17,7 @@ object_building_player_generic_medium_window_s02 = object_building_player_shared
 			{templateFile = "object/tangible/sign/player/house_address.iff", x = 5.72, z = 2, y = 7.70, ox = 0, oy = 1, oz = 0, ow = 0, cellid = -1, containmentType = -1}
 	},
 	shopSigns = {
-			{templateFile = "object/tangible/sign/player/house_address.iff", x = 5.72, z = 2, y = 7.70, ox = 0, oy = 1, oz = 0, ow = 0, cellid = -1, containmentType = -1, requiredSkill = "", suiItem = "@player_structure:house_address"},				
+			{templateFile = "object/tangible/sign/player/house_address.iff", x = 5.72, z = 2, y = 7.70, ox = 0, oy = 1, oz = 0, ow = 0, cellid = -1, containmentType = -1, requiredSkill = "", suiItem = "@player_structure:house_address"},
 			{templateFile = "object/tangible/sign/player/shop_sign_s01.iff", x = 11, z = 0.5, y = 11, ox = 0, oy = 0, oz = 0, ow =  1, cellid = -1, containmentType = -1, requiredSkill = "crafting_merchant_management_01", suiItem = "@player_structure:shop_sign1"},
 			{templateFile = "object/tangible/sign/player/shop_sign_s02.iff", x = 11, z = 0.5, y = 11, ox = 0, oy = 0, oz = 0, ow =  1, cellid = -1, containmentType = -1, requiredSkill = "crafting_merchant_management_02", suiItem = "@player_structure:shop_sign2"},
 			{templateFile = "object/tangible/sign/player/shop_sign_s03.iff", x = 11, z = 0.5, y = 11, ox = 0, oy = 0, oz = 0, ow =  1, cellid = -1, containmentType = -1, requiredSkill = "crafting_merchant_management_03", suiItem = "@player_structure:shop_sign3"},
@@ -44,7 +44,7 @@ object_building_player_generic_medium_window_s02 = object_building_player_shared
 		{templateFile = "object/tangible/sign/player/house_address_halloween_sign.iff", x = 5.72, z = 2, y = 7.70, ox = 0, oy = 1, oz = 0, ow = 0, cellid = -1, containmentType = -1, requiredSkill = "", suiItem = "Halloween Sign Hanging"},
 		{templateFile = "object/tangible/sign/player/imperial_empire_day_2009_sign_hanging.iff", x = 5.72, z = 2, y = 7.70, ox = 0, oy = 1, oz = 0, ow = 0, cellid = -1, containmentType = -1, requiredSkill = "", suiItem = "Imperial Emblem Sign Hanging"},
 		{templateFile = "object/tangible/sign/player/rebel_remembrance_day_2009_sign_hanging.iff", x = 5.72, z = 2, y = 7.70, ox = 0, oy = 1, oz = 0, ow = 0, cellid = -1, containmentType = -1, requiredSkill = "", suiItem = "Rebel Emblem Sign Hanging"},
-	},	
+	},
 
 }
 

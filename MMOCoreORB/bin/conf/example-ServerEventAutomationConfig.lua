@@ -59,18 +59,18 @@
 --]]
 
 ServerEventAutomation.config = {
-		verbose = true,
-		emails = {
-				swg_born_and_died = { -- << key name needs to be unique and will be used to avoid duplicates to players
-						start_time = 1056614400, -- Thursday, June 26, 2003 8:00:00 AM
-						end_time = 1323936000, -- Thursday, December 15, 2011 8:00:00 AM
-						sender = "Server Staff",
-						subject = "A server event message",
-						body = [[%firstname%,
+	verbose = true,
+	emails = {
+		swg_born_and_died = { -- << key name needs to be unique and will be used to avoid duplicates to players
+			start_time = 1056614400, -- Thursday, June 26, 2003 8:00:00 AM
+			end_time = 1323936000, -- Thursday, December 15, 2011 8:00:00 AM
+			sender = "Server Staff",
+			subject = "A server event message",
+			body = [[%firstname%,
 						We wanted to say hello, that's all!
 
 						-- Your Friendly Server Admin Staff
 						]]
-				}
 		}
+	}
 }

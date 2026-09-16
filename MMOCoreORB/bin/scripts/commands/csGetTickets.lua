@@ -46,4 +46,3 @@ CsGetTicketsCommand = {
 }
 
 AddCommand(CsGetTicketsCommand)
-

@@ -44,5 +44,3 @@ object_tangible_holiday_love_day_rewards_11_shared_love_day_prop_2011_flowers_s0
 
 ObjectTemplates:addClientTemplate(object_tangible_holiday_love_day_rewards_11_shared_love_day_prop_2011_flowers_s02_r, "object/tangible/holiday/love_day/rewards_11/shared_love_day_prop_2011_flowers_s02_r.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -840,4 +840,3 @@ function GeonosianLab:hasPermission(pPlayer, permissionGroup)
 
 	return PlayerObject(pGhost):hasPermissionGroup(permissionGroup)
 end
-

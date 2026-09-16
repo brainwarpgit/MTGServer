@@ -11,4 +11,3 @@ dathomir_verne_herd_neutral_none = Lair:new {
 }
 
 addLairTemplate("dathomir_verne_herd_neutral_none", dathomir_verne_herd_neutral_none)
-

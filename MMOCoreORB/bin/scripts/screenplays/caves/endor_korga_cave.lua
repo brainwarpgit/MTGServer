@@ -94,4 +94,4 @@ function EndorKorgaCaveScreenPlay:spawnMobiles()
 	spawnMobile("endor", "korga_dark_shaman",300,82.5,-46.6,-143.9,79,733370)
 	spawnMobile("endor", "korga_dark_shaman",300,82.7,-46.2,-138.9,91,733370)
 
-end	
+end

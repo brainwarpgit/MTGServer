@@ -1,6 +1,6 @@
 lx_466_dantari = Creature:new {
 	objectName = "",
-	customName = "(a Dantari tribesman)",	
+	customName = "(a Dantari tribesman)",
 	socialGroup = "dantari_raiders",
 	faction = "dantari_raiders",
 	mobType = MOB_NPC,
@@ -37,7 +37,7 @@ lx_466_dantari = Creature:new {
 	primaryWeapon = "primitive_weapons",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "lx_466_mission_target_convotemplate",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(brawlermaster,marksmanmaster),

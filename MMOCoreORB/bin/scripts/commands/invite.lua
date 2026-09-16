@@ -46,4 +46,3 @@ InviteCommand = {
 }
 
 AddCommand(InviteCommand)
-

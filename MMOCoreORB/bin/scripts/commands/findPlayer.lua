@@ -46,4 +46,3 @@ FindPlayerCommand = {
 }
 
 AddCommand(FindPlayerCommand)
-

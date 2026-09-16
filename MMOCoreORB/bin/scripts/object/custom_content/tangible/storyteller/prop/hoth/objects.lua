@@ -116,5 +116,3 @@ object_tangible_storyteller_prop_hoth_shared_pr_hoth_toolbox = SharedTangibleObj
 
 ObjectTemplates:addClientTemplate(object_tangible_storyteller_prop_hoth_shared_pr_hoth_toolbox, "object/tangible/storyteller/prop/hoth/shared_pr_hoth_toolbox.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

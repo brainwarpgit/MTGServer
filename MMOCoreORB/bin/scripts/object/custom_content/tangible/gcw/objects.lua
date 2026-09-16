@@ -116,5 +116,3 @@ object_tangible_gcw_shared_pvp_region_watcher = SharedTangibleObjectTemplate:new
 
 ObjectTemplates:addClientTemplate(object_tangible_gcw_shared_pvp_region_watcher, "object/tangible/gcw/shared_pvp_region_watcher.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

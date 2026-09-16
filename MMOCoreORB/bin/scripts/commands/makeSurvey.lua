@@ -46,4 +46,3 @@ MakeSurveyCommand = {
 }
 
 AddCommand(MakeSurveyCommand)
-

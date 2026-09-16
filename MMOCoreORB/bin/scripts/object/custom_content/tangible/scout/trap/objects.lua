@@ -60,5 +60,3 @@ object_tangible_scout_trap_shared_trap_ap_tr_timer = SharedTangibleObjectTemplat
 
 ObjectTemplates:addClientTemplate(object_tangible_scout_trap_shared_trap_ap_tr_timer, "object/tangible/scout/trap/shared_trap_ap_tr_timer.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -4144,5 +4144,3 @@ addOutfit(
 	{"object/tangible/wearables/shirt/shirt_s42.iff",	-- Shirt
 	"object/tangible/wearables/pants/pants_s33.iff"	-- Pants
 }))
-
-

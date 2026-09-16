@@ -10,4 +10,3 @@ tatooine_dune_lizard_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("tatooine_dune_lizard_lair_neutral_medium", tatooine_dune_lizard_lair_neutral_medium)
-

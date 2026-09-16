@@ -5,15 +5,15 @@ object_draft_schematic_armor_armor_appearance_galactic_marine_leggings_gcw = obj
    customObjectName = "Armor Pants",
 
    craftingToolTab = 2, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 45, 
-   size = 4, 
+   complexity = 45,
+   size = 4,
 
-   xpType = "crafting_clothing_armor", 
-   xp = 550, 
+   xpType = "crafting_clothing_armor",
+   xp = 550,
 
-   assemblySkill = "armor_assembly", 
-   experimentingSkill = "armor_experimentation", 
-   customizationSkill = "armor_customization", 
+   assemblySkill = "armor_assembly",
+   experimentingSkill = "armor_experimentation",
+   customizationSkill = "armor_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

@@ -18,4 +18,3 @@ includeFile("custom_content/static/worldbuilding/vehicles/serverobjects.lua")
 
 includeFile("custom_content/static/worldbuilding/battle_droid_powerdown.lua")
 includeFile("custom_content/static/worldbuilding/battle_droid_static.lua")
-

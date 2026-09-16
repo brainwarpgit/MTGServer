@@ -481,7 +481,7 @@ function Coa2Screenplay:startMissionThree(pPlayer, conversingNPC, faction)
 		CreatureObject(pPlayer):sendSystemMessage(file .. ":waypoint_failure")
 		return
 	end
-	
+
 	writeData(SceneObject(pPlayer):getObjectID() .. ":coaWayID", wayID)
 
 	writeScreenPlayData(pPlayer, faction .. "_coa2", "state", self.M3_4_ACTIVE)
@@ -497,7 +497,7 @@ function Coa2Screenplay:finishMissionFour(pPlayer, faction)
 	if pGhost == nil then
 		return
 	end
-	
+
 	self:removeWaypoint(pPlayer)
 
 	PlayerObject(pGhost):increaseFactionStanding(faction, 250)

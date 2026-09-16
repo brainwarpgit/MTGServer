@@ -46,4 +46,3 @@ CustomizeVehicleCommand = {
 }
 
 AddCommand(CustomizeVehicleCommand)
-

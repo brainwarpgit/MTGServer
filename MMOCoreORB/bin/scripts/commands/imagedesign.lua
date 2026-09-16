@@ -46,4 +46,3 @@ ImagedesignCommand = {
 }
 
 AddCommand(ImagedesignCommand)
-

@@ -46,4 +46,3 @@ ConsentCommand = {
 }
 
 AddCommand(ConsentCommand)
-

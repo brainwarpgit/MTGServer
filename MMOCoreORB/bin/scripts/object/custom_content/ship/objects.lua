@@ -2298,5 +2298,3 @@ object_ship_shared_z95_tier9 = SharedShipObjectTemplate:new {
 
 ObjectTemplates:addClientTemplate(object_ship_shared_z95_tier9, "object/ship/shared_z95_tier9.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

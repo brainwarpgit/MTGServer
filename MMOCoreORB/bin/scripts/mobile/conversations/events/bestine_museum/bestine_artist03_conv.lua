@@ -71,7 +71,7 @@ bestineArtist03ConvoTemplate:addScreen(painting_response_curvote);
 
 painting_response_curvote_prev = ConvoScreen:new {
 	id = "painting_response_curvote_prev",
-	leftDialog = "@conversation/bestine_artist03:s_1eebe4c5", -- Do you get the feeling we've done this before? Anyway, as someone who enjoys exploring this waste of a planet, I've sometimes used painting as a journal of sorts to memorialize things I've seen. Those that truly made an impression on me and are unique to Tatooine. 
+	leftDialog = "@conversation/bestine_artist03:s_1eebe4c5", -- Do you get the feeling we've done this before? Anyway, as someone who enjoys exploring this waste of a planet, I've sometimes used painting as a journal of sorts to memorialize things I've seen. Those that truly made an impression on me and are unique to Tatooine.
 	stopConversation = "true",
 	options = {}
 }

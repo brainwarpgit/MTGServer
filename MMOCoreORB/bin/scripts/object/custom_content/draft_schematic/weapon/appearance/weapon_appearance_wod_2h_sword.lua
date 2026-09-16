@@ -5,15 +5,15 @@ object_draft_schematic_weapon_appearance_weapon_appearance_wod_2h_sword = object
    customObjectName = "2h Sword",
 
    craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 20, 
-   size = 3, 
+   complexity = 20,
+   size = 3,
 
-   xpType = "crafting_weapons_general", 
-   xp = 110, 
+   xpType = "crafting_weapons_general",
+   xp = 110,
 
-   assemblySkill = "weapon_assembly", 
-   experimentingSkill = "weapon_experimentation", 
-   customizationSkill = "weapon_customization", 
+   assemblySkill = "weapon_assembly",
+   experimentingSkill = "weapon_experimentation",
+   customizationSkill = "weapon_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

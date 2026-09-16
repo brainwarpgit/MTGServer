@@ -108,5 +108,3 @@ object_draft_schematic_instrument_shared_instrument_xantha = SharedDraftSchemati
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_instrument_shared_instrument_xantha, "object/draft_schematic/instrument/shared_instrument_xantha.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

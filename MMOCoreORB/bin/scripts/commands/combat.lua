@@ -46,4 +46,3 @@ CombatCommand = {
 }
 
 AddCommand(CombatCommand)
-

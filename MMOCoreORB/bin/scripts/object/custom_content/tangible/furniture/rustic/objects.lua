@@ -68,5 +68,3 @@ object_tangible_furniture_rustic_shared_love_seat_rustic_s01 = SharedTangibleObj
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_rustic_shared_love_seat_rustic_s01, "object/tangible/furniture/rustic/shared_love_seat_rustic_s01.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

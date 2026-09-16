@@ -10,4 +10,3 @@ corellia_carrion_spat_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("corellia_carrion_spat_lair_neutral_medium", corellia_carrion_spat_lair_neutral_medium)
-

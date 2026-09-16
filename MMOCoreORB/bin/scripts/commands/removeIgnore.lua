@@ -46,4 +46,3 @@ RemoveIgnoreCommand = {
 }
 
 AddCommand(RemoveIgnoreCommand)
-

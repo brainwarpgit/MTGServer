@@ -46,4 +46,3 @@ SetLastNameCommand = {
 }
 
 AddCommand(SetLastNameCommand)
-

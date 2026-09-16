@@ -52,5 +52,3 @@ object_tangible_loot_creature_loot_collections_fried_icecream_components_tatooin
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_collections_fried_icecream_components_tatooine_shared_zog, "object/tangible/loot/creature_loot/collections/fried_icecream_components/tatooine/shared_zog.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

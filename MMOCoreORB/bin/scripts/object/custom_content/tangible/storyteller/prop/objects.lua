@@ -1428,5 +1428,3 @@ object_tangible_storyteller_prop_shared_pr_yt2400_ground_r0 = SharedTangibleObje
 
 ObjectTemplates:addClientTemplate(object_tangible_storyteller_prop_shared_pr_yt2400_ground_r0, "object/tangible/storyteller/prop/shared_pr_yt2400_ground_r0.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

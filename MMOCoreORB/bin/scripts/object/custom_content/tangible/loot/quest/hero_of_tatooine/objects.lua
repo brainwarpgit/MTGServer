@@ -4,5 +4,3 @@ object_tangible_loot_quest_hero_of_tatooine_shared_squill_skull_pile = SharedTan
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_quest_hero_of_tatooine_shared_squill_skull_pile, "object/tangible/loot/quest/hero_of_tatooine/shared_squill_skull_pile.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

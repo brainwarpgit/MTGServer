@@ -282,4 +282,3 @@ includeFile("lair/npc_theater/yavin4/yavin4_stranded_imperial_base_imperial_medi
 includeFile("lair/npc_theater/yavin4/yavin4_stranded_imperial_patrol_imperial_medium_theater.lua")
 includeFile("lair/npc_theater/yavin4/yavin4_stranded_rebel_base_rebel_medium_theater.lua")
 includeFile("lair/npc_theater/yavin4/yavin4_stranded_rebel_patrol_rebel_medium_theater.lua")
-

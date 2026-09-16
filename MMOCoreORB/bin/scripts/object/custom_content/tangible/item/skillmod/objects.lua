@@ -140,5 +140,3 @@ object_tangible_item_skillmod_shared_skillmod_wod_sm_standing_sign = SharedTangi
 
 ObjectTemplates:addClientTemplate(object_tangible_item_skillmod_shared_skillmod_wod_sm_standing_sign, "object/tangible/item/skillmod/shared_skillmod_wod_sm_standing_sign.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

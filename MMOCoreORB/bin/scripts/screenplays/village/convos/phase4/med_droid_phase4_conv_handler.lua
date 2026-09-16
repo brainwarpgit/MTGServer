@@ -9,7 +9,7 @@ function villageMedicalDroidPhase4ConvoHandler:getInitialScreen(pPlayer, pNpc, p
 	if not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.FS_COMBAT_HEALING_1) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.FS_COMBAT_HEALING_2) then
 		return convoTemplate:getScreen("intro_no_quest")
 	end
-	
+
 	return convoTemplate:getScreen("medical_records")
 end
 

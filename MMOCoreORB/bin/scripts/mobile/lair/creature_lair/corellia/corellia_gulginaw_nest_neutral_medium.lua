@@ -10,4 +10,3 @@ corellia_gulginaw_nest_neutral_medium = Lair:new {
 }
 
 addLairTemplate("corellia_gulginaw_nest_neutral_medium", corellia_gulginaw_nest_neutral_medium)
-

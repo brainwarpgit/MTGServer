@@ -47,7 +47,7 @@ UnarmedLunge1Command = {
 	damageMultiplier = 2.0,
 	speedMultiplier = 1.5,
 	accuracyBonus = 15,
-	
+
 	healthCostMultiplier = 1.0,
 	actionCostMultiplier = 1.0,
 	mindCostMultiplier = 1.0,
@@ -57,22 +57,21 @@ UnarmedLunge1Command = {
 	combatSpam = "ridingbantha",
 
 	range = 20,
-	
+
 	weaponType = UNARMEDWEAPON,
 
 	stateEffects = {
-	  StateEffect( 
-		POSTUREDOWN_EFFECT, 
-		{ "postureDownRecovery" }, 
-		{ "posture_change_down_defense" }, 
+	  StateEffect(
+		POSTUREDOWN_EFFECT,
+		{ "postureDownRecovery" },
+		{ "posture_change_down_defense" },
 		{},
-		100, 
-		0, 
-		0 
+		100,
+		0,
+		0
 	  )
 	}
 
 }
 
 AddCommand(UnarmedLunge1Command)
-

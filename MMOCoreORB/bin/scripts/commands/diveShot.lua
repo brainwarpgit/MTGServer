@@ -54,23 +54,22 @@ DiveShotCommand = {
 	animation = "fire_acrobatic",
 
 	combatSpam = "diveshot",
-	
+
 	weaponType = PISTOLWEAPON,
 
 	range = -1,
 	stateEffects = {
-	  StateEffect( 
-	    ATTACKER_FORCE_PRONE, 
-	    {}, 
-	    {}, 
-	    {}, 
-	    100, 
-	    0, 
-	    0 
+	  StateEffect(
+	    ATTACKER_FORCE_PRONE,
+	    {},
+	    {},
+	    {},
+	    100,
+	    0,
+	    0
 	  )
 	},
 
 }
 
 AddCommand(DiveShotCommand)
-

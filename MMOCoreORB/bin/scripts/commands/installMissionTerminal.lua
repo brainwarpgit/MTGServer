@@ -46,4 +46,3 @@ InstallMissionTerminalCommand = {
 }
 
 AddCommand(InstallMissionTerminalCommand)
-

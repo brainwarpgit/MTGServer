@@ -98,4 +98,3 @@ object_building_content_aurilia_shared_aurilia_token_vendor_sign = SharedBuildin
 }
 ObjectTemplates:addClientTemplate(object_building_content_aurilia_shared_aurilia_token_vendor_sign, "object/building/content/aurilia/shared_aurilia_token_vendor_sign.iff")
 --*********************************************************************************************************************************
-

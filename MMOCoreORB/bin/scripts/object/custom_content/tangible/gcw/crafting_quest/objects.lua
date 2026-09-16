@@ -156,5 +156,3 @@ object_tangible_gcw_crafting_quest_shared_gcw_weapon_stabilizers = SharedTangibl
 
 ObjectTemplates:addClientTemplate(object_tangible_gcw_crafting_quest_shared_gcw_weapon_stabilizers, "object/tangible/gcw/crafting_quest/shared_gcw_weapon_stabilizers.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

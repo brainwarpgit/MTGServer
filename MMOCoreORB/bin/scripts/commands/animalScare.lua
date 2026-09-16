@@ -63,4 +63,3 @@ AnimalScareCommand = {
 }
 
 AddCommand(AnimalScareCommand)
-

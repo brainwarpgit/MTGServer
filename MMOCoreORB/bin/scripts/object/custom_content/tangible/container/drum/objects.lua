@@ -12,5 +12,3 @@ object_tangible_container_drum_shared_supply_drop_crate = SharedTangibleObjectTe
 
 ObjectTemplates:addClientTemplate(object_tangible_container_drum_shared_supply_drop_crate, "object/tangible/container/drum/shared_supply_drop_crate.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

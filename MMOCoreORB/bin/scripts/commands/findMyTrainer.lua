@@ -46,4 +46,3 @@ FindMyTrainerCommand = {
 }
 
 AddCommand(FindMyTrainerCommand)
-

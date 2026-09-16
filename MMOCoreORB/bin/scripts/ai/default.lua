@@ -423,4 +423,3 @@ targetDefault = {
 	{id="64883208",	name="DropProspectFromDefenders",	pid="384243060"},
 	{id="1748526458",	name="EraseBlackboard",	pid="384243060",	args={param=""}}}
 addAiTemplate("targetDefault", targetDefault)
-

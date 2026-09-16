@@ -51,7 +51,7 @@ object_draft_schematic_furniture_bestine_painting_bestine_raventhorn = object_dr
 	size = 2,
 	factoryCrateSize = 15,
 	factoryCrateType = "object/factory/factory_crate_furniture.iff",
-   
+
 	xpType = "crafting_structure_general",
 	xp = 80,
 

@@ -1801,4 +1801,3 @@ ObjectTemplates:addClientTemplate(object_creature_player_shared_gotal_male, "obj
 object_creature_player_shared_talz_male = SharedCreatureObjectTemplate:new {
 	clientTemplateFileName = "object/creature/player/shared_talz_male.iff"}
 ObjectTemplates:addClientTemplate(object_creature_player_shared_talz_male, "object/creature/player/shared_talz_male.iff")
-

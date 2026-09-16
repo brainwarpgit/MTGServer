@@ -47,4 +47,3 @@ CreateNPCCommand = {
 }
 
 AddCommand(CreateNPCCommand)
-

@@ -139,4 +139,3 @@ object_tangible_wearables_armor_mandalorian_imperial_shared_armor_mandalorian_im
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_mandalorian_imperial_shared_armor_mandalorian_imperial_leggings, "object/tangible/wearables/armor/mandalorian_imperial/shared_armor_mandalorian_imperial_leggings.iff")
 
 --****************************************************************************************************************************************************************************
-

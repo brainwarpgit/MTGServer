@@ -53,15 +53,14 @@ CripplingShotCommand = {
 
 	poolsToDamage = RANDOM_ATTRIBUTE,
 
-	animation = "fire_5_single", 
+	animation = "fire_5_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "cripplingshot",
-	
+
 	weaponType = CARBINEWEAPON,
 
 	range = -1
 }
 
 AddCommand(CripplingShotCommand)
-

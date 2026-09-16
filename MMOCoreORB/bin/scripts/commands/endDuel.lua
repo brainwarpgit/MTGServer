@@ -46,4 +46,3 @@ EndDuelCommand = {
 }
 
 AddCommand(EndDuelCommand)
-

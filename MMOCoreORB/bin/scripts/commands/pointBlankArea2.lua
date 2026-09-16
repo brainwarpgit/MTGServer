@@ -54,15 +54,14 @@ PointBlankArea2Command = {
 	coneAngle = 60,
 	coneAction = true,
 
-	animation = "fire_area_no_trails", 
+	animation = "fire_area_no_trails",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "areashot",
-	
+
 	weaponType = PISTOLWEAPON,
 
 	range = 12
 }
 
 AddCommand(PointBlankArea2Command)
-

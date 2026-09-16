@@ -46,4 +46,3 @@ ServerSysGroupCommand = {
 }
 
 AddCommand(ServerSysGroupCommand)
-

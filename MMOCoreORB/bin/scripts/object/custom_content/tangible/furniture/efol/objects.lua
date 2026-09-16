@@ -12,5 +12,3 @@ object_tangible_furniture_efol_shared_frn_pillow_efol = SharedTangibleObjectTemp
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_efol_shared_frn_pillow_efol, "object/tangible/furniture/efol/shared_frn_pillow_efol.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

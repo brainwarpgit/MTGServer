@@ -5,15 +5,15 @@ object_draft_schematic_armor_armor_appearance_snowtrooper_chest = object_draft_s
    customObjectName = "Armor Chest Plate",
 
    craftingToolTab = 2, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 45, 
-   size = 4, 
+   complexity = 45,
+   size = 4,
 
-   xpType = "crafting_clothing_armor", 
-   xp = 650, 
+   xpType = "crafting_clothing_armor",
+   xp = 650,
 
-   assemblySkill = "armor_assembly", 
-   experimentingSkill = "armor_experimentation", 
-   customizationSkill = "armor_customization", 
+   assemblySkill = "armor_assembly",
+   experimentingSkill = "armor_experimentation",
+   customizationSkill = "armor_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

@@ -97,4 +97,3 @@ not_quest_owner = ConvoScreen:new {
 padawan_politician_01_convo_template:addScreen(not_quest_owner);
 
 addConversationTemplate("padawan_politician_01_convo_template", padawan_politician_01_convo_template);
-

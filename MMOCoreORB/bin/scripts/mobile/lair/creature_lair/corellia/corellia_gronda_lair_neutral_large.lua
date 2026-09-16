@@ -10,4 +10,3 @@ corellia_gronda_lair_neutral_large = Lair:new {
 }
 
 addLairTemplate("corellia_gronda_lair_neutral_large", corellia_gronda_lair_neutral_large)
-

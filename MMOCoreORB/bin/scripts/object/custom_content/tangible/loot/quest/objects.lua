@@ -76,5 +76,3 @@ object_tangible_loot_quest_shared_prolog_content_science_datapad = SharedTangibl
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_quest_shared_prolog_content_science_datapad, "object/tangible/loot/quest/shared_prolog_content_science_datapad.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -116,4 +116,3 @@ weapons =
 		{"object/weapon/ranged/rifle/shared_rifle_laser.iff", "rifle_barrel_large", "scope", "stock_rifle_laser"},
 		{"object/weapon/ranged/rifle/shared_rifle_t21.iff", "rifle_barrel_large", "", "stock_t21"},
 	}
-

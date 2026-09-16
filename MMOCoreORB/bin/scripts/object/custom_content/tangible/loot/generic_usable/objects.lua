@@ -460,5 +460,3 @@ object_tangible_loot_generic_usable_shared_worklight_generic = SharedTangibleObj
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_generic_usable_shared_worklight_generic, "object/tangible/loot/generic_usable/shared_worklight_generic.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

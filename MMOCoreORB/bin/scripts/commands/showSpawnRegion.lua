@@ -46,4 +46,3 @@ ShowSpawnRegionCommand = {
 }
 
 AddCommand(ShowSpawnRegionCommand)
-

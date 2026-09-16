@@ -46,4 +46,3 @@ SecretSpawnSpamCommand = {
 }
 
 AddCommand(SecretSpawnSpamCommand)
-

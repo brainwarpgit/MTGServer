@@ -139,4 +139,3 @@ object_tangible_wearables_armor_rebel_snow_shared_armor_rebel_snow_leggings = Sh
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_rebel_snow_shared_armor_rebel_snow_leggings, "object/tangible/wearables/armor/rebel_snow/shared_armor_rebel_snow_leggings.iff")
 
 --****************************************************************************************************************************************************************************
-

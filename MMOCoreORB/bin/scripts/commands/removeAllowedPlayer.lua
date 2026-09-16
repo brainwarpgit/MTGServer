@@ -46,4 +46,3 @@ RemoveAllowedPlayerCommand = {
 }
 
 AddCommand(RemoveAllowedPlayerCommand)
-

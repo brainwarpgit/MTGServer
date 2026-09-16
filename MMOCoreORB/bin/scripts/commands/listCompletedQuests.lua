@@ -46,4 +46,3 @@ ListCompletedQuestsCommand = {
 }
 
 AddCommand(ListCompletedQuestsCommand)
-

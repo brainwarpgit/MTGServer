@@ -10,4 +10,3 @@ rori_nightspider_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("rori_nightspider_lair_neutral_small", rori_nightspider_lair_neutral_small)
-

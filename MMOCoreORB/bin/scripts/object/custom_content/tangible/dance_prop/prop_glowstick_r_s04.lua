@@ -66,7 +66,7 @@ object_tangible_dance_prop_prop_glowstick_r_s04 = object_tangible_dance_prop_sha
 
 	xpType = "dance",
 
-	
+
 	--certificationsRequired = { "cert_sword_2h_axe" },
 }
 

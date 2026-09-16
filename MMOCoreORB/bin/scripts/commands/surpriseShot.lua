@@ -63,4 +63,3 @@ SurpriseShotCommand = {
 }
 
 AddCommand(SurpriseShotCommand)
-

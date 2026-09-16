@@ -46,4 +46,3 @@ ResourceContainerSplitCommand = {
 }
 
 AddCommand(ResourceContainerSplitCommand)
-

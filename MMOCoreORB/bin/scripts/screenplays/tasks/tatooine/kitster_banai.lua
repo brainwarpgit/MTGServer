@@ -2,10 +2,10 @@ kitster_banai_missions =
 {
 	{
 		missionType = "assassinate",
-		primarySpawns = 
-		{ 
+		primarySpawns =
+		{
 			{ npcTemplate = "jawa_leader", npcName = "" }
-		}, 
+		},
 		secondarySpawns =
 		{
 			{ npcTemplate = "jawa_henchman", npcName = "" },
@@ -15,9 +15,9 @@ kitster_banai_missions =
 		itemSpawns =
 		{
 
-		}, 
-		rewards = 
-		{ 
+		},
+		rewards =
+		{
 			{ rewardType = "credits", amount = 1500 },
 			{ rewardType = "faction", faction = "jawa", amount = -100 },
 			{ rewardType = "faction", faction = "tusken_raider", amount = 50 },
@@ -25,20 +25,20 @@ kitster_banai_missions =
 		}
 	},
 	{
-		missionType = "assassinate", 
-		primarySpawns = 
-		{ 
+		missionType = "assassinate",
+		primarySpawns =
+		{
 			{ npcTemplate = "deeng", npcName = "Deeng" }
-		}, 
+		},
 		secondarySpawns =
 		{
 
-		}, 
-		itemSpawns = 
+		},
+		itemSpawns =
 		{
 
-		}, 
-		rewards = 
+		},
+		rewards =
 		{
 			{ rewardType = "credits", amount = 1800 },
 			{ rewardType = "faction", faction = "thug", amount = -160 },
@@ -46,11 +46,11 @@ kitster_banai_missions =
 		}
 	},
 	{
-		missionType = "assassinate", 
-		primarySpawns = 
-		{ 
+		missionType = "assassinate",
+		primarySpawns =
+		{
 			{ npcTemplate = "sont_toipo", npcName = "Sont Toipo" }
-		}, 
+		},
 		secondarySpawns =
 		{
 			{ npcTemplate = "moisture_farmer", npcName = "" },
@@ -61,12 +61,12 @@ kitster_banai_missions =
 			{ npcTemplate = "moisture_farmer", npcName = "" },
 			{ npcTemplate = "moisture_farmer", npcName = "" },
 			{ npcTemplate = "moisture_farmer", npcName = "" }
-		}, 
-		itemSpawns = 
+		},
+		itemSpawns =
 		{
 
-		}, 
-		rewards = 
+		},
+		rewards =
 		{
 			{ rewardType = "credits", amount = 1500 },
 			{ rewardType = "faction", faction = "thug", amount = -160 },
@@ -75,48 +75,48 @@ kitster_banai_missions =
 		}
 	},
 	{
-		missionType = "escort", 
-		primarySpawns = 
-		{ 
+		missionType = "escort",
+		primarySpawns =
+		{
 			{ npcTemplate = "krin_vel", npcName = "Krin Vel" }
-		}, 
+		},
 		secondarySpawns =
 		{
 
-		}, 
-		itemSpawns = 
+		},
+		itemSpawns =
 		{
 
-		}, 
-		rewards = 
+		},
+		rewards =
 		{
 			{ rewardType = "credits", amount = 2500 }
 		}
 	},
 	{
-		missionType = "deliver", 
-		primarySpawns = 
-		{ 
+		missionType = "deliver",
+		primarySpawns =
+		{
 			{ npcTemplate = "thermal_det", npcName = "Thermal Det" }
-		}, 
+		},
 		secondarySpawns =
 		{
 
-		}, 
-		itemSpawns = 
+		},
+		itemSpawns =
 		{
 			{ itemTemplate = "object/tangible/mission/quest_item/kitster_banai_q5_needed.iff", itemName = "" }
-		}, 
-		rewards = 
+		},
+		rewards =
 		{
 			{ rewardType = "credits", amount = 2500 }
 		}
 	}
 }
 
-npcMapKitsterBanai = 
-{ 
-	{ 
+npcMapKitsterBanai =
+{
+	{
 		spawnData = { npcTemplate = "kitster_banai", x = -2887, z = 5, y = 2494, direction = 330, cellID = 0, position = STAND },
 		npcNumber = 1,
 		stfFile = "@static_npc/tatooine/kitster_banai",

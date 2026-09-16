@@ -7,10 +7,3 @@ includeFile("custom_content/static/worldbuilding/mechanical/ship_parts/ship_comp
 includeFile("custom_content/static/worldbuilding/mechanical/ship_parts/ship_component_reactor_s01.lua")
 includeFile("custom_content/static/worldbuilding/mechanical/ship_parts/xwing_weapon_neg_s02.lua")
 includeFile("custom_content/static/worldbuilding/mechanical/ship_parts/ywing_engine_s01.lua")
-
-
-
-
-
-
-

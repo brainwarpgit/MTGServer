@@ -20,5 +20,3 @@ object_tangible_item_costume_kit_shared_costume_kit_holiday = SharedTangibleObje
 
 ObjectTemplates:addClientTemplate(object_tangible_item_costume_kit_shared_costume_kit_holiday, "object/tangible/item/costume_kit/shared_costume_kit_holiday.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -20,5 +20,3 @@ object_tangible_storyteller_theater_shared_flat_layer_small = SharedBuildingObje
 
 ObjectTemplates:addClientTemplate(object_tangible_storyteller_theater_shared_flat_layer_small, "object/tangible/storyteller/theater/shared_flat_layer_small.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -55,4 +55,3 @@ ForceArmor1Command = {
 }
 
 AddCommand(ForceArmor1Command)
-

@@ -148,5 +148,3 @@ object_tangible_content_shared_wod_token_5 = SharedTangibleObjectTemplate:new {
 
 ObjectTemplates:addClientTemplate(object_tangible_content_shared_wod_token_5, "object/tangible/content/shared_wod_token_5.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

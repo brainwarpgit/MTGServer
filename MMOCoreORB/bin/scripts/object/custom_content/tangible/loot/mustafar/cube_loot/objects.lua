@@ -572,5 +572,3 @@ object_tangible_loot_mustafar_cube_loot_shared_cube_loot_reb3 = SharedTangibleOb
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_mustafar_cube_loot_shared_cube_loot_reb3, "object/tangible/loot/mustafar/cube_loot/shared_cube_loot_reb3.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

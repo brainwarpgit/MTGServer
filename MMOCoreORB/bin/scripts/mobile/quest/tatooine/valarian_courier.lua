@@ -33,7 +33,7 @@ valarian_courier = Creature:new {
 				{group = "theme_park_loot_jabba_courier", chance = 10000000},
 			},
 			lootChance = 10000000
-		}				
+		}
 	},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -41,7 +41,7 @@ valarian_courier = Creature:new {
 	primaryWeapon = "pirate_weapons_medium",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(brawlermaster,marksmanmaster),

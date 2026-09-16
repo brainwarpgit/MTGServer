@@ -47,4 +47,3 @@ CreateSpawningElementWithDifficultyCommand = {
 }
 
 AddCommand(CreateSpawningElementWithDifficultyCommand)
-

@@ -46,4 +46,3 @@ TransferstructureCommand = {
 }
 
 AddCommand(TransferstructureCommand)
-

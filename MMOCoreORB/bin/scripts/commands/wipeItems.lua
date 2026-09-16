@@ -46,4 +46,3 @@ WipeItemsCommand = {
 }
 
 AddCommand(WipeItemsCommand)
-

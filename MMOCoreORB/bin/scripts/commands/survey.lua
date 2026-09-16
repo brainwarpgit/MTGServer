@@ -46,4 +46,3 @@ SurveyCommand = {
 }
 
 AddCommand(SurveyCommand)
-

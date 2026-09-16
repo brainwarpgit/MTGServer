@@ -53,18 +53,17 @@ MultiTargetPistolShotCommand = {
 
 	areaAction = true,
         areaRange = 32,
-        
+
 	poolsToDamage = RANDOM_ATTRIBUTE,
 
 	animation = "fire_5_special_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "pistolmultishot",
-	
+
 	weaponType = PISTOLWEAPON,
 
 	range = -1
 }
 
 AddCommand(MultiTargetPistolShotCommand)
-

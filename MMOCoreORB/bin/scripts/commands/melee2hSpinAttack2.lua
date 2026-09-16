@@ -53,15 +53,14 @@ Melee2hSpinAttack2Command = {
 	areaAction = true,
 	areaRange = 16,
 
-	animation = "combo_4b", 
+	animation = "combo_4b",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "spinslam",
-	
+
 	weaponType = TWOHANDMELEEWEAPON,
 
 	range = -1
 }
 
 AddCommand(Melee2hSpinAttack2Command)
-

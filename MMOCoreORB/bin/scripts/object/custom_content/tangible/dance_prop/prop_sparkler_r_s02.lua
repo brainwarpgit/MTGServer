@@ -70,7 +70,7 @@ object_tangible_dance_prop_prop_sparkler_r_s02 = object_tangible_dance_prop_shar
 
 	xpType = "dance",
 
-	
+
 	--certificationsRequired = { "cert_sword_2h_axe" },
 }
 

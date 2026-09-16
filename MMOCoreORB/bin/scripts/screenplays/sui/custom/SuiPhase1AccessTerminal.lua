@@ -111,7 +111,7 @@ function SuiPhase1AccessTerminal:accessTerminalCallback(pPlayer, pSui, eventInde
 
 	local terminalID = suiPageData:getTargetNetworkId()
 	local pTerminal = getSceneObject(terminalID)
-	
+
 	rowIndex = math.floor(rowIndex)
 
 	if (rowIndex == -1) then

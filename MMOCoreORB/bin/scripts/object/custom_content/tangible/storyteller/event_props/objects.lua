@@ -108,5 +108,3 @@ object_tangible_storyteller_event_props_shared_pt_event_fx_05 = SharedStaticObje
 
 ObjectTemplates:addClientTemplate(object_tangible_storyteller_event_props_shared_pt_event_fx_05, "object/tangible/storyteller/event_props/shared_pt_event_fx_05.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

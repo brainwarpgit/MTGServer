@@ -46,4 +46,3 @@ RemoveFriendCommand = {
 }
 
 AddCommand(RemoveFriendCommand)
-

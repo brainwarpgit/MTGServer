@@ -10,9 +10,9 @@ GiantBarkMiteCaveScreenPlay = ScreenPlay:new {
 		5096065,
 		5096064
         },
-        
-        lootLevel = 17, 
- 
+
+        lootLevel = 17,
+
         lootGroups = {
                 {
                         groups = {
@@ -26,9 +26,9 @@ GiantBarkMiteCaveScreenPlay = ScreenPlay:new {
                                 {group = "armor_attachments", chance = 600000}
                         },
                         lootChance = 8000000
-                }                                       
+                }
         },
-        
+
         lootContainerRespawn = 1800 -- 30 minutes
 }
 

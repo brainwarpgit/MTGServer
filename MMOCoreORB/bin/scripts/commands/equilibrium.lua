@@ -46,4 +46,3 @@ EquilibriumCommand = {
 }
 
 AddCommand(EquilibriumCommand)
-

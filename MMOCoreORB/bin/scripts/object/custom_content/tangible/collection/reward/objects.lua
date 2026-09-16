@@ -796,5 +796,3 @@ object_tangible_collection_reward_shared_treasure_chest_schematic_reward = Share
 
 ObjectTemplates:addClientTemplate(object_tangible_collection_reward_shared_treasure_chest_schematic_reward, "object/tangible/collection/reward/shared_treasure_chest_schematic_reward.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

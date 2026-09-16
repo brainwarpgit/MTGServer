@@ -46,4 +46,3 @@ LootCommand = {
 }
 
 AddCommand(LootCommand)
-

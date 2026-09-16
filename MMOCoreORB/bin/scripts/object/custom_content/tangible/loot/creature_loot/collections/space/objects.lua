@@ -1276,5 +1276,3 @@ object_tangible_loot_creature_loot_collections_space_shared_reactor_mark_05_subp
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_collections_space_shared_reactor_mark_05_subpro, "object/tangible/loot/creature_loot/collections/space/shared_reactor_mark_05_subpro.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

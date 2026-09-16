@@ -8,8 +8,8 @@ BloodRazerTransportScreenPlay = ScreenPlay:new {
 		568951,	--magseal
 		568948  --magseal
 	},
-	
-	lootLevel = 29,	
+
+	lootLevel = 29,
 
 	lootGroups = {
 		{
@@ -25,9 +25,9 @@ BloodRazerTransportScreenPlay = ScreenPlay:new {
 				{group = "armor_attachments", chance = 500000}
 			},
 			lootChance = 8000000
-		}					
+		}
 	},
-	
+
 	lootContainerRespawn = 1200 -- 20 minutes
 }
 
@@ -91,7 +91,7 @@ function BloodRazerTransportScreenPlay:spawnMobiles()
 	spawnMobile("lok", "blood_razor_elite_pirate", 300, -5.1, 0, 1.7, 0, 568749)
 	spawnMobile("lok", "blood_razor_officer", 300, 4.6, 0, -3.8, 0, 568752)
 	spawnMobile("lok", "blood_razor_captain", 300, -4.8, 0, -3.9, -90, 568753)
-	
+
 	spawnMobile("lok", "blood_razor_elite_pirate", 300, 3.7, 0, 1.5, -90, 568758)
 	spawnMobile("lok", "blood_razor_officer", 300, 4.1, 0, 4.1, 0, 568758)
 	spawnMobile("lok", "blood_razor_captain", 300, -4.1, 0, -1.8, -180, 568760)

@@ -3,42 +3,42 @@
 
 --This File is part of Core3.
 
---This program is free software; you can redistribute 
---it and/or modify it under the terms of the GNU Lesser 
+--This program is free software; you can redistribute
+--it and/or modify it under the terms of the GNU Lesser
 --General Public License as published by the Free Software
---Foundation; either version 2 of the License, 
+--Foundation; either version 2 of the License,
 --or (at your option) any later version.
 
---This program is distributed in the hope that it will be useful, 
---but WITHOUT ANY WARRANTY; without even the implied warranty of 
---MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+--This program is distributed in the hope that it will be useful,
+--but WITHOUT ANY WARRANTY; without even the implied warranty of
+--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 --See the GNU Lesser General Public License for
 --more details.
 
---You should have received a copy of the GNU Lesser General 
+--You should have received a copy of the GNU Lesser General
 --Public License along with this program; if not, write to
 --the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 
---Linking Engine3 statically or dynamically with other modules 
---is making a combined work based on Engine3. 
---Thus, the terms and conditions of the GNU Lesser General Public License 
+--Linking Engine3 statically or dynamically with other modules
+--is making a combined work based on Engine3.
+--Thus, the terms and conditions of the GNU Lesser General Public License
 --cover the whole combination.
 
---In addition, as a special exception, the copyright holders of Engine3 
---give you permission to combine Engine3 program with free software 
---programs or libraries that are released under the GNU LGPL and with 
---code included in the standard release of Core3 under the GNU LGPL 
---license (or modified versions of such code, with unchanged license). 
---You may copy and distribute such a system following the terms of the 
---GNU LGPL for Engine3 and the licenses of the other code concerned, 
---provided that you include the source code of that other code when 
+--In addition, as a special exception, the copyright holders of Engine3
+--give you permission to combine Engine3 program with free software
+--programs or libraries that are released under the GNU LGPL and with
+--code included in the standard release of Core3 under the GNU LGPL
+--license (or modified versions of such code, with unchanged license).
+--You may copy and distribute such a system following the terms of the
+--GNU LGPL for Engine3 and the licenses of the other code concerned,
+--provided that you include the source code of that other code when
 --and as the GNU LGPL requires distribution of source code.
 
---Note that people who make modified versions of Engine3 are not obligated 
---to grant this special exception for their modified versions; 
---it is their choice whether to do so. The GNU Lesser General Public License 
---gives permission to release a modified version without this exception; 
---this exception also makes it possible to release a modified version 
+--Note that people who make modified versions of Engine3 are not obligated
+--to grant this special exception for their modified versions;
+--it is their choice whether to do so. The GNU Lesser General Public License
+--gives permission to release a modified version without this exception;
+--this exception also makes it possible to release a modified version
 --
 --NOTES ABOUT CHARACTER BUILDER TERMINAL ITEM LIST FORMAT
 ---------------------------------------------------------
@@ -51,7 +51,7 @@
 
 object_tangible_terminal_terminal_character_builder = object_tangible_terminal_shared_terminal_character_builder:new {
 	gameObjectType = 16400,
-			
+
 	maxCondition = 0,
 
 	templateType = CHARACTERBUILDERTERMINAL,
@@ -171,7 +171,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 						"Clone Engineering II", "outdoors_bio_engineer_creature_02",
 						"Clone Engineering III", "outdoors_bio_engineer_creature_03",
 						"Clone Engineering IV", "outdoors_bio_engineer_creature_04"
-					}, 
+					},
 					"Tissue Engineering",
 					{
 						"Tissue Engineering I", "outdoors_bio_engineer_tissue_01",
@@ -204,7 +204,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 						"Investigation II", "combat_bountyhunter_investigation_02",
 						"Investigation III", "combat_bountyhunter_investigation_03",
 						"Investigation IV", "combat_bountyhunter_investigation_04"
-					},	
+					},
 					"Bounty Carbine",
 					{
 						"Bounty Carbine Specialization I", "combat_bountyhunter_droidcontrol_01",
@@ -237,7 +237,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 						"Unarmed II", "combat_brawler_unarmed_02",
 						"Unarmed III", "combat_brawler_unarmed_03",
 						"Unarmed IV", "combat_brawler_unarmed_04"
-					},	
+					},
 					"Fencer",
 					{
 						"One Handed I", "combat_brawler_1handmelee_01",
@@ -751,7 +751,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				--			"Oppressor II", "force_rank_dark_rank_09"
 				--		},
 				--	},
-				--	
+				--
 				--	"Jedi Light Rank",
 				--	{
 				--		"Rank Member", "force_rank_dark_novice",
@@ -939,7 +939,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				--		"Preternatural Defense IV", "force_discipline_defender_preternatural_defense_04"
 				--	},
 				--	"Master", "force_discipline_defender_master"
-				--},				
+				--},
 				"Marksman",
 				{
 					"Novice", "combat_marksman_novice",
@@ -995,14 +995,14 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 						"Pharmacology I", "science_medic_ability_01",
 						"Pharmacology II", "science_medic_ability_02",
 						"Pharmacology III", "science_medic_ability_03",
-						"Pharmacology IV", "science_medic_ability_04"	
+						"Pharmacology IV", "science_medic_ability_04"
 					},
 					"Organic Chemistry",
 					{
 						"Organic Chemistry I", "science_medic_crafting_01",
 						"Organic Chemistry II", "science_medic_crafting_02",
 						"Organic Chemistry III", "science_medic_crafting_03",
-						"Organic Chemistry IV", "science_medic_crafting_04"				
+						"Organic Chemistry IV", "science_medic_crafting_04"
 					},
 					"Master", "science_medic_master"
 				},
@@ -1530,7 +1530,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			--"Attachments",
 			--{
 			--	"Armor Attachment", "object/tangible/gem/armor.iff",
-			--	"Clothing Attachment", "object/tangible/gem/clothing.iff",	
+			--	"Clothing Attachment", "object/tangible/gem/clothing.iff",
 			--},
 			"Armor",
 			{
@@ -1598,7 +1598,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Clone Trooper Gloves", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_gloves.iff",
 					"Clone Trooper Helmet", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_helmet.iff",
 					"Clone Trooper Leggings", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_leggings.iff"
-				},	
+				},
 				"Bone Armor",
 				{
 					"Bone Left Bicep", "object/tangible/wearables/armor/bone/armor_bone_s01_bicep_l.iff",
@@ -1635,7 +1635,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Kashyyykian Black Mountain Chest Plate", "object/tangible/wearables/armor/kashyyykian_black_mtn/armor_kashyyykian_black_mtn_chest_plate.iff",
 					"Kashyyykian Black Mountain Leggings", "object/tangible/wearables/armor/kashyyykian_black_mtn/armor_kashyyykian_black_mtn_leggings.iff"
 				},
-				
+
 				"Kashyyykian Ceremonial",
 				{
 					"Kashyyykian Ceremonial Left Bracer", "object/tangible/wearables/armor/kashyyykian_ceremonial/armor_kashyyykian_ceremonial_bracer_l.iff",
@@ -1859,7 +1859,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--"Gunjack", "object/tangible/food/spice/spice_gunjack.iff",
 					--"Kliknik Boost", "object/tangible/food/spice/spice_kliknik_boost.iff",
 					--"Kwi Boost", "object/tangible/food/spice/spice_kwi_boost.iff",
-					--"Muon Gold", "object/tangible/food/spice/spice_muon_gold.iff",  
+					--"Muon Gold", "object/tangible/food/spice/spice_muon_gold.iff",
 					--"Neutron Pixie", "object/tangible/food/spice/spice_neutron_pixey.iff",
 					--"Pyrepenol", "object/tangible/food/spice/spice_pyrepenol.iff",
 					--"Scramjet", "object/tangible/food/spice/spice_Scramjet.iff",
@@ -2014,7 +2014,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 							"Small Dathomir Garden", "object/tangible/deed/city_deed/garden_dathomir_sml_01_deed.iff",
 							"Large Endor Garden", "object/tangible/deed/city_deed/garden_endor_lrg_01_deed.iff",
 							"Medium Endor Garden", "object/tangible/deed/city_deed/garden_endor_med_01_deed.iff",
-							"Small Endor Garden", "object/tangible/deed/city_deed/garden_endor_sml_01_deed.iff"	
+							"Small Endor Garden", "object/tangible/deed/city_deed/garden_endor_sml_01_deed.iff"
 						}
 					},
 					"Corellia Deeds",
@@ -2340,7 +2340,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				"Painting: Emperor's Eyes (TIE Sentinel)","object/tangible/veteran_reward/one_year_anniversary/painting_09.iff",
 			},
 			"Furniture",
-			{	
+			{
 				"Trophies (NEW COMPLETE)",
 				{
 					"Picture Handheld (Style 1)", "object/tangible/trophy/picture_handheld_s01.iff",
@@ -2392,7 +2392,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Rodian (female)", "object/tangible/painting/painting_rodian_f.iff",
 					"Rodian Ad 1 (female)", "object/tangible/painting/painting_rodian_f_ad_01.iff",
 					"Rodian (male)", "object/tangible/painting/painting_rodian_m.iff",
-					"Stormtrooper", "object/tangible/painting/painting_bw_stormtrooper.iff",				
+					"Stormtrooper", "object/tangible/painting/painting_bw_stormtrooper.iff",
 					"Han Solo Wanted", "object/tangible/painting/painting_han_wanted.iff",
 					"Luke Skywalker Wanted", "object/tangible/painting/painting_luke_wanted.iff",
 					"Princess Leia Wanted", "object/tangible/painting/painting_leia_wanted.iff",
@@ -2469,8 +2469,8 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Table-top Lamp (Naboo) Lit", "object/tangible/furniture/all/frn_all_lamp_tbl_s03_lit.iff",
 					"Table-top Lamp (Coruscant)", "object/tangible/furniture/all/frn_all_lamp_tatt_s01.iff",
 					"Table-top Lamp(Coruscant) Lit", "object/tangible/furniture/all/frn_all_lamp_tatt_s01_lit.iff",
-					
-				},				
+
+				},
 				"Rugs and Tapestry",
 				{
 					"Large Rectangular Rug (Style 1)", "object/tangible/furniture/modern/rug_rect_lg_s01.iff",
@@ -2489,11 +2489,11 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Fine Woven Rug (Style 5)", "object/tangible/furniture/all/frn_all_rug_rectangle_large_style_05.iff",
 					"Tatooine Tapestry","object/tangible/furniture/decorative/tatooine_tapestry.iff",
 					-- The following do not generate an item, but are in the TRE files.
-					--"Bestine Rug","object/tangible/furniture/modern/bestine_quest_rug", 
-					--"Large Oval Rug (Style 3)","object/tangible/furniture/modern/rug_oval_lg_s01", 
-					--"Large Round Rug (Style 3)","object/tangible/furniture/modern/rug_rnd_m_s01", 
-					--"Small Rectangular Rug","object/tangible/furniture/modern/rug_rect_sml_s01", 
-					--"Medium Rectangular Rug","object/tangible/furniture/modern/rug_rect_m_s01", 
+					--"Bestine Rug","object/tangible/furniture/modern/bestine_quest_rug",
+					--"Large Oval Rug (Style 3)","object/tangible/furniture/modern/rug_oval_lg_s01",
+					--"Large Round Rug (Style 3)","object/tangible/furniture/modern/rug_rnd_m_s01",
+					--"Small Rectangular Rug","object/tangible/furniture/modern/rug_rect_sml_s01",
+					--"Medium Rectangular Rug","object/tangible/furniture/modern/rug_rect_m_s01",
 				},
 				"Plants",
 				{
@@ -2554,7 +2554,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Throwpillow (Brown)", "object/tangible/furniture/all/frn_all_throwpillow_med_s01.iff",
 					"Throwpillow (Red)", "object/tangible/furniture/all/frn_all_throwpillow_med_s02.iff",
 					"Throwpillow (Blue)", "object/tangible/furniture/all/frn_all_throwpillow_med_s03.iff"
-				},			
+				},
 				"Elegant Furniture (COMPLETE)",
 				{
 					"Elegant Armoire", "object/tangible/furniture/elegant/armoire_elegant_s01.iff",
@@ -2618,7 +2618,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Modern Coffee Table (Style 2)", "object/tangible/furniture/modern/coffee_table_modern_style_02.iff",
 					"Modern End Table - Small", "object/tangible/furniture/modern/end_table_small_modern_style_01.iff",
 					"Modern Sofa Chair", "object/tangible/furniture/modern/sofa_chair_modern_style_01.iff",
-					"Modern Table", "object/tangible/furniture/modern/table_modern_style_01.iff"	
+					"Modern Table", "object/tangible/furniture/modern/table_modern_style_01.iff"
 				},
 				"Camp Furniture",
 				-- Commented items don't have a mouseover hit box, which makes them too difficult to interact with.
@@ -2850,7 +2850,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Laser Carbine", "object/weapon/ranged/carbine/carbine_laser.iff",
 					"Nym's Slug-thrower Carbine", "object/weapon/ranged/carbine/carbine_nym_slugthrower.iff"
 				},
-				
+
 				"Post 14 Special Melee Weapons",
 				{
 					"Spiked Knuckles", "object/weapon/melee/special/wookiee_knuckler_wod.iff",
@@ -2895,7 +2895,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Loot Executer", "object/weapon/melee/2h_sword/ep3_loot_executer.iff",
 					"Loot Sickle WOD", "object/weapon/melee/2h_sword/ep3_loot_sickle_wod.iff",
 					"Loot Sickle", "object/weapon/melee/2h_sword/ep3_loot_sickle.iff"
-				},	
+				},
 				"Post 14 Axe's",
 				{
 					"Heavy Duty Axe NPE", "object/weapon/melee/axe/axe_heavy_duty_npe.iff"
@@ -2917,7 +2917,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Naktra Krystal Knife", "object/weapon/melee/knife/ep3/knife_naktra_crystal.iff",
 					"Dagger Static", "object/weapon/melee/knife/knife_dagger_static.iff",
 					"Loot Blackbane", "object/weapon/melee/knife/ep3_loot_blackbane.iff",
-				},	
+				},
 				"Post 14 Polearms",
 				{
 					"Xandank Generic", "object/weapon/melee/polearm/som_lance_xandank_generic.iff",
@@ -2978,8 +2978,8 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Loot Ripper WOD", "object/weapon/melee/sword/ep3_loot_ripper_wod.iff",
 					"Loot Ripper", "object/weapon/melee/sword/ep3_loot_ripper.iff",
 					"Loot Eventide", "object/weapon/melee/sword/ep3_loot_eventide.iff"
-				},					
-				"Post 14 Ranged Carbines", -- 42 
+				},
+				"Post 14 Ranged Carbines", -- 42
 				{
 					"Alliance Needler Carbine", "object/weapon/ranged/carbine/carbine_alliance_needler.iff",
 					"Avatar Trandoshian Carbine", "object/weapon/ranged/carbine/carbine_avatar_trando.iff",

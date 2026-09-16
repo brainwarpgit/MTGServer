@@ -7,7 +7,7 @@ vryyyrConvoTemplate = ConvoTemplate:new {
 
 first_screen = ConvoScreen:new {
 	id = "first_screen",
-	leftDialog = "@conversation/ep3_vryyyr:s_450", -- WRRROARRRR! 
+	leftDialog = "@conversation/ep3_vryyyr:s_450", -- WRRROARRRR!
 	stopConversation = "false",
 	options = {
 				{"@conversation/ep3_vryyyr:s_452", "whatwant"}, -- roar roar?
@@ -17,7 +17,7 @@ vryyyrConvoTemplate:addScreen(first_screen);
 
 whatwant = ConvoScreen:new {
 	id = "whatwant",
-	leftDialog = "@conversation/ep3_vryyyr:s_454", -- What do you want outsider! 
+	leftDialog = "@conversation/ep3_vryyyr:s_454", -- What do you want outsider!
 	stopConversation = "false",
 	options = {
 				{"@conversation/ep3_vryyyr:s_456", "ihunter"}, -- i am a hunter?

@@ -46,4 +46,3 @@ GuildstatusCommand = {
 }
 
 AddCommand(GuildstatusCommand)
-

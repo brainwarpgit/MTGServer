@@ -55,7 +55,7 @@ function corvetteBrokenDroidContainerComponent:transferObject(pDroid, pItem, slo
 
 	SceneObject(pItem):destroyObjectFromWorld()
 	SceneObject(pItem):destroyObjectFromDatabase()
-	
+
 	createEvent(10, "CorellianCorvette", "startRepairDroidMovement", pDroid, "")
 
 	return TRANSFERSUCCESS

@@ -20,5 +20,3 @@ object_tangible_hair_kel_dor_shared_kel_dor_mask_s03 = SharedTangibleObjectTempl
 
 ObjectTemplates:addClientTemplate(object_tangible_hair_kel_dor_shared_kel_dor_mask_s03, "object/tangible/hair/kel_dor/shared_kel_dor_mask_s03.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -79,7 +79,7 @@ object_tangible_wearables_cybernetic_s05_cybernetic_s05_arm_r = object_tangible_
 		"object/mobile/vendor/wookiee_female.iff",
 		"object/mobile/vendor/wookiee_male.iff",
 		"object/mobile/vendor/zabrak_female.iff",
-		"object/mobile/vendor/zabrak_male.iff"}, 
+		"object/mobile/vendor/zabrak_male.iff"},
 
 	-- Damage types in WeaponObject
 	vulnerability = LIGHTSABER + STUN + ELECTRICITY,

@@ -10,4 +10,3 @@ corellia_bageraset_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("corellia_bageraset_lair_neutral_medium", corellia_bageraset_lair_neutral_medium)
-

@@ -46,4 +46,3 @@ HarvesterHarvestCommand = {
 }
 
 AddCommand(HarvesterHarvestCommand)
-

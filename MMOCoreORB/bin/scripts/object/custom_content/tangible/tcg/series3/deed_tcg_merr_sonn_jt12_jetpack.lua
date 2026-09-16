@@ -1,6 +1,6 @@
 
 object_tangible_tcg_series3_deed_tcg_merr_sonn_jt12_jetpack = object_tangible_tcg_series3_shared_deed_tcg_merr_sonn_jt12_jetpack:new {
-    
+
 	templateType = VEHICLEDEED,
 
 	controlDeviceObjectTemplate = "object/intangible/vehicle/tcg_merr_sonn_jt12_jetpack_pcd.iff",

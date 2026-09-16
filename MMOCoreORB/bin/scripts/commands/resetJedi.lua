@@ -46,4 +46,3 @@ ResetJediCommand = {
 }
 
 AddCommand(ResetJediCommand)
-

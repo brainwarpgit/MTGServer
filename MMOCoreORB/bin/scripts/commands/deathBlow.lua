@@ -46,4 +46,3 @@ DeathBlowCommand = {
 }
 
 AddCommand(DeathBlowCommand)
-

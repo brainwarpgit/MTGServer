@@ -10,4 +10,3 @@ corellia_krahbu_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("corellia_krahbu_lair_neutral_medium", corellia_krahbu_lair_neutral_medium)
-

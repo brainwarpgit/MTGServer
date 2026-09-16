@@ -7,5 +7,5 @@ naboo_sharupat_family_neutral_medium = Lair:new {
 	buildingsHard = {"object/tangible/lair/base/poi_all_lair_dead_log_large_fog_green.iff"},
 	buildingsVeryHard = {"object/tangible/lair/base/poi_all_lair_dead_log_large_fog_green.iff"},
 }
---Client has sharupat, so don't change to back shaupaut, future reference. 
+--Client has sharupat, so don't change to back shaupaut, future reference.
 addLairTemplate("naboo_sharupat_family_neutral_medium", naboo_sharupat_family_neutral_medium)

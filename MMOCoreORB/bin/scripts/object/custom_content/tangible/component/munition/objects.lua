@@ -12,5 +12,3 @@ object_tangible_component_munition_shared_beast_steroid_sub_adv = SharedTangible
 
 ObjectTemplates:addClientTemplate(object_tangible_component_munition_shared_beast_steroid_sub_adv, "object/tangible/component/munition/shared_beast_steroid_sub_adv.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

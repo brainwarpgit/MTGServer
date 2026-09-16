@@ -44,5 +44,3 @@ object_tangible_gcw_static_base_shared_rebel_icon = SharedTangibleObjectTemplate
 
 ObjectTemplates:addClientTemplate(object_tangible_gcw_static_base_shared_rebel_icon, "object/tangible/gcw/static_base/shared_rebel_icon.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -3,7 +3,7 @@ TatooineStaticSpawnsSouthScreenPlay = ScreenPlay:new {
 
 	screenplayName = "TatooineStaticSpawnsSouthScreenPlay",
 
-	lootContainers = {	
+	lootContainers = {
 		1106593 -- -5350 -4438
 	},
 
@@ -65,4 +65,3 @@ function TatooineStaticSpawnsSouthScreenPlay:spawnMobiles()
 	spawnMobile("tatooine", "krayt_dragon_grand", 1800, -1263, 8, -327, -32, 0)
 
 end
-

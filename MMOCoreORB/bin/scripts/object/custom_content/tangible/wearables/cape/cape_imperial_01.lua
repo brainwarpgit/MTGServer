@@ -1,7 +1,7 @@
 object_tangible_wearables_cape_cape_imperial_01 = object_tangible_wearables_cape_shared_cape_imperial_01:new {
 
 	faction = "Imperial",
-	
+
 	playerRaces = { 	"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",
 				"object/creature/player/talz_male.iff",

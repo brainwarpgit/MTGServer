@@ -46,4 +46,3 @@ KillCommand = {
 }
 
 AddCommand(KillCommand)
-

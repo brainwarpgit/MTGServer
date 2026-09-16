@@ -10,9 +10,9 @@ function buffTerminalMenuComponent:logUsage(pPlayer, what)
 	local creature = CreatureObject(pPlayer)
 	local fh = io.open("log/buffTerminalMenuComponent.log", "a+")
 	fh:write(string.format(
-	    "%s [buffTerminalMenuComponent] %s on %s (oid: %d) on %s at %s %s\n",
+		"%s [buffTerminalMenuComponent] %s on %s (oid: %d) on %s at %s %s\n",
 		getFormattedTime(),
-	    what,
+		what,
 		creature:getFirstName(),
 		creature:getObjectID(),
 		creature:getZoneName(),

@@ -10,4 +10,3 @@ corellia_razor_cat_pride_neutral_medium = Lair:new {
 }
 
 addLairTemplate("corellia_razor_cat_pride_neutral_medium", corellia_razor_cat_pride_neutral_medium)
-

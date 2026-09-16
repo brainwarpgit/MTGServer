@@ -46,4 +46,3 @@ AddMapLocationCommand = {
 }
 
 AddCommand(AddMapLocationCommand)
-

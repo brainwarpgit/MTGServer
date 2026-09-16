@@ -55,25 +55,24 @@ PolearmStun2Command = {
 	areaAction = true,
 
 	stateEffects = {
-	  StateEffect( 
-		STUN_EFFECT, 
-		{}, 
-		{ "stun_defense" }, 
+	  StateEffect(
+		STUN_EFFECT,
+		{},
+		{ "stun_defense" },
 		{ "jedi_state_defense", "resistance_states" },
-		60, 
-		0, 
-		30 
+		60,
+		0,
+		30
 	  )
 	},
 
 	animation = "lower_posture_2hmelee_5",
 
 	combatSpam = "breathstealer",
-	
+
 	weaponType = POLEARMWEAPON,
 
 	range = -1
 }
 
 AddCommand(PolearmStun2Command)
-

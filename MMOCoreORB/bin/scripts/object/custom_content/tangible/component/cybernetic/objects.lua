@@ -140,5 +140,3 @@ object_tangible_component_cybernetic_shared_cybernetic_module_heat_resistance_tw
 
 ObjectTemplates:addClientTemplate(object_tangible_component_cybernetic_shared_cybernetic_module_heat_resistance_two_core, "object/tangible/component/cybernetic/shared_cybernetic_module_heat_resistance_two_core.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

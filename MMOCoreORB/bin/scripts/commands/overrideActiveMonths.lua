@@ -46,4 +46,3 @@ OverrideActiveMonthsCommand = {
 }
 
 AddCommand(OverrideActiveMonthsCommand)
-

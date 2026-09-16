@@ -112,7 +112,7 @@ object_tangible_component_armor_shield_generator_personal = object_tangible_comp
 			"object/mobile/vendor/zabrak_female.iff",
 			"object/mobile/vendor/zabrak_male.iff"
 			},
-	
+
 	-- Damage types in WeaponObject
 	vulnerability = ACID + BLAST + KINETIC,
 

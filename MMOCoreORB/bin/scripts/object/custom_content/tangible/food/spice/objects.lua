@@ -132,5 +132,3 @@ object_tangible_food_spice_shared_spice_yarrock_01 = SharedTangibleObjectTemplat
 
 ObjectTemplates:addClientTemplate(object_tangible_food_spice_shared_spice_yarrock_01, "object/tangible/food/spice/shared_spice_yarrock_01.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

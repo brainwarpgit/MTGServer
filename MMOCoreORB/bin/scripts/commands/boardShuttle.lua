@@ -46,4 +46,3 @@ BoardShuttleCommand = {
 }
 
 AddCommand(BoardShuttleCommand)
-

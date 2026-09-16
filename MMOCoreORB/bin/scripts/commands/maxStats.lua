@@ -46,4 +46,3 @@ MaxStatsCommand = {
 }
 
 AddCommand(MaxStatsCommand)
-

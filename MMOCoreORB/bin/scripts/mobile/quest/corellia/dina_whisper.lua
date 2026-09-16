@@ -69,7 +69,7 @@ dina_whisper = Creature:new {
 					"object/mobile/dressed_commoner_tatooine_bith_female_05.iff",
 					"object/mobile/dressed_commoner_tatooine_bith_female_06.iff",
 					},
-				
+
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)

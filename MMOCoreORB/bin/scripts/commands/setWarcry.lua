@@ -46,4 +46,3 @@ SetWarcryCommand = {
 }
 
 AddCommand(SetWarcryCommand)
-

@@ -44,5 +44,3 @@ object_tangible_holiday_life_day_shared_storyteller_lifeday_tree = SharedTangibl
 
 ObjectTemplates:addClientTemplate(object_tangible_holiday_life_day_shared_storyteller_lifeday_tree, "object/tangible/holiday/life_day/shared_storyteller_lifeday_tree.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

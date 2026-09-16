@@ -1,6 +1,6 @@
 object_tangible_wearables_hat_hat_imperial_gunner_01 = object_tangible_wearables_hat_shared_hat_imperial_gunner_01:new {
 		faction = "Imperial",
-	
+
 	playerRaces = { 	"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",
 				"object/creature/player/talz_male.iff",

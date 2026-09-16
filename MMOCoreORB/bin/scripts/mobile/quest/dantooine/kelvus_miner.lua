@@ -27,7 +27,7 @@ kelvus_miner = Creature:new {
 	diet = HERBIVORE,
 
 	templates = { "commoner" },
-				
+
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)

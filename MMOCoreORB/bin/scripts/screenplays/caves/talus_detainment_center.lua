@@ -123,4 +123,3 @@ function TalusDetainmentCenterScreenPlay:spawnRebels(pBuilding)
 	BuildingObject(pBuilding):spawnChildCreature("specops_alliance_free_agent", 600, 43.2, -23.0, 278.3, -177, 9686225)
 	BuildingObject(pBuilding):spawnChildCreature("lesser_prophet_of_the_light_side", 10800, -3.7, -23.0, 269.5, 90, 9686224)
 end
-

@@ -56,7 +56,7 @@ LegShot1Command = {
 	animation = "test_homing",
 
 	combatSpam = "leg",
-	
+
 	weaponType = CARBINEWEAPON,
 
 	range = -1
@@ -64,4 +64,3 @@ LegShot1Command = {
 }
 
 AddCommand(LegShot1Command)
-

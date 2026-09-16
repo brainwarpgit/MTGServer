@@ -10,4 +10,3 @@ gackle_bat_lair = Lair:new {
 }
 
 addLairTemplate("gackle_bat_lair", gackle_bat_lair)
-

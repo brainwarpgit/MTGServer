@@ -47,4 +47,3 @@ SetpermissionCommand = {
 }
 
 AddCommand(SetpermissionCommand)
-

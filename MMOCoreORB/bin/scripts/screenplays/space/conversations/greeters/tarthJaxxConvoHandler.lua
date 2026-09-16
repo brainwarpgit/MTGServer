@@ -19,4 +19,3 @@ function tarthJaxxConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, s
 
 	return pConvScreen
 end
-

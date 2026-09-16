@@ -11,4 +11,3 @@ dathomir_shear_mite_pack_neutral_none = Lair:new {
 }
 
 addLairTemplate("dathomir_shear_mite_pack_neutral_none", dathomir_shear_mite_pack_neutral_none)
-

@@ -64,4 +64,3 @@ ConcealShotCommand = {
 }
 
 AddCommand(ConcealShotCommand)
-

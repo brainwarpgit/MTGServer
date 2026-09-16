@@ -18,7 +18,7 @@ function AncientKraytSkeletonScreenPlay:spawnMobiles()
 	spawnMobile("tatooine", "giant_canyon_krayt_dragon", 1800, -4669.8, 30.1, -4477.7, 5, 0)
 	spawnMobile("tatooine", "canyon_krayt_dragon", 1800, -4528.8, 28.3, -4302.4, 144, 0)
 	spawnMobile("tatooine", "juvenile_canyon_krayt_dragon", 1200, -4521.3, 27.2, -4298.2, 144, 0)
-	
+
 	spawnMobile("tatooine", "krayt_dragon_adolescent", 1800, -4747.2, 32.5, -4424.8, -91, 0)
 
 end

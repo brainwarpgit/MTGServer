@@ -45,14 +45,14 @@ MediumDiseaseCommand = {
         name = "mediumdisease",
         combatSpam = "attack",
 	dotEffects = {
-	  DotEffect( 
-		DISEASED, 
+	  DotEffect(
+		DISEASED,
 		{ "resistance_disease", "poison_disease_resist" },
 		ATTACK_POOL,
 		true,
 		0,
 		40,
-		50, 
+		50,
 		205,
 		30
 	  )
@@ -60,4 +60,3 @@ MediumDiseaseCommand = {
 }
 
 AddCommand(MediumDiseaseCommand)
-

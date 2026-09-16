@@ -5,12 +5,12 @@ CanyonCorsairsStrongholdScreenPlay = ScreenPlay:new {
 
 	lootContainers = {
 		568630,
-		568615,		
+		568615,
 		568637,
 		568665
 	},
-	
-	lootLevel = 32,	
+
+	lootLevel = 32,
 
 	lootGroups = {
 		{
@@ -26,9 +26,9 @@ CanyonCorsairsStrongholdScreenPlay = ScreenPlay:new {
 				{group = "armor_attachments", chance = 500000}
 			},
 			lootChance = 8000000
-		}					
+		}
 	},
-	
+
 	lootContainerRespawn = 1200 -- 20 minutes
 }
 

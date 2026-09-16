@@ -50,4 +50,3 @@ RallyCommand = {
 }
 
 AddCommand(RallyCommand)
-

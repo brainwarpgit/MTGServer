@@ -1404,5 +1404,3 @@ object_intangible_beast_shared_bm_zucca_boar = SharedIntangibleObjectTemplate:ne
 
 ObjectTemplates:addClientTemplate(object_intangible_beast_shared_bm_zucca_boar, "object/intangible/beast/shared_bm_zucca_boar.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

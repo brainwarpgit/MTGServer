@@ -9,5 +9,5 @@ sarlacc_area = SharedObjectTemplate:new {
 	containerComponent = "ContainerComponent",
 	gameObjectType = 33554443
 }
-	
+
 ObjectTemplates:addTemplate(sarlacc_area, "object/sarlacc_area.iff")

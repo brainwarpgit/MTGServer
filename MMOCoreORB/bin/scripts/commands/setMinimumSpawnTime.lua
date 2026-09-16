@@ -46,4 +46,3 @@ SetMinimumSpawnTimeCommand = {
 }
 
 AddCommand(SetMinimumSpawnTimeCommand)
-

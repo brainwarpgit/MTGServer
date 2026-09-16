@@ -46,7 +46,7 @@ object_tangible_wearables_cybernetic_cybernetic_anakin_forearm = object_tangible
 				"object/creature/player/twilek_male.iff",
 				"object/creature/player/twilek_female.iff",
 				"object/creature/player/zabrak_male.iff",
-				"object/creature/player/zabrak_female.iff" }, 
+				"object/creature/player/zabrak_female.iff" },
 }
 
 ObjectTemplates:addTemplate(object_tangible_wearables_cybernetic_cybernetic_anakin_forearm, "object/tangible/wearables/cybernetic/cybernetic_anakin_forearm.iff")

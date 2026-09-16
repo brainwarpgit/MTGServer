@@ -46,4 +46,3 @@ NpcCommand = {
 }
 
 AddCommand(NpcCommand)
-

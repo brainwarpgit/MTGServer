@@ -31,7 +31,7 @@ orip_erchi = Creature:new {
     templates = { "object/mobile/dressed_criminal_pirate_human_male_01.iff",
 		"object/mobile/dressed_criminal_pirate_human_female_01.iff",
 		"object/mobile/dressed_criminal_slicer_human_male_01.iff",
-		"object/mobile/dressed_criminal_slicer_human_female_01.iff"},	
+		"object/mobile/dressed_criminal_slicer_human_female_01.iff"},
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)

@@ -1,7 +1,7 @@
 object_tangible_wearables_cape_cape_rebel_01 = object_tangible_wearables_cape_shared_cape_rebel_01:new {
 
 	faction = "Rebel",
-	
+
 	playerRaces = { 	"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",
 				"object/creature/player/talz_male.iff",
@@ -80,7 +80,7 @@ object_tangible_wearables_cape_cape_rebel_01 = object_tangible_wearables_cape_sh
 				"object/mobile/vendor/wookiee_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
 				"object/mobile/vendor/zabrak_male.iff" },
-	
+
 
 }
 ObjectTemplates:addTemplate(object_tangible_wearables_cape_cape_rebel_01, "object/tangible/wearables/cape/cape_rebel_01.iff")

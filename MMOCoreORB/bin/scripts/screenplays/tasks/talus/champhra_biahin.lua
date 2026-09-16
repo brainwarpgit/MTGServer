@@ -10,7 +10,7 @@ champhra_biahin_missions =
 			{
 				{ npcTemplate = "champhra_thug", npcName = "a Thug" },
 			},
-			itemSpawns = 
+			itemSpawns =
 			{
 				{ itemTemplate = "object/tangible/mission/quest_item/champhra_biahin_q1_needed.iff", itemName = "Twin-Scented Natterbloom" }
 			},
@@ -29,7 +29,7 @@ champhra_biahin_missions =
 			{
 				{ npcTemplate = "champhra_thug", npcName = "a Thug" },
 			},
-			itemSpawns = 
+			itemSpawns =
 			{
 				{ itemTemplate = "object/tangible/mission/quest_item/champhra_biahin_q2_needed.iff", itemName = "\"Flowers of Drall\"" }
 			},

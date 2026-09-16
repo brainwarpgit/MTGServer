@@ -36,5 +36,3 @@ object_tangible_component_bio_shared_bio_component_armor_thymine = SharedTangibl
 
 ObjectTemplates:addClientTemplate(object_tangible_component_bio_shared_bio_component_armor_thymine, "object/tangible/component/bio/shared_bio_component_armor_thymine.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

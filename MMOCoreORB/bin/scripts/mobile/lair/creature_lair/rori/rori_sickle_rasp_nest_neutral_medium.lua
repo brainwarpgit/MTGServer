@@ -10,4 +10,3 @@ rori_sickle_rasp_nest_neutral_medium = Lair:new {
 }
 
 addLairTemplate("rori_sickle_rasp_nest_neutral_medium", rori_sickle_rasp_nest_neutral_medium)
-

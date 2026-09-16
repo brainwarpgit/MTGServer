@@ -50,4 +50,3 @@ MultiTargetShotCommand = {
 }
 
 AddCommand(MultiTargetShotCommand)
-

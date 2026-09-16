@@ -1027,5 +1027,3 @@ object_tangible_dance_prop_shared_prop_torch_r = SharedTangibleObjectTemplate:ne
 
 ObjectTemplates:addClientTemplate(object_tangible_dance_prop_shared_prop_torch_r, "object/tangible/dance_prop/shared_prop_torch_r.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

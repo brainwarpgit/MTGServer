@@ -46,4 +46,3 @@ NewbieSelectStartingLocationCommand = {
 }
 
 AddCommand(NewbieSelectStartingLocationCommand)
-

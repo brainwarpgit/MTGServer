@@ -46,4 +46,3 @@ TellpetCommand = {
 }
 
 AddCommand(TellpetCommand)
-

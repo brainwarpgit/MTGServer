@@ -10,4 +10,3 @@ naboo_flewt_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("naboo_flewt_lair_neutral_small", naboo_flewt_lair_neutral_small)
-

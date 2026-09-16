@@ -46,4 +46,3 @@ AuctionAcceptCommand = {
 }
 
 AddCommand(AuctionAcceptCommand)
-

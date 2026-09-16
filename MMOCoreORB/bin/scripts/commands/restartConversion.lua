@@ -46,4 +46,3 @@ RestartConversionCommand = {
 }
 
 AddCommand(RestartConversionCommand)
-

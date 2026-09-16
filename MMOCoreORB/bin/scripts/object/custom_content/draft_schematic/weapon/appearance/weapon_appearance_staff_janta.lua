@@ -5,15 +5,15 @@ object_draft_schematic_weapon_appearance_weapon_appearance_staff_janta = object_
    customObjectName = "Janta Staff",
 
    craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 30, 
-   size = 4, 
+   complexity = 30,
+   size = 4,
 
-   xpType = "crafting_weapons_general", 
-   xp = 220, 
+   xpType = "crafting_weapons_general",
+   xp = 220,
 
-   assemblySkill = "weapon_assembly", 
-   experimentingSkill = "weapon_experimentation", 
-   customizationSkill = "weapon_customization", 
+   assemblySkill = "weapon_assembly",
+   experimentingSkill = "weapon_experimentation",
+   customizationSkill = "weapon_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

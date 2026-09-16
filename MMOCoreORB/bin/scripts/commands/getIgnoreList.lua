@@ -46,4 +46,3 @@ GetIgnoreListCommand = {
 }
 
 AddCommand(GetIgnoreListCommand)
-

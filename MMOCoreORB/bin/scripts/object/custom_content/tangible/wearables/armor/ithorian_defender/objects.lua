@@ -112,5 +112,3 @@ object_tangible_wearables_armor_ithorian_defender_shared_ith_armor_s01_leggings_
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_ithorian_defender_shared_ith_armor_s01_leggings_camo, "object/tangible/wearables/armor/ithorian_defender/shared_ith_armor_s01_leggings_camo.iff")
-
-

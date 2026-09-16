@@ -46,4 +46,3 @@ MedicalForageCommand = {
 }
 
 AddCommand(MedicalForageCommand)
-

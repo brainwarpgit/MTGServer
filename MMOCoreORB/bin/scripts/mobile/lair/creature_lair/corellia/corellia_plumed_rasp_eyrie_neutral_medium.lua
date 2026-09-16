@@ -10,4 +10,3 @@ corellia_plumed_rasp_eyrie_neutral_medium = Lair:new {
 }
 
 addLairTemplate("corellia_plumed_rasp_eyrie_neutral_medium", corellia_plumed_rasp_eyrie_neutral_medium)
-

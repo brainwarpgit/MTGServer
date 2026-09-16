@@ -684,5 +684,3 @@ object_tangible_meatlump_event_shared_slicing_device_meatlump_weapon = SharedTan
 
 ObjectTemplates:addClientTemplate(object_tangible_meatlump_event_shared_slicing_device_meatlump_weapon, "object/tangible/meatlump/event/shared_slicing_device_meatlump_weapon.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

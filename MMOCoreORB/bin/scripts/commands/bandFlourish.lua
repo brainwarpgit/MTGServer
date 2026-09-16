@@ -46,4 +46,3 @@ BandFlourishCommand = {
 }
 
 AddCommand(BandFlourishCommand)
-

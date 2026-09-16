@@ -1,6 +1,6 @@
 sg_567_droideka = Creature:new {
 	objectName = "",
-	customName = "(an old Droideka)",	
+	customName = "(an old Droideka)",
 	socialGroup = "droideka",
 	mobType = MOB_DROID,
 	faction = "",

@@ -10,4 +10,3 @@ corellia_canoid_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("corellia_canoid_lair_neutral_medium", corellia_canoid_lair_neutral_medium)
-

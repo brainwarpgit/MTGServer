@@ -46,4 +46,3 @@ InsureCommand = {
 }
 
 AddCommand(InsureCommand)
-

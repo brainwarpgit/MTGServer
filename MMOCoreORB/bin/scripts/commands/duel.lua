@@ -46,4 +46,3 @@ DuelCommand = {
 }
 
 AddCommand(DuelCommand)
-

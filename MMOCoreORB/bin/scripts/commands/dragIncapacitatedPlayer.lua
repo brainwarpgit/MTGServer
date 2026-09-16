@@ -47,4 +47,3 @@ DragIncapacitatedPlayerCommand = {
 }
 
 AddCommand(DragIncapacitatedPlayerCommand)
-

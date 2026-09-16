@@ -10,4 +10,3 @@ dantooine_graul_ancient_lair_neutral_large = Lair:new {
 }
 
 addLairTemplate("dantooine_graul_ancient_lair_neutral_large", dantooine_graul_ancient_lair_neutral_large)
-

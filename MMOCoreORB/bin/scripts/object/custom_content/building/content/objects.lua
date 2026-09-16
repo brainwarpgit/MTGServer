@@ -104,4 +104,3 @@ object_building_content_shared_tatooine_valarian_strategic_bunker = SharedBuildi
 }
 ObjectTemplates:addClientTemplate(object_building_content_shared_tatooine_valarian_strategic_bunker, "object/building/content/shared_tatooine_valarian_strategic_bunker.iff")
 --**********************************************************************************************************************************
-

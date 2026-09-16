@@ -46,4 +46,3 @@ ShowFactionInformationCommand = {
 }
 
 AddCommand(ShowFactionInformationCommand)
-

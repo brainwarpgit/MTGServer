@@ -46,4 +46,3 @@ SetprivacyCommand = {
 }
 
 AddCommand(SetprivacyCommand)
-

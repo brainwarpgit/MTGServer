@@ -5,15 +5,15 @@ object_draft_schematic_weapon_appearance_weapon_appearance_heavy_republic_flamer
    customObjectName = "Heavy Republic Flamer",
 
    craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 50, 
-   size = 4, 
+   complexity = 50,
+   size = 4,
 
-   xpType = "crafting_weapons_general", 
-   xp = 770, 
+   xpType = "crafting_weapons_general",
+   xp = 770,
 
-   assemblySkill = "weapon_assembly", 
-   experimentingSkill = "weapon_experimentation", 
-   customizationSkill = "weapon_customization", 
+   assemblySkill = "weapon_assembly",
+   experimentingSkill = "weapon_experimentation",
+   customizationSkill = "weapon_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

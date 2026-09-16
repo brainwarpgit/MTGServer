@@ -46,4 +46,3 @@ CombatSpamCommand = {
 }
 
 AddCommand(CombatSpamCommand)
-

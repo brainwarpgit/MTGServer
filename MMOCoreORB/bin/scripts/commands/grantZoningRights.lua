@@ -46,4 +46,3 @@ GrantZoningRightsCommand = {
 }
 
 AddCommand(GrantZoningRightsCommand)
-

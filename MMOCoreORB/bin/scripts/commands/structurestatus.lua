@@ -46,4 +46,3 @@ StructurestatusCommand = {
 }
 
 AddCommand(StructurestatusCommand)
-

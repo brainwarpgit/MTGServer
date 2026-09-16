@@ -46,4 +46,3 @@ ListActiveQuestsCommand = {
 }
 
 AddCommand(ListActiveQuestsCommand)
-

@@ -46,4 +46,3 @@ GroupChatCommand = {
 }
 
 AddCommand(GroupChatCommand)
-

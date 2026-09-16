@@ -46,4 +46,3 @@ RequestBadgesCommand = {
 }
 
 AddCommand(RequestBadgesCommand)
-

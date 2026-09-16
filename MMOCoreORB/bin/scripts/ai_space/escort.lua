@@ -49,4 +49,3 @@ targetEscort = {
 	{id="428911276",	name="EraseBlackboard",	pid="1252347732",	args={param="targetShipProspect"}},
 	{id="1001791584",	name="ExitCombat",	pid="1252347732"}}
 addAiTemplate("targetEscort", targetEscort)
-

@@ -20,5 +20,3 @@ object_static_structure_hoth_shared_hoth_ice_spire_02 = SharedStaticObjectTempla
 
 ObjectTemplates:addClientTemplate(object_static_structure_hoth_shared_hoth_ice_spire_02, "object/static/structure/hoth/shared_hoth_ice_spire_02.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

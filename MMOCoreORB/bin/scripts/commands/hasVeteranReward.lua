@@ -46,4 +46,3 @@ HasVeteranRewardCommand = {
 }
 
 AddCommand(HasVeteranRewardCommand)
-

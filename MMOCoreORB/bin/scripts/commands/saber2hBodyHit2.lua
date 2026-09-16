@@ -66,4 +66,3 @@ Saber2hBodyHit2Command = {
 }
 
 AddCommand(Saber2hBodyHit2Command)
-

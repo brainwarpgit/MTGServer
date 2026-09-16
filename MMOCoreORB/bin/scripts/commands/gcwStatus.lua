@@ -46,4 +46,3 @@ GcwStatusCommand = {
 }
 
 AddCommand(GcwStatusCommand)
-

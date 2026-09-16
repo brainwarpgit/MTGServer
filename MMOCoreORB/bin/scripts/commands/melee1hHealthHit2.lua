@@ -53,28 +53,27 @@ Melee1hHealthHit2Command = {
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
-	animation = "combo_3c", 
+	animation = "combo_3c",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "shiimshiak",
 
 	dotEffects = {
-	  DotEffect( 
-		BLEEDING, 
+	  DotEffect(
+		BLEEDING,
 		{ "resistance_bleeding", "bleed_resist" },
 		HEALTH,
 		true,
 		0,
 		100,
-		60, 
+		60,
 		60
 	  )
 	},
-	
+
 	weaponType = ONEHANDMELEEWEAPON,
 
 	range = -1
 }
 
 AddCommand(Melee1hHealthHit2Command)
-

@@ -54,17 +54,16 @@ PolearmArea1Command = {
 	areaRange = 16,
 	areaAction = true,
 
-	animation = "combo_2c", 
+	animation = "combo_2c",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "whirlwind",
 
 	poolsToDamage = RANDOM_ATTRIBUTE,
-	
+
 	weaponType = POLEARMWEAPON,
 
 	range = -1
 }
 
 AddCommand(PolearmArea1Command)
-

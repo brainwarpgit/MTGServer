@@ -1,6 +1,6 @@
 kelvus_imperial = Creature:new {
 	objectName = "",
-	customName = "Imperial Corporal",		
+	customName = "Imperial Corporal",
 	socialGroup = "imperial",
 	faction = "imperial",
 	mobType = MOB_NPC,
@@ -35,7 +35,7 @@ kelvus_imperial = Creature:new {
 	primaryWeapon = "imperial_weapons_medium",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "kelvus_naria_mission_target_convotemplate",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(riflemanmaster,carbineermaster),

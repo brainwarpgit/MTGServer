@@ -10,4 +10,3 @@ rori_mammoth_jax_lair_neutral_large = Lair:new {
 }
 
 addLairTemplate("rori_mammoth_jax_lair_neutral_large", rori_mammoth_jax_lair_neutral_large)
-

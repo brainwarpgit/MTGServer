@@ -3,14 +3,14 @@ KungaStrongholdScreenPlay = ScreenPlay:new {
 
 	screenplayName = "KungaStrongholdScreenPlay",
 
- 	lootContainers = {
+	lootContainers = {
 		529418,
-        	529425,
-        	529451,
-        	529435
+		529425,
+		529451,
+		529435
 	},
-	
-	lootLevel = 26,	
+
+	lootLevel = 26,
 
 	lootGroups = {
 		{
@@ -23,10 +23,10 @@ KungaStrongholdScreenPlay = ScreenPlay:new {
 				{group = "armor_attachments", chance = 300000}
 			},
 			lootChance = 8000000
-		}					
+		}
 	},
-	
-	lootContainerRespawn = 1800 
+
+	lootContainerRespawn = 1800
 }
 
 registerScreenPlay("KungaStrongholdScreenPlay", true)

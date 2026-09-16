@@ -12,5 +12,3 @@ object_intangible_buy_back_shared_buy_back_control_device = SharedIntangibleObje
 
 ObjectTemplates:addClientTemplate(object_intangible_buy_back_shared_buy_back_control_device, "object/intangible/buy_back/shared_buy_back_control_device.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

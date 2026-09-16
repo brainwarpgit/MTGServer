@@ -46,4 +46,3 @@ ResendLoginMessageToAllCommand = {
 }
 
 AddCommand(ResendLoginMessageToAllCommand)
-

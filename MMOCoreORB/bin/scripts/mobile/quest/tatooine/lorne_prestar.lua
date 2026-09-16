@@ -36,7 +36,7 @@ lorne_prestar = Creature:new {
 	secondaryWeapon = "none",
 	conversationTemplate = "lorne_prestar_mission_giver_convotemplate",
 	outfit = "mos_taike_guard_old_outfit",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = {},

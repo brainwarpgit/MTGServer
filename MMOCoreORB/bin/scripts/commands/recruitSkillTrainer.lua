@@ -46,4 +46,3 @@ RecruitSkillTrainerCommand = {
 }
 
 AddCommand(RecruitSkillTrainerCommand)
-

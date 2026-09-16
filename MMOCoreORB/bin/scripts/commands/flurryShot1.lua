@@ -52,28 +52,27 @@ FlurryShot1Command = {
 	accuracyBonus = 5,
 
 	stateEffects = {
-	  StateEffect( 
-		DIZZY_EFFECT, 
-		{}, 
-		{ "dizzy_defense" }, 
+	  StateEffect(
+		DIZZY_EFFECT,
+		{},
+		{ "dizzy_defense" },
 		{ "jedi_state_defense", "resistance_states" },
-		85, 
-		0, 
-		45 
+		85,
+		0,
+		45
 	  )
 	},
 
 	poolsToDamage = RANDOM_ATTRIBUTE,
 
-	animation = "fire_5_special_single", 
+	animation = "fire_5_special_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "flurryshot",
-	
+
 	weaponType = RIFLEWEAPON,
 
 	range = -1
 }
 
 AddCommand(FlurryShot1Command)
-

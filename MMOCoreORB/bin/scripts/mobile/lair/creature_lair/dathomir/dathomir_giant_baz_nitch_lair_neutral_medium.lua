@@ -10,4 +10,3 @@ dathomir_giant_baz_nitch_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("dathomir_giant_baz_nitch_lair_neutral_medium", dathomir_giant_baz_nitch_lair_neutral_medium)
-

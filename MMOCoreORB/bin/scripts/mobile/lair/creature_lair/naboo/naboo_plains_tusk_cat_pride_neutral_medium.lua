@@ -10,4 +10,3 @@ naboo_plains_tusk_cat_pride_neutral_medium = Lair:new {
 }
 
 addLairTemplate("naboo_plains_tusk_cat_pride_neutral_medium", naboo_plains_tusk_cat_pride_neutral_medium)
-

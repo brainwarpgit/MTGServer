@@ -46,4 +46,3 @@ TameCommand = {
 }
 
 AddCommand(TameCommand)
-

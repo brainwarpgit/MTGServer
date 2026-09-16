@@ -46,4 +46,3 @@ AreatrackCommand = {
 }
 
 AddCommand(AreatrackCommand)
-

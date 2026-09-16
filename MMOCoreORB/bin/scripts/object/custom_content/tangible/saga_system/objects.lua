@@ -124,5 +124,3 @@ object_tangible_saga_system_shared_saga_relic_retrieve = SharedTangibleObjectTem
 
 ObjectTemplates:addClientTemplate(object_tangible_saga_system_shared_saga_relic_retrieve, "object/tangible/saga_system/shared_saga_relic_retrieve.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

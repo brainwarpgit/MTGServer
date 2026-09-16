@@ -252,5 +252,3 @@ object_tangible_holiday_empire_day_component_shared_ration_poly_unsaturated_fats
 
 ObjectTemplates:addClientTemplate(object_tangible_holiday_empire_day_component_shared_ration_poly_unsaturated_fats, "object/tangible/holiday/empire_day/component/shared_ration_poly_unsaturated_fats.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

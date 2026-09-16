@@ -46,4 +46,3 @@ CraftCommand = {
 }
 
 AddCommand(CraftCommand)
-

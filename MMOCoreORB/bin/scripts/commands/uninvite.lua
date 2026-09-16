@@ -46,4 +46,3 @@ UninviteCommand = {
 }
 
 AddCommand(UninviteCommand)
-

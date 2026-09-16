@@ -44,5 +44,3 @@ object_tangible_loot_simple_kit_shared_legacy_droid_motivator = SharedTangibleOb
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_simple_kit_shared_legacy_droid_motivator, "object/tangible/loot/simple_kit/shared_legacy_droid_motivator.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

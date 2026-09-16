@@ -46,4 +46,3 @@ ToggleAwayFromKeyBoardCommand = {
 }
 
 AddCommand(ToggleAwayFromKeyBoardCommand)
-

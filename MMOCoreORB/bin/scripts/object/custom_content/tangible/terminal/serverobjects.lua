@@ -62,4 +62,3 @@ includeFile("custom_content/tangible/terminal/terminal_travel_instant_tcg_locati
 includeFile("custom_content/tangible/terminal/terminal_travel_instant_tcg_slave_1.lua")
 includeFile("custom_content/tangible/terminal/terminal_travel_instant_tie.lua")
 includeFile("custom_content/tangible/terminal/terminal_travel_instant_xwing.lua")
-

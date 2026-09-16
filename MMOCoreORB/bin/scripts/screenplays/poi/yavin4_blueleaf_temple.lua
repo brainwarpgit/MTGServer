@@ -1,16 +1,16 @@
 BlueleafTempleScreenPlay = ScreenPlay:new {
 	numberOfActs = 1,
-	
+
 	screenplayName = "BlueleafTempleScreenPlay",
 
 	lootContainers = {
 		9145383,
 		9145384,
-		9765486,		
+		9765486,
 		9765485
 	},
-	
-	lootLevel = 26,	
+
+	lootLevel = 26,
 
 	lootGroups = {
 		{
@@ -25,9 +25,9 @@ BlueleafTempleScreenPlay = ScreenPlay:new {
 				{group = "armor_attachments", chance = 500000}
 			},
 			lootChance = 8000000
-		}					
+		}
 	},
-	
+
 	lootContainerRespawn = 1800 -- 30 minutes
 }
 
@@ -41,14 +41,14 @@ function BlueleafTempleScreenPlay:start()
 end
 
 function BlueleafTempleScreenPlay:spawnMobiles()
-	-- Outside Temple	
+	-- Outside Temple
 	spawnMobile("yavin4", "kliknik_dark_hunter",600,-895.6,84.8,-2059,-139,0)
 	spawnMobile("yavin4", "kliknik_dark_hunter",600,-896.2,84.8,-2064.1,42,0)
 	spawnMobile("yavin4", "kliknik_dark_hunter",600,-892.3,84.8,-2062.4,-109,0)
 	spawnMobile("yavin4", "kliknik_dark_hunter",600,-884.4,84.8,-2026.1,-96,0)
 	spawnMobile("yavin4", "kliknik_dark_hunter",600,-888.5,84.8,-2023.3,155,0)
 	spawnMobile("yavin4", "kliknik_dark_hunter",600,-888.6,84.8,-2028.8,35,0)
-	
+
 	-- Inside Temple
 	spawnMobile("yavin4", "kliknik_dark_defender",600,-9,-37.3,-9,48,468319)
 	spawnMobile("yavin4", "kliknik_dark_defender",600,-10.5,-37.3,4.2,111,468319)
@@ -56,14 +56,14 @@ function BlueleafTempleScreenPlay:spawnMobiles()
 	spawnMobile("yavin4", "kliknik_dark_defender",600,10.2,-37.3,4.8,-110,468319)
 	spawnMobile("yavin4", "kliknik_dark_defender",600,10.9,-37.3,-3.9,-69,468319)
 	spawnMobile("yavin4", "kliknik_dark_defender",600,-12.1,-37.3,18.2,74,468319)
-	
+
 	spawnMobile("yavin4", "kliknik_dark_queen",600,-0.6,-37.3,-28.3,-19,468319)
-	
+
 	spawnMobile("yavin4", "kliknik_dark_worker",600,-24,-1.3,10.3,93,468319)
 	spawnMobile("yavin4", "kliknik_dark_worker",600,-16.4,-1.3,-21,49,468319)
 	spawnMobile("yavin4", "kliknik_dark_worker",600,12.1,-1.3,-23.4,21,468319)
 	spawnMobile("yavin4", "kliknik_dark_worker",600,23.4,-1.3,11,-77,468319)
-	
+
 	spawnMobile("yavin4", "kliknik_dark_warrior",600,12.4,-1.3,32.4,-93,468318)
 	spawnMobile("yavin4", "kliknik_dark_warrior",600,-12.8,-1.3,32,93,468318)
 end

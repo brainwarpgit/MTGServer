@@ -46,4 +46,3 @@ GuildCommand = {
 }
 
 AddCommand(GuildCommand)
-

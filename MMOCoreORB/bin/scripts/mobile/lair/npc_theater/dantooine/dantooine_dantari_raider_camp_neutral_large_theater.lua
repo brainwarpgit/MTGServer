@@ -13,4 +13,3 @@ dantooine_dantari_raider_camp_neutral_large_theater = Lair:new {
 }
 
 addLairTemplate("dantooine_dantari_raider_camp_neutral_large_theater", dantooine_dantari_raider_camp_neutral_large_theater)
-

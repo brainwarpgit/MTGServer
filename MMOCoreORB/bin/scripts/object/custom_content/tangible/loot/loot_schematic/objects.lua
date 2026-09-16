@@ -228,5 +228,3 @@ object_tangible_loot_loot_schematic_shared_yt1300_house_schematic = SharedTangib
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_yt1300_house_schematic, "object/tangible/loot/loot_schematic/shared_yt1300_house_schematic.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

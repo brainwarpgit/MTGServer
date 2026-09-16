@@ -12,9 +12,9 @@ TortonCaveScreenPlay = ScreenPlay:new {
 		5365486,
 		5555807
         },
-        
-        lootLevel = 17, 
- 
+
+        lootLevel = 17,
+
         lootGroups = {
                 {
                         groups = {
@@ -28,9 +28,9 @@ TortonCaveScreenPlay = ScreenPlay:new {
                                 {group = "armor_attachments", chance = 600000}
                         },
                         lootChance = 8000000
-                }                                       
+                }
         },
-        
+
         lootContainerRespawn = 1800 -- 30 minutes
 }
 

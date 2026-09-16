@@ -1,16 +1,16 @@
 DroidEngineerCaveScreenPlay = ScreenPlay:new {
 	numberOfActs = 1,
-	
+
 	screenplayName = "DroidEngineerCaveScreenPlay",
-	
+
 	lootContainers = {
 		568995,
 		871800,
 		871802,
 		871812
 	},
-	
-	lootLevel = 26,	
+
+	lootLevel = 26,
 
 	lootGroups = {
 		{
@@ -23,9 +23,9 @@ DroidEngineerCaveScreenPlay = ScreenPlay:new {
 				{group = "armor_attachments", chance = 100000}
 			},
 			lootChance = 8000000
-		}					
+		}
 	},
-	
+
 	lootContainerRespawn = 1800 -- 30 minutes
 }
 
@@ -67,7 +67,7 @@ function DroidEngineerCaveScreenPlay:spawnMobiles()
 	spawnMobile("lok", "droideka",600,-103.6,-53,-59.6,108,568962)
 	spawnMobile("lok", "droideka",600,-66.6,-46.5,-31.9,-138,568960)
 	spawnMobile("lok", "droideka",600,-57.4,-41.2,-9.8,109,568960)
-	
+
 	spawnMobile("lok", "ig_assassin_droid",600,-6.4,-35.1,-79,103,568976)
 	spawnMobile("lok", "ig_assassin_droid",600,-15.5,-35,-69,12,568976)
 	spawnMobile("lok", "ig_assassin_droid",600,-111.2,-54.3,-112.5,92,568965)

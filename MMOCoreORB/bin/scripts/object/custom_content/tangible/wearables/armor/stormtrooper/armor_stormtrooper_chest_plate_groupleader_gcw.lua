@@ -70,7 +70,7 @@ object_tangible_wearables_armor_stormtrooper_armor_stormtrooper_chest_plate_grou
 				"object/mobile/vendor/weequay_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
 				"object/mobile/vendor/zabrak_male.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 
@@ -93,7 +93,7 @@ object_tangible_wearables_armor_stormtrooper_armor_stormtrooper_chest_plate_grou
 	cold = 61,
 	acid = 61,
 	lightSaber = 0,
-	
+
 	skillMods = {
         {"slope_move", 10},
         {"dizzy_defense", 10},

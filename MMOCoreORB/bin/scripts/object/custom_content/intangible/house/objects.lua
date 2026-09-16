@@ -4,5 +4,3 @@ object_intangible_house_shared_generic_house_control_device = SharedIntangibleOb
 
 ObjectTemplates:addClientTemplate(object_intangible_house_shared_generic_house_control_device, "object/intangible/house/shared_generic_house_control_device.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

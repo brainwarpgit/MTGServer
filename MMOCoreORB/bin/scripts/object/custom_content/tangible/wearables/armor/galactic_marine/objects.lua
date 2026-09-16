@@ -199,6 +199,3 @@ object_tangible_wearables_armor_galactic_marine_shared_armor_galactic_marine_leg
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_galactic_marine_shared_armor_galactic_marine_leggings_gcw, "object/tangible/wearables/armor/galactic_marine/shared_armor_galactic_marine_leggings_gcw.iff")
-
-
-

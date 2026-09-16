@@ -46,4 +46,3 @@ SetFirstNameCommand = {
 }
 
 AddCommand(SetFirstNameCommand)
-

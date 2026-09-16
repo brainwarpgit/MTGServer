@@ -49,18 +49,18 @@ Warcry1Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 0,
 	mindCostMultiplier = 0,
-	
+
 	accuracySkillMod = "warcry",
-	
+
 	stateEffects = {
-	  StateEffect( 
-		NEXTATTACKDELAY_EFFECT, 
-		{ "nextAttackDelayRecovery" },  
-		{ "warcry_defense" }, 
-		{}, 
-		100, 
-		0, 
-		10 
+	  StateEffect(
+		NEXTATTACKDELAY_EFFECT,
+		{ "nextAttackDelayRecovery" },
+		{ "warcry_defense" },
+		{},
+		100,
+		0,
+		10
 	  )
 	},
 
@@ -76,4 +76,3 @@ Warcry1Command = {
 }
 
 AddCommand(Warcry1Command)
-

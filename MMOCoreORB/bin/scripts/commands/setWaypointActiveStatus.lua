@@ -46,4 +46,3 @@ SetWaypointActiveStatusCommand = {
 }
 
 AddCommand(SetWaypointActiveStatusCommand)
-

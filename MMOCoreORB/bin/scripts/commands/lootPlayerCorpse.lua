@@ -46,4 +46,3 @@ LootPlayerCorpseCommand = {
 }
 
 AddCommand(LootPlayerCorpseCommand)
-

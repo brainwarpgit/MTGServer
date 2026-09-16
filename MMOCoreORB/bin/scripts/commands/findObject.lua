@@ -46,4 +46,3 @@ FindObjectCommand = {
 }
 
 AddCommand(FindObjectCommand)
-

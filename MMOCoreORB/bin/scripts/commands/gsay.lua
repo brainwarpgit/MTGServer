@@ -46,4 +46,3 @@ GsayCommand = {
 }
 
 AddCommand(GsayCommand)
-

@@ -46,4 +46,3 @@ DisbandCommand = {
 }
 
 AddCommand(DisbandCommand)
-

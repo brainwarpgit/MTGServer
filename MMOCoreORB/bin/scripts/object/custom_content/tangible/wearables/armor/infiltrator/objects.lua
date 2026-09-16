@@ -249,4 +249,3 @@ object_tangible_wearables_armor_infiltrator_shared_armor_infiltrator_s02_bracer_
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_infiltrator_shared_armor_infiltrator_s02_bracer_l, "object/tangible/wearables/armor/infiltrator/shared_armor_infiltrator_s02_bracer_l.iff")
 
 --****************************************************************************************************************************************************************************
-

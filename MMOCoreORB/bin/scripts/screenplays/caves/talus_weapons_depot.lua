@@ -150,4 +150,3 @@ function TalusWeaponsDepotScreenPlay:spawnRebels(pBuilding)
 	BuildingObject(pBuilding):spawnChildCreature("talus", "senior_specforce_heavy_weapons_specialist", 300, -139.5, -50.0, 48.6, 89, 9686179)
 	BuildingObject(pBuilding):spawnChildCreature("talus", "senior_specforce_heavy_weapons_specialist", 300, -139.4, -50.0, 59.8, 89, 9686179)
 end
-

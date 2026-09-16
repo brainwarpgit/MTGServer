@@ -4,5 +4,3 @@ object_ship_dungeon_shared_dungeon_yt1300 = SharedShipObjectTemplate:new {
 
 ObjectTemplates:addClientTemplate(object_ship_dungeon_shared_dungeon_yt1300, "object/ship/dungeon/shared_dungeon_yt1300.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

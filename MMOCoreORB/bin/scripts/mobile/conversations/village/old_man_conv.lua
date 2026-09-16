@@ -136,4 +136,3 @@ oldManIntroConvoTemplate:addScreen(where_camp_detail);
 
 
 addConversationTemplate("oldManIntroConvoTemplate", oldManIntroConvoTemplate);
-

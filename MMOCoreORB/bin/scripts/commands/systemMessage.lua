@@ -46,4 +46,3 @@ SystemMessageCommand = {
 }
 
 AddCommand(SystemMessageCommand)
-

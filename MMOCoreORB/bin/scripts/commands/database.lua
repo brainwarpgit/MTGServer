@@ -46,4 +46,3 @@ DatabaseCommand = {
 }
 
 AddCommand(DatabaseCommand)
-

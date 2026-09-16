@@ -46,4 +46,3 @@ StopCraftingSessionCommand = {
 }
 
 AddCommand(StopCraftingSessionCommand)
-

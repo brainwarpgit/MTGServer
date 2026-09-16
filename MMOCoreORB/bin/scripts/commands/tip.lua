@@ -46,4 +46,3 @@ TipCommand = {
 }
 
 AddCommand(TipCommand)
-

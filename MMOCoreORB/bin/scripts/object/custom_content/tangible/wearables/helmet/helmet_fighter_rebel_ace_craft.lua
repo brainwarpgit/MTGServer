@@ -1,7 +1,7 @@
 object_tangible_wearables_helmet_helmet_fighter_rebel_ace_craft = object_tangible_wearables_helmet_shared_helmet_fighter_rebel_ace_craft:new {
 
 	faction = "Rebel",
-	
+
 	playerRaces = { 	"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",
 				"object/creature/player/talz_male.iff",

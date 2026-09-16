@@ -28,7 +28,7 @@ mse_crafted = Creature:new {
 
 	templates = {
 		"object/creature/npc/droid/crafted/mse_6_droid.iff"
-	},		
+	},
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)

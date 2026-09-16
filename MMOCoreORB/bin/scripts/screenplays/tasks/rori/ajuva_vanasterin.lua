@@ -2,10 +2,10 @@ ajuva_vanasterin_missions =
 {
 	{
 		missionType = "deliver",
-		primarySpawns = 
-		{ 
+		primarySpawns =
+		{
 			{ npcTemplate = "jinderliss_prason", npcName = "Jinderliss Prason" }
-		}, 
+		},
 		secondarySpawns =
 		{
 
@@ -13,28 +13,28 @@ ajuva_vanasterin_missions =
 		itemSpawns =
 		{
 			{ itemTemplate = "object/tangible/mission/quest_item/ajuva_vamasterin_q1_needed.iff", itemName = "" }
-		}, 
-		rewards = 
-		{ 
+		},
+		rewards =
+		{
 			{ rewardType = "credits", amount = 25 },
 			{ rewardType = "faction", faction = "naboo", amount = 5 },
 		}
 	},
 	{
-		missionType = "deliver", 
-		primarySpawns = 
-		{ 
+		missionType = "deliver",
+		primarySpawns =
+		{
 			{ npcTemplate = "art_dealer", npcName = "Art Dealer" }
-		}, 
+		},
 		secondarySpawns =
 		{
 
-		}, 
-		itemSpawns = 
+		},
+		itemSpawns =
 		{
 			{ itemTemplate = "object/tangible/mission/quest_item/ajuva_vamasterin_q2_needed.iff", itemName = "" }
-		}, 
-		rewards = 
+		},
+		rewards =
 		{
 			{ rewardType = "credits", amount = 25 },
 			{ rewardType = "faction", faction = "naboo", amount = 5 }
@@ -42,9 +42,9 @@ ajuva_vanasterin_missions =
 	}
 }
 
-npcMapAjuvaVanasterin = 
-{ 
-	{ 
+npcMapAjuvaVanasterin =
+{
+	{
 		spawnData = { npcTemplate = "ajuva_vanasterin", x = 5203, z = 80, y = 5700, direction = 180, cellID = 0, position = STAND },
 		npcNumber = 1,
 		stfFile = "@static_npc/rori/rori_restuss_ajuva_vanasterin",

@@ -138,5 +138,3 @@ object_ship_player_shared_player_yt2400 = SharedShipObjectTemplate:new {
 
 ObjectTemplates:addClientTemplate(object_ship_player_shared_player_yt2400, "object/ship/player/shared_player_yt2400.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

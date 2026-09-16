@@ -34,7 +34,7 @@ sullustan_male = Creature:new {
 				 "object/mobile/dressed_commoner_tatooine_sullustan_male_05.iff",
 				 "object/mobile/dressed_commoner_tatooine_sullustan_male_01.iff",
 				 "object/mobile/dressed_mercenary_messanger_sullustan_m.iff",
-				 "object/mobile/dressed_patron_sullustan_01.iff",				 
+				 "object/mobile/dressed_patron_sullustan_01.iff",
 	},
 	lootGroups = {},
 
@@ -43,7 +43,7 @@ sullustan_male = Creature:new {
 	primaryWeapon = "unarmed",
 	secondaryWeapon = "none",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = {},

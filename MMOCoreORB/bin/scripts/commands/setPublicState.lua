@@ -46,4 +46,3 @@ SetPublicStateCommand = {
 }
 
 AddCommand(SetPublicStateCommand)
-

@@ -46,4 +46,3 @@ SetChargeCommand = {
 }
 
 AddCommand(SetChargeCommand)
-

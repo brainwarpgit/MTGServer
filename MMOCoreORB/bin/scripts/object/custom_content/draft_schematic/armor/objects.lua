@@ -1876,5 +1876,3 @@ object_draft_schematic_armor_shared_shield_generator_personal_old_republic = Sha
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_armor_shared_shield_generator_personal_old_republic, "object/draft_schematic/armor/shared_shield_generator_personal_old_republic.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

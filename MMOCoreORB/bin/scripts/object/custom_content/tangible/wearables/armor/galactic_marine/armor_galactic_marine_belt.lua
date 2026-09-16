@@ -1,6 +1,6 @@
 object_tangible_wearables_armor_galactic_marine_armor_galactic_marine_belt = object_tangible_wearables_armor_galactic_marine_shared_armor_galactic_marine_belt:new {
 	templateType = ARMOROBJECT,
-	
+
 	faction = "Imperial",
 	--noTrade = 1,
 	playerRaces = { "object/creature/player/bothan_male.iff",
@@ -56,8 +56,8 @@ object_tangible_wearables_armor_galactic_marine_armor_galactic_marine_belt = obj
 				"object/creature/player/wookiee_female.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
-	
-	
+
+
 	skillMods = {
         {"slope_move", 2},
         {"dizzy_defense", 2},

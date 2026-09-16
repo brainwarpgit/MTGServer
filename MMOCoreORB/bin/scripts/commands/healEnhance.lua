@@ -47,4 +47,3 @@ HealEnhanceCommand = {
 }
 
 AddCommand(HealEnhanceCommand)
-

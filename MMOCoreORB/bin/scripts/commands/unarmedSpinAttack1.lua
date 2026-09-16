@@ -49,20 +49,19 @@ UnarmedSpinAttack1Command = {
 	areaAction = true,
 	areaRange = 16,
 	accuracyBonus = 15,
-	
+
 	healthCostMultiplier = 1.5,
 	actionCostMultiplier = 1.5,
 	mindCostMultiplier = 1.5,
 
-	animation = "combo_3c", 
+	animation = "combo_3c",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "leapingveermok",
-	
+
 	weaponType = UNARMEDWEAPON,
 
 	range = -1
 }
 
 AddCommand(UnarmedSpinAttack1Command)
-

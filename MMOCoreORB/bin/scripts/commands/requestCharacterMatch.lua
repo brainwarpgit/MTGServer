@@ -46,4 +46,3 @@ RequestCharacterMatchCommand = {
 }
 
 AddCommand(RequestCharacterMatchCommand)
-

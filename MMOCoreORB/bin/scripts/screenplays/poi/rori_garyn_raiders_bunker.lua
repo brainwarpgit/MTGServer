@@ -11,9 +11,9 @@ GarynRaidersBunkerScreenPlay = ScreenPlay:new {
 		5555912,
 		5555914
         },
-        
-        lootLevel = 15, 
- 
+
+        lootLevel = 15,
+
         lootGroups = {
                 {
                         groups = {
@@ -28,9 +28,9 @@ GarynRaidersBunkerScreenPlay = ScreenPlay:new {
                                 {group = "armor_attachments", chance = 400000}
                         },
                         lootChance = 8000000
-                }                                       
+                }
         },
-        
+
         lootContainerRespawn = 1800 -- 30 minutes
 }
 

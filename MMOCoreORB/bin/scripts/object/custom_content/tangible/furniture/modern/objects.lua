@@ -36,5 +36,3 @@ object_tangible_furniture_modern_shared_bar_piece_straight_s2_treasure_map = Sha
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_modern_shared_bar_piece_straight_s2_treasure_map, "object/tangible/furniture/modern/shared_bar_piece_straight_s2_treasure_map.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

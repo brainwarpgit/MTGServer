@@ -52,5 +52,3 @@ object_tangible_loot_creature_loot_collections_fried_icecream_components_yavin_s
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_collections_fried_icecream_components_yavin_shared_wuli_nuts, "object/tangible/loot/creature_loot/collections/fried_icecream_components/yavin/shared_wuli_nuts.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

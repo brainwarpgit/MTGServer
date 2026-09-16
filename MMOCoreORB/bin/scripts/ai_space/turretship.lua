@@ -6,4 +6,3 @@ attackTurretship = {
 	{id="2624176723",	name="CheckWeapons",	pid="652020583"},
 	{id="1070459205",	name="EngageTurrets",	pid="1295149021"}}
 addAiTemplate("attackTurretship", attackTurretship)
-

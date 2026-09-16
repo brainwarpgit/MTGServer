@@ -37,7 +37,7 @@ function SandcrawlerNeScreenPlay:spawnMobiles()
 	spawnMobile("tatooine", "jawa_henchman", 300, 5805.3, 51.5, 3990.7, 135, 0)
 
 	spawnMobile("tatooine", "jawa_leader", 300, 5757.0, 51.1, 4001.1, 175, 0)
-	spawnMobile("tatooine", "jawa_leader", 300, 5768.8, 52.2, 4006.3, 130, 0)	
+	spawnMobile("tatooine", "jawa_leader", 300, 5768.8, 52.2, 4006.3, 130, 0)
 
 	spawnMobile("tatooine", "jawa_protector", 300, 5775.4, 49.7, 3989.3, 85, 0)
 	spawnMobile("tatooine", "jawa_protector", 300, 5777.3, 49.7, 3990.6, -110, 0)
@@ -57,7 +57,7 @@ function SandcrawlerNeScreenPlay:spawnMobiles()
 
 	spawnMobile("tatooine", "tusken_bantha", 480, 5803, 54.2, 3952.8, -33, 0)
 	spawnMobile("tatooine", "tusken_bantha", 480, 5793.4, 54.8, 3948.4, -33, 0)
-	
+
 	spawnMobile("tatooine", "tusken_raider", 480, 5809, 55.6, 3968.6, -40, 0)
 	spawnMobile("tatooine", "tusken_raider", 480, 5813.1, 55.4, 3971.6, -40, 0)
 	spawnMobile("tatooine", "tusken_raider", 480, 5806.2, 53.0, 3982.4, -45, 0)
@@ -80,4 +80,3 @@ function SandcrawlerNeScreenPlay:spawnMobiles()
 	spawnMobile("tatooine", "tusken_chief", 900, 5798.0, 56.0, 3961.1, -45, 0)
 
 end
-

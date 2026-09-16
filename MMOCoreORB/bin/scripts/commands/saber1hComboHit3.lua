@@ -78,4 +78,3 @@ Saber1hComboHit3Command = {
 }
 
 AddCommand(Saber1hComboHit3Command)
-

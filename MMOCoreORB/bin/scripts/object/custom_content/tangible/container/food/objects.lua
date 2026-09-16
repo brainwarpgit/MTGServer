@@ -4,5 +4,3 @@ object_tangible_container_food_shared_ice_cream_fryer = SharedTangibleObjectTemp
 
 ObjectTemplates:addClientTemplate(object_tangible_container_food_shared_ice_cream_fryer, "object/tangible/container/food/shared_ice_cream_fryer.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

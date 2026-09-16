@@ -11,4 +11,3 @@ dathomir_reptilian_flyer_flock_neutral_none = Lair:new {
 }
 
 addLairTemplate("dathomir_reptilian_flyer_flock_neutral_none", dathomir_reptilian_flyer_flock_neutral_none)
-

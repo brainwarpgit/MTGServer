@@ -220,5 +220,3 @@ object_draft_schematic_munition_shared_beast_steroid_turkey_wolf_mk2 = SharedDra
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_munition_shared_beast_steroid_turkey_wolf_mk2, "object/draft_schematic/munition/shared_beast_steroid_turkey_wolf_mk2.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

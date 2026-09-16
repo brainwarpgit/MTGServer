@@ -46,4 +46,3 @@ ResourceCommand = {
 }
 
 AddCommand(ResourceCommand)
-

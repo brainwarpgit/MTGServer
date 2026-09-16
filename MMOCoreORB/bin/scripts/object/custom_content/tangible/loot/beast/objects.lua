@@ -292,5 +292,3 @@ object_tangible_loot_beast_shared_enzyme_3_element_5 = SharedTangibleObjectTempl
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_beast_shared_enzyme_3_element_5, "object/tangible/loot/beast/shared_enzyme_3_element_5.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

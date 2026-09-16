@@ -131,7 +131,7 @@ padawan_peoples_soldier_01_convo_template:addScreen(pretty_penny);
 
 six_million = ConvoScreen:new {
 	id = "six_million",
-	leftDialog = "@conversation/padawan_peoples_soldier_01:s_53e9175a", -- Would you have returned the disk had you known the contents were worth well over six million credits?  Didn't think so.  
+	leftDialog = "@conversation/padawan_peoples_soldier_01:s_53e9175a", -- Would you have returned the disk had you known the contents were worth well over six million credits?  Didn't think so.
 	stopConversation = "true",
 	options = {}
 }

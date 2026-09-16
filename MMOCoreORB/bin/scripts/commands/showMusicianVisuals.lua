@@ -46,4 +46,3 @@ ShowMusicianVisualsCommand = {
 }
 
 AddCommand(ShowMusicianVisualsCommand)
-

@@ -10,4 +10,3 @@ endor_blurrg_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("endor_blurrg_lair_neutral_small", endor_blurrg_lair_neutral_small)
-

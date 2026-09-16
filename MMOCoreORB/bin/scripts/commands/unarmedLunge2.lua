@@ -47,7 +47,7 @@ UnarmedLunge2Command = {
 	damageMultiplier = 3.0,
 	speedMultiplier = 2.0,
 	accuracyBonus = 15,
-	
+
 	healthCostMultiplier = 1.5,
 	actionCostMultiplier = 1.5,
 	mindCostMultiplier = 1.5,
@@ -57,22 +57,21 @@ UnarmedLunge2Command = {
 	combatSpam = "lungeshiak",
 
 	range = 20,
-	
+
 	weaponType = UNARMEDWEAPON,
 
 	stateEffects = {
-	  StateEffect( 
-		KNOCKDOWN_EFFECT, 
-		{ "knockdownRecovery", "lastKnockdown" }, 
-		{ "knockdown_defense" }, 
+	  StateEffect(
+		KNOCKDOWN_EFFECT,
+		{ "knockdownRecovery", "lastKnockdown" },
+		{ "knockdown_defense" },
 		{},
-		100, 
-		0, 
-		0 
+		100,
+		0,
+		0
 	  )
 	}
 
 }
 
 AddCommand(UnarmedLunge2Command)
-

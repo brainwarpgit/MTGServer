@@ -54,7 +54,7 @@ SniperShotCommand = {
 
 	poolsToDamage = RANDOM_ATTRIBUTE,
 
-	animation = "fire_1_special_single_medium_face", 
+	animation = "fire_1_special_single_medium_face",
 
 	combatSpam = "snipershot",
 
@@ -64,4 +64,3 @@ SniperShotCommand = {
 }
 
 AddCommand(SniperShotCommand)
-

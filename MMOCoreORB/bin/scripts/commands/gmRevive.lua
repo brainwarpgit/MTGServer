@@ -47,4 +47,3 @@ GmReviveCommand = {
 }
 
 AddCommand(GmReviveCommand)
-

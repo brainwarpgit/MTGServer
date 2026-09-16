@@ -10,4 +10,3 @@ tatooine_dune_bantha_lair_neutral_large = Lair:new {
 }
 
 addLairTemplate("tatooine_dune_bantha_lair_neutral_large", tatooine_dune_bantha_lair_neutral_large)
-

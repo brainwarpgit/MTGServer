@@ -197,4 +197,3 @@ targetPet = {
 	{id="3536084980",	name="AlwaysFail",	pid="2727643421"},
 	{id="2207924975",	name="ExitCombat",	pid="3536084980",	args={clearDefenders=1}}}
 addAiTemplate("targetPet", targetPet)
-

@@ -54,6 +54,6 @@ object_tangible_wearables_robe_robe_chronicle_master = object_tangible_wearables
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
 
-				
+
 }
 ObjectTemplates:addTemplate(object_tangible_wearables_robe_robe_chronicle_master, "object/tangible/wearables/robe/robe_chronicle_master.iff")

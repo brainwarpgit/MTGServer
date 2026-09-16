@@ -94,5 +94,3 @@ addOutfit(
 	"object/tangible/wearables/pants/pants_s18.iff",	-- Pants
 	"object/tangible/wearables/shoes/shoes_s09.iff"	-- Shoes
 }))
-
-

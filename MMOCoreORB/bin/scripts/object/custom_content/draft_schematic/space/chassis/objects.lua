@@ -180,5 +180,3 @@ object_draft_schematic_space_chassis_shared_z95_heavy = SharedDraftSchematicObje
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_space_chassis_shared_z95_heavy, "object/draft_schematic/space/chassis/shared_z95_heavy.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -10,4 +10,3 @@ rori_fuzzy_jax_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("rori_fuzzy_jax_lair_neutral_medium", rori_fuzzy_jax_lair_neutral_medium)
-

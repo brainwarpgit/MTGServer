@@ -12,5 +12,3 @@ object_tangible_wearables_cybernetic_s03_shared_cybernetic_s03_arm_r = SharedTan
 
 ObjectTemplates:addClientTemplate(object_tangible_wearables_cybernetic_s03_shared_cybernetic_s03_arm_r, "object/tangible/wearables/cybernetic/s03/shared_cybernetic_s03_arm_r.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

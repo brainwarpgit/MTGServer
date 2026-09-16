@@ -239,4 +239,3 @@ object_tangible_wearables_armor_rebel_spec_force_shared_armor_rebel_spec_force_l
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_rebel_spec_force_shared_armor_rebel_spec_force_leggings_gcw, "object/tangible/wearables/armor/rebel_spec_force/shared_armor_rebel_spec_force_leggings_gcw.iff")
 
 --****************************************************************************************************************************************************************************
-

@@ -46,4 +46,3 @@ RolePlayCommand = {
 }
 
 AddCommand(RolePlayCommand)
-

@@ -49,4 +49,3 @@ RegainConsciousnessCommand = {
 }
 
 AddCommand(RegainConsciousnessCommand)
-

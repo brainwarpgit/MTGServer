@@ -27,7 +27,7 @@ huff_blistmok = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = CARNIVORE,
 
-	templates = {"object/mobile/voritor_lizard.iff"}, -- Intentional, voritor model used for this quest, blistmok model did not appear ingame until Trials of Obi-Wan. 
+	templates = {"object/mobile/voritor_lizard.iff"}, -- Intentional, voritor model used for this quest, blistmok model did not appear ingame until Trials of Obi-Wan.
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -35,7 +35,7 @@ huff_blistmok = Creature:new {
 	primaryWeapon = "unarmed",
 	secondaryWeapon = "none",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = { {"intimidationattack",""} },

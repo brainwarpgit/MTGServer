@@ -36,5 +36,3 @@ object_draft_schematic_space_armor_shared_gunship_armor_mk3 = SharedDraftSchemat
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_space_armor_shared_gunship_armor_mk3, "object/draft_schematic/space/armor/shared_gunship_armor_mk3.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

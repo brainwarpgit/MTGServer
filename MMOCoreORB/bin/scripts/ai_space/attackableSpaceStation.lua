@@ -13,4 +13,3 @@ rootAttackablespacestation = {
 	{id="3575304462",	name="TreeSocketSpace",	pid="372913136",	args={slot=ATTACKSPACE}},
 	{id="2155200216",	name="TreeSocketSpace",	pid="3348004110",	args={slot=IDLESPACE}}}
 addAiTemplate("rootAttackablespacestation", rootAttackablespacestation)
-

@@ -818,12 +818,12 @@ function VillageCommunityCrafting:giveSchematics(pPlayer)
 	local addSuccess = true
 	for i = 1, #secondaryList, 1 do
 		local tempSuccess = PlayerObject(pGhost):addRewardedSchematic(secondaryList[i], 2, -1, true)
-		
+
 		if (not tempSuccess) then
 			addSuccess = false
 		end
 	end
-	
+
 	return addSuccess
 end
 
@@ -956,7 +956,7 @@ function VillageCommunityCrafting:doEndOfPhasePrizes()
 
 			-- Only add player data to reward list if they completed the quest
 			if (playerQuantity ~= nil and playerQuantity > 0 and pPlayer ~= nil) then
-				if ((currentPhase == 2 and QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.FS_PHASE_2_CRAFT_DEFENSES_MAIN)) or 
+				if ((currentPhase == 2 and QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.FS_PHASE_2_CRAFT_DEFENSES_MAIN)) or
 						(currentPhase == 3 and QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.FS_PHASE_3_CRAFT_SHIELDS_MAIN))) then
 					local dataTable = { playerID, playerQuality, playerQuantity }
 					table.insert(statTable, dataTable)

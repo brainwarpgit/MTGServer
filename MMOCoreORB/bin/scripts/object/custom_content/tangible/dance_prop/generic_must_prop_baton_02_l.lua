@@ -70,7 +70,7 @@ object_tangible_dance_prop_generic_must_prop_baton_02_l = object_tangible_dance_
 
 	xpType = "dance",
 
-	
+
 	--certificationsRequired = { "cert_sword_2h_axe" },
 }
 

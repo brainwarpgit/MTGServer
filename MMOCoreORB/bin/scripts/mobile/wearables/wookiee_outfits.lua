@@ -68,5 +68,3 @@ addOutfit(
 	"Wookiee4",					-- OutfitName
 	{"object/tangible/wearables/wookiee/wke_shirt_s04.iff"	-- Shirt
 }))
-
-

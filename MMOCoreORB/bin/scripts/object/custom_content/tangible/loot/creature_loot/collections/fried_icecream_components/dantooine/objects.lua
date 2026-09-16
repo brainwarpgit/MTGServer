@@ -52,5 +52,3 @@ object_tangible_loot_creature_loot_collections_fried_icecream_components_dantooi
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_collections_fried_icecream_components_dantooine_shared_yot_beans, "object/tangible/loot/creature_loot/collections/fried_icecream_components/dantooine/shared_yot_beans.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

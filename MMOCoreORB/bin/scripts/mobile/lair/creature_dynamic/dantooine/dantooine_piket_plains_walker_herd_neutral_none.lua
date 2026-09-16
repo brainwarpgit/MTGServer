@@ -11,4 +11,3 @@ dantooine_piket_plains_walker_herd_neutral_none = Lair:new {
 }
 
 addLairTemplate("dantooine_piket_plains_walker_herd_neutral_none", dantooine_piket_plains_walker_herd_neutral_none)
-

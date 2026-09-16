@@ -46,4 +46,3 @@ TumbleToKneelingCommand = {
 }
 
 AddCommand(TumbleToKneelingCommand)
-

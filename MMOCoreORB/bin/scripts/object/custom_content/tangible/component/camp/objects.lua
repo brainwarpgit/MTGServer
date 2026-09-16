@@ -100,5 +100,3 @@ object_tangible_component_camp_shared_camp_module_shuttle_beacon = SharedTangibl
 
 ObjectTemplates:addClientTemplate(object_tangible_component_camp_shared_camp_module_shuttle_beacon, "object/tangible/component/camp/shared_camp_module_shuttle_beacon.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

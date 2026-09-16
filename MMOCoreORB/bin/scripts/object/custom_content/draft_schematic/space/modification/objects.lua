@@ -36,5 +36,3 @@ object_draft_schematic_space_modification_shared_z95_modification_s01 = SharedDr
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_space_modification_shared_z95_modification_s01, "object/draft_schematic/space/modification/shared_z95_modification_s01.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

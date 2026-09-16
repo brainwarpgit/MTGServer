@@ -153,15 +153,15 @@ function OldManIntroEncounter:taskFinish(pPlayer)
 	if (pPlayer == nil) then
 		return true
 	end
-	
+
 	local oldManVisits = readScreenPlayData(pPlayer, "VillageJediProgression", "FsIntroOldManVisits")
-	
+
 	if (oldManVisits == "") then
 		oldManVisits = 1
 	else
 		oldManVisits = tonumber(oldManVisits) + 1
 	end
-	
+
 	writeScreenPlayData(pPlayer, "VillageJediProgression", "FsIntroOldManVisits", oldManVisits)
 
 	if (self:isEncounterFinished(pPlayer)) then

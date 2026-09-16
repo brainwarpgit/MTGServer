@@ -10,4 +10,3 @@ dathomir_purbole_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("dathomir_purbole_lair_neutral_medium", dathomir_purbole_lair_neutral_medium)
-

@@ -30,9 +30,9 @@ TalusErranSifScreenPlay = ScreenPlay:new {
 
 	lootContainerRespawn = 1800
 }
- 
+
 registerScreenPlay("TalusErranSifScreenPlay", true)
- 
+
 function TalusErranSifScreenPlay:start()
 	if (isZoneEnabled("talus")) then
                 self:spawnMobiles()
@@ -47,7 +47,7 @@ function TalusErranSifScreenPlay:spawnMobiles()
 	spawnMobile("talus", "rodian_sif_02", 300, -7.0, -13.8, 1.7, 110, 9815433)
 	spawnMobile("talus", "trandoshan_sif_02", 300, 4.1, -6.8, -2.2, -48, 9815431)
 	spawnMobile("talus", "trandoshan_sif_02", 300, 7.0, -6.8, -2.6, 164, 9815431)
-	spawnMobile("talus", "rodian_sif_02", 300, 4.8, -6.8, -9.0, 164, 9815431)	
+	spawnMobile("talus", "rodian_sif_02", 300, 4.8, -6.8, -9.0, 164, 9815431)
 	spawnMobile("talus", "trandoshan_sif_02", 300, 4.2, -6.8, -15.3, -112, 9815430)
 	spawnMobile("talus", "rodian_sif", 300, 6.3, -6.8, -15.7, -92, 9815430)
 	spawnMobile("talus", "trandoshan_sif_02", 300, -1.1, -6.8, -6.3, -63, 9815429)

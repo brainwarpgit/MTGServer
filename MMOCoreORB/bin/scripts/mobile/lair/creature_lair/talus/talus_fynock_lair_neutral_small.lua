@@ -10,4 +10,3 @@ talus_fynock_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("talus_fynock_lair_neutral_small", talus_fynock_lair_neutral_small)
-

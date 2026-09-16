@@ -52,5 +52,3 @@ object_tangible_furniture_gcw_shared_gcw_weapon_rack_02 = SharedTangibleObjectTe
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_gcw_shared_gcw_weapon_rack_02, "object/tangible/furniture/gcw/shared_gcw_weapon_rack_02.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

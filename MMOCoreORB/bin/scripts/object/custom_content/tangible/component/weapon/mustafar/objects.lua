@@ -100,5 +100,3 @@ object_tangible_component_weapon_mustafar_shared_tulrus_lance_core = SharedTangi
 
 ObjectTemplates:addClientTemplate(object_tangible_component_weapon_mustafar_shared_tulrus_lance_core, "object/tangible/component/weapon/mustafar/shared_tulrus_lance_core.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

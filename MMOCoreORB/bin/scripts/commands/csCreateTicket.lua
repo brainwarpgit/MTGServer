@@ -46,4 +46,3 @@ CsCreateTicketCommand = {
 }
 
 AddCommand(CsCreateTicketCommand)
-

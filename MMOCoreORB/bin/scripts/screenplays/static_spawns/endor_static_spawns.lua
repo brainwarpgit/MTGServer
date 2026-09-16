@@ -1,5 +1,5 @@
 --This is to be used for static spawns that are NOT part of caves, cities, dungeons, poi's, or other large screenplays.
-EndorStaticSpawnsScreenPlay = ScreenPlay:new 
+EndorStaticSpawnsScreenPlay = ScreenPlay:new
 {
 	numberOfActs = 1,
 

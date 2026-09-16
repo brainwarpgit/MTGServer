@@ -1,9 +1,9 @@
 buildingMourno =
-	{ 
+	{
 		type = "destructible",
 		buildingTemplate = "object/building/military/pirate_warehouse.iff",
 		terminal = { template = "object/tangible/terminal/terminal_destructible_building.iff", vectorCellID = 3, x = 0, z = 0.3, y = -6.0 },
-		childNpcs = 
+		childNpcs =
 		{
 			{ npcTemplate = "mourno_surveyor", npcName = "Hutt Expeditionary Force Surveyor", vectorCellID = 3, x = 0, z = 0.3, y = -3.0 }
 		}
@@ -29,7 +29,7 @@ mourno_draver_missions =
 			}
 		},
 		{
-			missionType = "destroy", 
+			missionType = "destroy",
 			buildingSpawn = buildingMourno,
 			primarySpawns = { },
 			secondarySpawns =	{ { npcTemplate = "mourno_thug", npcName = "a Thug" }, { npcTemplate = "mourno_thug", npcName = "a Thug" } },

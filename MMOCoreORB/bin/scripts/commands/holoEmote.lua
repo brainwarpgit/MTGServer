@@ -46,4 +46,3 @@ HoloEmoteCommand = {
 }
 
 AddCommand(HoloEmoteCommand)
-

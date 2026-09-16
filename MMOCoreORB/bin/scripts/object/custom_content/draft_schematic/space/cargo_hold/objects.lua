@@ -92,5 +92,3 @@ object_draft_schematic_space_cargo_hold_shared_crg_starfighter_small = SharedDra
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_space_cargo_hold_shared_crg_starfighter_small, "object/draft_schematic/space/cargo_hold/shared_crg_starfighter_small.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

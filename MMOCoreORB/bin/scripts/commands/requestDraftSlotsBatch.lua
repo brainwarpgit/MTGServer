@@ -46,4 +46,3 @@ RequestDraftSlotsBatchCommand = {
 }
 
 AddCommand(RequestDraftSlotsBatchCommand)
-

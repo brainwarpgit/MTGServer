@@ -60,5 +60,3 @@ object_tangible_component_reverse_engineering_shared_power_bit_3 = SharedTangibl
 
 ObjectTemplates:addClientTemplate(object_tangible_component_reverse_engineering_shared_power_bit_3, "object/tangible/component/reverse_engineering/shared_power_bit_3.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

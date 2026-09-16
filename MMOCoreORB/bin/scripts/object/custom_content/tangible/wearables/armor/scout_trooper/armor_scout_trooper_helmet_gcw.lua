@@ -32,7 +32,7 @@ object_tangible_wearables_armor_scout_trooper_armor_scout_trooper_helmet_gcw = o
 				"object/creature/player/twilek_female.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 

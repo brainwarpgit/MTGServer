@@ -8,7 +8,3 @@ includeFile("custom_content/static/worldbuilding/furniture/cheap/frn_all_chep_co
 includeFile("custom_content/static/worldbuilding/furniture/cheap/frn_all_chep_couch_s01.lua")
 includeFile("custom_content/static/worldbuilding/furniture/cheap/frn_all_chep_end_table_s01.lua")
 includeFile("custom_content/static/worldbuilding/furniture/cheap/frn_all_chep_love_seat_s01.lua")
-
-
-
-

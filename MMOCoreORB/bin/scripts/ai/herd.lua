@@ -44,4 +44,3 @@ idleHerd = {
 	{id="2256881794",	name="FollowHerd",	pid="505873291"},
 	{id="244234023",	name="WriteBlackboard",	pid="505873291",	args={key="moveMode", val=WALK}}}
 addAiTemplate("idleHerd", idleHerd)
-

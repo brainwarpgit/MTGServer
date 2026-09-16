@@ -6,7 +6,7 @@ jilljoo_jab_missions =
 			{
 				{ npcTemplate = "jilljoo_slave", npcName = "Sadelli" }
 			},
-			secondarySpawns = 
+			secondarySpawns =
 			{
 				{ npcTemplate = "thug", npcName = "a Thug" },
 				{ npcTemplate = "thug", npcName = "a Thug" },

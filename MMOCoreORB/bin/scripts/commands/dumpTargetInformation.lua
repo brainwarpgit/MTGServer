@@ -46,4 +46,3 @@ DumpTargetInformationCommand = {
 }
 
 AddCommand(DumpTargetInformationCommand)
-

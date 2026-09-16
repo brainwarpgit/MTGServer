@@ -46,4 +46,3 @@ RequestStatMigrationDataCommand = {
 }
 
 AddCommand(RequestStatMigrationDataCommand)
-

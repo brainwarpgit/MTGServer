@@ -46,4 +46,3 @@ SetIntimidateCommand = {
 }
 
 AddCommand(SetIntimidateCommand)
-

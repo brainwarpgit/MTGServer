@@ -11,4 +11,3 @@ rori_dreaded_vir_vur_neutral_none = Lair:new {
 }
 
 addLairTemplate("rori_dreaded_vir_vur_neutral_none", rori_dreaded_vir_vur_neutral_none)
-

@@ -46,4 +46,3 @@ StartTargetSpawnerCommand = {
 }
 
 AddCommand(StartTargetSpawnerCommand)
-

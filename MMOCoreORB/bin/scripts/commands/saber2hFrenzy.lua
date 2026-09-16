@@ -98,4 +98,3 @@ Saber2hFrenzyCommand = {
 }
 
 AddCommand(Saber2hFrenzyCommand)
-

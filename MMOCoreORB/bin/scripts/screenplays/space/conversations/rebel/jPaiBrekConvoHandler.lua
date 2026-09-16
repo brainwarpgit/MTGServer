@@ -97,4 +97,3 @@ function jPaiBrekConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, se
 
 	return pConvScreen
 end
-

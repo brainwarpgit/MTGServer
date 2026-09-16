@@ -10,7 +10,7 @@ intro = ConvoScreen:new {
 	leftDialog = "@conversation/fs_village_convo4_f:s_21bb400d", -- Everybody is running around with important things to do. Nobody has time for the crops. I'm going to try and get as much planted today as I can. Did you want to help?
 	stopConversation = "false",
 	options = {
-		{ "@conversation/fs_village_convo4_f:s_3f5944d5", "got_in_way" }, -- Not me, I'm not really the farmer type. 
+		{ "@conversation/fs_village_convo4_f:s_3f5944d5", "got_in_way" }, -- Not me, I'm not really the farmer type.
 		{ "@conversation/fs_village_convo4_f:s_34b7d87e", "on_second_thought" }, -- Sure, I'd be glad to help.
 	}
 }

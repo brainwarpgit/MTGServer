@@ -18,4 +18,3 @@ rebel_corvette_loot = {
 	}
 }
 addLootGroupTemplate("rebel_corvette_loot", rebel_corvette_loot)
-

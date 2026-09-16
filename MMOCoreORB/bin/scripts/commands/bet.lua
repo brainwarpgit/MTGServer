@@ -46,4 +46,3 @@ BetCommand = {
 }
 
 AddCommand(BetCommand)
-

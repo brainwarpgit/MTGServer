@@ -33,7 +33,7 @@ alert_droideka = Creature:new {
 				{group = "geonosian_cubes", chance = 10000000}
 			},
 			lootChance = 1800000
-	    }	
+	    }
 	},
 	defaultAttack = "attack",
 	defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",

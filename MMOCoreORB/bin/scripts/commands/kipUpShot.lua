@@ -54,23 +54,22 @@ KipUpShotCommand = {
 	animation = "fire_acrobatic",
 
 	combatSpam = "kipup",
-	
+
 	weaponType = PISTOLWEAPON,
 
 	range = -1,
-	
+
 	stateEffects = {
-	  StateEffect( 
-	    ATTACKER_FORCE_STANDING, 
-	    {}, 
-	    {}, 
-	    {}, 
-	    100, 
-	    0, 
-	    0 
+	  StateEffect(
+	    ATTACKER_FORCE_STANDING,
+	    {},
+	    {},
+	    {},
+	    100,
+	    0,
+	    0
 	  )
 	},
 }
 
 AddCommand(KipUpShotCommand)
-

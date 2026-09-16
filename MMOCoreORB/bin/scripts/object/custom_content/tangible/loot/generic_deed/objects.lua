@@ -20,5 +20,3 @@ object_tangible_loot_generic_deed_shared_vehicle_generic = SharedTangibleObjectT
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_generic_deed_shared_vehicle_generic, "object/tangible/loot/generic_deed/shared_vehicle_generic.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

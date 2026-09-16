@@ -56,15 +56,14 @@ FireAcidCone2Command = {
 
 	poolsToDamage = RANDOM_ATTRIBUTE,
 
-	animation = "fire_acid_rifle_single_2", 
+	animation = "fire_acid_rifle_single_2",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "fireacidcone2",
-	
+
 	weaponType = SPECIALHEAVYWEAPON,
-	
+
 	range = 16
 }
 
 AddCommand(FireAcidCone2Command)
-

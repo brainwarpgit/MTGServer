@@ -10,4 +10,3 @@ talus_roba_lair_neutral_large = Lair:new {
 }
 
 addLairTemplate("talus_roba_lair_neutral_large", talus_roba_lair_neutral_large)
-

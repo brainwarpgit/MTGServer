@@ -10,4 +10,3 @@ naboo_kaadu_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("naboo_kaadu_lair_neutral_medium", naboo_kaadu_lair_neutral_medium)
-

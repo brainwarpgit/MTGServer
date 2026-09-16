@@ -52,5 +52,3 @@ object_tangible_loot_creature_loot_collections_fried_icecream_components_naboo_s
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_collections_fried_icecream_components_naboo_shared_stinkmelon, "object/tangible/loot/creature_loot/collections/fried_icecream_components/naboo/shared_stinkmelon.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

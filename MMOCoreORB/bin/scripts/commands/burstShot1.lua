@@ -53,15 +53,14 @@ BurstShot1Command = {
 
 	poolsToDamage = RANDOM_ATTRIBUTE,
 
-	animation = "fire_7_single", 
+	animation = "fire_7_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "burstshot",
-	
+
 	weaponType = CARBINEWEAPON,
 
 	range = -1
 }
 
 AddCommand(BurstShot1Command)
-

@@ -46,4 +46,3 @@ WaypointCommand = {
 }
 
 AddCommand(WaypointCommand)
-

@@ -5,13 +5,13 @@ JantaCaveScreenPlay = ScreenPlay:new {
 
 	lootContainers = {
 		529346,
-        	529349,
-        	529353,
-        	529363,
-        	529368
+		529349,
+		529353,
+		529363,
+		529368
 	},
-	
-	lootLevel = 26,	
+
+	lootLevel = 26,
 
 	lootGroups = {
 		{
@@ -24,10 +24,10 @@ JantaCaveScreenPlay = ScreenPlay:new {
 				{group = "armor_attachments", chance = 300000}
 			},
 			lootChance = 8000000
-		}					
+		}
 	},
-	
-	lootContainerRespawn = 1800 
+
+	lootContainerRespawn = 1800
 }
 
 registerScreenPlay("JantaCaveScreenPlay", true)

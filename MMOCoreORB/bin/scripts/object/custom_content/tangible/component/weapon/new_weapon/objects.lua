@@ -476,5 +476,3 @@ object_tangible_component_weapon_new_weapon_shared_power_bit = SharedTangibleObj
 
 ObjectTemplates:addClientTemplate(object_tangible_component_weapon_new_weapon_shared_power_bit, "object/tangible/component/weapon/new_weapon/shared_power_bit.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

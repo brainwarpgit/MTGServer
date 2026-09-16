@@ -11,4 +11,3 @@ tatooine_bantha_dune_bantha_neutral_medium_boss_01 = Lair:new {
 }
 
 addLairTemplate("tatooine_bantha_dune_bantha_neutral_medium_boss_01", tatooine_bantha_dune_bantha_neutral_medium_boss_01)
-

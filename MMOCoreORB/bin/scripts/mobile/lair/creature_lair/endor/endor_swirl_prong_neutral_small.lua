@@ -10,4 +10,3 @@ endor_swirl_prong_neutral_small = Lair:new {
 }
 
 addLairTemplate("endor_swirl_prong_neutral_small", endor_swirl_prong_neutral_small)
-

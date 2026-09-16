@@ -140,5 +140,3 @@ object_draft_schematic_droid_shared_droid_union_sentry_droid = SharedDraftSchema
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_droid_shared_droid_union_sentry_droid, "object/draft_schematic/droid/shared_droid_union_sentry_droid.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

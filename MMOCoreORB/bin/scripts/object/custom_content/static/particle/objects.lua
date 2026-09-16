@@ -560,5 +560,3 @@ object_static_particle_shared_pt_water_drop_sound_no_visual = SharedStaticObject
 
 ObjectTemplates:addClientTemplate(object_static_particle_shared_pt_water_drop_sound_no_visual, "object/static/particle/shared_pt_water_drop_sound_no_visual.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

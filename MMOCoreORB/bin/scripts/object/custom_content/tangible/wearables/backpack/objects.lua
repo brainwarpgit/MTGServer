@@ -276,4 +276,3 @@ object_tangible_wearables_backpack_shared_wearable_backpack_recon = SharedTangib
 ObjectTemplates:addClientTemplate(object_tangible_wearables_backpack_shared_wearable_backpack_recon, "object/tangible/wearables/backpack/shared_wearable_backpack_recon.iff")
 
 --******************************************************************************************************************************************************************************************************************************
-

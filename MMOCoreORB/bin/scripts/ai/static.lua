@@ -42,4 +42,3 @@ wanderStatic = {
 	{id="4198924774",	name="CheckIsHome",	pid="3866536807"},
 	{id="737159031",	name="Wait",	pid="3910073142",	args={durationMax=10.0, durationMin=5.0}}}
 addAiTemplate("wanderStatic", wanderStatic)
-

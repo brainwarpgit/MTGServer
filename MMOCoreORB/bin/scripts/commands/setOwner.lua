@@ -46,4 +46,3 @@ SetOwnerCommand = {
 }
 
 AddCommand(SetOwnerCommand)
-

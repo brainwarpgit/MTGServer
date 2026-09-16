@@ -46,4 +46,3 @@ PeaceCommand = {
 }
 
 AddCommand(PeaceCommand)
-

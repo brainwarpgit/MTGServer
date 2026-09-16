@@ -17,38 +17,38 @@ singular_nak_missions =
 		{
 		}
 	},
-	{ 
-		missionType = "deliver", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "trujhazii", npcName = "Trujhazii" } 
-		}, 
-		secondarySpawns = 
+	{
+		missionType = "deliver",
+		primarySpawns =
 		{
-		}, 
-		itemSpawns = 
-		{ 
+			{ npcTemplate = "trujhazii", npcName = "Trujhazii" }
+		},
+		secondarySpawns =
+		{
+		},
+		itemSpawns =
+		{
 			{ itemTemplate = "object/tangible/mission/quest_item/singular_nak_q2_needed.iff", itemName = "" }
-		}, 
-		rewards = 
-		{ 
+		},
+		rewards =
+		{
 		}
 	},
-	{ 
-		missionType = "assassinate", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "nightsister_stalker_quest", npcName = "Nightsister Stalker" } --SORT OUT BETTER NAME
-		}, 
-		secondarySpawns = 
+	{
+		missionType = "assassinate",
+		primarySpawns =
 		{
-		}, 
-		itemSpawns = 
-		{ 
+			{ npcTemplate = "nightsister_stalker_quest", npcName = "Nightsister Stalker" } --SORT OUT BETTER NAME
+		},
+		secondarySpawns =
+		{
+		},
+		itemSpawns =
+		{
 			--{ itemTemplate = "object/tangible/mission/quest_item/singular_nak_q1_needed.iff", itemName = "" }
-		}, 
-		rewards = 
-		{ 
+		},
+		rewards =
+		{
 		}
 	},
 }
@@ -61,7 +61,7 @@ npcMapSingularNak =
 		stfFile = "@static_npc/dathomir/dathomir_tradeoutpost_singular_nak",
 		missions = singular_nak_missions
 	},
-	
+
 }
 
 SingularNak = ThemeParkLogic:new {

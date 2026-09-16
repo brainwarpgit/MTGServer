@@ -46,4 +46,3 @@ ListGuildsCommand = {
 }
 
 AddCommand(ListGuildsCommand)
-

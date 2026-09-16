@@ -4,5 +4,3 @@ object_draft_schematic_chemistry_component_shared_stimpack_load_charger = Shared
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_chemistry_component_shared_stimpack_load_charger, "object/draft_schematic/chemistry/component/shared_stimpack_load_charger.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

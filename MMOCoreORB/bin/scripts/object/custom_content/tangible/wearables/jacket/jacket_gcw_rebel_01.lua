@@ -55,7 +55,7 @@ object_tangible_wearables_jacket_jacket_gcw_rebel_01 = object_tangible_wearables
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff",
 			},
-			
+
 	numberExperimentalProperties = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalProperties = {"XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX"},
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},

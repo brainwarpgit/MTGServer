@@ -356,5 +356,3 @@ object_tangible_quest_corellia_shared_corellia_droid_factory_terminal_4 = Shared
 
 ObjectTemplates:addClientTemplate(object_tangible_quest_corellia_shared_corellia_droid_factory_terminal_4, "object/tangible/quest/corellia/shared_corellia_droid_factory_terminal_4.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

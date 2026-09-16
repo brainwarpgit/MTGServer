@@ -92,5 +92,3 @@ object_draft_schematic_camp_modules_shared_shuttle_beacon_module = SharedDraftSc
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_camp_modules_shared_shuttle_beacon_module, "object/draft_schematic/camp/modules/shared_shuttle_beacon_module.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

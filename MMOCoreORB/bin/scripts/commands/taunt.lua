@@ -51,4 +51,3 @@ TauntCommand = {
 }
 
 AddCommand(TauntCommand)
-

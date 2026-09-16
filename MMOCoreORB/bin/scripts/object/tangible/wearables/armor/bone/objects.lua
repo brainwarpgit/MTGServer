@@ -605,7 +605,7 @@ object_tangible_wearables_armor_bone_shared_armor_smc_s01_bicep_l = SharedTangib
 	objectName = "@wearables_name:armor_singing_mountain_clan_s01_bicep_l",
 	onlyVisibleInTools = 0,
 
-	paletteColorCustomizationVariables = {{"/private/index_color_0", "palette/white.pal", 1}, 
+	paletteColorCustomizationVariables = {{"/private/index_color_0", "palette/white.pal", 1},
 			{"/private/index_color_1", "palette/wr_leather.pal", 135}},
 	portalLayoutFilename = "",
 

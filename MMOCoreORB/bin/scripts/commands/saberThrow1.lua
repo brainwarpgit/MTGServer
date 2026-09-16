@@ -66,4 +66,3 @@ SaberThrow1Command = {
 }
 
 AddCommand(SaberThrow1Command)
-

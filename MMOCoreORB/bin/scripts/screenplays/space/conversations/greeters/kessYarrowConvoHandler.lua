@@ -15,4 +15,3 @@ function kessYarrowConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, 
 
 	return pConvScreen
 end
-

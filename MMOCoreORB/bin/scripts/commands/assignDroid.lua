@@ -46,4 +46,3 @@ AssignDroidCommand = {
 }
 
 AddCommand(AssignDroidCommand)
-

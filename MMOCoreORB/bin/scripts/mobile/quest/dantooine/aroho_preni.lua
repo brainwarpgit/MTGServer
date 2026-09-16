@@ -1,6 +1,6 @@
 aroho_preni = Creature:new {
 	objectName = "",
-	customName = "Aroho Preni (a Dantari Raider)",	
+	customName = "Aroho Preni (a Dantari Raider)",
 	socialGroup = "dantari_raiders",
 	faction = "dantari_raiders",
 	mobType = MOB_NPC,

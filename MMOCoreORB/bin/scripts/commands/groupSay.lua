@@ -46,4 +46,3 @@ GroupSayCommand = {
 }
 
 AddCommand(GroupSayCommand)
-

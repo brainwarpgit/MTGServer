@@ -46,4 +46,3 @@ SeGogglesCommand = {
 }
 
 AddCommand(SeGogglesCommand)
-

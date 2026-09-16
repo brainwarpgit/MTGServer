@@ -10,4 +10,3 @@ yavin4_skreeg_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("yavin4_skreeg_lair_neutral_medium", yavin4_skreeg_lair_neutral_medium)
-

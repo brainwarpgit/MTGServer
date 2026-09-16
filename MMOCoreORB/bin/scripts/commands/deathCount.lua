@@ -46,4 +46,3 @@ DeathCountCommand = {
 }
 
 AddCommand(DeathCountCommand)
-

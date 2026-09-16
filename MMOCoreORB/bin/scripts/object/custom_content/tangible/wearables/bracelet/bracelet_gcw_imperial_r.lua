@@ -2,7 +2,7 @@ object_tangible_wearables_bracelet_bracelet_gcw_imperial_r = object_tangible_wea
 
 
 	faction = "Imperial",
-	
+
 	playerRaces = { 	"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",
 				"object/creature/player/talz_male.iff",

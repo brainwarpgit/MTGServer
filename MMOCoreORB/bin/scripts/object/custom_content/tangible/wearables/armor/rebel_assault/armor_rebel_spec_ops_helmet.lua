@@ -36,7 +36,7 @@ object_tangible_wearables_armor_rebel_assault_armor_rebel_spec_ops_helmet = obje
 				"object/creature/player/wookiee_female.iff",
 				"object/creature/player/ithorian_male.iff",
 				"object/creature/player/ithorian_female.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 

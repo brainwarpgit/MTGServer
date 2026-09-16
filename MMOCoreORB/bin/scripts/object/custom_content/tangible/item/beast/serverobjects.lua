@@ -149,4 +149,3 @@ includeFile("custom_content/tangible/item/beast/converted_woolamander_decoration
 includeFile("custom_content/tangible/item/beast/converted_worrt_decoration.lua")
 includeFile("custom_content/tangible/item/beast/converted_xandank_decoration.lua")
 includeFile("custom_content/tangible/item/beast/converted_zucca_boar_decoration.lua")
-

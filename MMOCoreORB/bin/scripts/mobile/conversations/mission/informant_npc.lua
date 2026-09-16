@@ -4,12 +4,12 @@ function createInformantTemplate(lvl)
 		templateType = "InformantNPC",
 		screens = {}
 	}
-	
+
 	informant_npc_convoscreenstart = ConvoScreen:new {
 		id = "convoscreenstart",
 		leftDialog = lvl, --Level of the informant.
 		stopConversation = "true",
-		options = { 
+		options = {
 			{"level", lvl }
 		}
 	}

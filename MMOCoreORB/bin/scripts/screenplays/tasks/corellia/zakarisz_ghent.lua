@@ -10,7 +10,7 @@ zakarisz_ghent_missions =
 			{
 				{ npcTemplate = "male_rodian_thug_low", npcName = "a thug" }
 			},
-			itemSpawns = 
+			itemSpawns =
 			{
 				{ itemTemplate = "object/tangible/mission/quest_item/talon_karrde_q1_needed.iff", itemName = "Official Travel Documents" }
 			},
@@ -43,7 +43,7 @@ zakarisz_ghent_missions =
 				{ npcTemplate = "jabba_thug", npcName = "a Hutt thug" },
 				{ npcTemplate = "jabba_thug", npcName = "a Hutt thug" }
 			},
-			itemSpawns = 
+			itemSpawns =
 			{
 				{ itemTemplate = "object/tangible/mission/quest_item/talon_karrde_q3_needed.iff", itemName = "Package" }
 			},
@@ -62,7 +62,7 @@ zakarisz_ghent_missions =
 			{
 				{ npcTemplate = "jabba_thug", npcName = "a Hutt thug" }
 			},
-			itemSpawns = 
+			itemSpawns =
 			{
 				{ itemTemplate = "object/tangible/mission/quest_item/talon_karrde_q4_needed.iff", itemName = "Virus Flask" }
 			},

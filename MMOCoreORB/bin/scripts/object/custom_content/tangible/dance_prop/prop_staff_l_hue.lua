@@ -70,7 +70,7 @@ object_tangible_dance_prop_prop_staff_l_hue = object_tangible_dance_prop_shared_
 
 	xpType = "dance",
 
-	
+
 	--certificationsRequired = { "cert_sword_2h_axe" },
 }
 

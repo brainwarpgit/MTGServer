@@ -32,7 +32,7 @@ taln_solwind = Creature:new {
 				"object/mobile/dressed_commoner_artisan_sullustan_male_01.iff",
 				"object/mobile/dressed_artisan_trainer_01.iff",
 					},
-				
+
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -40,7 +40,7 @@ taln_solwind = Creature:new {
 	primaryWeapon = "unarmed",
 	secondaryWeapon = "none",
 	conversationTemplate = "ikka_gesul_mission_target_convotemplate",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = {},

@@ -5,15 +5,15 @@ object_draft_schematic_weapon_appearance_weapon_appearance_bowcaster_recon = obj
    customObjectName = "Bowcaster Recon",
 
    craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 28, 
-   size = 3, 
+   complexity = 28,
+   size = 3,
 
-   xpType = "crafting_weapons_general", 
-   xp = 250, 
+   xpType = "crafting_weapons_general",
+   xp = 250,
 
-   assemblySkill = "weapon_assembly", 
-   experimentingSkill = "weapon_experimentation", 
-   customizationSkill = "weapon_customization", 
+   assemblySkill = "weapon_assembly",
+   experimentingSkill = "weapon_experimentation",
+   customizationSkill = "weapon_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

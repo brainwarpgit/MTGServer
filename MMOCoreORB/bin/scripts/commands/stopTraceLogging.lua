@@ -46,4 +46,3 @@ StopTraceLoggingCommand = {
 }
 
 AddCommand(StopTraceLoggingCommand)
-

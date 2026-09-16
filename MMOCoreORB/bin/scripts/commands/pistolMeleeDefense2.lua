@@ -65,7 +65,7 @@ PistolMeleeDefense2Command = {
 
 	poolsToDamage = RANDOM_ATTRIBUTE,
 
-	animation = "ranged_melee", 
+	animation = "ranged_melee",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "pistolwhip",
@@ -76,4 +76,3 @@ PistolMeleeDefense2Command = {
 }
 
 AddCommand(PistolMeleeDefense2Command)
-

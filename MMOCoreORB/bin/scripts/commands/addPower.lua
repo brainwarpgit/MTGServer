@@ -46,4 +46,3 @@ AddPowerCommand = {
 }
 
 AddCommand(AddPowerCommand)
-

@@ -28,5 +28,3 @@ object_draft_schematic_bio_engineer_bio_component_shared_bio_component_armor_thy
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_bio_engineer_bio_component_shared_bio_component_armor_thymine, "object/draft_schematic/bio_engineer/bio_component/shared_bio_component_armor_thymine.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

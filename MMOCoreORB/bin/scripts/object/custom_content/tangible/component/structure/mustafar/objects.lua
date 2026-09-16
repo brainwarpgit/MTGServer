@@ -52,5 +52,3 @@ object_tangible_component_structure_mustafar_shared_must_transthermal_padding = 
 
 ObjectTemplates:addClientTemplate(object_tangible_component_structure_mustafar_shared_must_transthermal_padding, "object/tangible/component/structure/mustafar/shared_must_transthermal_padding.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

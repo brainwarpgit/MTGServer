@@ -48,8 +48,3 @@ includeFile("custom_content/static/worldbuilding/terminal/wall_terminal_bank_off
 includeFile("custom_content/static/worldbuilding/terminal/wall_terminal_bank_off_02.lua")
 includeFile("custom_content/static/worldbuilding/terminal/wall_terminal_bank_on_01.lua")
 includeFile("custom_content/static/worldbuilding/terminal/wall_terminal_bank_on_02.lua")
-
-
-
-
-

@@ -36,5 +36,3 @@ object_tangible_scout_misc_shared_trackingbeacon = SharedTangibleObjectTemplate:
 
 ObjectTemplates:addClientTemplate(object_tangible_scout_misc_shared_trackingbeacon, "object/tangible/scout/misc/shared_trackingbeacon.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

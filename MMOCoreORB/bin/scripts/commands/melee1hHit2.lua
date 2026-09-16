@@ -51,15 +51,14 @@ Melee1hHit2Command = {
 	mindCostMultiplier = 1.25,
         accuracyBonus = 25,
 
-	animation = "combo_4a", 
+	animation = "combo_4a",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "chosun",
-	
+
 	weaponType = ONEHANDMELEEWEAPON,
 
 	range = -1,
 }
 
 AddCommand(Melee1hHit2Command)
-

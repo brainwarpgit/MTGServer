@@ -1,7 +1,7 @@
 global_imperial_stormtrooper_camp2_imperial_large_theater = Lair:new {
 	mobiles = {
 		{"stormtrooper_major",1},
-		{"stormtrooper_groupleader",1},	
+		{"stormtrooper_groupleader",1},
 		{"stormtrooper_squad_leader",2},
 		{"stormtrooper",4}
 	},

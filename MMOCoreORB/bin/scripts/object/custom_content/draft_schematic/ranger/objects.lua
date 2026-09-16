@@ -92,5 +92,3 @@ object_draft_schematic_ranger_shared_item_trap_tr_timer = SharedDraftSchematicOb
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_ranger_shared_item_trap_tr_timer, "object/draft_schematic/ranger/shared_item_trap_tr_timer.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

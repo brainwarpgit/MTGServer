@@ -68,7 +68,7 @@ object_tangible_wearables_armor_stormtrooper_armor_stormtrooper_boots_gcw = obje
 				"object/mobile/vendor/weequay_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
 				"object/mobile/vendor/zabrak_male.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 

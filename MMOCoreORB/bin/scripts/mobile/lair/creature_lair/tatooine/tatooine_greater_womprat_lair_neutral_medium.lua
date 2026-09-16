@@ -10,4 +10,3 @@ tatooine_greater_womprat_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("tatooine_greater_womprat_lair_neutral_medium", tatooine_greater_womprat_lair_neutral_medium)
-

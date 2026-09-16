@@ -68,15 +68,14 @@ StrafeShot2Command = {
 	  )
 	},
 
-	animation = "fire_area", 
+	animation = "fire_area",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "advancedstrafe",
-	
+
 	weaponType = RIFLEWEAPON,
 
 	range = -1
 }
 
 AddCommand(StrafeShot2Command)
-

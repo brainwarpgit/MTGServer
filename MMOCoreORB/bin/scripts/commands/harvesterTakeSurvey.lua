@@ -46,4 +46,3 @@ HarvesterTakeSurveyCommand = {
 }
 
 AddCommand(HarvesterTakeSurveyCommand)
-

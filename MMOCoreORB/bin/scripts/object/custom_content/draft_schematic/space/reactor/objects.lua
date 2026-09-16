@@ -116,5 +116,3 @@ object_draft_schematic_space_reactor_shared_mustafar_fusion_reactor = SharedDraf
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_space_reactor_shared_mustafar_fusion_reactor, "object/draft_schematic/space/reactor/shared_mustafar_fusion_reactor.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

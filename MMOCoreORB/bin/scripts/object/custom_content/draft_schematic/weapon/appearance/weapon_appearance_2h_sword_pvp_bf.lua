@@ -5,15 +5,15 @@ object_draft_schematic_weapon_appearance_weapon_appearance_2h_sword_pvp_bf = obj
    customObjectName = "2h Pvp Bf Sword",
 
    craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 30, 
-   size = 4, 
+   complexity = 30,
+   size = 4,
 
-   xpType = "crafting_weapons_general", 
-   xp = 280, 
+   xpType = "crafting_weapons_general",
+   xp = 280,
 
-   assemblySkill = "weapon_assembly", 
-   experimentingSkill = "weapon_experimentation", 
-   customizationSkill = "weapon_customization", 
+   assemblySkill = "weapon_assembly",
+   experimentingSkill = "weapon_experimentation",
+   customizationSkill = "weapon_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

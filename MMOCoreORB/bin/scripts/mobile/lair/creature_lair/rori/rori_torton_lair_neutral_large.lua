@@ -10,4 +10,3 @@ rori_torton_lair_neutral_large = Lair:new {
 }
 
 addLairTemplate("rori_torton_lair_neutral_large", rori_torton_lair_neutral_large)
-

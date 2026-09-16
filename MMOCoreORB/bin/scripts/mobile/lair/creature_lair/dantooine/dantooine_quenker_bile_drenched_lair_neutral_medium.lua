@@ -10,4 +10,3 @@ dantooine_quenker_bile_drenched_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("dantooine_quenker_bile_drenched_lair_neutral_medium", dantooine_quenker_bile_drenched_lair_neutral_medium)
-

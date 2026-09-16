@@ -5,7 +5,7 @@ global_criminal_neutral_none = Lair:new {
 	buildingsEasy = {},
 	buildingsMedium = {},
 	buildingsHard = {},
-	buildingsVeryHard = {},	
+	buildingsVeryHard = {},
 	mobType = "npc",
 	buildingType = "none"
 }

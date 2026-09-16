@@ -46,4 +46,3 @@ LeaveGroupCommand = {
 }
 
 AddCommand(LeaveGroupCommand)
-

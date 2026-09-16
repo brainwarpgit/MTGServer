@@ -5,7 +5,7 @@ endor_pubam_vicious_battlelord_neutral_none = Lair:new {
 		{"enraged_pubam",1},
 		{"pubam_battlelord",1},
 		{"pubam_tribesman",1}
-	},	
+	},
 	spawnLimit = 9,
 	buildingsVeryEasy = {},
 	buildingsEasy = {},

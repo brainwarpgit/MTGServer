@@ -46,4 +46,3 @@ FishCommand = {
 }
 
 AddCommand(FishCommand)
-

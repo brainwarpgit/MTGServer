@@ -28,7 +28,7 @@ wed_treadwell_crafted = Creature:new {
 
 	templates = {
 		"object/creature/npc/droid/crafted/wed_treadwell_droid.iff"
-	},		
+	},
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)

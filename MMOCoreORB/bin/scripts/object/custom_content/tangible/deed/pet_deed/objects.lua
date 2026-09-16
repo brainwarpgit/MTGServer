@@ -12,5 +12,3 @@ object_tangible_deed_pet_deed_shared_tauntaun_deed = SharedTangibleObjectTemplat
 
 ObjectTemplates:addClientTemplate(object_tangible_deed_pet_deed_shared_tauntaun_deed, "object/tangible/deed/pet_deed/shared_tauntaun_deed.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

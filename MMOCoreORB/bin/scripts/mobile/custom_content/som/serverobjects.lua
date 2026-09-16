@@ -143,6 +143,3 @@ includeFile("custom_content/som/xandank_patriarch.lua")
 
 
 --Root Folder
-
-
-

@@ -27,4 +27,3 @@ includeFile("custom_content/tangible/loot/loot_schematic/wod_sm_hut.lua")
 includeFile("custom_content/tangible/loot/loot_schematic/wod_tower_schematic.lua")
 includeFile("custom_content/tangible/loot/loot_schematic/wod_trilithon_schematic.lua")
 includeFile("custom_content/tangible/loot/loot_schematic/yt1300_house_schematic.lua")
-

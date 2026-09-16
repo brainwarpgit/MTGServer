@@ -26,10 +26,3 @@ includeFile("custom_content/static/worldbuilding/building/frn_kash_myyydril_cave
 includeFile("custom_content/static/worldbuilding/building/frn_tech_droid_rack_arm.lua")
 includeFile("custom_content/static/worldbuilding/building/frn_tech_droid_rack_base.lua")
 includeFile("custom_content/static/worldbuilding/building/thm_all_energy_coil_s01.lua")
-
-
-
-
-
-
-

@@ -56,11 +56,10 @@ UnarmedHeadHit1Command = {
 	animation = "knockdown_unarmed_1",
 
 	combatSpam = "nexugrin",
-	
+
 	weaponType = UNARMEDWEAPON,
 
 	range = -1
 }
 
 AddCommand(UnarmedHeadHit1Command)
-

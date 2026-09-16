@@ -68,5 +68,3 @@ object_tangible_meatlump_hideout_shared_mtp_king_story = SharedTangibleObjectTem
 
 ObjectTemplates:addClientTemplate(object_tangible_meatlump_hideout_shared_mtp_king_story, "object/tangible/meatlump/hideout/shared_mtp_king_story.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

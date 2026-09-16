@@ -64,9 +64,9 @@ function tutorial_0001_han_solo_convo_handler:getInitialScreen(pPlayer, pNpc, pC
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
 
 	if (CreatureObject(pPlayer):hasScreenPlayState(1, "tutorial_one")) then
-        
-        return convoTemplate:getScreen("task_one_active")
-    
+
+		return convoTemplate:getScreen("task_one_active")
+
 	elseif (CreatureObject(pPlayer):hasScreenPlayState(2, "tutorial_one")) then
 
 		CreatureObject(pPlayer):addCashCredits(10000, true)
@@ -79,7 +79,7 @@ function tutorial_0001_han_solo_convo_handler:getInitialScreen(pPlayer, pNpc, pC
 	elseif (CreatureObject(pPlayer):hasScreenPlayState(4, "tutorial_one")) then
 		return convoTemplate:getScreen("quest_complete")
 
-	else	
+	else
 		return convoTemplate:getScreen("first_screen")
 	end
 end
@@ -88,10 +88,10 @@ function tutorial_0001_han_solo_convo_handler:runScreenHandlers(pConvTemplate, p
 	local screen = LuaConversationScreen(pConvScreen)
 	local screenID = screen:getScreenID()
 
-    if (screenID == "accept_task_one") then
+	if (screenID == "accept_task_one") then
 		CreatureObject(pPlayer):setScreenPlayState(1, "tutorial_one")
 		CreatureObject(pPlayer):playMusicMessage("sound/ui_npe2_quest_received.snd")
 		CreatureObject(pPlayer):sendSystemMessage(" \\#FFFF00\\Quest received:  \\#FFFFFF\\Checking the Falcon.")
-    end
-    return pConvScreen
+	end
+	return pConvScreen
 end

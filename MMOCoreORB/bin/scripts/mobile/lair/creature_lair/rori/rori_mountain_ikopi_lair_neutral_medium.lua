@@ -10,4 +10,3 @@ rori_mountain_ikopi_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("rori_mountain_ikopi_lair_neutral_medium", rori_mountain_ikopi_lair_neutral_medium)
-

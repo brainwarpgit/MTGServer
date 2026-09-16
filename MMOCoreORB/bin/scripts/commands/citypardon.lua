@@ -46,4 +46,3 @@ CitypardonCommand = {
 }
 
 AddCommand(CitypardonCommand)
-

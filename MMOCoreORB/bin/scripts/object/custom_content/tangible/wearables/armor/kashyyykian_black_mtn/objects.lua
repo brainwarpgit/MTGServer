@@ -112,5 +112,3 @@ object_tangible_wearables_armor_kashyyykian_black_mtn_shared_armor_kashyyykian_b
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_kashyyykian_black_mtn_shared_armor_kashyyykian_black_mtn_leggings_camo, "object/tangible/wearables/armor/kashyyykian_black_mtn/shared_armor_kashyyykian_black_mtn_leggings_camo.iff")
-
-

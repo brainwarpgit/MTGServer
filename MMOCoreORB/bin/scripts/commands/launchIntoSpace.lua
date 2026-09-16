@@ -46,4 +46,3 @@ LaunchIntoSpaceCommand = {
 }
 
 AddCommand(LaunchIntoSpaceCommand)
-

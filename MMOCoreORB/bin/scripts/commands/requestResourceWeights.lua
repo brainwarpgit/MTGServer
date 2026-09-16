@@ -46,4 +46,3 @@ RequestResourceWeightsCommand = {
 }
 
 AddCommand(RequestResourceWeightsCommand)
-

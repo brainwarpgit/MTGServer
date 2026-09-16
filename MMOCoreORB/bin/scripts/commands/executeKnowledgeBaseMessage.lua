@@ -46,4 +46,3 @@ ExecuteKnowledgeBaseMessageCommand = {
 }
 
 AddCommand(ExecuteKnowledgeBaseMessageCommand)
-

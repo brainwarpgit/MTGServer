@@ -85,7 +85,7 @@ object_weapon_melee_sword_crafted_saber_sword_lightsaber_one_handed_gcw_s01_gen5
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
 	-- combat_meleespecialize_twohandlightsaber, combat_meleespecialize_polearmlightsaber, jedi_general
 	xpType = "jedi_general",
-	
+
 	-- See http://www.ocdsoft.com/files/certifications.xls
 	certificationsRequired = { "cert_onehandlightsaber_gen4" },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
@@ -127,9 +127,9 @@ object_weapon_melee_sword_crafted_saber_sword_lightsaber_one_handed_gcw_s01_gen5
 	woundsRatio = 15,
 
 	defenderToughnessModifiers = { "lightsaber_toughness" },
-	
+
 	noTrade = 1,
-	
+
 	childObjects = {
 		{templateFile = "object/tangible/inventory/lightsaber_inventory_5.iff", x = 0, z = 0, y = 0, ox = 0, oy = 0, oz = 0, ow = 0, cellid = -1, containmentType = 4}
 	},

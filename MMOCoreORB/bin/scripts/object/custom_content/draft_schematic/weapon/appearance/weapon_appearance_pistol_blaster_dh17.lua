@@ -5,15 +5,15 @@ object_draft_schematic_weapon_appearance_weapon_appearance_pistol_blaster_dh17 =
    customObjectName = "D17 Blaster Pistol",
 
    craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 32, 
-   size = 1, 
+   complexity = 32,
+   size = 1,
 
-   xpType = "crafting_weapons_general", 
-   xp = 360, 
+   xpType = "crafting_weapons_general",
+   xp = 360,
 
-   assemblySkill = "weapon_assembly", 
-   experimentingSkill = "weapon_experimentation", 
-   customizationSkill = "weapon_customization", 
+   assemblySkill = "weapon_assembly",
+   experimentingSkill = "weapon_experimentation",
+   customizationSkill = "weapon_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

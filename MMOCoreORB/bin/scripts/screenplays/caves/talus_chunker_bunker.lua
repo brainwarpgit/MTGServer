@@ -25,9 +25,9 @@ TalusChunkerBunkerScreenPlay = ScreenPlay:new {
 
 	lootContainerRespawn = 1800
 }
- 
+
 registerScreenPlay("TalusChunkerBunkerScreenPlay", true)
- 
+
 function TalusChunkerBunkerScreenPlay:start()
 	if (isZoneEnabled("talus")) then
                 self:spawnMobiles()
@@ -39,12 +39,12 @@ function TalusChunkerBunkerScreenPlay:spawnMobiles()
 	spawnMobile("talus", "chunker_nitwit", 300, 1382.5, 29.0, 1465.2, 119,  0)
 	spawnMobile("talus", "chunker_punk", 300, 1370.0, 29.0, 1456.8, -177, 0)
    	spawnMobile("talus", "chunker_nitwit", 300, 1366.9, 29.0, 1468.9, -83, 0)
-	
+
 	spawnMobile("talus", "chunker_goon", 300, -2.6, -12.0, 33.1, -150, 7955555)
 	spawnMobile("talus", "chunker_pest", 300, -0.8, -12.0, 27.0, 165, 7955555)
 	spawnMobile("talus", "chunker_mooch", 300, 6.3, -12.0, 27.2, 70, 7955555)
 	spawnMobile("talus", "chunker_swindler", 300, 6.0, -12.0, 35.5, 100, 7955555)
-		
+
 	spawnMobile("talus", "chunker_goon", 300, 35.1, -12.0, 34.0, 96, 7955556)
 	spawnMobile("talus", "chunker_braggart", 300, 32.1, -12.0, 27.2, -73, 7955556)
 	spawnMobile("talus", "chunker_creep", 300, 27.3, -12.0, 33.9, -98, 7955556)

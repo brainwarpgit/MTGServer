@@ -5,15 +5,15 @@ object_draft_schematic_armor_armor_appearance_kashyyykian_ceremonial_chestplate 
    customObjectName = "",
 
    craftingToolTab = 2, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 40, 
-   size = 4, 
+   complexity = 40,
+   size = 4,
 
-   xpType = "crafting_clothing_armor", 
-   xp = 80, 
+   xpType = "crafting_clothing_armor",
+   xp = 80,
 
-   assemblySkill = "armor_assembly", 
-   experimentingSkill = "armor_experimentation", 
-   customizationSkill = "armor_customization", 
+   assemblySkill = "armor_assembly",
+   experimentingSkill = "armor_experimentation",
+   customizationSkill = "armor_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

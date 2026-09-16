@@ -300,5 +300,3 @@ object_draft_schematic_item_shared_item_war_intel_datapad = SharedDraftSchematic
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_item_shared_item_war_intel_datapad, "object/draft_schematic/item/shared_item_war_intel_datapad.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

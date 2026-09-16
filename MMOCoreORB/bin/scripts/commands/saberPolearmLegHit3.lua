@@ -66,4 +66,3 @@ SaberPolearmLegHit3Command = {
 }
 
 AddCommand(SaberPolearmLegHit3Command)
-

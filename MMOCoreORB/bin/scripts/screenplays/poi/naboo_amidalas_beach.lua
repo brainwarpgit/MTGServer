@@ -1,6 +1,6 @@
 NabooAmidalasBeachScreenPlay = ScreenPlay:new {
 	numberOfActs = 1,
-	
+
 	screenplayName = "NabooAmidalasBeachScreenPlay",
 
 }

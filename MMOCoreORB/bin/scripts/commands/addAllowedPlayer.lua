@@ -46,4 +46,3 @@ AddAllowedPlayerCommand = {
 }
 
 AddCommand(AddAllowedPlayerCommand)
-

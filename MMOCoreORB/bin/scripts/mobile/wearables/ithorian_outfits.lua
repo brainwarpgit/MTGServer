@@ -2392,5 +2392,3 @@ addOutfit(
 	{"object/tangible/wearables/ithorian/ith_shirt_s14.iff",	-- Shirt
 	"object/tangible/wearables/ithorian/ith_pants_s21.iff"	-- Pants
 }))
-
-

@@ -46,4 +46,3 @@ ChangeMusicCommand = {
 }
 
 AddCommand(ChangeMusicCommand)
-

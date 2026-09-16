@@ -46,4 +46,3 @@ FreezePlayerCommand = {
 }
 
 AddCommand(FreezePlayerCommand)
-

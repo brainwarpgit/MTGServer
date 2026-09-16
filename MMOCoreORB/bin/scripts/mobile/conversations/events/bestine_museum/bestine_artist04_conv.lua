@@ -31,7 +31,7 @@ bestineArtist04ConvoTemplate:addScreen(init_novote);
 
 passby_response_curvote = ConvoScreen:new {
 	id = "passby_response_curvote",
-	leftDialog = "@conversation/bestine_artist04:s_7766385", -- Kahfr is impressed by your understanding. Kahfr thanks you and bids you farewell. Though Kahfr wonders if this is sarcasm...  
+	leftDialog = "@conversation/bestine_artist04:s_7766385", -- Kahfr is impressed by your understanding. Kahfr thanks you and bids you farewell. Though Kahfr wonders if this is sarcasm...
 	stopConversation = "true",
 	options = {}
 }
@@ -47,7 +47,7 @@ bestineArtist04ConvoTemplate:addScreen(passby_response_wonvote);
 
 painting_response_wonvote = ConvoScreen:new {
 	id = "painting_response_wonvote",
-	leftDialog = "@conversation/bestine_artist04:s_cf179f96", -- Kahfr is interested. Kahfr has long expected such an honor as is her due. Kahfr's art is the art of people. Faces. Right now Mon Calamari faces. Taken out of context, a person's face can be quite abstract. This is what Kahfr does. 
+	leftDialog = "@conversation/bestine_artist04:s_cf179f96", -- Kahfr is interested. Kahfr has long expected such an honor as is her due. Kahfr's art is the art of people. Faces. Right now Mon Calamari faces. Taken out of context, a person's face can be quite abstract. This is what Kahfr does.
 	stopConversation = "true",
 	options = {}
 }

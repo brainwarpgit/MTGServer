@@ -31,7 +31,7 @@ object_tangible_wearables_armor_rebel_assault_armor_rebel_assault_helmet = objec
 				"object/creature/player/twilek_female.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 

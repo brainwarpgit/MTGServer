@@ -1,5 +1,5 @@
 TalusAakuanCaveScreenPlay = ScreenPlay:new {
-       numberOfActs = 1, 
+       numberOfActs = 1,
 
 	screenplayName = "TalusAakuanCaveScreenPlay",
 
@@ -10,9 +10,9 @@ TalusAakuanCaveScreenPlay = ScreenPlay:new {
 		6075902,
 		6075903
         },
-        
-        lootLevel = 25, 
- 
+
+        lootLevel = 25,
+
         lootGroups = {
                 {
                         groups = {
@@ -23,14 +23,14 @@ TalusAakuanCaveScreenPlay = ScreenPlay:new {
                                 {group = "armor_attachments", chance = 300000}
                         },
                         lootChance = 8000000
-                }                                       
+                }
         },
-        
+
         lootContainerRespawn = 1800
 }
- 
+
 registerScreenPlay("TalusAakuanCaveScreenPlay", true)
- 
+
 function TalusAakuanCaveScreenPlay:start()
 	if (isZoneEnabled("talus")) then
                 self:spawnMobiles()
@@ -38,7 +38,7 @@ function TalusAakuanCaveScreenPlay:start()
         end
 end
 
-function TalusAakuanCaveScreenPlay:spawnMobiles()    
+function TalusAakuanCaveScreenPlay:spawnMobiles()
        spawnMobile("talus", "aakuan_follower", 300, 5932.6, 39.2, 4646.6, -73, 0)
        spawnMobile("talus", "aakuan_follower", 300, 5926.5, 40.0, 4647.9, 89, 0)
        spawnMobile("talus", "aakuan_steward", 300, 5928.6, 40.6, 4650.5, -164, 0)

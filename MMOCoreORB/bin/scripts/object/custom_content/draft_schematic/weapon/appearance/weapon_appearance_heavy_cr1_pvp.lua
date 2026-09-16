@@ -5,15 +5,15 @@ object_draft_schematic_weapon_appearance_weapon_appearance_heavy_cr1_pvp = objec
    customObjectName = "Cr1 Pvp",
 
    craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 24, 
-   size = 3, 
+   complexity = 24,
+   size = 3,
 
-   xpType = "crafting_weapons_general", 
-   xp = 456, 
+   xpType = "crafting_weapons_general",
+   xp = 456,
 
-   assemblySkill = "weapon_assembly", 
-   experimentingSkill = "weapon_experimentation", 
-   customizationSkill = "weapon_customization", 
+   assemblySkill = "weapon_assembly",
+   experimentingSkill = "weapon_experimentation",
+   customizationSkill = "weapon_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

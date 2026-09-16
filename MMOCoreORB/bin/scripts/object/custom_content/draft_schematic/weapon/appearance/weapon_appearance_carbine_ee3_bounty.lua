@@ -5,15 +5,15 @@ object_draft_schematic_weapon_appearance_weapon_appearance_carbine_ee3_bounty = 
    customObjectName = "Ee3 Bounty Carbine",
 
    craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 25, 
-   size = 1, 
+   complexity = 25,
+   size = 1,
 
-   xpType = "crafting_weapons_general", 
-   xp = 200, 
+   xpType = "crafting_weapons_general",
+   xp = 200,
 
-   assemblySkill = "weapon_assembly", 
-   experimentingSkill = "weapon_experimentation", 
-   customizationSkill = "weapon_customization", 
+   assemblySkill = "weapon_assembly",
+   experimentingSkill = "weapon_experimentation",
+   customizationSkill = "weapon_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

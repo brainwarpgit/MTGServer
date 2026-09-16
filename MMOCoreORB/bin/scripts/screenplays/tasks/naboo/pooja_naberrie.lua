@@ -12,7 +12,7 @@ pooja_naberrie_missions =
 				{ npcTemplate = "imperial_trooper", npcName = "" },
 			},
 			itemSpawns = {
-				 { itemTemplate = "object/tangible/mission/quest_item/pooja_naberrie_q1_needed.iff", itemName = "" }
+				{ itemTemplate = "object/tangible/mission/quest_item/pooja_naberrie_q1_needed.iff", itemName = "" }
 			},
 			rewards =
 			{
@@ -143,4 +143,3 @@ pooja_naberrie_mission_giver_conv_handler = mission_giver_conv_handler:new {
 pooja_naberrie_mission_target_conv_handler = mission_target_conv_handler:new {
 	themePark = PoojaNaberrie
 }
-

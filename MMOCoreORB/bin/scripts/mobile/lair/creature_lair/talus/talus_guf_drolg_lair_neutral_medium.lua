@@ -10,4 +10,3 @@ talus_guf_drolg_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("talus_guf_drolg_lair_neutral_medium", talus_guf_drolg_lair_neutral_medium)
-

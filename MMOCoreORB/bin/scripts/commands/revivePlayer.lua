@@ -46,4 +46,3 @@ RevivePlayerCommand = {
 }
 
 AddCommand(RevivePlayerCommand)
-

@@ -1,15 +1,15 @@
 LordNyaxCultScreenPlay = ScreenPlay:new {
 	numberOfActs = 1,
-	
+
 	screenplayName = "LordNyaxCultScreenPlay",
-	
+
 	lootContainers = {
 		6036023,
 		6036026,
 		6036035
 	},
-	
-	lootLevel = 26,	
+
+	lootLevel = 26,
 
 	lootGroups = {
 		{
@@ -24,9 +24,9 @@ LordNyaxCultScreenPlay = ScreenPlay:new {
 				{group = "armor_attachments", chance = 100000}
 			},
 			lootChance = 8000000
-		}					
+		}
 	},
-	
+
 	lootContainerRespawn = 1800 -- 30 minutes
 }
 

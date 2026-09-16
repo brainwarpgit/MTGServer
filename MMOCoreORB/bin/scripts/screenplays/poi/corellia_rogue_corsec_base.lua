@@ -6,10 +6,10 @@ CorsecBaseScreenPlay = ScreenPlay:new {
 	lootContainers = {
 		6575944,
 		6575945
-	
+
 	},
 
-	lootLevel = 26,	
+	lootLevel = 26,
 
 	lootGroups = {
 		{
@@ -22,7 +22,7 @@ CorsecBaseScreenPlay = ScreenPlay:new {
 				{group = "armor_attachments", chance = 100000}
 			},
 			lootChance = 8000000
-		}					
+		}
 	},
 
 	lootContainerRespawn = 1800 -- 30 minutes

@@ -46,4 +46,3 @@ CreatePrototypeCommand = {
 }
 
 AddCommand(CreatePrototypeCommand)
-

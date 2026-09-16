@@ -1,7 +1,7 @@
 object_tangible_wearables_jacket_jacket_gcw_imperial_01 = object_tangible_wearables_jacket_shared_jacket_gcw_imperial_01:new {
 
 	faction = "Imperial",
-	
+
 	playerRaces = { 	"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",
 				"object/creature/player/talz_male.iff",
@@ -56,7 +56,7 @@ object_tangible_wearables_jacket_jacket_gcw_imperial_01 = object_tangible_wearab
 				"object/creature/player/zabrak_female.iff",
 
 			},
-			
+
 	numberExperimentalProperties = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalProperties = {"XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX"},
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},

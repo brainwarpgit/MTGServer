@@ -46,4 +46,3 @@ GotoCommand = {
 }
 
 AddCommand(GotoCommand)
-

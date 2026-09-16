@@ -46,4 +46,3 @@ CustomizeDroidCommand = {
 }
 
 AddCommand(CustomizeDroidCommand)
-

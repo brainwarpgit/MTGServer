@@ -76,4 +76,3 @@ ForceIntimidate2Command = {
 }
 
 AddCommand(ForceIntimidate2Command)
-

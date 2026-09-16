@@ -46,4 +46,3 @@ GivevendormaintCommand = {
 }
 
 AddCommand(GivevendormaintCommand)
-

@@ -36,5 +36,3 @@ object_tangible_camp_shared_camp_shuttle_beacon = SharedTangibleObjectTemplate:n
 
 ObjectTemplates:addClientTemplate(object_tangible_camp_shared_camp_shuttle_beacon, "object/tangible/camp/shared_camp_shuttle_beacon.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

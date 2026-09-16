@@ -10,4 +10,3 @@ rori_midnight_vir_vur_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("rori_midnight_vir_vur_lair_neutral_medium", rori_midnight_vir_vur_lair_neutral_medium)
-

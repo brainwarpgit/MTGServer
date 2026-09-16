@@ -18,11 +18,3 @@ includeFile("custom_content/tangible/component/weapon/projectile_feed_mechanism_
 includeFile("custom_content/tangible/component/weapon/projectile_pistol_barrel_exceptional.lua")
 includeFile("custom_content/tangible/component/weapon/projectile_rifle_barrel_exceptional.lua")
 includeFile("custom_content/tangible/component/weapon/vibro_unit_exceptional.lua")
-
-
-
-
-
-
-
-

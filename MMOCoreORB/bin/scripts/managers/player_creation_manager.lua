@@ -20,7 +20,7 @@ professions = {
 }
 
 marksmanPistol = "object/weapon/ranged/pistol/pistol_cdef.iff"
-	
+
 marksmanRifle = "object/weapon/ranged/rifle/rifle_cdef.iff"
 
 marksmanCarbine = "object/weapon/ranged/carbine/carbine_cdef.iff"

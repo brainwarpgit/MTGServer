@@ -1,41 +1,41 @@
 sloan_rusper_missions =
 {
-	{ 
+	{
 		missionType = "assassinate",
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "deadly_forest_mite_guardian", npcName = "" } 
-		}, 
+		primarySpawns =
+		{
+			{ npcTemplate = "deadly_forest_mite_guardian", npcName = "" }
+		},
 		secondarySpawns =
 		{
-		
+
 		},
 		itemSpawns =
 		{
 
-		}, 
-		rewards = 
-		{ 
+		},
+		rewards =
+		{
 			{ rewardType = "credits", amount = 75 },
 			{ rewardType = "faction", faction = "naboo", amount = 10 }
 		}
 	},
 	{
-		missionType = "escort", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "ablest", npcName = "Ablest" }	
-		}, 
+		missionType = "escort",
+		primarySpawns =
+		{
+			{ npcTemplate = "ablest", npcName = "Ablest" }
+		},
 		secondarySpawns =
 		{
 			{ npcTemplate = "nightspider_aggressor", npcName = "" },
 			{ npcTemplate = "nightspider_aggressor", npcName = "" }
-		}, 
-		itemSpawns = 
+		},
+		itemSpawns =
 		{
 
-		}, 
-		rewards = 
+		},
+		rewards =
 		{
 			{ rewardType = "credits", amount = 75 },
 			{ rewardType = "faction", faction = "naboo", amount = 10 }
@@ -43,9 +43,9 @@ sloan_rusper_missions =
 	},
 }
 
-npcMapSloanRusper = 
-{ 
-	{ 
+npcMapSloanRusper =
+{
+	{
 		spawnData = { npcTemplate = "lord_sloan_rusper", x = 5065, z = 80, y = 5715, direction = 0, cellID = 0, position = STAND },
 		npcNumber = 1,
 		stfFile = "@static_npc/rori/rori_restuss_sloan_rusper",

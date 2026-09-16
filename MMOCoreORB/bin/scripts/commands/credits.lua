@@ -46,4 +46,3 @@ CreditsCommand = {
 }
 
 AddCommand(CreditsCommand)
-

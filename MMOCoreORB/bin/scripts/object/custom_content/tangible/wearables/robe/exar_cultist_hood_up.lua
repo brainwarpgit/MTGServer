@@ -53,7 +53,7 @@ object_tangible_wearables_robe_exar_cultist_hood_up = object_tangible_wearables_
 				"object/creature/player/wookiee_female.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
-				
+
 				skillMods = {
 				    {"jedi_force_power_max", 250},
 				    {"jedi_force_power_regen", 10}

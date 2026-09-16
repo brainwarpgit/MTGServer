@@ -4,9 +4,9 @@ SuiInputBox.new = function (defaultCallback, defaultFunction)
 	local data = {}
 
 	self.setDefaultCallback(defaultCallback, defaultFunction)
-	
+
 	self.subscribeToPropertyForEvent(SuiEventType.SET_onClosedOk, "txtInput", "LocalText")
-	
+
 	self.setProperty("cmbInput", "Enabled", "false")
 	self.setProperty("cmbInput", "Visible", "false")
 

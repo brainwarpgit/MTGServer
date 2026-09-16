@@ -4,5 +4,3 @@ object_tangible_component_vehicle_shared_panning_droid = SharedTangibleObjectTem
 
 ObjectTemplates:addClientTemplate(object_tangible_component_vehicle_shared_panning_droid, "object/tangible/component/vehicle/shared_panning_droid.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

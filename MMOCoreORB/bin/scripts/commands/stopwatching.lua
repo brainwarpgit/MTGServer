@@ -46,4 +46,3 @@ StopwatchingCommand = {
 }
 
 AddCommand(StopwatchingCommand)
-

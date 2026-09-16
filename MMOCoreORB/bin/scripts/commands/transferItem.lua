@@ -46,4 +46,3 @@ TransferItemCommand = {
 }
 
 AddCommand(TransferItemCommand)
-

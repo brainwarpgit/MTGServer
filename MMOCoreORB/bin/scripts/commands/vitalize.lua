@@ -46,4 +46,3 @@ VitalizeCommand = {
 }
 
 AddCommand(VitalizeCommand)
-

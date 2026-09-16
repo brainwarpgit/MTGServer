@@ -22,4 +22,3 @@ includeFile("custom_content/draft_schematic/vehicle/civilian/serverobjects.lua")
 includeFile("custom_content/draft_schematic/weapon/serverobjects.lua")
 
 -- Server Objects
-

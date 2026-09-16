@@ -17,4 +17,3 @@ naboo_gungan_mercenary_camp_neutral_large_theater = Lair:new {
 }
 
 addLairTemplate("naboo_gungan_mercenary_camp_neutral_large_theater", naboo_gungan_mercenary_camp_neutral_large_theater)
-

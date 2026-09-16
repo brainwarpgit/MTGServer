@@ -46,4 +46,3 @@ BroadcastGalaxyCommand = {
 }
 
 AddCommand(BroadcastGalaxyCommand)
-

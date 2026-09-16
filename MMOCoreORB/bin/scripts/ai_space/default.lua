@@ -147,4 +147,3 @@ targetDefault = {
 	{id="4107670032",	name="CheckMovementState",	pid="3553364391",	args={condition=ATTACKING}},
 	{id="1537483837",	name="SetMovementState",	pid="627960272",	args={state=PATROLLING}}}
 addAiTemplate("targetDefault", targetDefault)
-

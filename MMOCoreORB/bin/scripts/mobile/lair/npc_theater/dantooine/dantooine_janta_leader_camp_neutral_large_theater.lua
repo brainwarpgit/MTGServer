@@ -12,4 +12,3 @@ dantooine_janta_leader_camp_neutral_large_theater = Lair:new {
 }
 
 addLairTemplate("dantooine_janta_leader_camp_neutral_large_theater", dantooine_janta_leader_camp_neutral_large_theater)
-

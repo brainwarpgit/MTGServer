@@ -46,4 +46,3 @@ LeaveGameCommand = {
 }
 
 AddCommand(LeaveGameCommand)
-

@@ -46,4 +46,3 @@ SplitCreditsWithGroupCommand = {
 }
 
 AddCommand(SplitCreditsWithGroupCommand)
-

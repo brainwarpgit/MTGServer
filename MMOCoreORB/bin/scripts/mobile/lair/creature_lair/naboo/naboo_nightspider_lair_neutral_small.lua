@@ -10,4 +10,3 @@ naboo_nightspider_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("naboo_nightspider_lair_neutral_small", naboo_nightspider_lair_neutral_small)
-

@@ -14,6 +14,6 @@ SuiQuestPopup.new = function ()
 	self.setViewerObjectId = function (value)
 		self.setProperty("comp.vP.viewer", "setObject", value)
 	end
-	
+
 	return self
 end

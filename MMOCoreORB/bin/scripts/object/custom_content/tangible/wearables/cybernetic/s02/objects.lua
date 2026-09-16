@@ -28,5 +28,3 @@ object_tangible_wearables_cybernetic_s02_shared_cybernetic_s02_torso = SharedTan
 
 ObjectTemplates:addClientTemplate(object_tangible_wearables_cybernetic_s02_shared_cybernetic_s02_torso, "object/tangible/wearables/cybernetic/s02/shared_cybernetic_s02_torso.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

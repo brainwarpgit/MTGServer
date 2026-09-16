@@ -46,4 +46,3 @@ StopTargetSpawnerCommand = {
 }
 
 AddCommand(StopTargetSpawnerCommand)
-

@@ -10,4 +10,3 @@ endor_boar_wolf_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("endor_boar_wolf_lair_neutral_small", endor_boar_wolf_lair_neutral_small)
-

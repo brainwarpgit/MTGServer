@@ -406,5 +406,3 @@ object_tangible_furniture_house_cleanup_shared_xeno_throne = SharedTangibleObjec
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_house_cleanup_shared_xeno_throne, "object/tangible/furniture/house_cleanup/shared_xeno_throne.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

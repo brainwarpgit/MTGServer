@@ -129,5 +129,3 @@ object_tangible_wearables_armor_chitin_shared_armor_chitin_acklay_leggings = Sha
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_chitin_shared_armor_chitin_acklay_leggings, "object/tangible/wearables/armor/chitin/shared_armor_chitin_acklay_leggings.iff")
 
 --****************************************************************************************************************************************************************************
-
-

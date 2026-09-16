@@ -46,4 +46,3 @@ EditBankAccountCommand = {
 }
 
 AddCommand(EditBankAccountCommand)
-

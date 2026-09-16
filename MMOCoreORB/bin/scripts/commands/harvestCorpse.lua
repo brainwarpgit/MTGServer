@@ -46,4 +46,3 @@ HarvestCorpseCommand = {
 }
 
 AddCommand(HarvestCorpseCommand)
-

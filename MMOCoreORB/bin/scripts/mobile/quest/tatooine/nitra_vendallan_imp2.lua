@@ -23,7 +23,7 @@ nitra_vendallan_imp2 = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK,
-	optionsBitmask = AIENABLED + CONVERSABLE,	
+	optionsBitmask = AIENABLED + CONVERSABLE,
 	diet = HERBIVORE,
 
 	templates = {
@@ -41,7 +41,7 @@ nitra_vendallan_imp2 = Creature:new {
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = brawlermaster,
 	secondaryAttacks = { },
-	conversationTemplate = "nitra_vendallan_mission_target_convotemplate",	
+	conversationTemplate = "nitra_vendallan_mission_target_convotemplate",
 }
 
 CreatureTemplates:addCreatureTemplate(nitra_vendallan_imp2, "nitra_vendallan_imp2")

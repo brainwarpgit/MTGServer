@@ -46,4 +46,3 @@ ColorlightsCommand = {
 }
 
 AddCommand(ColorlightsCommand)
-

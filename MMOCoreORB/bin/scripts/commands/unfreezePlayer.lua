@@ -46,4 +46,3 @@ UnfreezePlayerCommand = {
 }
 
 AddCommand(UnfreezePlayerCommand)
-

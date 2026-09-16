@@ -10,4 +10,3 @@ dantooine_piket_longhorn_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("dantooine_piket_longhorn_lair_neutral_medium", dantooine_piket_longhorn_lair_neutral_medium)
-

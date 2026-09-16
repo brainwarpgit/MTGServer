@@ -10,4 +10,3 @@ corellia_gubbur_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("corellia_gubbur_lair_neutral_small", corellia_gubbur_lair_neutral_small)
-

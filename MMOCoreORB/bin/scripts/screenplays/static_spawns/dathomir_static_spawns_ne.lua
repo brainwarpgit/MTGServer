@@ -5,7 +5,7 @@ DathomirStaticSpawnsNeScreenPlay = ScreenPlay:new {
 	screenplayName = "DathomirStaticSpawnsNeScreenPlay",
 
 	lootContainers = {
-		
+
 
 	},
 

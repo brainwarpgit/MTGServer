@@ -5,15 +5,15 @@ object_draft_schematic_armor_armor_appearance_rebel_specforce_utility_belt = obj
    customObjectName = "Armor Belt",
 
    craftingToolTab = 2, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 20, 
-   size = 4, 
+   complexity = 20,
+   size = 4,
 
-   xpType = "crafting_clothing_armor", 
-   xp = 40, 
+   xpType = "crafting_clothing_armor",
+   xp = 40,
 
-   assemblySkill = "armor_assembly", 
-   experimentingSkill = "armor_experimentation", 
-   customizationSkill = "armor_customization", 
+   assemblySkill = "armor_assembly",
+   experimentingSkill = "armor_experimentation",
+   customizationSkill = "armor_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

@@ -12,4 +12,3 @@ tatooine_evil_settlement_neutral_medium_theater = Lair:new {
 }
 
 addLairTemplate("tatooine_evil_settlement_neutral_medium_theater", tatooine_evil_settlement_neutral_medium_theater)
-

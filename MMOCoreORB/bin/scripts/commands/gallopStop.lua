@@ -46,4 +46,3 @@ GallopStopCommand = {
 }
 
 AddCommand(GallopStopCommand)
-

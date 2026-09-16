@@ -46,4 +46,3 @@ GetObjVarsCommand = {
 }
 
 AddCommand(GetObjVarsCommand)
-

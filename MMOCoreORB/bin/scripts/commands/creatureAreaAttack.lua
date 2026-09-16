@@ -60,4 +60,3 @@ CreatureAreaAttackCommand = {
 }
 
 AddCommand(CreatureAreaAttackCommand)
-

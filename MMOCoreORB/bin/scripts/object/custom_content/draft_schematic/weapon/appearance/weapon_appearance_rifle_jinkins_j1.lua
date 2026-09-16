@@ -5,15 +5,15 @@ object_draft_schematic_weapon_appearance_weapon_appearance_rifle_jinkins_j1 = ob
    customObjectName = "Jinkins J1 Rifle",
 
    craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 30, 
-   size = 4, 
+   complexity = 30,
+   size = 4,
 
-   xpType = "crafting_weapons_general", 
-   xp = 650, 
+   xpType = "crafting_weapons_general",
+   xp = 650,
 
-   assemblySkill = "weapon_assembly", 
-   experimentingSkill = "weapon_experimentation", 
-   customizationSkill = "weapon_customization", 
+   assemblySkill = "weapon_assembly",
+   experimentingSkill = "weapon_experimentation",
+   customizationSkill = "weapon_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

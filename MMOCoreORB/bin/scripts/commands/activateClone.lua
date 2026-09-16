@@ -46,4 +46,3 @@ ActivateCloneCommand = {
 }
 
 AddCommand(ActivateCloneCommand)
-

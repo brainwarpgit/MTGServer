@@ -1068,5 +1068,3 @@ object_tangible_furniture_decorative_shared_yr_2_cor_vette = SharedTangibleObjec
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_yr_2_cor_vette, "object/tangible/furniture/decorative/shared_yr_2_cor_vette.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

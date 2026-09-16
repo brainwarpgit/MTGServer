@@ -11,4 +11,3 @@ naboo_peko_peko_solitary_neutral_none = Lair:new {
 }
 
 addLairTemplate("naboo_peko_peko_solitary_neutral_none", naboo_peko_peko_solitary_neutral_none)
-

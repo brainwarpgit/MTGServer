@@ -27,8 +27,8 @@ kunn_kuroosh = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {	
-			"object/mobile/dressed_dark_jedi_human_male_01.iff" 
+	templates = {
+			"object/mobile/dressed_dark_jedi_human_male_01.iff"
 		},
 		lootGroups = {
 		{
@@ -52,7 +52,7 @@ kunn_kuroosh = Creature:new {
 	primaryWeapon = "dark_jedi_weapons_gen2",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(lightsabermaster,forcewielder),

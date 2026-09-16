@@ -54,23 +54,22 @@ RollShotCommand = {
 	animation = "fire_acrobatic",
 
 	combatSpam = "rollshot",
-	
+
 	weaponType = PISTOLWEAPON,
 
 	range = -1,
 	stateEffects = {
-	  StateEffect( 
-	    ATTACKER_FORCE_CROUCH, 
-	    {}, 
-	    {}, 
-	    {}, 
-	    100, 
-	    0, 
-	    0 
+	  StateEffect(
+	    ATTACKER_FORCE_CROUCH,
+	    {},
+	    {},
+	    {},
+	    100,
+	    0,
+	    0
 	  )
 	},
 
 }
 
 AddCommand(RollShotCommand)
-

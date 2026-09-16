@@ -4142,4 +4142,3 @@ planet_yavin4 = PlanetSpawnMap:new {
 }
 
 universe:addPlanet(planet_yavin4);
-

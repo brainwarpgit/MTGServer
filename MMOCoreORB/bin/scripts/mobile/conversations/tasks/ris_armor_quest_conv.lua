@@ -91,7 +91,7 @@ quest_3_start_no = ConvoScreen:new {
 	leftDialog = "@quest_armorsmith:quest_3_start_no", -- Fine, fine. Practice up. Come back when you are ready for the next lesson.
 	stopConversation = "true",
 	options = {}
-}		
+}
 risArmorQuestConvoTemplate:addScreen(quest_3_start_no);
 
 quest_4_query = ConvoScreen:new {
@@ -136,7 +136,7 @@ quest_5_start_no = ConvoScreen:new {
 	leftDialog = "@quest_armorsmith:quest_5_start_no", -- No ready, huh? Very well, I'll be here when you are.
 	stopConversation = "true",
 	options = {}
-}		
+}
 risArmorQuestConvoTemplate:addScreen(quest_5_start_no);
 
 quest_6_query = ConvoScreen:new {

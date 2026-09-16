@@ -53,15 +53,14 @@ UnarmedSpinAttack2Command = {
 	mindCostMultiplier = 2,
         accuracyBonus = 15,
 
-	animation = "combo_3d", 
+	animation = "combo_3d",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "unarmed_knockdown",
-	
+
 	weaponType = UNARMEDWEAPON,
 
 	range = -1
 }
 
 AddCommand(UnarmedSpinAttack2Command)
-

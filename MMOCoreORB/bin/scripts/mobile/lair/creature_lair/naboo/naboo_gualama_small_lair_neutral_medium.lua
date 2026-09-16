@@ -10,4 +10,3 @@ naboo_gualama_small_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("naboo_gualama_small_lair_neutral_medium", naboo_gualama_small_lair_neutral_medium)
-

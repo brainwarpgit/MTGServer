@@ -3669,5 +3669,3 @@ object_tangible_quest_shared_warl_cave_plant = SharedTangibleObjectTemplate:new 
 
 ObjectTemplates:addClientTemplate(object_tangible_quest_shared_warl_cave_plant, "object/tangible/quest/shared_warl_cave_plant.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

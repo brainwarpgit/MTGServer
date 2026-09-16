@@ -28,7 +28,7 @@ c3p0_crafted = Creature:new {
 
 	templates = {
 		"object/creature/npc/droid/crafted/3po_droid.iff"
-	},		
+	},
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)

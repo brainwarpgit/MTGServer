@@ -5,7 +5,7 @@ endor_korga_chief_neutral_medium_theater = Lair:new {
 		{"korga_laborer",1},
 		{"korga_elder",1},
 		{"korga_spiritmaster",1},
-		{"korga_cub",1}	
+		{"korga_cub",1}
 	},
 	spawnLimit = 12,
 	buildingsVeryEasy = {"object/building/poi/endor_ewok_medium.iff","object/building/poi/endor_ewok_medium3.iff","object/building/poi/endor_ewok_medium4.iff"},

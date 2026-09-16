@@ -46,4 +46,3 @@ MaxCombatAbilityCommand = {
 }
 
 AddCommand(MaxCombatAbilityCommand)
-

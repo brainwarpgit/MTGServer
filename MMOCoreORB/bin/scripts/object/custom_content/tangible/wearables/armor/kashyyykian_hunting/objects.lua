@@ -64,9 +64,3 @@ object_tangible_wearables_armor_kashyyykian_hunting_shared_armor_kashyyykian_hun
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_kashyyykian_hunting_shared_armor_kashyyykian_hunting_chestplate, "object/tangible/wearables/armor/kashyyykian_hunting/shared_armor_kashyyykian_hunting_chestplate.iff")
-
-
-
-
-
-

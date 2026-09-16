@@ -1,6 +1,6 @@
 untrained_padawan = Creature:new {
 	objectName = "",
-	customName = "Untrained Padawan",	
+	customName = "Untrained Padawan",
 	socialGroup = "force",
 	mobType = MOB_NPC,
 	faction = "",

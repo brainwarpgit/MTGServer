@@ -47,4 +47,3 @@ ApplyDiseaseCommand = {
 }
 
 AddCommand(ApplyDiseaseCommand)
-

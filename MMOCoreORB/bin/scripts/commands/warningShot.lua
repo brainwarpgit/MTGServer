@@ -64,4 +64,3 @@ WarningShotCommand = {
 }
 
 AddCommand(WarningShotCommand)
-

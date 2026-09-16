@@ -305,4 +305,3 @@ function RebelHideoutScreenPlay:spawnMobiles()
 	spawnMobile("corellia", "rebel_corporal", 300, 0.93, 2.01, 5.74, 0, 8555472)
 	spawnMobile("corellia", "rebel_trooper", 300, 17.39, 1.01, -11.38, 0, 8555472)
 end
-

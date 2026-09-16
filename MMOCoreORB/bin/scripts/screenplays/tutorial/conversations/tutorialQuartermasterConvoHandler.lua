@@ -32,9 +32,9 @@ function tutorialQuartermasterConvoHandler:runScreenHandlers(pConvTemplate, pPla
 		CreatureObject(pNpc):clearOptionBit(CONVERSABLE)
 	elseif (screenID == "intro_nodocs") then
 		local giverID = readData(CreatureObject(pPlayer):getObjectID() .. ":tutorial:roomTenMissionGiver")
-		
+
 		local pMissionGiver = getSceneObject(giverID)
-		
+
 		if (pMissionGiver ~= nil) then
 			CreatureObject(pMissionGiver):setOptionBit(CONVERSABLE)
 		end

@@ -28,5 +28,3 @@ object_tangible_hair_gungan_shared_gungan_s04 = SharedTangibleObjectTemplate:new
 
 ObjectTemplates:addClientTemplate(object_tangible_hair_gungan_shared_gungan_s04, "object/tangible/hair/gungan/shared_gungan_s04.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

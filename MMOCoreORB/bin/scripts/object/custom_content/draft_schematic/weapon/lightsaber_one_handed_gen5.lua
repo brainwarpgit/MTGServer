@@ -5,16 +5,16 @@ object_draft_schematic_weapon_lightsaber_one_handed_gen5 = object_draft_schemati
    customObjectName = "Fifth Generation Lightsaber",
 
    craftingToolTab = 2048, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 19, 
-   size = 1, 
+   complexity = 19,
+   size = 1,
 
-   xpType = "jedi_general", 
-   xp = 0, 
+   xpType = "jedi_general",
+   xp = 0,
 
-   assemblySkill = "jedi_saber_assembly", 
-   experimentingSkill = "jedi_saber_experimentation", 
-   customizationSkill = "jedi_customization", 
-   factoryCrateSize = 0,   
+   assemblySkill = "jedi_saber_assembly",
+   experimentingSkill = "jedi_saber_experimentation",
+   customizationSkill = "jedi_customization",
+   factoryCrateSize = 0,
 
    customizationOptions = {},
    customizationStringNames = {},

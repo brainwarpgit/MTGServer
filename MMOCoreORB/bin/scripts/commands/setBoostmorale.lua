@@ -49,4 +49,3 @@ SetBoostmoraleCommand = {
 }
 
 AddCommand(SetBoostmoraleCommand)
-

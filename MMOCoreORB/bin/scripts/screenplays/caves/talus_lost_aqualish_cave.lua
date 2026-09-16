@@ -28,9 +28,9 @@ TalusLostAqualishScreenPlay = ScreenPlay:new {
 
 	lootContainerRespawn = 1800
 }
- 
+
 registerScreenPlay("TalusLostAqualishScreenPlay", true)
- 
+
 function TalusLostAqualishScreenPlay:start()
 	if (isZoneEnabled("talus")) then
                 self:spawnMobiles()
@@ -56,7 +56,7 @@ function TalusLostAqualishScreenPlay:spawnMobiles()
 	spawnMobile("talus", "lost_aqualish_commando", 300, -54.7, -68.5, -110.3, -78, 4255648)
 	spawnMobile("talus", "lost_aqualish_marksman", 300, -60.1, -68.2, -105.2, 159, 4255648)
 	spawnMobile("talus", "lost_aqualish_captain", 300, -98.5, -70.1, -112.5, 174, 4255647)
-	spawnMobile("talus", "lost_aqualish_commando", 300, -91.2, -70.4, -124.9, -157, 4255647)	
+	spawnMobile("talus", "lost_aqualish_commando", 300, -91.2, -70.4, -124.9, -157, 4255647)
 	spawnMobile("talus", "lost_aqualish_commando", 300, -118.5, -69.3, -121.0, -100, 4255647)
 	spawnMobile("talus", "lost_aqualish_commando", 300, -119.5, -69.6, -125.7, 33, 4255647)
 	spawnMobile("talus", "lost_aqualish_marksman", 300, -116.8, -69.5, -123.9, -55, 4255647)

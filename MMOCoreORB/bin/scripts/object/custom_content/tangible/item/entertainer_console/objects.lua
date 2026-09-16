@@ -196,5 +196,3 @@ object_tangible_item_entertainer_console_shared_stage_smoke_machine = SharedTang
 
 ObjectTemplates:addClientTemplate(object_tangible_item_entertainer_console_shared_stage_smoke_machine, "object/tangible/item/entertainer_console/shared_stage_smoke_machine.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

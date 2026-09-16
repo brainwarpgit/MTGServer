@@ -46,4 +46,3 @@ CombatEscapeCommand = {
 }
 
 AddCommand(CombatEscapeCommand)
-

@@ -1508,5 +1508,3 @@ object_tangible_loot_npc_loot_shared_writing_utensils_generic = SharedTangibleOb
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_npc_loot_shared_writing_utensils_generic, "object/tangible/loot/npc_loot/shared_writing_utensils_generic.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

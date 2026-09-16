@@ -46,4 +46,3 @@ RequestWaypointAtPositionCommand = {
 }
 
 AddCommand(RequestWaypointAtPositionCommand)
-

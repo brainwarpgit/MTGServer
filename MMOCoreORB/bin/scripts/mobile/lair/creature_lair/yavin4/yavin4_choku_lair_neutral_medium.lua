@@ -10,4 +10,3 @@ yavin4_choku_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("yavin4_choku_lair_neutral_medium", yavin4_choku_lair_neutral_medium)
-

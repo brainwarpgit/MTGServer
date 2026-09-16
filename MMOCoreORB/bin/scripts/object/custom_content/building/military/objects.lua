@@ -49,5 +49,3 @@ object_building_military_shared_talus_coa_aclo_office = SharedBuildingObjectTemp
 }
 ObjectTemplates:addClientTemplate(object_building_military_shared_talus_coa_aclo_office, "object/building/military/shared_talus_coa_aclo_office.iff")
 --**********************************************************************************************************************************
-
-

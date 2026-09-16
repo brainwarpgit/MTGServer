@@ -46,4 +46,3 @@ SnoopCommand = {
 }
 
 AddCommand(SnoopCommand)
-

@@ -54,15 +54,14 @@ PointBlankArea1Command = {
 	areaRange = 15,
 	areaAction = true,
 
-	animation = "fire_area_no_trails", 
+	animation = "fire_area_no_trails",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "pointblankblast",
-	
+
 	weaponType = RANGEDWEAPON,
 
 	range = 12
 }
 
 AddCommand(PointBlankArea1Command)
-

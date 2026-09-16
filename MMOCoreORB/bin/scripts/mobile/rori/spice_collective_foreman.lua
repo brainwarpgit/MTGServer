@@ -43,7 +43,7 @@ spice_collective_foreman = Creature:new {
 	primaryWeapon = "ranged_weapons",
 	secondaryWeapon = "unarmed",
 	reactionStf = "@npc_reaction/slang",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(brawlermaster,marksmanmaster),

@@ -56,7 +56,7 @@ object_tangible_wearables_armor_scout_trooper_armor_swamp_trooper_boots = object
 				"object/creature/player/wookiee_female.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 

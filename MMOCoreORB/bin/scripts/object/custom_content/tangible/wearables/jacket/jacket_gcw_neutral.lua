@@ -47,14 +47,14 @@ object_tangible_wearables_jacket_jacket_gcw_neutral = object_tangible_wearables_
 				"object/creature/player/trandoshan_male.iff",
 				"object/creature/player/trandoshan_female.iff",
 				"object/creature/player/wookiee_male.iff",
-				"object/creature/player/wookiee_female.iff",				
+				"object/creature/player/wookiee_female.iff",
 				"object/creature/player/twilek_male.iff",
 				"object/creature/player/twilek_female.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff",
 
 			},
-			
+
 
 	numberExperimentalProperties = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalProperties = {"XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX"},

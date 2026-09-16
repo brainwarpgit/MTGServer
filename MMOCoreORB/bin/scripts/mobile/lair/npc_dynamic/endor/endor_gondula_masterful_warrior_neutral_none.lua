@@ -4,7 +4,7 @@ endor_gondula_masterful_warrior_neutral_none = Lair:new {
 		{"hardened_gondula_warrior",1},
 		{"gondula_veteran",1},
 		{"gondula_warrior",1},
-		{"gondula_tribesman",1}	
+		{"gondula_tribesman",1}
 	},
 	spawnLimit = 12,
 	buildingsVeryEasy = {},

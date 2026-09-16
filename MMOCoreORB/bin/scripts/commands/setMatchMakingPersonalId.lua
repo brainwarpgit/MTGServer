@@ -46,4 +46,3 @@ SetMatchMakingPersonalIdCommand = {
 }
 
 AddCommand(SetMatchMakingPersonalIdCommand)
-

@@ -95,5 +95,3 @@ object_tangible_component_weapon_shared_vibro_unit_exceptional = SharedTangibleO
 
 ObjectTemplates:addClientTemplate(object_tangible_component_weapon_shared_vibro_unit_exceptional, "object/tangible/component/weapon/shared_vibro_unit_exceptional.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

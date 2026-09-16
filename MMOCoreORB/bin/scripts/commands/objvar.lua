@@ -46,4 +46,3 @@ ObjvarCommand = {
 }
 
 AddCommand(ObjvarCommand)
-

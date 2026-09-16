@@ -84,5 +84,3 @@ object_draft_schematic_space_capacitor_shared_mining_grade_capacitor = SharedDra
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_space_capacitor_shared_mining_grade_capacitor, "object/draft_schematic/space/capacitor/shared_mining_grade_capacitor.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

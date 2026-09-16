@@ -1,2 +1,1 @@
 jediManagerName = "CustomJediManager"
-

@@ -111,4 +111,3 @@ rootCrackdown = {
 	{id="617162459",	name="TreeSocket",	pid="3448069951",	args={slot=AWARE}},
 	{id="3529678842",	name="TreeSocket",	pid="3448069951",	args={slot=IDLE}}}
 addAiTemplate("rootCrackdown", rootCrackdown)
-

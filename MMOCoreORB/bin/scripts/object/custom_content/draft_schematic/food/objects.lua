@@ -148,5 +148,3 @@ object_draft_schematic_food_shared_synthetic_bait = SharedDraftSchematicObjectTe
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_food_shared_synthetic_bait, "object/draft_schematic/food/shared_synthetic_bait.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -172,5 +172,3 @@ object_tangible_quest_outbreak_shared_outbreak_facility_vent_06 = SharedTangible
 
 ObjectTemplates:addClientTemplate(object_tangible_quest_outbreak_shared_outbreak_facility_vent_06, "object/tangible/quest/outbreak/shared_outbreak_facility_vent_06.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

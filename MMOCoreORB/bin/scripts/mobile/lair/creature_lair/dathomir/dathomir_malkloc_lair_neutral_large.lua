@@ -10,4 +10,3 @@ dathomir_malkloc_lair_neutral_large = Lair:new {
 }
 
 addLairTemplate("dathomir_malkloc_lair_neutral_large", dathomir_malkloc_lair_neutral_large)
-

@@ -30,7 +30,7 @@ tatooine_static = RecordKeeper:new {
 		tolan_nokkar_quest="TolanNokkar",
 		vardias_tyne_quest="VardiasTyne"
 	},
-	faction = 0	
+	faction = 0
 }
  tatooine_static_record_keeper_convo_handler = record_keeper_conv_handler:new {
 	keeper = tatooine_static

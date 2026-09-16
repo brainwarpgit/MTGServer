@@ -46,4 +46,3 @@ SetTEFCommand = {
 }
 
 AddCommand(SetTEFCommand)
-

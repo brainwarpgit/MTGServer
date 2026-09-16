@@ -12,9 +12,9 @@ BorgleBatCaveScreenPlay = ScreenPlay:new {
 		8795688,
 		8795689
         },
-        
-        lootLevel = 13, 
- 
+
+        lootLevel = 13,
+
         lootGroups = {
                 {
                         groups = {
@@ -27,9 +27,9 @@ BorgleBatCaveScreenPlay = ScreenPlay:new {
                                 {group = "armor_attachments", chance = 2000000}
                         },
                         lootChance = 8000000
-                }                                       
+                }
         },
-        
+
         lootContainerRespawn = 1800 -- 30 minutes
 }
 

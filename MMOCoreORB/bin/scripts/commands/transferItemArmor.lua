@@ -46,4 +46,3 @@ TransferItemArmorCommand = {
 }
 
 AddCommand(TransferItemArmorCommand)
-

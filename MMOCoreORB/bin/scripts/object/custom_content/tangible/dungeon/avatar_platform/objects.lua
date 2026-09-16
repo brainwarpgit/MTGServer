@@ -4,5 +4,3 @@ object_dungeon_avatar_platform_shared_avatar_terminal_technical_readout = Shared
 
 ObjectTemplates:addClientTemplate(object_dungeon_avatar_platform_shared_avatar_terminal_technical_readout, "object/dungeon/avatar_platform/shared_avatar_terminal_technical_readout.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

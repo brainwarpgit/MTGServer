@@ -46,4 +46,3 @@ CreateVendorCommand = {
 }
 
 AddCommand(CreateVendorCommand)
-

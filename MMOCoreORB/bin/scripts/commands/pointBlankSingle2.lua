@@ -49,15 +49,14 @@ PointBlankSingle2Command = {
 	actionCostMultiplier = 1,
 	mindCostMultiplier = 1,
 
-	animation = "fire_5_single", 
+	animation = "fire_5_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "pointblankblast",
-	
+
 	weaponType = PISTOLWEAPON,
 
 	range = 10
 }
 
 AddCommand(PointBlankSingle2Command)
-

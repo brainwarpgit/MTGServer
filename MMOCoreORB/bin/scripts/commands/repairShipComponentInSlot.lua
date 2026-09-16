@@ -46,4 +46,3 @@ RepairShipComponentInSlotCommand = {
 }
 
 AddCommand(RepairShipComponentInSlotCommand)
-

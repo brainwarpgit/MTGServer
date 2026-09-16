@@ -188,5 +188,3 @@ object_tangible_holiday_love_day_shared_love_day_prop_2009_flowers_reward = Shar
 
 ObjectTemplates:addClientTemplate(object_tangible_holiday_love_day_shared_love_day_prop_2009_flowers_reward, "object/tangible/holiday/love_day/shared_love_day_prop_2009_flowers_reward.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

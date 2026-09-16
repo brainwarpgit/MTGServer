@@ -41,4 +41,3 @@ object_building_naboo_shared_trapped_family_house = SharedBuildingObjectTemplate
 }
 ObjectTemplates:addClientTemplate(object_building_naboo_shared_trapped_family_house, "object/building/naboo/shared_trapped_family_house.iff")
 --*******************************************************************************************************************************
-

@@ -10,4 +10,3 @@ dathomir_gaping_spider_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("dathomir_gaping_spider_lair_neutral_medium", dathomir_gaping_spider_lair_neutral_medium)
-

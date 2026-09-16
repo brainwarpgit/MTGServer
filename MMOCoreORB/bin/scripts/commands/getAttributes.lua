@@ -46,4 +46,3 @@ GetAttributesCommand = {
 }
 
 AddCommand(GetAttributesCommand)
-

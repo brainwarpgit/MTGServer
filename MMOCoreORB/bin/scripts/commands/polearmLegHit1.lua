@@ -47,7 +47,7 @@ PolearmLegHit1Command = {
 	damageMultiplier = 1.5,
 	speedMultiplier = 1.25,
 	accuracyBonus = 10,
-	
+
 	healthCostMultiplier = 1.0,
 	actionCostMultiplier = 0.5,
 	mindCostMultiplier = 0.5,
@@ -57,11 +57,10 @@ PolearmLegHit1Command = {
 	combatSpam = "legbruiser",
 
 	poolsToDamage = ACTION_ATTRIBUTE,
-	
+
 	weaponType = POLEARMWEAPON,
 
 	range = -1
 }
 
 AddCommand(PolearmLegHit1Command)
-

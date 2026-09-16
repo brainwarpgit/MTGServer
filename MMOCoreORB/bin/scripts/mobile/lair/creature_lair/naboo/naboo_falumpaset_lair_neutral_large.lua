@@ -10,4 +10,3 @@ naboo_falumpaset_lair_neutral_large = Lair:new {
 }
 
 addLairTemplate("naboo_falumpaset_lair_neutral_large", naboo_falumpaset_lair_neutral_large)
-

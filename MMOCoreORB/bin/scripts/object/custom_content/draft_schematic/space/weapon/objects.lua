@@ -92,5 +92,3 @@ object_draft_schematic_space_weapon_shared_wpn_tractor_beam = SharedDraftSchemat
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_space_weapon_shared_wpn_tractor_beam, "object/draft_schematic/space/weapon/shared_wpn_tractor_beam.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

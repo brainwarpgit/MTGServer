@@ -46,4 +46,3 @@ HealMindCommand = {
 }
 
 AddCommand(HealMindCommand)
-

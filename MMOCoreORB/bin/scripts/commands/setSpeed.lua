@@ -46,4 +46,3 @@ SetSpeedCommand = {
 }
 
 AddCommand(SetSpeedCommand)
-

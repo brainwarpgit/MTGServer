@@ -15,7 +15,7 @@ object_building_player_sith_house = object_building_player_shared_sith_house:new
 	childObjects = {
 			{templateFile = "object/tangible/terminal/terminal_player_structure.iff", x = 3.57535, z = 0.999999, y = 2.61467, ow = -4.37114e-08, ox = 0, oz = 0, oy = 1, cellid = 1, containmentType = -1},
 			{templateFile = "object/tangible/sign/player/house_address.iff", x = 3, z = 3.73, y = 6.05, ow = 0, ox = 0, oz = 0, oy = 1, cellid = -1, containmentType = -1},
---Force Shrine		
+--Force Shrine
 			{templateFile = "object/tangible/loot/mustafar/jedi_statue.iff", x = 0, z = 1, y = -8.2, ow = 1, ox = 0, oz = 0, oy = 1, cellid = 1, containmentType = -1},
 			{templateFile = "object/static/particle/pt_lair_evil_fire_small.iff", x = 0, z = 1, y = -8.2, ow = -4.37114e-08, ox = 0, oz = 0, oy = 1, cellid = 1, containmentType = -1},
 	},

@@ -27,12 +27,12 @@ function DantariVillageScreenPlay:spawnMobiles()
 	spawnMobile("dantooine", "dantari_battlelord",900,5557.1,0.2,-619.2,154,0)
 	spawnMobile("dantooine", "dantari_battlelord",900,5592.4,1.4,-619.1,-151,0)
 	spawnMobile("dantooine", "dantari_battlelord",900,5593.2,0.8,-645.8,-76,0)
-	
+
 	spawnMobile("dantooine", "dantari_chief",900,-3839.3,8,-5753.5,30,0)
 	spawnMobile("dantooine", "dantari_chief",900,-3886.9,2.5,-5686,-159,0)
 	spawnMobile("dantooine", "dantari_chief",900,-7209.2,3,-923.1,32,0)
 	spawnMobile("dantooine", "dantari_chief",900,5567,0.2,-648.2,-145,0)
-	
+
 	spawnMobile("dantooine", "dantari_raider",900,-3893.6,2.4,-5708.2,85,0)
 	spawnMobile("dantooine", "dantari_raider",900,-3088.7,2.5,-5720.3,61,0)
 	spawnMobile("dantooine", "dantari_raider",900,-3882.9,2.5,-5730.6,28,0)

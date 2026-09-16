@@ -100,5 +100,3 @@ object_tangible_furniture_jedi_shared_frn_all_table_light_02_hue = SharedTangibl
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_jedi_shared_frn_all_table_light_02_hue, "object/tangible/furniture/jedi/shared_frn_all_table_light_02_hue.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

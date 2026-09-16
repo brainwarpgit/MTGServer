@@ -1,7 +1,7 @@
 
 object_tangible_wearables_cybernetic_cybernetic_crafted_s01_arm_l = object_tangible_wearables_cybernetic_shared_cybernetic_crafted_s01_arm_l:new {
 	templateType = CLOTHINGOBJECT,
-	
+
 	playerRaces = {
 				"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",
@@ -80,6 +80,6 @@ object_tangible_wearables_cybernetic_cybernetic_crafted_s01_arm_l = object_tangi
 				"object/mobile/vendor/wookiee_female.iff",
 				"object/mobile/vendor/wookiee_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
-				"object/mobile/vendor/zabrak_male.iff" }, 
+				"object/mobile/vendor/zabrak_male.iff" },
 }
 ObjectTemplates:addTemplate(object_tangible_wearables_cybernetic_cybernetic_crafted_s01_arm_l, "object/tangible/wearables/cybernetic/cybernetic_crafted_s01_arm_l.iff")

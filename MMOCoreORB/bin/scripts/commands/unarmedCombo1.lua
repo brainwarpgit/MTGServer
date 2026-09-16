@@ -53,11 +53,11 @@ UnarmedCombo1Command = {
 
 	poolsToDamage = HEALTH_ATTRIBUTE + ACTION_ATTRIBUTE + MIND_ATTRIBUTE,
 
-	animation = "combo_4b", 
+	animation = "combo_4b",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "shenbitbonecrusher",
-	
+
 	weaponType = UNARMEDWEAPON,
 
 	range = -1
@@ -65,4 +65,3 @@ UnarmedCombo1Command = {
 }
 
 AddCommand(UnarmedCombo1Command)
-

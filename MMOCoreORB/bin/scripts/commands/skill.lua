@@ -46,4 +46,3 @@ SkillCommand = {
 }
 
 AddCommand(SkillCommand)
-

@@ -46,4 +46,3 @@ BurstRunCommand = {
 }
 
 AddCommand(BurstRunCommand)
-

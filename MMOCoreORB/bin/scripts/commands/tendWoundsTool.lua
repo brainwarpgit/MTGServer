@@ -46,4 +46,3 @@ TendWoundsToolCommand = {
 }
 
 AddCommand(TendWoundsToolCommand)
-

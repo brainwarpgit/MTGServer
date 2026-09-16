@@ -84,5 +84,3 @@ object_tangible_gcw_base_rewards_shared_rally_banner_inv = SharedTangibleObjectT
 
 ObjectTemplates:addClientTemplate(object_tangible_gcw_base_rewards_shared_rally_banner_inv, "object/tangible/gcw/base_rewards/shared_rally_banner_inv.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

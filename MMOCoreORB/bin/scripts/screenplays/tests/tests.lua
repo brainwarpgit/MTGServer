@@ -62,7 +62,7 @@ function Tests:aiMoveTest()
 	AiAgent(agent):setNextPosition(moveTarget[1],moveTarget[2],moveTarget[3], 0)
 	AiAgent(agent):executeBehavior()
 	AiAgent(agent):info("Pathing to: (" .. moveTarget[1] .. ", " .. moveTarget[2] .. ", " .. moveTarget[3] .. ")")
-	
+
 	local args = moveTarget[1] .. "," .. moveTarget[2] .. "," .. moveTarget[3]
 	createEvent(2000, "Tests", "aiMoveEvent", agent, args)
 end
@@ -135,7 +135,7 @@ function Tests:aiAggroEvent(agent, args)
 		AiAgent(agent):info("agent is not an AiAgent in Tests:aiAggroEvent().");
 		return
 	end
-	
+
 	if readSharedMemory("testPlayer") ~= 0 then
 		local player = getSceneObject(readSharedMemory("testPlayer"))
 		if CreatureObject(player):isDead() or CreatureObject(player):isIncapacitated() then

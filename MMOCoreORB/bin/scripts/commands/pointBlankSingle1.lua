@@ -51,11 +51,11 @@ PointBlankSingle1Command = {
 	mindCostMultiplier = 0.5,
 	accuracyBonus = 15,
 
-	animation = "fire_3_single", 
+	animation = "fire_3_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "pointblankshot",
-	
+
 	weaponType = RANGEDWEAPON,
 
 	range = 12

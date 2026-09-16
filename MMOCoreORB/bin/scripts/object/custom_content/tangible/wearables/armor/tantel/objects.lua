@@ -99,4 +99,3 @@ object_tangible_wearables_armor_tantel_shared_armor_tantel_skreej_leggings = Sha
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_tantel_shared_armor_tantel_skreej_leggings, "object/tangible/wearables/armor/tantel/shared_armor_tantel_skreej_leggings.iff")
 
 --****************************************************************************************************************************************************************************
-

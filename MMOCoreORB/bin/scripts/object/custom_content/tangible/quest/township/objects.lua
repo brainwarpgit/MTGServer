@@ -204,5 +204,3 @@ object_tangible_quest_township_shared_tusken_feeder_wave = SharedTangibleObjectT
 
 ObjectTemplates:addClientTemplate(object_tangible_quest_township_shared_tusken_feeder_wave, "object/tangible/quest/township/shared_tusken_feeder_wave.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -7,7 +7,7 @@ lifeDayOraalarriConvoTemplate = ConvoTemplate:new {
 
 im_sorry = ConvoScreen:new {
 	id = "im_sorry",
-	leftDialog = "@conversation/lifeday04b:s_5bd07d67", -- (Translated from Shyriiwook) I'm sorry, This is a private gathering for family and friends. 
+	leftDialog = "@conversation/lifeday04b:s_5bd07d67", -- (Translated from Shyriiwook) I'm sorry, This is a private gathering for family and friends.
 	stopConversation = "true",
 	options = {}
 }

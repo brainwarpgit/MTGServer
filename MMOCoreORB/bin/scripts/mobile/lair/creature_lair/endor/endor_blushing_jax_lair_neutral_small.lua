@@ -10,4 +10,3 @@ endor_blushing_jax_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("endor_blushing_jax_lair_neutral_small", endor_blushing_jax_lair_neutral_small)
-

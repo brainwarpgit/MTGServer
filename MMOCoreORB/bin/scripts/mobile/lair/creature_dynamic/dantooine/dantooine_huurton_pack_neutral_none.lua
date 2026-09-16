@@ -11,4 +11,3 @@ dantooine_huurton_pack_neutral_none = Lair:new {
 }
 
 addLairTemplate("dantooine_huurton_pack_neutral_none", dantooine_huurton_pack_neutral_none)
-

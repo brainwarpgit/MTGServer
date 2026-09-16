@@ -46,4 +46,3 @@ StatCommand = {
 }
 
 AddCommand(StatCommand)
-

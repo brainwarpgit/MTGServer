@@ -24,7 +24,7 @@ igbi_freemo_missions =
 				{ npcTemplate = "igbi_thug", npcName = "a Thug" },
 				{ npcTemplate = "igbi_thug", npcName = "a Thug" },
 			},
-			itemSpawns = 
+			itemSpawns =
 			{
 				{ itemTemplate = "object/tangible/mission/quest_item/igbi_freemo_q2_needed.iff", itemName = "" }
 			},

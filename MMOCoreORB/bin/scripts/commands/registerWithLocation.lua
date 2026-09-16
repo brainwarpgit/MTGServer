@@ -46,4 +46,3 @@ RegisterWithLocationCommand = {
 }
 
 AddCommand(RegisterWithLocationCommand)
-

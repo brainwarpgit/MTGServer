@@ -15,7 +15,7 @@ bestineArtist05ConvoTemplate:addScreen(init_curvote);
 
 init_wonvote = ConvoScreen:new {
 	id = "init_wonvote",
-	leftDialog = "@conversation/bestine_artist05:s_3671ce2c", -- Greetings my friend. Times are good. I have a painting being featured at the Bestine Museum. 
+	leftDialog = "@conversation/bestine_artist05:s_3671ce2c", -- Greetings my friend. Times are good. I have a painting being featured at the Bestine Museum.
 	stopConversation = "false",
 	options = {}
 }
@@ -31,7 +31,7 @@ bestineArtist05ConvoTemplate:addScreen(init_novote);
 
 passby_response_curvote = ConvoScreen:new {
 	id = "passby_response_curvote",
-	leftDialog = "@conversation/bestine_artist05:s_b5220a73", -- Not even that. I'm scraping together every bit I can just to purchase my painting supplies. At this rate I'll be stuck in this sand ball forever. 
+	leftDialog = "@conversation/bestine_artist05:s_b5220a73", -- Not even that. I'm scraping together every bit I can just to purchase my painting supplies. At this rate I'll be stuck in this sand ball forever.
 	stopConversation = "true",
 	options = {}
 }
@@ -39,7 +39,7 @@ bestineArtist05ConvoTemplate:addScreen(passby_response_curvote);
 
 passby_response_wonvote = ConvoScreen:new {
 	id = "passby_response_wonvote",
-	leftDialog = "@conversation/bestine_artist05:s_74b54572", -- Indeed. I'm hoping to earn enough money to travel once again. I'd like to see more of the galaxy if I can. 
+	leftDialog = "@conversation/bestine_artist05:s_74b54572", -- Indeed. I'm hoping to earn enough money to travel once again. I'd like to see more of the galaxy if I can.
 	stopConversation = "true",
 	options = {}
 }

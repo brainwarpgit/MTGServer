@@ -10,4 +10,3 @@ talus_huf_dun_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("talus_huf_dun_lair_neutral_medium", talus_huf_dun_lair_neutral_medium)
-

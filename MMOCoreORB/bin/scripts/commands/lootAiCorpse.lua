@@ -46,4 +46,3 @@ LootAiCorpseCommand = {
 }
 
 AddCommand(LootAiCorpseCommand)
-

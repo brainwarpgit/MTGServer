@@ -46,4 +46,3 @@ TakeCoverCommand = {
 }
 
 AddCommand(TakeCoverCommand)
-

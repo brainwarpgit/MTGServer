@@ -3,7 +3,7 @@ object_tangible_wearables_armor_rebel_battle_armor_rebel_battle_belt = object_ta
 	templateType = ARMOROBJECT,
 	objectMenuComponent = "ArmorObjectMenuComponent",
 	faction = "Rebel",
-	
+
 	playerRaces = { 	"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",
 				"object/creature/player/nautolan_male.iff",
@@ -68,7 +68,7 @@ object_tangible_wearables_armor_rebel_battle_armor_rebel_battle_belt = object_ta
 				"object/mobile/vendor/weequay_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
 				"object/mobile/vendor/zabrak_male.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 

@@ -47,4 +47,3 @@ CreateCreatureCommand = {
 }
 
 AddCommand(CreateCreatureCommand)
-

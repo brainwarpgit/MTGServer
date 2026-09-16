@@ -180,5 +180,3 @@ object_tangible_component_genetic_engineering_shared_processor_use_mold = Shared
 
 ObjectTemplates:addClientTemplate(object_tangible_component_genetic_engineering_shared_processor_use_mold, "object/tangible/component/genetic_engineering/shared_processor_use_mold.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

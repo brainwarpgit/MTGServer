@@ -1,7 +1,7 @@
 object_tangible_wearables_jacket_jacket_ace_rebel_craft = object_tangible_wearables_jacket_shared_jacket_ace_rebel_craft:new {
 
 	faction = "Rebel",
-	
+
 	playerRaces = { 	"object/creature/player/smc_female.iff",
 				"object/creature/player/smc_male.iff",
 				"object/creature/player/talz_male.iff",

@@ -46,4 +46,3 @@ CompleteQuestCommand = {
 }
 
 AddCommand(CompleteQuestCommand)
-

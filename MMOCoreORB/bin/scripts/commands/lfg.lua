@@ -46,4 +46,3 @@ LfgCommand = {
 }
 
 AddCommand(LfgCommand)
-

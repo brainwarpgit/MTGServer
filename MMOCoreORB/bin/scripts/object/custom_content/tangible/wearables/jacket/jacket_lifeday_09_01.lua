@@ -53,7 +53,7 @@ object_tangible_wearables_jacket_jacket_lifeday_09_01 = object_tangible_wearable
 				"object/creature/player/zabrak_female.iff",
 
 			},
-			
+
 	numberExperimentalProperties = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalProperties = {"XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX"},
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},

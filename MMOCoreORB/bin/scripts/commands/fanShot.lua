@@ -56,15 +56,14 @@ FanShotCommand = {
 
 	poolsToDamage = RANDOM_ATTRIBUTE,
 
-	animation = "fire_area", 
+	animation = "fire_area",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "fanshot",
-	
+
 	weaponType = PISTOLWEAPON,
 
 	range = -1
 }
 
 AddCommand(FanShotCommand)
-

@@ -46,4 +46,3 @@ SetBiographyAdminCommand = {
 }
 
 AddCommand(SetBiographyAdminCommand)
-

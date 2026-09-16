@@ -332,5 +332,3 @@ object_tangible_quest_quest_start_shared_update_14_quest_comlink = SharedTangibl
 
 ObjectTemplates:addClientTemplate(object_tangible_quest_quest_start_shared_update_14_quest_comlink, "object/tangible/quest/quest_start/shared_update_14_quest_comlink.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

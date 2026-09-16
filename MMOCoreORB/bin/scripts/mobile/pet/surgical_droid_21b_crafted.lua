@@ -28,7 +28,7 @@ surgical_droid_21b_crafted = Creature:new {
 
 	templates = {
 		"object/creature/npc/droid/crafted/2_1b_surgical_droid.iff"
-	},		
+	},
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)

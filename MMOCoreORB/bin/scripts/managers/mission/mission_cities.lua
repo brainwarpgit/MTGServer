@@ -3,7 +3,7 @@ cities = {
 	{ "corellia", "Coronet", -178, -4504, 581 },
 	{ "corellia", "Doaba Guerfel", 3240, 5391, 516 },
 	{ "corellia", "Kor Vella", -3420, 3146, 620 },
-	{ "corellia", "Tyrena", -5217, -2456, 619 },				 
+	{ "corellia", "Tyrena", -5217, -2456, 619 },
 	{ "corellia", "Vreni Island", -5399, -6296, 359 },
 	{ "dantooine", "Dantooine Mining Outpost", -640, 2486, 135 },
 	{ "dantooine", "Dantooine Agro Outpost", 1588, -6399, 135 },

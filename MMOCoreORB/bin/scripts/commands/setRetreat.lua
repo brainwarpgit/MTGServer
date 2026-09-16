@@ -49,4 +49,3 @@ SetRetreatCommand = {
 }
 
 AddCommand(SetRetreatCommand)
-

@@ -60,5 +60,3 @@ object_tangible_component_clothing_shared_trim_outbreak_prison_guard_jacket = Sh
 
 ObjectTemplates:addClientTemplate(object_tangible_component_clothing_shared_trim_outbreak_prison_guard_jacket, "object/tangible/component/clothing/shared_trim_outbreak_prison_guard_jacket.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

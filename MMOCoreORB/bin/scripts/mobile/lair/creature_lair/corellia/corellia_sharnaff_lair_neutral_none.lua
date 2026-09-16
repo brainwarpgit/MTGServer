@@ -10,4 +10,3 @@ corellia_sharnaff_lair_neutral_none = Lair:new {
 }
 
 addLairTemplate("corellia_sharnaff_lair_neutral_none", corellia_sharnaff_lair_neutral_none)
-

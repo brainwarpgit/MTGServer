@@ -46,4 +46,3 @@ EditStatsCommand = {
 }
 
 AddCommand(EditStatsCommand)
-

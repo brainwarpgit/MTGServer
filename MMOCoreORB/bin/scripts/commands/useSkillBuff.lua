@@ -46,4 +46,3 @@ UseSkillBuffCommand = {
 }
 
 AddCommand(UseSkillBuffCommand)
-

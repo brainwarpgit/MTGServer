@@ -39,7 +39,7 @@ jaleela_protestor = Creature:new {
 		{
 			groups = {
 				{group = "junk", chance = 4000000},
-				{group = "wearables_common", chance = 2000000},       
+				{group = "wearables_common", chance = 2000000},
 				{group = "pistols", chance = 1000000},
 				{group = "tailor_components", chance = 1500000},
 				{group = "loot_kit_parts", chance = 1500000}
@@ -52,7 +52,7 @@ jaleela_protestor = Creature:new {
 	primaryWeapon = "pirate_weapons_light",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(marksmannovice,brawlernovice),

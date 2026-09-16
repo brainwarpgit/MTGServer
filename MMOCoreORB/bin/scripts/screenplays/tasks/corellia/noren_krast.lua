@@ -6,7 +6,7 @@ noren_krast_missions =
 			{
 				{ npcTemplate = "banyon_craddok", npcName = "Banyon Craddok" }
 			},
-			secondarySpawns =	
+			secondarySpawns =
 			{
 				{ npcTemplate = "thug", npcName = "a thug" }
 			},

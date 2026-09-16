@@ -46,4 +46,3 @@ FlourishCommand = {
 }
 
 AddCommand(FlourishCommand)
-

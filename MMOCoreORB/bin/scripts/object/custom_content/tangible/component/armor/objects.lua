@@ -343,5 +343,3 @@ object_tangible_component_armor_shared_standard_armor_layer_stun = SharedTangibl
 
 ObjectTemplates:addClientTemplate(object_tangible_component_armor_shared_standard_armor_layer_stun, "object/tangible/component/armor/shared_standard_armor_layer_stun.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

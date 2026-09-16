@@ -47,7 +47,7 @@ PolearmSpinAttack1Command = {
 	damageMultiplier = 1.5,
 	speedMultiplier = 1.5,
 	accuracyBonus = 10,
-	
+
 	healthCostMultiplier = 1.5,
 	actionCostMultiplier = 1.0,
 	mindCostMultiplier = 1.0,
@@ -58,7 +58,7 @@ PolearmSpinAttack1Command = {
 	animation = "attack_high_left_light_2",
 
 	combatSpam = "limbsmasher",
-	
+
 	weaponType = POLEARMWEAPON,
 
 	range = -1
@@ -66,4 +66,3 @@ PolearmSpinAttack1Command = {
 }
 
 AddCommand(PolearmSpinAttack1Command)
-

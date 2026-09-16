@@ -51,7 +51,7 @@ ForceWeaken1Command = {
 	accuracySkillMod = "forceweaken_accuracy",
 	forceAttack = true,
 
-	animation = "force_weaken_1_particle_level_1", 
+	animation = "force_weaken_1_particle_level_1",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "forceweaken1",
@@ -62,4 +62,3 @@ ForceWeaken1Command = {
 }
 
 AddCommand(ForceWeaken1Command)
-

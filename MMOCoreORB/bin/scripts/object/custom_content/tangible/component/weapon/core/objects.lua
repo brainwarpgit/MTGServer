@@ -60,5 +60,3 @@ object_tangible_component_weapon_core_shared_weapon_core_ranged_standard = Share
 
 ObjectTemplates:addClientTemplate(object_tangible_component_weapon_core_shared_weapon_core_ranged_standard, "object/tangible/component/weapon/core/shared_weapon_core_ranged_standard.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

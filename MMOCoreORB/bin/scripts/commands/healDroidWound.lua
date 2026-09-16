@@ -46,4 +46,3 @@ HealDroidWoundCommand = {
 }
 
 AddCommand(HealDroidWoundCommand)
-

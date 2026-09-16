@@ -212,5 +212,3 @@ object_tangible_furniture_tatooine_shared_uber_tankfarm_s01 = SharedTangibleObje
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_tatooine_shared_uber_tankfarm_s01, "object/tangible/furniture/tatooine/shared_uber_tankfarm_s01.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

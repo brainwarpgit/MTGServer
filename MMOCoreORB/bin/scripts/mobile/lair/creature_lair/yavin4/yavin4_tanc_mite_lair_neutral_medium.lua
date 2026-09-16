@@ -10,4 +10,3 @@ yavin4_tanc_mite_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("yavin4_tanc_mite_lair_neutral_medium", yavin4_tanc_mite_lair_neutral_medium)
-

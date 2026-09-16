@@ -1,43 +1,43 @@
 zeelius_kraymunder_missions =
 {
-	{ 
+	{
 		missionType = "assassinate",
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "hermit_spider", npcName = "Hermit Spider" } 
-		}, 
+		primarySpawns =
+		{
+			{ npcTemplate = "hermit_spider", npcName = "Hermit Spider" }
+		},
 		secondarySpawns = {},
-		itemSpawns = {}, 
-		rewards = 
-		{ 
+		itemSpawns = {},
+		rewards =
+		{
 			{ rewardType = "credits", amount = 25 }
 		}
 	},
 	{
-		missionType = "escort", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "zeelius_partner", npcName = "Zeelius' Partner" } 
-		}, 
+		missionType = "escort",
+		primarySpawns =
+		{
+			{ npcTemplate = "zeelius_partner", npcName = "Zeelius' Partner" }
+		},
 		secondarySpawns = {
 			{ npcTemplate = "gundark_rogue", npcName = "Card Player" },
 			{ npcTemplate = "gundark_hooligan", npcName = "Card Player" }
-}, 
-		itemSpawns = {}, 
-		rewards = 
-		{ 
+},
+		itemSpawns = {},
+		rewards =
+		{
 			{ rewardType = "credits", amount = 50 }
 		}
 	},
 }
 
-npcMapZeeliusKraymunder = 
-{ 
-	{ 
-		spawnData = { npcTemplate = "zeelius_kraymunder", x = -5318.6, z = 80.5, y = -2264.9, direction = 76, cellID = 0, position = STAND }, 
-		npcNumber = 1,   
-		stfFile = "@static_npc/rori/rori_narmle_zeelius_kraymunder", 
-		missions = zeelius_kraymunder_missions 
+npcMapZeeliusKraymunder =
+{
+	{
+		spawnData = { npcTemplate = "zeelius_kraymunder", x = -5318.6, z = 80.5, y = -2264.9, direction = 76, cellID = 0, position = STAND },
+		npcNumber = 1,
+		stfFile = "@static_npc/rori/rori_narmle_zeelius_kraymunder",
+		missions = zeelius_kraymunder_missions
 	},
 }
 

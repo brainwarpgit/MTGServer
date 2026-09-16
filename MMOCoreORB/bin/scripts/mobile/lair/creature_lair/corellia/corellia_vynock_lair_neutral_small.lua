@@ -10,4 +10,3 @@ corellia_vynock_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("corellia_vynock_lair_neutral_small", corellia_vynock_lair_neutral_small)
-

@@ -50,7 +50,7 @@ lifeDayKkatamkConvoTemplate:addScreen(waypoint);
 
 greetings_wookiee = ConvoScreen:new {
 	id = "greetings_wookiee",
-	leftDialog = "@conversation/lifeday04a:s_311837be", -- (Translated from Shyriiwook) Ah! A Wookiee cousin! Are you here to celebrate Life Day? 
+	leftDialog = "@conversation/lifeday04a:s_311837be", -- (Translated from Shyriiwook) Ah! A Wookiee cousin! Are you here to celebrate Life Day?
 	stopConversation = "false",
 	options = {
 		{"@conversation/lifeday04a:s_20e6f0a5", "waypoint_wookiee"}, -- Yes I am. Where can I find a Life Day gathering?

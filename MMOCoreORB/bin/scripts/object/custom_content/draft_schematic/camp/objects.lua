@@ -44,5 +44,3 @@ object_draft_schematic_camp_shared_camp_quality = SharedDraftSchematicObjectTemp
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_camp_shared_camp_quality, "object/draft_schematic/camp/shared_camp_quality.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

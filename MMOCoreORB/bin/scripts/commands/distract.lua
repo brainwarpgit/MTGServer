@@ -46,4 +46,3 @@ DistractCommand = {
 }
 
 AddCommand(DistractCommand)
-

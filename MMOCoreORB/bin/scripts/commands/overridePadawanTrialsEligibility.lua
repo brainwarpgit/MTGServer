@@ -46,4 +46,3 @@ OverridePadawanTrialsEligibilityCommand = {
 }
 
 AddCommand(OverridePadawanTrialsEligibilityCommand)
-

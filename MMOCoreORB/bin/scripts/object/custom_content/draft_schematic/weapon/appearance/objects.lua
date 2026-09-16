@@ -2228,5 +2228,3 @@ object_draft_schematic_weapon_appearance_shared_weapon_appearance_wookiee_knuckl
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_appearance_shared_weapon_appearance_wookiee_knuckler, "object/draft_schematic/weapon/appearance/shared_weapon_appearance_wookiee_knuckler.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

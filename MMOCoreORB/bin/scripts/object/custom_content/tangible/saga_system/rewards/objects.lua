@@ -340,5 +340,3 @@ object_tangible_saga_system_rewards_shared_structure_deed_player_tent_chronicler
 
 ObjectTemplates:addClientTemplate(object_tangible_saga_system_rewards_shared_structure_deed_player_tent_chronicler, "object/tangible/saga_system/rewards/shared_structure_deed_player_tent_chronicler.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

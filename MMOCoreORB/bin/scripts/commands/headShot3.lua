@@ -53,15 +53,14 @@ HeadShot3Command = {
 
 	poolsToDamage = MIND_ATTRIBUTE,
 
-	animation = "fire_1_special_single", 
+	animation = "fire_1_special_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "masterheadshot",
-	
+
 	weaponType = RIFLEWEAPON,
 
 	range = -1
 }
 
 AddCommand(HeadShot3Command)
-

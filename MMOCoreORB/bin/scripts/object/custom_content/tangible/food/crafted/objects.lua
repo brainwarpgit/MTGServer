@@ -148,5 +148,3 @@ object_tangible_food_crafted_shared_drink_simple_tea = SharedTangibleObjectTempl
 
 ObjectTemplates:addClientTemplate(object_tangible_food_crafted_shared_drink_simple_tea, "object/tangible/food/crafted/shared_drink_simple_tea.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

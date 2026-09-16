@@ -46,4 +46,3 @@ KickCommand = {
 }
 
 AddCommand(KickCommand)
-

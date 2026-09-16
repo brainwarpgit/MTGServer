@@ -3,7 +3,7 @@ NabooPirateBunkerScreenPlay = ScreenPlay:new {
 	--location -1482 -1729
 	screenplayName = "NabooPirateBunkerScreenPlay",
 
- 	lootContainers = {
+	lootContainers = {
 		5535582,
 		5535589,
 		5535590,

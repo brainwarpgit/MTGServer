@@ -46,4 +46,3 @@ NpcConversationStopCommand = {
 }
 
 AddCommand(NpcConversationStopCommand)
-

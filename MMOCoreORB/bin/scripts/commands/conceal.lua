@@ -46,4 +46,3 @@ ConcealCommand = {
 }
 
 AddCommand(ConcealCommand)
-

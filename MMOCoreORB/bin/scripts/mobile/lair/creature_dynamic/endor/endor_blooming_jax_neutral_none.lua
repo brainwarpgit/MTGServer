@@ -11,4 +11,3 @@ endor_blooming_jax_neutral_none = Lair:new {
 }
 
 addLairTemplate("endor_blooming_jax_neutral_none", endor_blooming_jax_neutral_none)
-

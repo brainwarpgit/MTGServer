@@ -68,7 +68,7 @@ object_tangible_wearables_armor_snowtrooper_armor_snowtrooper_belt = object_tang
 				"object/mobile/vendor/weequay_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
 				"object/mobile/vendor/zabrak_male.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 

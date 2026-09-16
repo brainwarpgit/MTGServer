@@ -46,4 +46,3 @@ MeditateCommand = {
 }
 
 AddCommand(MeditateCommand)
-

@@ -46,4 +46,3 @@ ExtinguishFireCommand = {
 }
 
 AddCommand(ExtinguishFireCommand)
-

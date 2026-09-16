@@ -46,4 +46,3 @@ DeactivateQuestCommand = {
 }
 
 AddCommand(DeactivateQuestCommand)
-

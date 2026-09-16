@@ -53,4 +53,3 @@ TransferForceCommand = {
 }
 
 AddCommand(TransferForceCommand)
-

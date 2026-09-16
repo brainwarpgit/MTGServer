@@ -46,4 +46,3 @@ MoneyCommand = {
 }
 
 AddCommand(MoneyCommand)
-

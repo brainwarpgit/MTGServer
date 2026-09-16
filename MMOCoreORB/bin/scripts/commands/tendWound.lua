@@ -46,4 +46,3 @@ TendWoundCommand = {
 }
 
 AddCommand(TendWoundCommand)
-

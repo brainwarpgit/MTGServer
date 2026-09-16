@@ -46,4 +46,3 @@ BroadcastCommand = {
 }
 
 AddCommand(BroadcastCommand)
-

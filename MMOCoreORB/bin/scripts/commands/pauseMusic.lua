@@ -46,4 +46,3 @@ PauseMusicCommand = {
 }
 
 AddCommand(PauseMusicCommand)
-

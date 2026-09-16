@@ -55,4 +55,3 @@ ForceShield2Command = {
 }
 
 AddCommand(ForceShield2Command)
-

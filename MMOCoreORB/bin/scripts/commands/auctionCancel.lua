@@ -46,4 +46,3 @@ AuctionCancelCommand = {
 }
 
 AddCommand(AuctionCancelCommand)
-

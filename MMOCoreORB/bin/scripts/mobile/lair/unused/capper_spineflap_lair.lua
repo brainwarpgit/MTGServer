@@ -10,4 +10,3 @@ capper_spineflap_lair = Lair:new {
 }
 
 addLairTemplate("capper_spineflap_lair", capper_spineflap_lair)
-

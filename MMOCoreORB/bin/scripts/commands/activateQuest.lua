@@ -46,4 +46,3 @@ ActivateQuestCommand = {
 }
 
 AddCommand(ActivateQuestCommand)
-

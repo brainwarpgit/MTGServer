@@ -60,4 +60,3 @@ ThrowGrenadeCommand = {
 }
 
 AddCommand(ThrowGrenadeCommand)
-

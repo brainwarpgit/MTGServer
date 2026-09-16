@@ -46,4 +46,3 @@ HarvesterActivateCommand = {
 }
 
 AddCommand(HarvesterActivateCommand)
-

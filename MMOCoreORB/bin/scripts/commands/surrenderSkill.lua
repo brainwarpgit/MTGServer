@@ -46,4 +46,3 @@ SurrenderSkillCommand = {
 }
 
 AddCommand(SurrenderSkillCommand)
-

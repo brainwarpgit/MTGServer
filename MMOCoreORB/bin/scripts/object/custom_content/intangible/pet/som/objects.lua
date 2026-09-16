@@ -52,5 +52,3 @@ object_intangible_pet_som_shared_xandank = SharedIntangibleObjectTemplate:new {
 
 ObjectTemplates:addClientTemplate(object_intangible_pet_som_shared_xandank, "object/intangible/pet/som/shared_xandank.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

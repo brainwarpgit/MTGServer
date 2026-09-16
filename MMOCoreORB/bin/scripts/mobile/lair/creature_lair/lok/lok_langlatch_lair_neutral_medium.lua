@@ -10,4 +10,3 @@ lok_langlatch_lair_neutral_medium = Lair:new {
 }
 
 addLairTemplate("lok_langlatch_lair_neutral_medium", lok_langlatch_lair_neutral_medium)
-

@@ -28,7 +28,7 @@ cll8_binary_load_lifter_crafted = Creature:new {
 
 	templates = {
 		"object/creature/npc/droid/crafted/cll_8_binary_load_lifter.iff"
-	},		
+	},
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)

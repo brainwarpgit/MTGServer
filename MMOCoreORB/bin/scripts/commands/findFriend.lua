@@ -46,4 +46,3 @@ FindFriendCommand = {
 }
 
 AddCommand(FindFriendCommand)
-

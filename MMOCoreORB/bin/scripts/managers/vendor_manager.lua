@@ -5,7 +5,7 @@ function VendorSelectionNode(nn, np, sd, hr)
 		suiDisplay = sd,
 		hiringRequired = hr,
 		childNodes = {},
-		
+
 		addChildNode = function (self, node) table.insert(self.childNodes, node) end
 	}
 end
@@ -18,7 +18,7 @@ terminalNode = VendorSelectionNode("@player_structure:terminal", "object/tangibl
 droidNode = VendorSelectionNode("@player_structure:droid", "object/tangible/vendor/vendor_droid_", "@player_structure:droid_type_", 20)
 npcNode = VendorSelectionNode("@player_structure:npc", "object/mobile/vendor/", "@player_structure:race_type_", 30)
 
--- TerminalMenu - Selections 
+-- TerminalMenu - Selections
 terminalNode:addChildNode(VendorSelectionNode("@player_structure:terminal_bulky", "bulky.iff", "", 10))
 terminalNode:addChildNode(VendorSelectionNode("@player_structure:terminal_standard", "standard.iff", "", 30))
 terminalNode:addChildNode(VendorSelectionNode("@player_structure:terminal_small", "small.iff", "", 50))

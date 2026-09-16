@@ -10,4 +10,3 @@ rori_capper_spineflap_pod_neutral_small = Lair:new {
 }
 
 addLairTemplate("rori_capper_spineflap_pod_neutral_small", rori_capper_spineflap_pod_neutral_small)
-

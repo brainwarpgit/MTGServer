@@ -10,4 +10,3 @@ corellia_plumed_rasp_nest_neutral_small = Lair:new {
 }
 
 addLairTemplate("corellia_plumed_rasp_nest_neutral_small", corellia_plumed_rasp_nest_neutral_small)
-

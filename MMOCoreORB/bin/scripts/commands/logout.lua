@@ -46,4 +46,3 @@ LogoutCommand = {
 }
 
 AddCommand(LogoutCommand)
-

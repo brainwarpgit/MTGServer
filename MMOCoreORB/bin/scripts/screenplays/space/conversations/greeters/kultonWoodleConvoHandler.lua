@@ -28,4 +28,3 @@ function kultonWoodleConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 
 	return pConvScreen
 end
-

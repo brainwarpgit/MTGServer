@@ -51,15 +51,14 @@ UnarmedHit2Command = {
 	mindCostMultiplier = 1.5,
         accuracyBonus = 15,
 
-	animation = "combo_3a", 
+	animation = "combo_3a",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "goraxsmash",
-	
+
 	weaponType = UNARMEDWEAPON,
 
 	range = -1
 }
 
 AddCommand(UnarmedHit2Command)
-

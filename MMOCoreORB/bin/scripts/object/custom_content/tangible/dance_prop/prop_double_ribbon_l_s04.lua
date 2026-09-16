@@ -70,7 +70,7 @@ object_tangible_dance_prop_prop_double_ribbon_l_s04 = object_tangible_dance_prop
 
 	xpType = "dance",
 
-	
+
 	--certificationsRequired = { "cert_sword_2h_axe" },
 }
 

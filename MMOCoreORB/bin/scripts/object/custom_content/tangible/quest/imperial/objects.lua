@@ -132,5 +132,3 @@ object_tangible_quest_imperial_shared_itp_veers_rebel_server = SharedTangibleObj
 
 ObjectTemplates:addClientTemplate(object_tangible_quest_imperial_shared_itp_veers_rebel_server, "object/tangible/quest/imperial/shared_itp_veers_rebel_server.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

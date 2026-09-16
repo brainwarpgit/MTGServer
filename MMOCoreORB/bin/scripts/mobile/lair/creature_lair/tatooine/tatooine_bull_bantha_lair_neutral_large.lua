@@ -10,4 +10,3 @@ tatooine_bull_bantha_lair_neutral_large = Lair:new {
 }
 
 addLairTemplate("tatooine_bull_bantha_lair_neutral_large", tatooine_bull_bantha_lair_neutral_large)
-

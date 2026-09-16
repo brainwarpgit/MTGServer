@@ -349,5 +349,3 @@ object_intangible_pet_shared_varactyl = SharedIntangibleObjectTemplate:new {
 
 ObjectTemplates:addClientTemplate(object_intangible_pet_shared_varactyl, "object/intangible/pet/shared_varactyl.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

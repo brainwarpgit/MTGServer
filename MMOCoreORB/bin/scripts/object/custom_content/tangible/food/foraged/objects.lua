@@ -108,5 +108,3 @@ object_tangible_food_foraged_shared_foraged_vegetable_s5_generic = SharedTangibl
 
 ObjectTemplates:addClientTemplate(object_tangible_food_foraged_shared_foraged_vegetable_s5_generic, "object/tangible/food/foraged/shared_foraged_vegetable_s5_generic.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

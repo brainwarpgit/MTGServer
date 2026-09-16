@@ -29,10 +29,10 @@ includeFile("tutorial/serverobjects.lua")
 includeFile("yavin4/serverobjects.lua")
 
 includeFile("faction/serverobjects.lua")
-includeFile("dungeon/serverobjects.lua") 
+includeFile("dungeon/serverobjects.lua")
 
 -- Weapons
-includeFile("weapon/serverobjects.lua") 
+includeFile("weapon/serverobjects.lua")
 
 -- Spawn Groups
 includeFile("spawn/serverobjects.lua")

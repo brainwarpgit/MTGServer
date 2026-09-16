@@ -12,5 +12,3 @@ object_draft_schematic_item_component_shared_item_micro_sensor_suite_advanced = 
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_item_component_shared_item_micro_sensor_suite_advanced, "object/draft_schematic/item/component/shared_item_micro_sensor_suite_advanced.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

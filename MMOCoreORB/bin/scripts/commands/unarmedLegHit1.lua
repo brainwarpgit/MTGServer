@@ -53,15 +53,14 @@ UnarmedLegHit1Command = {
 
 	poolsToDamage = ACTION_ATTRIBUTE,
 
-	animation = "attack_special_foot_stomp", 
+	animation = "attack_special_foot_stomp",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "grondastomp",
-	
+
 	weaponType = UNARMEDWEAPON,
 
 	range = -1
 }
 
 AddCommand(UnarmedLegHit1Command)
-

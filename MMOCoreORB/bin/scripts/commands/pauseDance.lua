@@ -46,4 +46,3 @@ PauseDanceCommand = {
 }
 
 AddCommand(PauseDanceCommand)
-

@@ -12,5 +12,3 @@ object_tangible_quest_story_loot_shared_som_kenobi_historian_data_disk_2 = Share
 
 ObjectTemplates:addClientTemplate(object_tangible_quest_story_loot_shared_som_kenobi_historian_data_disk_2, "object/tangible/quest/story_loot/shared_som_kenobi_historian_data_disk_2.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

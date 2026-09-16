@@ -47,7 +47,7 @@ PolearmLunge2Command = {
 	damageMultiplier = 2.0,
 	speedMultiplier = 2.5,
 	accuracyBonus = 10,
-	
+
 	healthCostMultiplier = 0.625,
 	actionCostMultiplier = 1.5,
 	mindCostMultiplier = 0.625,
@@ -57,22 +57,21 @@ PolearmLunge2Command = {
 	combatSpam = "lungestrike",
 
 	range = 20,
-	
+
 	weaponType = POLEARMWEAPON,
 
 	stateEffects = {
-	  StateEffect( 
-		KNOCKDOWN_EFFECT, 
-		{ "knockdownRecovery", "lastKnockdown" }, 
-		{ "knockdown_defense" }, 
+	  StateEffect(
+		KNOCKDOWN_EFFECT,
+		{ "knockdownRecovery", "lastKnockdown" },
+		{ "knockdown_defense" },
 		{},
-		100, 
-		0, 
-		0 
+		100,
+		0,
+		0
 	  )
 	}
 
 }
 
 AddCommand(PolearmLunge2Command)
-

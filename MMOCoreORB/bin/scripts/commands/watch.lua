@@ -46,4 +46,3 @@ WatchCommand = {
 }
 
 AddCommand(WatchCommand)
-

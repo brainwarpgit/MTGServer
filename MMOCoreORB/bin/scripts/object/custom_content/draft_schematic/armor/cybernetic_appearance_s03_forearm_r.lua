@@ -5,11 +5,11 @@ object_draft_schematic_armor_cybernetic_appearance_s03_forearm_r = object_draft_
    customObjectName = "Armor Right ForeArm 03",
 
    craftingToolTab = 2, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 45, 
-   size = 4, 
+   complexity = 45,
+   size = 4,
 
-   xpType = "crafting_droid_general", 
-   xp = 250, 
+   xpType = "crafting_droid_general",
+   xp = 250,
 
    assemblySkill = "droid_assembly",
    experimentingSkill = "droid_experimentation",

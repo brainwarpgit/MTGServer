@@ -4,5 +4,3 @@ object_tangible_quest_wave_event_shared_aaa_wave_event_test_object = SharedTangi
 
 ObjectTemplates:addClientTemplate(object_tangible_quest_wave_event_shared_aaa_wave_event_test_object, "object/tangible/quest/wave_event/shared_aaa_wave_event_test_object.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

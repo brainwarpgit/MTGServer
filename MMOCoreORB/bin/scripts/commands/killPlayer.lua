@@ -46,4 +46,3 @@ KillPlayerCommand = {
 }
 
 AddCommand(KillPlayerCommand)
-

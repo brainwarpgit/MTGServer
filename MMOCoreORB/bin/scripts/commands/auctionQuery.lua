@@ -46,4 +46,3 @@ AuctionQueryCommand = {
 }
 
 AddCommand(AuctionQueryCommand)
-

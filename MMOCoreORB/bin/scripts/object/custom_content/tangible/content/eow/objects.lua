@@ -12,5 +12,3 @@ object_tangible_content_eow_shared_final_data_disk_rebel = SharedTangibleObjectT
 
 ObjectTemplates:addClientTemplate(object_tangible_content_eow_shared_final_data_disk_rebel, "object/tangible/content/eow/shared_final_data_disk_rebel.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

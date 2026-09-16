@@ -28,5 +28,3 @@ object_draft_schematic_bio_engineer_instant_stimpack_shared_stimpack_pet_d = Sha
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_bio_engineer_instant_stimpack_shared_stimpack_pet_d, "object/draft_schematic/bio_engineer/instant_stimpack/shared_stimpack_pet_d.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -64,13 +64,13 @@ function Task:start(pPlayer, ...)
 			if self.onLoggedOut ~= nil then
 				createObserver(LOGGEDOUT, self.taskName, "onLoggedOut", pPlayer, 1)
 			end
-			
+
 			return true
 		end
 	else
 		Logger:log("Task " .. self.taskName .. " is already started.", LT_INFO)
 	end
-	
+
 	return false
 end
 

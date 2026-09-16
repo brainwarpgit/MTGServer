@@ -252,5 +252,3 @@ object_tangible_component_droid_shared_union_sentry_droid_chassis = SharedTangib
 
 ObjectTemplates:addClientTemplate(object_tangible_component_droid_shared_union_sentry_droid_chassis, "object/tangible/component/droid/shared_union_sentry_droid_chassis.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -66,7 +66,7 @@ object_tangible_dance_prop_prop_ewok_flowers = object_tangible_dance_prop_shared
 
 	xpType = "dance",
 
-	
+
 	--certificationsRequired = { "cert_sword_2h_axe" },
 }
 

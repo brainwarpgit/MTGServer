@@ -34,7 +34,7 @@ object_tangible_wearables_armor_mandalorian_imperial_armor_mandalorian_imperial_
 				"object/creature/player/twilek_female.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
-	
+
 	-- The damage types in WeaponObject
 	vulnerability = LIGHTSABER,
 
@@ -42,7 +42,7 @@ object_tangible_wearables_armor_mandalorian_imperial_armor_mandalorian_imperial_
 	healthEncumbrance = 15,
 	actionEncumbrance = 15,
 	mindEncumbrance = 15,
-	
+
 	maxCondition = 30000,
 
 	-- LIGHT, MEDIUM, HEAVY

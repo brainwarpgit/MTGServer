@@ -46,4 +46,3 @@ CreateMissionElementCommand = {
 }
 
 AddCommand(CreateMissionElementCommand)
-

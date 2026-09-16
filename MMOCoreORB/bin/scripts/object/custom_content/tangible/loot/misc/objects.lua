@@ -172,5 +172,3 @@ object_tangible_loot_misc_shared_tusken_token = SharedTangibleObjectTemplate:new
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_misc_shared_tusken_token, "object/tangible/loot/misc/shared_tusken_token.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

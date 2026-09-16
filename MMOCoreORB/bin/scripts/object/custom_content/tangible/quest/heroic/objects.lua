@@ -28,5 +28,3 @@ object_tangible_quest_heroic_shared_heroic_exar_kun_entrance = SharedTangibleObj
 
 ObjectTemplates:addClientTemplate(object_tangible_quest_heroic_shared_heroic_exar_kun_entrance, "object/tangible/quest/heroic/shared_heroic_exar_kun_entrance.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

@@ -46,4 +46,3 @@ SetWaypointNameCommand = {
 }
 
 AddCommand(SetWaypointNameCommand)
-

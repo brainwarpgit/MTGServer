@@ -46,4 +46,3 @@ TendDamageCommand = {
 }
 
 AddCommand(TendDamageCommand)
-

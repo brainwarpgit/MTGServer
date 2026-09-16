@@ -46,4 +46,3 @@ ObjectCommand = {
 }
 
 AddCommand(ObjectCommand)
-

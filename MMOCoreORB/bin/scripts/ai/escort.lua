@@ -58,4 +58,3 @@ walkEscort = {
 	{id="3093889889",	name="TreeSocket",	pid="1489268495",	args={slot=MOVE}},
 	{id="70283378",	name="Wait",	pid="437268100",	args={durationMax=-1.0, durationMin=-1.0}}}
 addAiTemplate("walkEscort", walkEscort)
-

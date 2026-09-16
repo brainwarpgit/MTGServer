@@ -46,4 +46,3 @@ AiIgnoreCommand = {
 }
 
 AddCommand(AiIgnoreCommand)
-

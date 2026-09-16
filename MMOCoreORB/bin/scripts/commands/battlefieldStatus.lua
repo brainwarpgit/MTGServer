@@ -46,4 +46,3 @@ BattlefieldStatusCommand = {
 }
 
 AddCommand(BattlefieldStatusCommand)
-

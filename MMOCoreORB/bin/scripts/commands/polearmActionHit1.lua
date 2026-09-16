@@ -56,18 +56,18 @@ PolearmActionHit1Command = {
 	combatSpam = "kneecracker",
 
 	dotEffects = {
-	  DotEffect( 
-		BLEEDING, 
+	  DotEffect(
+		BLEEDING,
 		{ "resistance_bleeding", "bleed_resist" },
 		ACTION,
 		true,
 		0,
 		100,
-		30, 
+		30,
 		30
 	  )
 	},
-	
+
 	weaponType = POLEARMWEAPON,
 
 	poolsToDamage = ACTION_ATTRIBUTE,
@@ -76,4 +76,3 @@ PolearmActionHit1Command = {
 }
 
 AddCommand(PolearmActionHit1Command)
-

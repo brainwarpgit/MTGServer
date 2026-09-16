@@ -2,10 +2,10 @@ hefsen_zindalai_missions =
 {
 	{
 		missionType = "deliver",
-		primarySpawns = 
-		{ 
+		primarySpawns =
+		{
 			{ npcTemplate = "maestro", npcName = "Maestro" }
-		}, 
+		},
 		secondarySpawns =
 		{
 
@@ -13,51 +13,51 @@ hefsen_zindalai_missions =
 		itemSpawns =
 		{
 			{ itemTemplate = "object/tangible/mission/quest_item/hefsen_zindalai_q1_needed.iff", itemName = "" }
-		}, 
-		rewards = 
-		{ 
+		},
+		rewards =
+		{
 			{ rewardType = "credits", amount = 25 },
 			{ rewardType = "faction", faction = "naboo", amount = 5 },
 		}
 	},
 	{
 		missionType = "escort",
-		primarySpawns = 
-		{ 
+		primarySpawns =
+		{
 			{ npcTemplate = "runaway_gualama", npcName = "a runaway gualama" }
-		}, 
+		},
 		secondarySpawns =
 		{
 			{ npcTemplate = "blood_thirsty_borgle", npcName = "" },
 			{ npcTemplate = "blood_thirsty_borgle", npcName = "" }
-		}, 
-		itemSpawns = 
+		},
+		itemSpawns =
 		{
 
-		}, 
-		rewards = 
+		},
+		rewards =
 		{
 			{ rewardType = "credits", amount = 50 },
 			{ rewardType = "faction", faction = "naboo", amount = 10 }
 		}
 	},
 	{
-		missionType = "escort", 
-		primarySpawns = 
-		{ 
+		missionType = "escort",
+		primarySpawns =
+		{
 			{ npcTemplate = "wealthy_patron", npcName = "a wealthy patron" }
-		}, 
+		},
 		secondarySpawns =
 		{
 			{ npcTemplate = "bandit", npcName = "" },
 			{ npcTemplate = "bandit", npcName = "" },
 			{ npcTemplate = "bandit", npcName = "" }
-		}, 
-		itemSpawns = 
+		},
+		itemSpawns =
 		{
 
-		}, 
-		rewards = 
+		},
+		rewards =
 		{
 			{ rewardType = "credits", amount = 100 },
 			{ rewardType = "faction", faction = "naboo", amount = 15 }
@@ -65,9 +65,9 @@ hefsen_zindalai_missions =
 	}
 }
 
-npcMapHefsenZindalai = 
-{ 
-	{ 
+npcMapHefsenZindalai =
+{
+	{
 		spawnData = { npcTemplate = "hefsen_zindalai", x = -11, z = 1.7, y = -20, direction = 0, cellID = 4635710, position = STAND },
 		worldPosition = { x = 5298.6, y = 5896.8 },
 		npcNumber = 1,

@@ -100,5 +100,3 @@ object_tangible_furniture_wod_themepark_shared_wod_trampled_plant = SharedTangib
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_wod_themepark_shared_wod_trampled_plant, "object/tangible/furniture/wod_themepark/shared_wod_trampled_plant.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

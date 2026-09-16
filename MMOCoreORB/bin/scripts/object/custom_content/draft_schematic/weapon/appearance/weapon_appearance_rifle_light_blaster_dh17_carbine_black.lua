@@ -5,15 +5,15 @@ object_draft_schematic_weapon_appearance_weapon_appearance_rifle_light_blaster_d
    customObjectName = "Light Blaster Dh17 Carbine Rifle Black",
 
    craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 30, 
-   size = 4, 
+   complexity = 30,
+   size = 4,
 
-   xpType = "crafting_weapons_general", 
-   xp = 650, 
+   xpType = "crafting_weapons_general",
+   xp = 650,
 
-   assemblySkill = "weapon_assembly", 
-   experimentingSkill = "weapon_experimentation", 
-   customizationSkill = "weapon_customization", 
+   assemblySkill = "weapon_assembly",
+   experimentingSkill = "weapon_experimentation",
+   customizationSkill = "weapon_customization",
 
    customizationOptions = {},
    customizationStringNames = {},

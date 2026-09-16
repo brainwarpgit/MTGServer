@@ -46,4 +46,3 @@ CombatModeCheckCommand = {
 }
 
 AddCommand(CombatModeCheckCommand)
-

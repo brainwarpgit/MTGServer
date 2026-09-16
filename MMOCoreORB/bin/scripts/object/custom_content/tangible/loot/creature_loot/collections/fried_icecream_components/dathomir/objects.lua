@@ -52,5 +52,3 @@ object_tangible_loot_creature_loot_collections_fried_icecream_components_dathomi
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_collections_fried_icecream_components_dathomir_shared_qana, "object/tangible/loot/creature_loot/collections/fried_icecream_components/dathomir/shared_qana.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

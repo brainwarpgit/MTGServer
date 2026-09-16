@@ -45,14 +45,14 @@ MildDiseaseCommand = {
         name = "milddisease",
         combatSpam = "attack",
 	dotEffects = {
-	  DotEffect( 
-		DISEASED, 
+	  DotEffect(
+		DISEASED,
 		{ "resistance_disease", "poison_disease_resist" },
 		ATTACK_POOL,
 		true,
 		0,
 		20,
-		30, 
+		30,
 		125,
 		15
 	  )
@@ -60,4 +60,3 @@ MildDiseaseCommand = {
 }
 
 AddCommand(MildDiseaseCommand)
-

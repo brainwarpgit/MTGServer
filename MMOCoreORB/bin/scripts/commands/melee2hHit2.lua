@@ -50,9 +50,9 @@ Melee2hHit2Command = {
 	mindCostMultiplier = 1.0,
         accuracyBonus = 10,
 
-	animation = "combo_2a", 
+	animation = "combo_2a",
 	animType = GENERATE_INTENSITY,
-	
+
 	weaponType = TWOHANDMELEEWEAPON,
 
 	combatSpam = "violentstrike",
@@ -61,4 +61,3 @@ Melee2hHit2Command = {
 }
 
 AddCommand(Melee2hHit2Command)
-

@@ -3,7 +3,7 @@ VeermokCaveScreenPlay = ScreenPlay:new {
 	--location 5703 -1557
 	screenplayName = "VeermokCaveScreenPlay",
 
- 	lootContainers = {
+	lootContainers = {
 		261338,
 		7955559,
 		7955560,

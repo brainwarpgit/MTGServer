@@ -404,4 +404,3 @@ object_tangible_wearables_armor_scout_trooper_shared_armor_scout_trooper_utility
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_scout_trooper_shared_armor_scout_trooper_utility_belt_gcw, "object/tangible/wearables/armor/scout_trooper/shared_armor_scout_trooper_utility_belt_gcw.iff")
 
 --****************************************************************************************************************************************************************************
-

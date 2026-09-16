@@ -244,5 +244,3 @@ object_draft_schematic_weapon_component_shared_weapon_power_bit = SharedDraftSch
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_component_shared_weapon_power_bit, "object/draft_schematic/weapon/component/shared_weapon_power_bit.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

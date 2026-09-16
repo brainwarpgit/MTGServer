@@ -46,4 +46,3 @@ TargetCommand = {
 }
 
 AddCommand(TargetCommand)
-

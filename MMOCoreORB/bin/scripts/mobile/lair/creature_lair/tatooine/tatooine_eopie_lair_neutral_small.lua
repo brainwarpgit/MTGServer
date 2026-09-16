@@ -10,4 +10,3 @@ tatooine_eopie_lair_neutral_small = Lair:new {
 }
 
 addLairTemplate("tatooine_eopie_lair_neutral_small", tatooine_eopie_lair_neutral_small)
-

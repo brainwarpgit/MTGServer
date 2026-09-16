@@ -46,4 +46,3 @@ SetCurrentSkillTitleCommand = {
 }
 
 AddCommand(SetCurrentSkillTitleCommand)
-

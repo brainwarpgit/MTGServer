@@ -69,4 +69,3 @@ object_tangible_wearables_armor_marauder_shared_armor_marauder_s02_helmet = Shar
 ObjectTemplates:addClientTemplate(object_tangible_wearables_armor_marauder_shared_armor_marauder_s02_helmet, "object/tangible/wearables/armor/marauder/shared_armor_marauder_s02_helmet.iff")
 
 --****************************************************************************************************************************************************************************
-

@@ -46,4 +46,3 @@ GetPlayerIdCommand = {
 }
 
 AddCommand(GetPlayerIdCommand)
-

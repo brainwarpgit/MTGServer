@@ -52,5 +52,3 @@ object_tangible_loot_creature_loot_collections_fried_icecream_components_corelli
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_collections_fried_icecream_components_corellia_shared_yam, "object/tangible/loot/creature_loot/collections/fried_icecream_components/corellia/shared_yam.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

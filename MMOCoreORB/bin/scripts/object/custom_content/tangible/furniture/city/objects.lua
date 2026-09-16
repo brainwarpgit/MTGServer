@@ -164,5 +164,3 @@ object_tangible_furniture_city_shared_xwing_event_reward = SharedTangibleObjectT
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_city_shared_xwing_event_reward, "object/tangible/furniture/city/shared_xwing_event_reward.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

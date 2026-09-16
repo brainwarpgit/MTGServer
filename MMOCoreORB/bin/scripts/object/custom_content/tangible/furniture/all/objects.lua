@@ -1860,5 +1860,3 @@ object_tangible_furniture_all_shared_year_seven_gift_box = SharedTangibleObjectT
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_all_shared_year_seven_gift_box, "object/tangible/furniture/all/year_seven_gift_box.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-

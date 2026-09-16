@@ -52,5 +52,3 @@ object_tangible_loot_creature_loot_collections_fried_icecream_components_endor_s
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_collections_fried_icecream_components_endor_shared_yubnut, "object/tangible/loot/creature_loot/collections/fried_icecream_components/endor/shared_yubnut.iff")
 ------------------------------------------------------------------------------------------------------------------------------------
-
-
