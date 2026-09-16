@@ -22,7 +22,20 @@ public:
 
 	}
 
-	void readObject(LuaObject* templateData) {
+	void readObject(IffStream* iffStream) override {
+		uint32 nextType = iffStream->getNextFormType();
+
+		// Resource spawns use a container's client ancestry but remain server
+		// scene objects rather than tangible resource containers.
+		if (nextType == 'RCCT' || nextType == 'STOT') {
+			readInheritedTemplate(iffStream, nextType);
+			return;
+		}
+
+		SharedObjectTemplate::readObject(iffStream);
+	}
+
+	void readObject(LuaObject* templateData) override {
 		SharedObjectTemplate::readObject(templateData);
 
 	}

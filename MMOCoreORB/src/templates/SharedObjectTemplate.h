@@ -97,6 +97,8 @@ protected:
 	bool updatesNavMesh;
 	bool delayedContainerLoad;
 
+	void readInheritedTemplate(IffStream* iffStream, uint32 formType);
+
 public:
 	const static int SHOT = 'SHOT';
 	const static int STOT = 'STOT';

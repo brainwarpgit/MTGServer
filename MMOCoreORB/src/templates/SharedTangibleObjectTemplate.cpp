@@ -93,7 +93,6 @@ void SharedTangibleObjectTemplate::parseFileData(IffStream* iffStream) {
 
 void SharedTangibleObjectTemplate::parseVariableData(const String& varName, LuaObject* data) {
 	lua_State* state = data->getLuaState();
-	TemplateManager* templateManager = TemplateManager::instance();
 
 	if (varName == "certificationsRequired") {
 		LuaObject certifications(state);
@@ -104,7 +103,7 @@ void SharedTangibleObjectTemplate::parseVariableData(const String& varName, LuaO
 
 		certifications.pop();
 	} else if (varName == "structureFootprintFileName") {
-		structureFootprint = templateManager->loadStructureFootprint(Lua::getStringParameter(state));
+		structureFootprint = TemplateManager::instance()->loadStructureFootprint(Lua::getStringParameter(state));
 	} else if (varName == "targetable") {
 		targetable = Lua::getByteParameter(state);
 	} else if (varName == "playerUseMask") {
@@ -246,8 +245,6 @@ void SharedTangibleObjectTemplate::parseVariableData(const String& varName, LuaO
 }
 
 void SharedTangibleObjectTemplate::parseVariableData(const String& varName, Chunk* data) {
-	TemplateManager* templateManager = TemplateManager::instance();
-
 	if (varName == "paletteColorCustomizationVariables") {
 //		paletteColorCustomizationVariables.parse(data);
 		PaletteColorCustomizationVariables pccv;
@@ -272,7 +269,7 @@ void SharedTangibleObjectTemplate::parseVariableData(const String& varName, Chun
 		StringParam structureFootprintFileName;
 
 		if (structureFootprintFileName.parse(data))
-			structureFootprint = templateManager->loadStructureFootprint(structureFootprintFileName.get());
+			structureFootprint = TemplateManager::instance()->loadStructureFootprint(structureFootprintFileName.get());
 	} else if (varName == "useStructureFootprintOutline") {
 /*		useStructureFootprintOutline.parse(data);
 		variables[varName] = &useStructureFootprintOutline;*/
@@ -290,6 +287,12 @@ void SharedTangibleObjectTemplate::parseVariableData(const String& varName, Chun
 
 void SharedTangibleObjectTemplate::readObject(IffStream* iffStream) {
 	uint32 nextType = iffStream->getNextFormType();
+
+	// Battlefield space objects can inherit a ship base without being ships.
+	if (nextType == 'SSHP') {
+		readInheritedTemplate(iffStream, nextType);
+		return;
+	}
 
 	if (nextType != 'STOT') {
 		SharedObjectTemplate::readObject(iffStream);

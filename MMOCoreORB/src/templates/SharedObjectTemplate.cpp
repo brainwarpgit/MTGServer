@@ -50,7 +50,6 @@ SharedObjectTemplate::SharedObjectTemplate() : Logger("SharedObjectTemplate") {
 }
 
 void SharedObjectTemplate::parseVariableData(const String& varName, LuaObject* templateData) {
-	TemplateManager* templateManager = TemplateManager::instance();
 	lua_State* state = templateData->getLuaState();
 
 	if (varName == "objectName") {
@@ -72,11 +71,11 @@ void SharedObjectTemplate::parseVariableData(const String& varName, LuaObject* t
 	} else if (varName == "slotDescriptorFilename") {
 		String slotDescriptorFilename = Lua::getStringParameter(state);
 
-		slotDescriptors = templateManager->getSlotDescriptor(slotDescriptorFilename);
+		slotDescriptors = TemplateManager::instance()->getSlotDescriptor(slotDescriptorFilename);
 	} else if (varName == "arrangementDescriptorFilename") {
 		String arrangementDescriptorFilename = Lua::getStringParameter(state);
 
-		arrangementDescriptors = templateManager->getArrangementDescriptor(arrangementDescriptorFilename);
+		arrangementDescriptors = TemplateManager::instance()->getArrangementDescriptor(arrangementDescriptorFilename);
 	} else if (varName == "appearanceFilename") {
 		appearanceFilename = Lua::getStringParameter(state);
 		appearanceTemplate = nullptr;
@@ -137,9 +136,9 @@ void SharedObjectTemplate::parseVariableData(const String& varName, LuaObject* t
 	} else if (varName == "templateType") {
 		templateType = Lua::getIntParameter(state);
 	} else if (varName == "planetMapCategory") {
-		planetMapCategory = templateManager->getPlanetMapCategoryByName(Lua::getStringParameter(state));
+		planetMapCategory = TemplateManager::instance()->getPlanetMapCategoryByName(Lua::getStringParameter(state));
 	} else if (varName == "planetMapSubCategory") {
-		planetMapSubCategory = templateManager->getPlanetMapSubCategoryByName(Lua::getStringParameter(state));
+		planetMapSubCategory = TemplateManager::instance()->getPlanetMapSubCategoryByName(Lua::getStringParameter(state));
 	} else if (varName == "autoRegisterWithPlanetMap") {
 		autoRegisterWithPlanetMap = (bool) Lua::getByteParameter(state);
 	} else if (varName == "childObjects") {
@@ -212,8 +211,6 @@ void SharedObjectTemplate::parseVariableData(const String& varName, LuaObject* t
 }
 
 void SharedObjectTemplate::parseVariableData(const String& varName, Chunk* data) {
-	TemplateManager* templateManager = TemplateManager::instance();
-
 	if (varName == "objectName") {
 		objectName.parse(data);
 	} else if (varName == "detailedDescription") {
@@ -231,12 +228,12 @@ void SharedObjectTemplate::parseVariableData(const String& varName, Chunk* data)
 	} else if (varName == "slotDescriptorFilename") {
 		StringParam slotDescriptorFilename;
 		if (slotDescriptorFilename.parse(data))
-			slotDescriptors = templateManager->getSlotDescriptor(slotDescriptorFilename.get());
+			slotDescriptors = TemplateManager::instance()->getSlotDescriptor(slotDescriptorFilename.get());
 	} else if (varName == "arrangementDescriptorFilename") {
 		StringParam arrangementDescriptorFilename;
 
 		if (arrangementDescriptorFilename.parse(data))
-			arrangementDescriptors = templateManager->getArrangementDescriptor(arrangementDescriptorFilename.get());
+			arrangementDescriptors = TemplateManager::instance()->getArrangementDescriptor(arrangementDescriptorFilename.get());
 	} else if (varName == "appearanceFilename") {
 		appearanceFilename.parse(data);
 	} else if (varName == "portalLayoutFilename") {
@@ -364,6 +361,28 @@ String SharedObjectTemplate::getType(int type) {
 	chars[4] = 0;
 
 	return String(chars, 4);
+}
+
+void SharedObjectTemplate::readInheritedTemplate(IffStream* iffStream, uint32 formType) {
+	iffStream->openForm(formType);
+
+	uint32 version = iffStream->getNextFormType();
+
+	if (version == 'DERV') {
+		loadDerv(iffStream);
+		version = iffStream->getNextFormType();
+	}
+
+	// This server template uses the common base data, not the specialized
+	// fields of this client template. Keep its DERV and embedded ancestry.
+	iffStream->openForm(version);
+	iffStream->closeForm(version);
+
+	while (iffStream->getRemainingSubChunksNumber() > 0) {
+		readObject(iffStream);
+	}
+
+	iffStream->closeForm(formType);
 }
 
 void SharedObjectTemplate::readObject(IffStream* iffStream) {
