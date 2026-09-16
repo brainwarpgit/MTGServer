@@ -39,111 +39,171 @@
 --gives permission to release a modified version without this exception;
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
--- Core3 Config File
--- 0 = false, 1 = true
+
+-- Core3 server configuration
+-- Existing values are preserved; newly listed settings use their source defaults.
+-- Boolean settings accept true/false or 1/0. Durations include their units below.
+-- Commented overrides preserve defaults that depend on other settings or the build.
+-- Engine properties use the separate core3engine configuration, not this table.
+-- MOTD and Revision are loaded from conf/motd.txt and conf/rev.txt.
 
 Core3 = {
-	------Server Make Options------
+
+	-- Services and network endpoints
+	-- ------------------------------
 	MakeLogin = 1,
 	MakeZone = 1,
 	MakePing = 1,
 	MakeStatus = 1,
-	MakeWeb = 0,
-
-	------ORB Server Config------
 	ORB = "",
 	ORBPort = 44419,
+	LoginPort = 44453,
+	LoginAllowedConnections = 3000,
+	PingPort = 44462,
+	PingAllowedConnections = 3000,
+	StatusPort = 44455,
+	StatusAllowedConnections = 500,
+	StatusInterval = 30, -- Seconds to cache zone status.
+	ZoneGalaxyID = 2, -- Must match the galaxy entry used by the login server.
+	ZoneServerPort = 0, -- 0 uses the port from the galaxy database/API entry.
+	ZoneAllowedConnections = 30000,
+	ZonePortsBalancer = 1, -- USE_RANDOM_EXTRA_PORTS builds: 1 = round robin; other values = random.
+	Zone = {
+		ThreadsDefault = 1, -- Worker threads per ground zone.
+		-- ThreadsCorellia = 1, -- Example: Threads + capitalized zone name; otherwise ThreadsDefault.
+	},
+	SpaceZone = {
+		ThreadsDefault = 1, -- Worker threads per space zone.
+		-- ThreadsSpaceCorellia = 1, -- Example: ThreadsSpace + capitalized planet name.
+	},
 
-	------Main Database Config------
+	-- Database connections
+	-- --------------------
 	DBHost = "127.0.0.1",
 	DBPort = 3306,
 	DBName = "swgemu",
 	DBUser = "swgemu",
 	DBPass = "123456",
 	DBInstances = 2,
-	DBSecret = "swgemus3cr37!", -- Change this! This value should be unique and of reasonable length.
-
-	------Login Server Config------
-	LoginPort = 44453,
-	LoginProcessingThreads = 1,
-	LoginAllowedConnections = 3000,
-	LoginRequiredVersion = "20050408-18:00",
-
-	------Mantis Database Config------
+	DBSecret = "swgemus3cr37!", -- Use a unique server secret; override credentials in config-local.lua.
+	-- Mantis is used by the optional in-game support-ticket integration.
 	MantisHost = "127.0.0.1",
 	MantisPort = 3306,
 	MantisName = "swgemu",
 	MantisUser = "swgemu",
 	MantisPass = "123456",
-	MantisPrfx = "mantis_", -- The prefix for your mantis tables.
+	MantisPrfx = "mantis_", -- Mantis table prefix.
 
-	------Metrics Server Config------
-	MetricsHost = "localhost",
-	MetricsPort = 8125,
-	MetricsPrefix = "",
-
-	------Ping Server Config------
-	PingPort = 44462,
-	PingAllowedConnections = 3000,
-
-	------Zone Server config------
-	ZoneProcessingThreads = 10,
-	ZoneAllowedConnections = 30000,
-	ZoneGalaxyID = 2, --The actual zone server's galaxyID. Should coordinate with your login server.
-
-	-------- GROUND ZONES -------
-	ZonesEnabled = {
-	-------- PRE-CU ZONES -------
-	"corellia",
-	"dantooine",
-	"dathomir",
-	"dungeon1",
-	"endor",
-	"lok",
-	"naboo",
-	"rori",
-	"talus",
-	"tatooine",
-	"tutorial",
-	"yavin4",
-	-------- NEW CONTENT ZONES -------
-	"chandrila",
-	"coruscant",
-	"dungeon2",
-	"hoth",
-	"kaas",
-	"kashyyyk",
-	"kashyyyk_hunting",
-	"kashyyyk_rryatt_trail",
-	"kashyyyk_main",
-	"kashyyyk_south_dungeons",
-	"kashyyyk_north_dungeons",
-	"kashyyyk_pob_dungeons",
-	"kashyyyk_dead_forest",
-	"mandalore",
-	--"moraband",
-	"mustafar",
-	"taanab",
-	-------- TEST ZONES -------
-	--"09",
-	--"10",
-	--"11",
-	--"character_farm",
-	--"cinco_city_test_m5",
-	--"creature_test",
-	--"endor_asommers",
-	--"floratest",
-	--"godclient_test",
-	--"otoh_gunga",
-	--"rivertest",
-	--"runtimerules",
-	--"simple",
-	--"taanab",
-	--"test_wearables",
-	--"umbra",
-	--"watertabletest",
+	-- Accounts, login and terms of service
+	-- ------------------------------------
+	AutoReg = 1,
+	RegistrationMessage = "Automatic registration is currently disabled. Please contact the administrators of the server in order to get an authorized account.",
+	LoginRequiredVersion = "20050408-18:00",
+	InactiveAccountTitle = "Account Disabled",
+	InactiveAccountText = "The server administrators have disabled your account.",
+	TermsOfServiceVersion = 0,
+	TermsOfService = "",
+	AccountManager = {
+		CreatedDateFirstConnect = false, -- Record account creation time on first connection.
+		HolocronTicketsEnabled = false, -- Enable in-game Mantis support tickets.
 	},
-	-------- SPACE ZONES -------
+	Login = {
+		EnableSessionId = false, -- Enable session-ID authentication.
+		SessionDuration = "00:15", -- Session lifetime in HH:MM.
+		-- External sessions API; requires an WITH_SWGREALMS_API build and URL/token.
+		API = {
+			BaseURL = "",
+			APIToken = "",
+			DryRun = false,
+			FailOpen = false,
+			WorkerThreads = 4,
+			DebugLevel = 0,
+			Timeout = 30, -- HTTP timeout in seconds.
+			MetricsInterval = 600, -- Seconds between API metric updates.
+			-- RotateLogSizeMB = 100, -- Omit to inherit Core3.RotateLogSizeMB.
+			-- StreamURL = "", -- Omit to derive the ws/wss URL from BaseURL and galaxy ID.
+		},
+	},
+
+	-- Characters and player behavior
+	-- ------------------------------
+	CharacterBuilderEnabled = "true",
+	PurgeDeletedCharacters = 10, -- Minutes between deleted-character cleanup passes.
+	CleanupMailCount = 25000, -- Maximum expired mails deleted during startup.
+	PlayerCreationManager = {
+		MaxCharactersPerGalaxy = 10,
+		EnableTutorial = false,
+	},
+	PlayerManager = {
+		ValidClientVersion = "20050408-18:00", -- Zone handshake version; separate from LoginRequiredVersion.
+		GalaxyWideGrouping = false,
+		DisableGroupVisibility = false,
+		AdvancedWaypoints = false,
+		WipeFillingOnClone = false,
+		accountVictimList = false, -- Track PvP victims per account instead of per character.
+	},
+	PlayerObject = {
+		AlwaysSafeLogout = false,
+		LinkDeadDelay = 3 * 60, -- Seconds before unsafe link-dead logout.
+	},
+	SameAccountTipsAreFree = false,
+	NameManager = {
+		FilterTable = "oldFilterWords", -- Name-filter table in the name-manager Lua data.
+	},
+
+	-- Enabled ground and space zones
+	-- ------------------------------
+	ZonesEnabled = {
+		-------- PRE-CU ZONES -------
+		"corellia",
+		"dantooine",
+		"dathomir",
+		"dungeon1",
+		"endor",
+		"lok",
+		"naboo",
+		"rori",
+		"talus",
+		"tatooine",
+		"tutorial",
+		"yavin4",
+		-------- NEW CONTENT ZONES -------
+		"chandrila",
+		"coruscant",
+		"dungeon2",
+		"hoth",
+		"kaas",
+		"kashyyyk",
+		"kashyyyk_hunting",
+		"kashyyyk_rryatt_trail",
+		"kashyyyk_main",
+		"kashyyyk_south_dungeons",
+		"kashyyyk_north_dungeons",
+		"kashyyyk_pob_dungeons",
+		"kashyyyk_dead_forest",
+		"mandalore",
+		--"moraband",
+		"mustafar",
+		"taanab",
+		-------- TEST ZONES -------
+		--"09",
+		--"10",
+		--"11",
+		--"character_farm",
+		--"cinco_city_test_m5",
+		--"creature_test",
+		--"endor_asommers",
+		--"floratest",
+		--"godclient_test",
+		--"otoh_gunga",
+		--"rivertest",
+		--"runtimerules",
+		--"simple",
+		--"taanab",
+		--"test_wearables",
+		--"umbra",
+		--"watertabletest",
+	},
 	SpaceZonesEnabled = {
 		"space_corellia",
 		"space_dantooine",
@@ -154,7 +214,7 @@ Core3 = {
 		"space_lok",
 		"space_naboo",
 		"space_tatooine",
-		"space_yavin4"
+		"space_yavin4",
 		---- TEST ZONES ----
 		--"space_09",
 		--"space_corellia_2",
@@ -164,9 +224,10 @@ Core3 = {
 		--"space_tatooine_2",
 	},
 
-	------TRE config------
+	-- Client assets and TRE archives
+	-- ------------------------------
 	TrePath = "/home/swgemu/workspace/tre",
-
+	-- Keep archive precedence/order intact when adding patches.
 	TreFiles = {
 		"mtg_patch_024.tre",
 		"mtg_patch_023.tre",
@@ -192,55 +253,203 @@ Core3 = {
 		"mtg_patch_004_appearance_04.tre",
 		"mtg_patch_003_appearance_03.tre",
 		"mtg_patch_002_appearance_02.tre",
-		"mtg_patch_001_appearance_01.tre"
+		"mtg_patch_001_appearance_01.tre",
+	},
+	TreManager = {
+		ReloadStrings = false, -- Reload requested string tables for development.
 	},
 
-	------Status Server Config------
-	StatusPort = 44455,
-	StatusAllowedConnections = 500,
-	StatusInterval = 30, -- interval to check if zone is locked up (in seconds)
+	-- World spawning, AI and navigation
+	-- ---------------------------------
+	Regions = {
+		DisableWorldSpawns = false,
+		DisableSpaceSpawns = false,
+		minimumLairSpawnInterval = 5000, -- Milliseconds between ground spawn attempts.
+		minimumSpaceSpawnInterval = 5000, -- Milliseconds between space spawn attempts.
+		spawnCheckRange = 64, -- Meters.
+		spaceSpawnCheckRange = 1024, -- Meters.
+	},
+	AiAgent = {
+		AiAgentLoadTesting = false, -- DEBUG_AI builds only: keep AI active for load testing.
+		Verbose = false, -- Verbose behavior-tree logging.
+		-- LogLevel = 2, -- Optional override; startup defaults to WARNING, later paths use -1.
+		-- ConsoleThrottle = 100, -- Default is 100, or 1 in DEBUG_AI builds; must be positive.
+		-- Per-template example: stormtrooper = { LogLevel = 5 },
+	},
+	ShipAiAgent = {
+		LogLevel = 2, -- Initial ship AI logger level.
+	},
+	MaxNavMeshJobs = 6,
+	DumpObjFiles = 1, -- Export navigation geometry OBJ files.
+	NavMeshManager = {
+		LogLevel = 4,
+	},
+	UnloadContainers = 1, -- Unload inactive container contents from RAM.
 
-	------Web Server Config------
-	WebPorts = 44460, -- Can be multiple ports 44460,44461
-	WebAccessLog = "../log/webaccess.log",
-	WebErrorLog = "../log/weberror.log",
-	WebSessionTimeout = 600, -- Length that inactive web sessions expire
+	-- Combat, faction warfare and space features
+	-- ------------------------------------------
+	PvpMode = false,
+	CombatManager = {
+		AllowSameAccountLinkDeadBeneficialActions = true,
+	},
+	GCWManager = {
+		useCovertOvertSystem = false,
+	},
+	ChatManager = {
+		PvpBroadcastChannel = false,
+	},
+	JTL = {
+		JTLEnabled = false, -- Enable JTL features exposed to screenplays.
+	},
+	FrsManager = {
+		ImmediateMaintXpDeduction = false,
+	},
 
-	------Logging Config------
+	-- Missions and bounties
+	-- ---------------------
+	MissionManager = {
+		IncludeFactionPets = true, -- Include faction pets in mission difficulty.
+		ListRequestCooldown = 1400, -- Milliseconds between mission-list requests.
+		AnonymousBountyTerminals = false,
+		MaxBountiesPerJedi = 5,
+		PrivateStructureJediMissions = true,
+		BountyExpirationTime = 172800000, -- Milliseconds; 48 hours.
+		PlayerBountyCooldownTime = 86400000, -- Milliseconds; 24 hours.
+		-- PlayerBountyCooldown = true, -- Omit to retain existing caller-specific true/false defaults.
+	},
+
+	-- Structures, maintenance and travel
+	-- ----------------------------------
+	StructureManager = {
+		EnhancedFurnitureRotate = false,
+		-- Optional per-client-structure navmesh flags, keyed by exact objectName.getFullPath():
+		-- CreateNavMesh = { ["<exact objectName.getFullPath()>"] = false },
+	},
+	StructureMaintenanceTask = {
+		AllowBankPayments = true,
+	},
+	StructureObject = {
+		MaintenanceBootDelay = 600, -- Seconds, plus a random delay of up to one hour.
+	},
+	Tweaks = {
+		StructureObject = {
+			DestroyOrphans = false, -- Remove orphaned civic structures.
+		},
+	},
+	ShuttleZoneComponent = {
+		BootDelay = 5 * 60 * 1000, -- Milliseconds before initial shuttle scheduling.
+	},
+	-- DEBUG_TRAVEL builds only: uncomment to override per-planet Lua travel timings.
+	-- PlanetManager = {
+		-- ShuttleportAwayTime = 300, -- Seconds; sample fallback value.
+		-- ShuttleportLandedTime = 120, -- Seconds; sample fallback value.
+		-- ShuttleportLandingTime = 11, -- Seconds; sample fallback value.
+		-- StarportAwayTime = 60, -- Seconds; sample fallback value.
+		-- StarportLandedTime = 120, -- Seconds; sample fallback value.
+		-- StarportLandingTime = 14, -- Seconds; sample fallback value.
+	-- },
+
+	-- Items, loot and auctions
+	-- ------------------------
+	TangibleObject = {
+		NoTradeMessage = "", -- Text appended to the item condition attribute.
+		ForceNoTradeMessage = "", -- Text appended to the item condition attribute.
+		ForceNoTradeADKMessage = "", -- Text appended to the item condition attribute.
+	},
+	LootManager = {
+		DebugAttributes = false,
+	},
+	MaxAuctionSearchJobs = 1,
+	AuctionManager = {
+		LogLevel = -1,
+		-- RotateLogSizeMB = 100, -- Omit to inherit Core3.RotateLogSizeMB.
+		Startup = {
+			ExpireInvalid = false,
+		},
+	},
+	AuctionItem = {
+		ExportOnDestroy = false,
+	},
+
+	-- Logging and metrics
+	-- -------------------
+	-- Logger levels: -1 NONE, 0 FATAL, 1 ERROR, 2 WARNING, 3 LOG, 4 INFO, 5 DEBUG.
 	LogFile = "log/core3.log",
-	LogFileLevel = 4, -- -1 NONE, 0 FATAL, 1 ERROR, 2 WARNING, 3 LOG, 4 INFO, 5 DEBUG
-	LogJSON = 0, -- global log output in JSON format
-	LogSync = 0, -- flush global log file after each write
+	LogFileLevel = 4,
+	LogJSON = 0,
+	LogSync = 0,
 	LuaLogJSON = 0,
 	PathfinderLogJSON = 0,
-	PlayerLogLevel = 4, -- -1 NONE, 0 FATAL, 1 ERROR, 2 WARNING, 3 LOG, 4 INFO, 5 DEBUG
-	MaxLogLines = 1000000, -- how often to rotate log (currently only log/player.log rotates)
-
-	------REST Server Config------
-	RESTServerPort = 0,
-
-	------Account Config------
-	InactiveAccountTitle = "Account Disabled",
-	InactiveAccountText = "The server administrators have disabled your account.",
-
-	------Character Config------
-	CleanupMailCount = 25000,
-	DeleteCharacters = 10, -- How often in minutes to purge deleted characters
-
-	------Extra Config ------
-	MaxNavMeshJobs = 6,
-	MaxAuctionSearchJobs = 1,
-	DumpObjFiles = 1,
+	PlayerLogLevel = 4,
+	RotateLogSizeMB = 100, -- Default rotation size for loggers that use size-based rotation.
+	RotateLogAtStart = false,
+	MaxLogLines = 1000000, -- Lines before rotating player.log.
 	ProgressMonitors = "true",
-	UnloadContainers = 1, -- Whether to unload container contents from RAM after the container hasn't been accessed for a time
+	SessionStatsSeconds = 1800, -- Seconds between periodic statistics writes; clamped to 300-3600 outside WITH_DEV_MODE.
+	OnlineLogSeconds = 300, -- Seconds between online-player log updates.
+	OnlineLogSize = 100000000, -- Bytes before rotating the online-player log.
+	LogOnlineCount = 3, -- Accounts sharing one IP before detailed logging starts.
+	LogOnlineOnSessionChange = true,
+	ZoneServer = {
+		ClientLogLevel = -1, -- Per-client logging; supports account-specific overrides below.
+	},
+	UseMetrics = false,
+	MetricsHost = "localhost",
+	MetricsPort = 8125,
+	MetricsPrefix = "",
 
-	------Server Config------
-	CharacterBuilderEnabled = "true",
-	AutoReg = 1,
+	-- Lua screenplays and command diagnostics
+	-- ---------------------------------------
+	DirectorManager = {
+		SlowLoadMs = 1000, -- Milliseconds before reporting a slow screenplay load.
+	},
+	LuaEngine = {
+		LogLevel = 1,
+		LuaEventLogLevel = 4,
+	},
+	CommandConfigManager = {
+		DumpAdminCommands = false,
+	},
+	-- Optional per-command cooldown overrides, in milliseconds; omitted commands use their own defaults.
+	-- CommandCooldown = { attack = 1000 },
 
-	------TOS Config------
-	TermsOfServiceVersion = 0,
-	TermsOfService = "",
+	-- REST API and object exports
+	-- ---------------------------
+	RESTServerPort = 0, -- 0 disables the REST server; requires an WITH_REST_API build.
+	RESTServer = {
+		APIToken = "",
+		SSLKeyFile = "",
+		SSLCertFile = "",
+		WorkerThreads = 4,
+		LogLevel = 4,
+		-- RotateLogSizeMB = 100, -- Omit to inherit Core3.RotateLogSizeMB.
+		exportDir = "log/exports/api/%Y-%m-%d/%H/", -- strftime-style export directory.
+	},
+	SceneObject = {
+		exportDir = "log/exports/%Y-%m-%d/%H/", -- strftime-style export directory.
+	},
+
+	-- Transaction logging
+	-- -------------------
+	TransactionLog = {
+		Enabled = false,
+		AsyncExport = false,
+		Verbose = false,
+		WorkerThreads = 4,
+		LogLevel = 5,
+		PruneCreatureObjects = true,
+		PruneCraftedComponents = true,
+		CheckPlayerDebug = true,
+		-- RotateLogSizeMB = 100, -- Omit to inherit Core3.RotateLogSizeMB.
+	},
+
+	-- Account-specific overrides
+	-- --------------------------
+	-- Account IDs must be strings. The full Core3 key is required inside each account table.
+	-- AccountFlags = {
+	-- 	["12345"] = { ["Core3.ZoneServer.ClientLogLevel"] = 5 },
+	-- },
 }
 
--- NOTE: conf/config-local.lua is parsed after this file if it exists
+-- conf/config-local.lua is loaded afterward. Use individual Core3.Key assignments
+-- there to override these defaults without replacing the entire Core3 table.

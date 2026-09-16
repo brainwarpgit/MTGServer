@@ -6900,7 +6900,9 @@ void PlayerManagerImplementation::doPvpDeathRatingUpdate(CreatureObject* player,
 	int frsXpAdjustment = 0;
 	bool throttleOnly = true;
 
-	bool accountVictimList = ConfigManager::instance()->getBool("PlayerManager.accountVictimList", false);
+	// Lua configuration uses Core3-prefixed keys; retain the legacy runtime key as a fallback.
+	bool accountVictimList = ConfigManager::instance()->getBool("Core3.PlayerManager.accountVictimList",
+		ConfigManager::instance()->getBool("PlayerManager.accountVictimList", false));
 
 	for (int i = 0; i < threatMap->size(); ++i) {
 		ThreatMapEntry* entry = &threatMap->elementAt(i).getValue();

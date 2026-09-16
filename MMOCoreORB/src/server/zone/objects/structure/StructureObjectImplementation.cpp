@@ -225,7 +225,7 @@ void StructureObjectImplementation::notifyInsertToZone(Zone* zone) {
 }
 
 void StructureObjectImplementation::destroyOrphanCivicStructure() {
-	if (!ConfigManager::instance()->getBool("Core3.Tweaks.StructureObject.DestoryOrphans", false)) {
+	if (!ConfigManager::instance()->getBool("Core3.Tweaks.StructureObject.DestroyOrphans", false)) {
 		return;
 	}
 
