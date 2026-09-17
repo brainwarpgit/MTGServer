@@ -308,6 +308,10 @@ class Zone extends SceneObject {
 		return zoneCleared;
 	}
 
+	@local
+	@read
+	public native int getZoneObjectCount();
+
 	@read
 	public int getSpawnedAiAgents() {
 		return spawnedAiAgents.get();

@@ -72,6 +72,12 @@ void ZoneImplementation::clearZone() {
 
 }
 
+int ZoneImplementation::getZoneObjectCount() const {
+	ReadLocker locker(_this.getReferenceUnsafeStaticCast());
+
+	return objectMap != nullptr ? objectMap->getMap()->size() : 0;
+}
+
 /*
 
 	Object Management in Zone

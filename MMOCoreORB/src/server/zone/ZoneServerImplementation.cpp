@@ -50,6 +50,10 @@
 #include "ZoneLoadManagersTask.h"
 #include "ShutdownTask.h"
 
+#include <algorithm>
+#include <utility>
+#include <vector>
+
 ZoneServerImplementation::ZoneServerImplementation(ConfigManager* config) :
 		ManagedServiceImplementation(), Logger("ZoneServer") {
 
@@ -534,9 +538,25 @@ void ZoneServerImplementation::stopManagers() {
 
 void ZoneServerImplementation::clearZones() {
 	info("clearing all zones..", true);
-	// Clear Ground Zones
+
+	// Snapshot counts before any zone in this batch starts clearing. Larger zones
+	// go first; stable sorting preserves the existing order for equally busy zones.
+	using GroundZoneClearEntry = std::pair<int, ManagedReference<GroundZone*>>;
+	std::vector<GroundZoneClearEntry> groundClearOrder;
+	groundClearOrder.reserve(zones->size());
+
 	for (int i = 0; i < zones->size(); ++i) {
 		ManagedReference<GroundZone*> zone = zones->get(i);
+		groundClearOrder.emplace_back(zone != nullptr ? zone->getZoneObjectCount() : 0, zone);
+	}
+
+	std::stable_sort(groundClearOrder.begin(), groundClearOrder.end(), [](const GroundZoneClearEntry& left, const GroundZoneClearEntry& right) {
+		return left.first > right.first;
+	});
+
+	// Clear Ground Zones
+	for (const auto& entry : groundClearOrder) {
+		ManagedReference<GroundZone*> zone = entry.second;
 
 		if (zone != nullptr) {
 			Core::getTaskManager()->executeTask([=] () {
@@ -557,9 +577,22 @@ void ZoneServerImplementation::clearZones() {
 
 	info("Ground zones cleared...", true);
 
-	//Clear Space Zones
+	using SpaceZoneClearEntry = std::pair<int, ManagedReference<SpaceZone*>>;
+	std::vector<SpaceZoneClearEntry> spaceClearOrder;
+	spaceClearOrder.reserve(spaceZones->size());
+
 	for (int i = 0; i < spaceZones->size(); ++i) {
 		ManagedReference<SpaceZone*> szone = spaceZones->get(i);
+		spaceClearOrder.emplace_back(szone != nullptr ? szone->getZoneObjectCount() : 0, szone);
+	}
+
+	std::stable_sort(spaceClearOrder.begin(), spaceClearOrder.end(), [](const SpaceZoneClearEntry& left, const SpaceZoneClearEntry& right) {
+		return left.first > right.first;
+	});
+
+	// Clear Space Zones
+	for (const auto& entry : spaceClearOrder) {
+		ManagedReference<SpaceZone*> szone = entry.second;
 
 		if (szone != nullptr) {
 			Core::getTaskManager()->executeTask([=] () {

@@ -13,6 +13,7 @@
 #include "server/zone/GroundZone.h"
 #include "server/zone/ZoneProcessServer.h"
 #include "server/zone/objects/scene/SceneObject.h"
+#include "server/zone/objects/scene/DatabaseZoneInsertion.h"
 #include "server/zone/objects/area/ActiveArea.h"
 #include "conf/ConfigManager.h"
 #include "server/zone/managers/player/PlayerManager.h"
@@ -206,11 +207,15 @@ TEST_F(ZoneTest, ActiveAreaTest) {
 }
 
 TEST_F(ZoneTest, InRangeTest) {
+	ASSERT_EQ(groundZone->getZoneObjectCount(), 0);
+
 	Reference<SceneObject*> scene = createSceneObject();
 
 	Locker slocker(scene);
 
 	groundZone->transferObject(scene, -1);
+
+	ASSERT_EQ(groundZone->getZoneObjectCount(), 1);
 
 	ASSERT_TRUE(scene->getZone() != nullptr);
 
@@ -244,6 +249,8 @@ TEST_F(ZoneTest, InRangeTest) {
 
 	groundZone->transferObject(scene2, -1);
 
+	ASSERT_EQ(groundZone->getZoneObjectCount(), 2);
+
 	objects.removeAll();
 
 	groundZone->getInRangeObjects(1000, 0, 1000, 128, &objects, true);
@@ -252,15 +259,125 @@ TEST_F(ZoneTest, InRangeTest) {
 
 	scene2->destroyObjectFromWorld(false);
 
+	ASSERT_EQ(groundZone->getZoneObjectCount(), 1);
+
 	s2locker.release();
 
 	Locker s3locker(scene);
 
 	scene->destroyObjectFromWorld(false);
 
+	ASSERT_EQ(groundZone->getZoneObjectCount(), 0);
+
 	objects.removeAll();
 
 	groundZone->getInRangeObjects(1000, 0, 1000, 128, &objects, true);
 
 	ASSERT_EQ(objects.size(), 0);
+}
+
+TEST_F(ZoneTest, DatabaseInsertionRestoresUnchangedSavedZone) {
+	auto scene = createSceneObject();
+	scene->setZone(groundZone);
+
+	EXPECT_TRUE(DatabaseZoneInsertion::insertIfUnchanged(scene, groundZone));
+	EXPECT_TRUE(scene->isInQuadTree());
+	EXPECT_EQ(1, groundZone->getZoneObjectCount());
+
+	Locker locker(scene);
+	scene->destroyObjectFromWorld(false);
+}
+
+TEST_F(ZoneTest, DatabaseInsertionDoesNotRespawnStoredObject) {
+	auto scene = createSceneObject();
+	scene->setZone(groundZone);
+
+	// Model the world removal performed by vehicle storage after its database
+	// load queued an insertion. Use the real removal path to clear the zone.
+	{
+		Locker locker(scene);
+		scene->destroyObjectFromWorld(false);
+	}
+
+	EXPECT_TRUE(scene->getLocalZone() == nullptr);
+	EXPECT_FALSE(DatabaseZoneInsertion::insertIfUnchanged(scene, groundZone));
+	EXPECT_FALSE(scene->isInQuadTree());
+	EXPECT_EQ(0, groundZone->getZoneObjectCount());
+
+	// Cancelling the stale request must not prevent a later normal call.
+	{
+		Locker locker(scene);
+		EXPECT_TRUE(groundZone->transferObject(scene, -1, false));
+		EXPECT_TRUE(scene->isInQuadTree());
+		scene->destroyObjectFromWorld(false);
+	}
+}
+
+TEST_F(ZoneTest, DatabaseInsertionDoesNotRemoveObjectFromNewContainer) {
+	auto scene = createSceneObject();
+	auto container = createSceneObject();
+	container->setContainerVolumeLimit(1);
+	scene->setZone(groundZone);
+
+	{
+		Locker locker(scene);
+		EXPECT_TRUE(container->transferObject(scene, -1, false));
+	}
+
+	EXPECT_FALSE(DatabaseZoneInsertion::insertIfUnchanged(scene, groundZone));
+	EXPECT_TRUE(scene->getParent().get().get() == container.get());
+	EXPECT_EQ(0, groundZone->getZoneObjectCount());
+
+	Locker locker(scene);
+	container->removeObject(scene, nullptr, false);
+}
+
+TEST_F(ZoneTest, DatabaseInsertionDoesNotInsertTwice) {
+	auto scene = createSceneObject();
+	scene->setZone(groundZone);
+
+	EXPECT_TRUE(DatabaseZoneInsertion::insertIfUnchanged(scene, groundZone));
+	EXPECT_FALSE(DatabaseZoneInsertion::insertIfUnchanged(scene, groundZone));
+	EXPECT_EQ(1, groundZone->getZoneObjectCount());
+
+	Locker locker(scene);
+	scene->destroyObjectFromWorld(false);
+}
+
+TEST_F(ZoneTest, DatabaseInsertionDoesNotMoveObjectBackToSavedZone) {
+	Reference<GroundZone*> otherZone = new GroundZone(processServer, "test_other_zone");
+	otherZone->createContainerComponent();
+	otherZone->_setObjectID(nextObjectId.increment());
+	auto scene = createSceneObject();
+	scene->setZone(groundZone);
+
+	{
+		Locker locker(scene);
+		EXPECT_TRUE(otherZone->transferObject(scene, -1, false));
+	}
+
+	EXPECT_FALSE(DatabaseZoneInsertion::insertIfUnchanged(scene, groundZone));
+	EXPECT_TRUE(scene->getLocalZone() == otherZone);
+	EXPECT_EQ(0, groundZone->getZoneObjectCount());
+	EXPECT_EQ(1, otherZone->getZoneObjectCount());
+
+	Locker locker(scene);
+	scene->destroyObjectFromWorld(false);
+}
+
+TEST_F(ZoneTest, DatabaseInsertionPreservesActiveAreaInsertion) {
+	auto area = createActiveArea();
+	area->setRadius(128);
+	area->setZone(groundZone);
+
+	EXPECT_TRUE(DatabaseZoneInsertion::insertIfUnchanged(area, groundZone));
+	EXPECT_EQ(1, groundZone->getZoneObjectCount());
+
+	SortedVector<ManagedReference<ActiveArea*>> areas;
+	groundZone->getInRangeActiveAreas(0, 0, 0, &areas, true);
+	EXPECT_EQ(1, areas.size());
+	EXPECT_TRUE(areas.contains(area.get()));
+
+	Locker locker(area);
+	area->destroyObjectFromWorld(false);
 }

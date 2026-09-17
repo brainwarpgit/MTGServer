@@ -987,9 +987,10 @@ class PlayerObject extends IntangibleObject {
 	}
 
 	/**
-	 * Unloads all the spawned objects from the datapad control devices
+	 * Unloads all the spawned objects from the datapad control devices.
+	 * Login may reconcile vehicles synchronously before queuing other children.
 	 */
-	public native void unloadSpawnedChildren(boolean skipShips = false);
+	public native void unloadSpawnedChildren(boolean skipShips = false, boolean recoverVehicles = false);
 
 	public void addToConsentList(final string name) {
 		consentList.put(name);

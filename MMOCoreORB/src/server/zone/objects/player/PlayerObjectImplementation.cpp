@@ -49,6 +49,7 @@
 #include "server/zone/objects/group/GroupObject.h"
 #include "server/zone/objects/guild/GuildObject.h"
 #include "server/zone/objects/intangible/ControlDevice.h"
+#include "server/zone/objects/intangible/VehicleControlDevice.h"
 #include "server/zone/objects/intangible/ShipControlDevice.h"
 #include "server/zone/objects/structure/events/StructureSetOwnerTask.h"
 #include "server/zone/packets/player/BadgesResponseMessage.h"
@@ -252,7 +253,7 @@ void PlayerObjectImplementation::notifyLoadFromDatabase() {
 	clientLastMovementStamp = 0;
 }
 
-void PlayerObjectImplementation::unloadSpawnedChildren(bool skipShips) {
+void PlayerObjectImplementation::unloadSpawnedChildren(bool skipShips, bool recoverVehicles) {
 	ManagedReference<CreatureObject*> player = dynamic_cast<CreatureObject*>(parent.get().get());
 
 	if (player == nullptr) {
@@ -279,6 +280,17 @@ void PlayerObjectImplementation::unloadSpawnedChildren(bool skipShips) {
 		ControlDevice* device = cast<ControlDevice*>(object.get());
 
 		if (device == nullptr) {
+			continue;
+		}
+
+		if (recoverVehicles && device->isVehicleControlDevice()) {
+			// Finish login recovery while the player is locked. A queued recovery
+			// could otherwise run after the player calls or trades the vehicle.
+			Locker deviceLocker(device, player);
+			cast<VehicleControlDevice*>(device)->recoverObject(player);
+
+			// Rejected recovery must not fall through to forced storage, which
+			// skips ownership checks and can delete an exhausted rental.
 			continue;
 		}
 

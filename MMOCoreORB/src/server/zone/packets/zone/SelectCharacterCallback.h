@@ -280,7 +280,7 @@ public:
 
 				player->sendToOwner(true);
 			}
-		// Player is LD on a vehicle. Vehicle is auto stored when player reconnects.
+		// Player is LD on a vehicle. Preserve the occupied vehicle during reconnect.
 		} else if (!unloadedInParent && !currentParentNull && currentParent->isVehicleObject()) {
 #ifdef DEBUG_SELECT_CHAR_CALLBACK
 			player->info(true) << "SelectCharacterCallback -- Player is in vehicle still LD, transferring vehicle into zone.";
@@ -407,8 +407,8 @@ public:
 
 		SkillModManager::instance()->verifyWearableSkillMods(player);
 
-		// Store all of the players spawned children: Pets & vehicles, except ships (bool)
-		ghost->unloadSpawnedChildren(true);
+		// Reconcile vehicles during login, then queue storage of other children except ships.
+		ghost->unloadSpawnedChildren(true, true);
 	}
 
 	void run() {

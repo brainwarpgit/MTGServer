@@ -13,6 +13,7 @@
 #include "server/zone/SpaceZone.h"
 #include "server/zone/ZoneProcessServer.h"
 #include "server/zone/objects/scene/SceneObject.h"
+#include "server/zone/objects/scene/DatabaseZoneInsertion.h"
 #include "server/zone/objects/area/space/SpaceActiveArea.h"
 #include "conf/ConfigManager.h"
 #include "server/zone/managers/player/PlayerManager.h"
@@ -186,11 +187,15 @@ TEST_F(SpaceZoneTest, SpaceActiveAreaTest) {
 }
 
 TEST_F(SpaceZoneTest, InRangeTest) {
+	ASSERT_EQ(spaceZone->getZoneObjectCount(), 0);
+
 	Reference<SceneObject*> scene = createSceneObject();
 
 	Locker slocker(scene);
 
 	spaceZone->transferObject(scene, -1);
+
+	ASSERT_EQ(spaceZone->getZoneObjectCount(), 1);
 
 	ASSERT_TRUE(scene->getZone() != nullptr);
 
@@ -226,6 +231,8 @@ TEST_F(SpaceZoneTest, InRangeTest) {
 
 	spaceZone->transferObject(scene2, -1);
 
+	ASSERT_EQ(spaceZone->getZoneObjectCount(), 2);
+
 	objects.removeAll();
 
 	spaceZone->getInRangeObjects(1000, 1000, 1000, 128, &objects, true);
@@ -234,15 +241,47 @@ TEST_F(SpaceZoneTest, InRangeTest) {
 
 	scene2->destroyObjectFromWorld(false);
 
+	ASSERT_EQ(spaceZone->getZoneObjectCount(), 1);
+
 	s2locker.release();
 
 	Locker s3locker(scene);
 
 	scene->destroyObjectFromWorld(false);
 
+	ASSERT_EQ(spaceZone->getZoneObjectCount(), 0);
+
 	objects.removeAll();
 
 	spaceZone->getInRangeObjects(1000, 1000, 1000, 128, &objects, true);
 
 	ASSERT_EQ(objects.size(), 0);
+}
+
+TEST_F(SpaceZoneTest, DatabaseInsertionRestoresSavedSpaceZoneOnlyOnce) {
+	auto scene = createSceneObject();
+	scene->setZone(spaceZone);
+
+	EXPECT_TRUE(DatabaseZoneInsertion::insertIfUnchanged(scene, spaceZone));
+	EXPECT_TRUE(scene->isInOctree());
+	EXPECT_FALSE(DatabaseZoneInsertion::insertIfUnchanged(scene, spaceZone));
+	EXPECT_EQ(1, spaceZone->getZoneObjectCount());
+
+	Locker locker(scene);
+	scene->destroyObjectFromWorld(false);
+}
+
+TEST_F(SpaceZoneTest, DatabaseInsertionDoesNotRespawnStoredSpaceObject) {
+	auto scene = createSceneObject();
+	scene->setZone(spaceZone);
+
+	{
+		Locker locker(scene);
+		scene->destroyObjectFromWorld(false);
+	}
+
+	EXPECT_TRUE(scene->getLocalZone() == nullptr);
+	EXPECT_FALSE(DatabaseZoneInsertion::insertIfUnchanged(scene, spaceZone));
+	EXPECT_FALSE(scene->isInOctree());
+	EXPECT_EQ(0, spaceZone->getZoneObjectCount());
 }

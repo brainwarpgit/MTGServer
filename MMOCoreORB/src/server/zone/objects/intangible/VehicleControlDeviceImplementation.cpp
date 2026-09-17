@@ -243,6 +243,134 @@ void VehicleControlDeviceImplementation::storeObject(CreatureObject* player, boo
 	}
 }
 
+bool VehicleControlDeviceImplementation::recoverObject(CreatureObject* player) {
+	ManagedReference<TangibleObject*> controlled = controlledObject.get();
+	auto self = _this.getReferenceUnsafeStaticCast();
+
+	auto reject = [&](const char* reason) {
+		warning() << "Skipping vehicle recovery: " << reason
+			<< " (player=" << (player != nullptr ? player->getObjectID() : 0)
+			<< ", device=" << getObjectID()
+			<< ", vehicle=" << (controlled != nullptr ? controlled->getObjectID() : 0) << ")";
+		return false;
+	};
+
+	if (player == nullptr || controlled == nullptr || !controlled->isVehicleObject()) {
+		return reject("missing player or valid vehicle");
+	}
+
+	ManagedReference<SceneObject*> datapad = player->getSlottedObject("datapad");
+	ManagedReference<VehicleObject*> vehicle = cast<VehicleObject*>(controlled.get());
+	Locker vehicleLocker(vehicle, player);
+
+	// The datapad's forward reference is authoritative only when all surviving
+	// ownership links agree. Never assign a vehicle claimed by another device.
+	auto validate = [&]() -> const char* {
+		if (datapad == nullptr || player->getSlottedObject("datapad") != datapad ||
+			datapad->getParent().get() != player || getParent().get() != datapad ||
+			!datapad->hasObjectInContainer(getObjectID())) {
+			return "device is not in the player's datapad";
+		}
+
+		if (controlledObject.get() != controlled) {
+			return "controlled vehicle changed";
+		}
+
+		auto linkedDevice = vehicle->getControlDevice().get();
+		auto linkedOwner = vehicle->getLinkedCreature().get();
+
+		if (linkedDevice != nullptr && linkedDevice != self) {
+			return "vehicle references another control device";
+		}
+
+		if (linkedOwner != nullptr && linkedOwner != player) {
+			return "vehicle references another owner";
+		}
+
+		for (int i = 0; i < datapad->getContainerObjectsSize(); ++i) {
+			auto other = datapad->getContainerObject(i);
+
+			if (other == nullptr || other == self || !other->isControlDevice()) {
+				continue;
+			}
+
+			auto otherDevice = cast<ControlDevice*>(other.get());
+
+			if (otherDevice->getControlledObject() == vehicle) {
+				return "multiple datapad devices reference the vehicle";
+			}
+		}
+
+		if (vehicle->getParent() != nullptr) {
+			return "vehicle has a parent";
+		}
+
+		// Do not dismount here: jetpack dismount calls normal storage, which can
+		// delete rentals. Occupied or otherwise contained objects need review.
+		if (vehicle->getContainerObjectsSize() != 0 || player->getParent().get() == vehicle) {
+			return "vehicle is occupied or contains objects";
+		}
+
+		// Vehicle templates create a default unarmed weapon in this slot. It
+		// belongs to the vehicle and must survive recovery along with it.
+		auto defaultWeapon = vehicle->getSlottedObject("default_weapon");
+
+		for (int i = 0; i < vehicle->getSlottedObjectsSize(); ++i) {
+			auto child = vehicle->getSlottedObject(i);
+
+			if (child == nullptr || child != defaultWeapon || !child->isWeaponObject() ||
+				child->getParent().get() != vehicle) {
+				return "vehicle has an occupant or unexpected slotted object";
+			}
+		}
+
+		return nullptr;
+	};
+
+	if (auto reason = validate()) {
+		return reject(reason);
+	}
+
+	bool changed = vehicle->getLocalZone() != nullptr || getStatus() != 0 ||
+		vehicle->getLinkedCreature() != nullptr || vehicle->getControlDevice() == nullptr ||
+		vehicle->hasState(CreatureState::MOUNTEDCREATURE);
+
+	Reference<Task*> decayTask = vehicle->getPendingTask("decay");
+
+	if (decayTask != nullptr) {
+		decayTask->cancel();
+		vehicle->removePendingTask("decay");
+	}
+
+	// Removing the existing object preserves its identity, damage, paint, and
+	// rental uses. In particular, do not call spawnObject() or storeObject().
+	if (vehicle->getLocalZone() != nullptr) {
+		vehicle->destroyObjectFromWorld(true);
+	}
+
+	// World removal invokes observers. Check the relationships again before
+	// repairing them or reporting a successfully stored vehicle.
+	if (auto reason = validate()) {
+		return reject(reason);
+	}
+
+	if (vehicle->getLocalZone() != nullptr || vehicle->isInQuadTree() || vehicle->isInOctree()) {
+		return reject("vehicle could not be removed from the world");
+	}
+
+	vehicle->setControlDevice(self);
+	vehicle->setCreatureLink(nullptr);
+	vehicle->clearState(CreatureState::MOUNTEDCREATURE, false);
+	updateStatus(0);
+
+	if (changed) {
+		info(false) << "Recovered vehicle to stored state (player=" << player->getObjectID()
+			<< ", device=" << getObjectID() << ", vehicle=" << vehicle->getObjectID() << ")";
+	}
+
+	return true;
+}
+
 void VehicleControlDeviceImplementation::destroyObjectFromDatabase(bool destroyContainedObjects) {
 	ManagedReference<TangibleObject*> controlledObject = this->controlledObject.get();
 

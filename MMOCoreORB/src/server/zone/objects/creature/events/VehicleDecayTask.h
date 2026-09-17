@@ -24,12 +24,17 @@ public:
 		if (vehicle == nullptr)
 			return;
 
+		Locker locker(vehicle);
+
+		// A task already dequeued when the vehicle was stored can still run
+		// after cancellation. Stored vehicles must not decay or restart decay.
+		if (vehicle->getLocalZone() == nullptr)
+			return;
+
 		Reference<VehicleObjectTemplate*> vehicleTemplate = cast<VehicleObjectTemplate*>(vehicle->getObjectTemplate());
 
 		if (vehicleTemplate == nullptr)
 			return;
-
-		Locker locker(vehicle);
 
 		vehicle->removePendingTask("decay");
 

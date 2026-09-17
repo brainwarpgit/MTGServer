@@ -26,6 +26,14 @@ class VehicleControlDevice extends ControlDevice {
 	@arg1preLocked
 	public native void storeObject(CreatureObject player, boolean force = false);
 
+	/**
+	 * Reconciles a verified, unoccupied vehicle during character login without
+	 * invoking normal storage's rental expiration or spawning a replacement.
+	 */
+	@preLocked
+	@arg1preLocked
+	public native boolean recoverObject(CreatureObject player);
+
 	@preLocked
 	@arg1preLocked
 	public native void generateObject(CreatureObject player);

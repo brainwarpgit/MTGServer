@@ -3,6 +3,7 @@
 		See file COPYING for copying conditions. */
 
 #include "server/zone/objects/scene/SceneObject.h"
+#include "server/zone/objects/scene/DatabaseZoneInsertion.h"
 
 #include "server/zone/packets/scene/SceneObjectCreateMessage.h"
 #include "server/zone/packets/scene/SceneObjectDestroyMessage.h"
@@ -482,9 +483,7 @@ void SceneObjectImplementation::notifyLoadFromDatabase() {
 					return;
 				}
 
-				Locker locker(obj);
-
-				zone->transferObject(obj, -1, true);
+				DatabaseZoneInsertion::insertIfUnchanged(obj, zone);
 			}
 		};
 

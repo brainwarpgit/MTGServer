@@ -89,6 +89,8 @@ void SpaceZoneImplementation::stopManagers() {
 void SpaceZoneImplementation::clearZone() {
 	Locker zonelocker(_this.getReferenceUnsafeStaticCast());
 
+	Time clearStart;
+
 	info("clearing space zone", true);
 
 	HashTable<uint64, ManagedReference<SceneObject*> > tbl;
@@ -97,6 +99,8 @@ void SpaceZoneImplementation::clearZone() {
 	zonelocker.release();
 
 	auto iterator = tbl.iterator();
+	auto totalObjects = tbl.size();
+	int countDestroyed = 0;
 
 	while (iterator.hasNext()) {
 		ManagedReference<SceneObject*> sceno = iterator.getNextValue();
@@ -104,6 +108,7 @@ void SpaceZoneImplementation::clearZone() {
 		if (sceno != nullptr) {
 			Locker locker(sceno);
 			sceno->destroyObjectFromWorld(false);
+			countDestroyed++;
 		}
 	}
 
@@ -111,7 +116,8 @@ void SpaceZoneImplementation::clearZone() {
 
 	zoneCleared = true;
 
-	info("space zone clear", true);
+	info(true) << "space zone clear: processed " << countDestroyed << " of " << totalObjects
+		<< " object(s) in " << clearStart.miliDifference() << " ms";
 }
 
 /*

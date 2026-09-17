@@ -106,6 +106,8 @@ void GroundZoneImplementation::stopManagers() {
 void GroundZoneImplementation::clearZone() {
 	Locker zonelocker(_this.getReferenceUnsafeStaticCast());
 
+	Time clearStart;
+
 	info(true) << "clearing zone";
 
 	creatureManager->unloadSpawnAreas();
@@ -142,7 +144,8 @@ void GroundZoneImplementation::clearZone() {
 
 	zoneCleared = true;
 
-	info("zone clear", true);
+	info(true) << "zone clear: processed " << countDestroyed << " of " << totalObjects
+		<< " object(s) in " << clearStart.miliDifference() << " ms";
 }
 
 /*

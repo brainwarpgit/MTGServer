@@ -495,5 +495,32 @@ void GroundZoneComponent::removeAllObjectsFromCOV(CloseObjectsVector *closeobjec
 		}
 
 		closeSceneObjects.removeAll();
+
+		if (vectorOwner != sceneObject) {
+			// A borrowed parent list must stay populated. Retry only if a fresh
+			// snapshot still has references to the departing object, including
+			// references or neighbors added by removal callbacks.
+			closeobjects->safeCopyTo(closeSceneObjects);
+			bool hasRemainingReferences = false;
+
+			for (const auto& obj : closeSceneObjects) {
+				if (obj == nullptr || obj == sceneObject) {
+					continue;
+				}
+
+				auto* neighborCloseObjects = obj->getCloseObjects();
+
+				if (neighborCloseObjects != nullptr && neighborCloseObjects->contains(sceneObject)) {
+					hasRemainingReferences = true;
+					break;
+				}
+			}
+
+			closeSceneObjects.removeAll();
+
+			if (!hasRemainingReferences) {
+				break;
+			}
+		}
 	}
 }
