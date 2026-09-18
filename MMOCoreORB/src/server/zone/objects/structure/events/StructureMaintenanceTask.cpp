@@ -6,6 +6,7 @@
  */
 
 #include "StructureMaintenanceTask.h"
+#include "server/zone/objects/structure/StructureOwnership.h"
 #include "server/zone/objects/player/PlayerObject.h"
 #include "server/zone/objects/creature/CreatureObject.h"
 #include "server/zone/managers/structure/StructureManager.h"
@@ -25,6 +26,11 @@ void StructureMaintenanceTask::run() {
 	if (strongRef == nullptr)
 		return;
 
+	// A world, temporary or civic structure may legitimately lose its owner
+	// after scheduling. Persisted player structures still need orphan cleanup.
+	if (!StructureOwnership::requiresPlayerMaintenance(strongRef.get()))
+		return;
+
 	ZoneServer* zoneServer = strongRef->getZoneServer();
 
 	if (zoneServer == nullptr || zoneServer->isServerShuttingDown())
@@ -36,8 +42,22 @@ void StructureMaintenanceTask::run() {
 		return;
 	}
 
-	ManagedReference<PlayerManager*> playerManager = zoneServer->getPlayerManager();
 	uint64 oid = strongRef->getOwnerObjectID();
+
+	if (oid == 0) {
+		Locker locker(strongRef);
+
+		// Recheck after taking the lock in case ownership changed meanwhile.
+		if (strongRef->getOwnerObjectID() != 0) {
+			strongRef->scheduleMaintenanceExpirationEvent();
+		} else if (StructureOwnership::requiresPlayerMaintenance(strongRef.get())) {
+			destroyStructureWithReason(strongRef, "persisted player structure has no owner.");
+		}
+
+		return;
+	}
+
+	ManagedReference<PlayerManager*> playerManager = zoneServer->getPlayerManager();
 	String name = playerManager->getPlayerName(oid);
 
 	ManagedReference<CreditObject*> creditObj = CreditManager::getCreditObject(oid);

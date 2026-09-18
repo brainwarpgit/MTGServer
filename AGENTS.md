@@ -7,6 +7,7 @@ These instructions apply throughout this project. Paths below are relative to th
 - Stay within `MMOCoreORB/bin` and `MMOCoreORB/src` for all project work.
 - Keep project file access, searches, edits, and command working directories within these two folders.
 - The root `AGENTS.md` is an exception: it may be read and updated to maintain this guidance.
+- `/home/swgemu/workspace/tre` is an exception for read-only access: its files may be listed, searched, and read whenever needed. Do not create, modify, move, or delete files there. Keep command working directories and any extracted or generated files within `MMOCoreORB/bin` or `MMOCoreORB/src`.
 - Do not access other locations unless the user explicitly asks you to do so.
 
 ## Git commits

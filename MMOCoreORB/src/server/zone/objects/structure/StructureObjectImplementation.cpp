@@ -6,6 +6,7 @@
  */
 
 #include "server/zone/objects/structure/StructureObject.h"
+#include "server/zone/objects/structure/StructureOwnership.h"
 #include "server/zone/ZoneServer.h"
 #include "server/zone/Zone.h"
 #include "server/zone/ZoneProcessServer.h"
@@ -187,7 +188,7 @@ void StructureObjectImplementation::notifyInsertToZone(Zone* zone) {
 			structurePermissionList.dropList("VENDOR");
 	}
 
-	if (!staticObject && getBaseMaintenanceRate() != 0 && !isTurret() && !isMinefield() && !isScanner()) {
+	if (!staticObject && StructureOwnership::requiresPlayerMaintenance(this) && getBaseMaintenanceRate() != 0 && !isTurret() && !isMinefield() && !isScanner()) {
 		//Decay is 4 weeks.
 		maxCondition = getBaseMaintenanceRate() * 24 * 7 * 4;
 
@@ -361,10 +362,10 @@ String StructureObjectImplementation::getTimeString(uint32 timestamp) const {
 
 //Only gets called when maintenance has been changed by an outside source
 void StructureObjectImplementation::scheduleMaintenanceExpirationEvent() {
-	if (getMaintenanceRate() <= 0) {
-		if (getOwnerObjectID() == 0)
-			return;
+	if (!StructureOwnership::requiresPlayerMaintenance(this))
+		return;
 
+	if (getMaintenanceRate() <= 0) {
 		if (getCityRegion().get() == nullptr && !isTurret() && !isMinefield() && !isScanner())
 			error("scheduleMaintenanceExpirationEvent: getMaintenanceRate() <= 0 but not in a city!");
 
@@ -437,10 +438,10 @@ void StructureObjectImplementation::scheduleMaintenanceExpirationEvent() {
 }
 
 void StructureObjectImplementation::scheduleMaintenanceTask(int secondsFromNow) {
-	if(getBaseMaintenanceRate() == 0) {
-		if (getOwnerObjectID() == 0)
-			return;
+	if (!StructureOwnership::requiresPlayerMaintenance(this))
+		return;
 
+	if(getBaseMaintenanceRate() == 0) {
 		if (getCityRegion().get() == nullptr && !isTurret() && !isMinefield() && !isScanner())
 			error("scheduleMaintenanceTask: getMaintenanceRate() <= 0 but not in a city!");
 
@@ -614,7 +615,12 @@ String StructureObjectImplementation::getDebugStructureStatus() const {
 
 		status << " " << ss << "s";
 	} else {
-		if (getBaseMaintenanceRate() > 0) {
+		// The generated object-ID accessor is non-const; read it through the stub.
+		auto structure = _this.getReferenceUnsafeStaticCast();
+		const bool requiresMaintenance = getOwnerObjectID() != 0 ||
+			(structure != nullptr && StructureOwnership::requiresPlayerMaintenance(structure));
+
+		if (requiresMaintenance && getBaseMaintenanceRate() > 0) {
 			status << "WARNING: No maintenance task running on this structure";
 			error("getDebugStructureStatus: structureMaintenanceTask == nullptr");
 		} else if (getOwnerObjectID() != 0 && getCityRegion().get() == nullptr && !isTurret() && !isMinefield() && !isScanner()) {

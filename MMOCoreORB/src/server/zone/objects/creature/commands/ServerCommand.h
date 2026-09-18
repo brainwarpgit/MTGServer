@@ -19,6 +19,7 @@
 #include "SpawnPointInAreaCommand.h"
 #include "ServerWhoCommand.h"
 #include "ServerLootCommand.h"
+#include "OrphanStructuresCommand.h"
 
 class ServerCommand : public QueueCommand {
 	MethodFactory<String, CreatureObject*, uint64, const String&> methodFactory;
@@ -41,6 +42,7 @@ public:
 		methodFactory.registerMethod<SpawnPointInAreaCommand>("spawnpointinarea");
 		methodFactory.registerMethod<ServerWhoCommand>("who");
 		methodFactory.registerMethod<ServerLootCommand>("loot");
+		methodFactory.registerMethod<OrphanStructuresCommand>("orphanstructures");
 }
 
 	int doQueueCommand(CreatureObject* creature, const uint64& target, const UnicodeString& arguments) const {
