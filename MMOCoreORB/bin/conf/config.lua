@@ -182,7 +182,7 @@ Core3 = {
 		"kashyyyk_pob_dungeons",
 		"kashyyyk_dead_forest",
 		"mandalore",
-		--"moraband",
+		"moraband",
 		"mustafar",
 		"taanab",
 		-------- TEST ZONES -------

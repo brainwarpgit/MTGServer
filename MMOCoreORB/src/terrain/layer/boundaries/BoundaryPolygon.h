@@ -280,7 +280,9 @@ public:
 
 		switch (version) {
 		case '0005':
-			parseFromIffStream(iffStream, Version<'0005'>());
+		case '0006':
+		case '0007':
+			parseFromIffStream(iffStream, version);
 			break;
 		default:
 			System::out << "unknown BoundaryPolygon version 0x" << hex << version << endl;
@@ -290,7 +292,7 @@ public:
 		iffStream->closeForm(version);
 	}
 
-	void parseFromIffStream(engine::util::IffStream* iffStream, Version<'0005'>) {
+	void parseFromIffStream(engine::util::IffStream* iffStream, uint32 version) {
 		informationHeader.readObject(iffStream);
 
 		iffStream->openChunk('DATA');
@@ -310,6 +312,13 @@ public:
 		localWaterTableEnabled = iffStream->getInt(); // local water table enabled?
 		localWaterTableHeight = iffStream->getFloat(); // water height
 		shaderSize = iffStream->getFloat();
+
+		if (version == '0006' || version == '0007') {
+			// Reserved in 0006, water type in 0007. The server uses the
+			// water height only, but this field precedes the shader name.
+			iffStream->getInt();
+		}
+
 		iffStream->getString(shaderName);
 
 		iffStream->closeChunk('DATA');

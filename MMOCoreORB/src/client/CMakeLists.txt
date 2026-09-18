@@ -3,7 +3,7 @@
 
 include_directories(.)
 
-find_package(Boost REQUIRED COMPONENTS program_options)
+find_package(Boost CONFIG REQUIRED COMPONENTS program_options)
 
 file(GLOB_RECURSE core3client_sources "*.cpp")
 file(GLOB_RECURSE core3client_headers "*.h")

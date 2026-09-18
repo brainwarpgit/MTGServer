@@ -181,7 +181,7 @@ PlayerManagerImplementation::PlayerManagerImplementation(ZoneServer* zoneServer,
 	int onlineLogSeconds = ConfigManager::instance()->getOnlineLogSeconds();
 
 	if (onlineLogSeconds > 0 && trackOnlineUsers) {
-		onlinePlayerLogSum = 0;
+		onlinePlayerLogSummary = "";
 
 		Core::getTaskManager()->executeTask([=] () {
 			rescheduleOnlinePlayerLogTask(onlineLogSeconds);
@@ -6270,53 +6270,59 @@ int PlayerManagerImplementation::getOnlineCharCount(unsigned int accountId) {
  */
 
 void PlayerManagerImplementation::disconnectAllPlayers() {
-	Locker locker(&onlineMapMutex);
+	Vector<Reference<ZoneClientSession*>> sessions;
 
-	info(true) << "Disconnecting " << onlineZoneClientMap.size() << " players.";
+	{
+		Locker locker(&onlineMapMutex);
+		sessions = onlineZoneClientMap.getSessionsSnapshot();
+	}
+
+	// Closing a session removes its account entry. Iterate strong references
+	// copied before any disconnect, without holding the account map lock while
+	// acquiring player/session locks or running logout callbacks.
+	info(true) << "Disconnecting " << sessions.size() << " player sessions.";
 
 	Time now, last_rpt;
 	Timer profile;
 	int countDisconnected = 0;
 
 	profile.start();
-	HashTableIterator<uint32, Vector<Reference<ZoneClientSession*> > > iter = onlineZoneClientMap.iterator();
+	for (const auto& session : sessions) {
+		ManagedReference<CreatureObject*> player = session->getPlayer();
 
-	while (iter.hasNext()) {
-		Vector<Reference<ZoneClientSession*> > clients = iter.next();
+		if (player != nullptr) {
+			Locker plocker(player);
 
-		for (int i = 0; i < clients.size(); i++) {
-			ZoneClientSession* session = clients.get(i);
+			// A snapshot entry can outlive its player association. Never unload
+			// a character that has since acquired a different client session.
+			if (player->getClient() == session && session->getPlayer() == player) {
+				ManagedReference<PlayerObject*> ghost = player->getPlayerObject();
 
-			if (session != nullptr) {
-				CreatureObject* player = session->getPlayer();
-
-				if (player != nullptr) {
-					PlayerObject* ghost = player->getPlayerObject();
-
-					if (ghost != nullptr) {
-						Locker plocker(player);
-						ghost->setLinkDead(true);
-						ghost->disconnect(true, true);
-						++countDisconnected;
-					}
+				if (ghost != nullptr) {
+					ghost->setLinkDead(true);
+					ghost->disconnect(false, true);
 				}
 			}
+		}
 
-			now.updateToCurrentTime();
-			int delta = now.getTime() - last_rpt.getTime();
+		// Close this specific session even when its player or ghost is missing.
+		session->closeConnection(false, true);
+		++countDisconnected;
 
-			if (delta > 5) {
-				last_rpt.updateToCurrentTime();
-				auto elapsedMs = profile.elapsedToNow() / 1000000;
-				auto ps = countDisconnected / (elapsedMs / 1000.0f);
-				info(true) << "Disconnected " << commas << countDisconnected << " players (" << ps << "/s)";
-			}
+		now.updateToCurrentTime();
+		int delta = now.getTime() - last_rpt.getTime();
+
+		if (delta > 5) {
+			last_rpt.updateToCurrentTime();
+			auto elapsedMs = profile.elapsedToNow() / 1000000;
+			auto ps = countDisconnected / (elapsedMs / 1000.0f);
+			info(true) << "Requested disconnect for " << commas << countDisconnected << " player sessions (" << ps << "/s)";
 		}
 	}
 
 	auto elapsedMs = Math::max((uint64)1, profile.stopMs());
 	auto ps = countDisconnected / (elapsedMs / 1000.0f);
-	info(true) << "Finished disconnecting " << commas << countDisconnected << " players (" << ps << "/s)";
+	info(true) << "Finished requesting disconnect for " << commas << countDisconnected << " player sessions (" << ps << "/s)";
 }
 
 bool PlayerManagerImplementation::shouldRescheduleCorpseDestruction(CreatureObject* player, CreatureObject* ai) {
@@ -7296,6 +7302,10 @@ void PlayerManagerImplementation::logOnlinePlayers(bool onlyWho) {
 		}
 	}
 
+	// Preserve snapshot order through publication, including who.json.next.
+	// Take the log lock before releasing the map lock; the writer below must
+	// not acquire player or map locks while holding the log lock.
+	Locker logfileLock(&onlinePlayerLogMutext);
 	locker.release();
 
 	JSONSerializationType logEntry;
@@ -7367,8 +7377,6 @@ void PlayerManagerImplementation::logOnlinePlayers(bool onlyWho) {
 	if (onlyWho)
 		return;
 
-	Locker logfileLock(&onlinePlayerLogMutext);
-
 	String fileName = "log/online-players.log";
 
 	struct stat st_log;
@@ -7396,10 +7404,6 @@ void PlayerManagerImplementation::logOnlinePlayers(bool onlyWho) {
 
 		logFile.close();
 
-		logfileLock.release();
-
-		int LogSum = countOnline + countAccounts + countPlayers + countnullptrClient + countnullptrCreature + countnullptrGhost + countDistinctIPs;
-
 		auto statisticsManager = StatisticsManager::instance();
 
 		if (statisticsManager != nullptr) {
@@ -7408,26 +7412,28 @@ void PlayerManagerImplementation::logOnlinePlayers(bool onlyWho) {
 			statisticsManager->setDistinctIPsCount(countDistinctIPs);
 		}
 
-		// Throttle to no more often than once per 5s and only if something to report
-		if (lastOnlinePlayerLogMsg.miliDifference() >= 5000 && LogSum != onlinePlayerLogSum) {
-			StringBuffer logMsg;
+		StringBuffer logMsg;
 
-			logMsg << "Logged " << countOnline << " players (" << countAccounts << " accounts, " << countDistinctIPs << " distinct IPs) to " << fileName;
+		logMsg << "Logged " << countOnline << " players (" << countAccounts << " accounts, " << countDistinctIPs << " distinct IPs) to " << fileName;
 
-			if (countnullptrClient > 0)
-				logMsg << "; " << countnullptrClient << " null clients";
+		if (countnullptrClient > 0)
+			logMsg << "; " << countnullptrClient << " null clients";
 
-			if (countnullptrCreature > 0)
-				logMsg << "; " << countnullptrCreature << " clients without a creature";
+		if (countnullptrCreature > 0)
+			logMsg << "; " << countnullptrCreature << " clients without a creature";
 
-			if (countnullptrGhost > 0)
-				logMsg << "; " << countnullptrGhost << " creatures without a player object";
+		if (countnullptrGhost > 0)
+			logMsg << "; " << countnullptrGhost << " creatures without a player object";
 
-			logMsg << ".";
+		logMsg << ".";
 
-			info(logMsg.toString(), true);
-			lastOnlinePlayerLogMsg.updateToCurrentTime();
-			onlinePlayerLogSum = LogSum;
+		// Report every changed summary, including rapid login/logout events.
+		// Comparing the full message avoids collisions between summed counts.
+		String summary = logMsg.toString();
+
+		if (summary != onlinePlayerLogSummary) {
+			info(summary, true);
+			onlinePlayerLogSummary = summary;
 		}
 	} catch (const Exception& e) {
 		error() << "logOnlinePlayers failed to write " << fileName << ": " << e.getMessage();

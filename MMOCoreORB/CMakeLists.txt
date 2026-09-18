@@ -1,7 +1,7 @@
 # Copyright (C) 2007 <SWGEmu>. All rights reserved.
 # Distribution of this file for usage outside of Core3 is prohibited.
 
-cmake_minimum_required(VERSION 3.7.0 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
 
 find_program(CLANGXX_EXECUTABLE_PATH NAMES clang++)
 
@@ -94,8 +94,71 @@ include_directories(${DB_INCLUDE_DIR})
 
 find_package(Java 1.5 COMPONENTS Runtime REQUIRED)
 
+# Keep dependency settings local without introducing a new variable scope,
+# so values returned by Engine3 discovery remain available to Core3.
+macro(core3_override_dependency_setting setting value)
+	if(DEFINED ${setting})
+		set(_core3_saved_${setting} "${${setting}}")
+	else()
+		unset(_core3_saved_${setting})
+	endif()
+
+	if("${setting}" STREQUAL "CMAKE_WARN_DEPRECATED")
+		# Built-in compatibility warnings use CMake's global diagnostic state.
+		# Only a cache assignment updates it; a normal variable is insufficient.
+		get_property(_core3_warn_cache_exists CACHE ${setting} PROPERTY TYPE SET)
+		if(_core3_warn_cache_exists)
+			get_property(_core3_warn_cache_value CACHE ${setting} PROPERTY VALUE)
+			get_property(_core3_warn_cache_type CACHE ${setting} PROPERTY TYPE)
+			get_property(_core3_warn_cache_help CACHE ${setting} PROPERTY HELPSTRING)
+		endif()
+		set(${setting} "${value}" CACHE BOOL "Whether to issue deprecation warnings" FORCE)
+
+		# Cache-property updates do not change the diagnostic state. Restore
+		# the cache immediately so a failed dependency cannot persist OFF.
+		if(_core3_warn_cache_exists)
+			set_property(CACHE ${setting} PROPERTY VALUE "${_core3_warn_cache_value}")
+			set_property(CACHE ${setting} PROPERTY TYPE "${_core3_warn_cache_type}")
+			set_property(CACHE ${setting} PROPERTY HELPSTRING "${_core3_warn_cache_help}")
+		else()
+			unset(${setting} CACHE)
+		endif()
+	endif()
+
+	set(${setting} "${value}")
+endmacro()
+
+macro(core3_restore_dependency_setting setting)
+	if("${setting}" STREQUAL "CMAKE_WARN_DEPRECATED")
+		if(_core3_warn_cache_exists)
+			set(${setting} "${_core3_warn_cache_value}" CACHE BOOL "${_core3_warn_cache_help}" FORCE)
+			set_property(CACHE ${setting} PROPERTY TYPE "${_core3_warn_cache_type}")
+		else()
+			# Removing the cache entry alone leaves global suppression enabled.
+			set(${setting} ON CACHE BOOL "Whether to issue deprecation warnings" FORCE)
+			unset(${setting} CACHE)
+		endif()
+		unset(_core3_warn_cache_exists)
+		unset(_core3_warn_cache_value)
+		unset(_core3_warn_cache_type)
+		unset(_core3_warn_cache_help)
+	endif()
+
+	if(DEFINED _core3_saved_${setting})
+		set(${setting} "${_core3_saved_${setting}}")
+	else()
+		unset(${setting})
+	endif()
+	unset(_core3_saved_${setting})
+endmacro()
+
 # Find engine3 includes and libraries
+# Suppress its legacy CMake deprecations and use Boost's package config.
+core3_override_dependency_setting(CMAKE_WARN_DEPRECATED OFF)
+core3_override_dependency_setting(CMAKE_POLICY_DEFAULT_CMP0167 NEW)
 find_package(Engine3 REQUIRED)
+core3_restore_dependency_setting(CMAKE_POLICY_DEFAULT_CMP0167)
+core3_restore_dependency_setting(CMAKE_WARN_DEPRECATED)
 include_directories(${ENGINE3_INCLUDE_DIR})
 
 find_package(OpenSSL REQUIRED)
@@ -221,7 +284,10 @@ endif(IDL_NOPRELOCKS)
 if(COMPILE_TESTS)
 	set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
+    # Keep bundled GoogleTest's deprecations out of Core3's configure output.
+    core3_override_dependency_setting(CMAKE_WARN_DEPRECATED OFF)
     add_subdirectory(utils/googletest-release-1.13.0)
+    core3_restore_dependency_setting(CMAKE_WARN_DEPRECATED)
 
     include_directories(${CMAKE_SOURCE_DIR}/utils/googletest-release-1.13.0/googletest/include)
     include_directories(${CMAKE_SOURCE_DIR}/utils/googletest-release-1.13.0/googlemock/include)
@@ -249,7 +315,7 @@ if (ENABLE_LOCKFREE_BCLIENT_BUFFERS)
 	add_definitions(-DLOCKFREE_BCLIENT_BUFFERS)
 endif()
 
-find_package(Boost REQUIRED COMPONENTS thread)
+find_package(Boost CONFIG REQUIRED COMPONENTS thread)
 
 if(Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS})

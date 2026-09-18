@@ -84,7 +84,8 @@ public:
 
 		switch (version) {
 		case '0003':
-			parseFromIffStream(iffStream, Version<'0003'>());
+		case '0004':
+			parseFromIffStream(iffStream, version);
 			break;
 		case '0002':
 			parseFromIffStream(iffStream, Version<'0002'>());
@@ -119,7 +120,7 @@ public:
 		initialize();
 	}
 
-	void parseFromIffStream(engine::util::IffStream* iffStream, Version<'0003'>) {
+	void parseFromIffStream(engine::util::IffStream* iffStream, uint32 version) {
 		informationHeader.readObject(iffStream);
 
 		iffStream->openChunk('DATA');
@@ -142,6 +143,12 @@ public:
 		localWaterTableHeight = iffStream->getFloat(); // local water table height
 		shaderSize = iffStream->getFloat();
 		iffStream->getString(shaderName);
+
+		if (version == '0004') {
+			// Unlike polygons, rectangles append the water type after
+			// the shader name. The server uses the water height only.
+			iffStream->getInt();
+		}
 
 		iffStream->closeChunk('DATA');
 

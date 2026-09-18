@@ -922,7 +922,17 @@ void ServerCore::shutdown() {
 				count++;
 			}
 
-			info("All players disconnected", true);
+			int remainingPlayers = zoneServer->getConnectionCount();
+
+			// Logout callbacks report before their sessions leave the online map.
+			// Publish the final state after disconnects finish (or the wait expires).
+			playerManager->updateOnlinePlayers();
+
+			if (remainingPlayers > 0) {
+				warning() << "Shutdown disconnect timed out with " << remainingPlayers << " player sessions still attached";
+			} else {
+				info("All players disconnected", true);
+			}
 		}
 	}
 

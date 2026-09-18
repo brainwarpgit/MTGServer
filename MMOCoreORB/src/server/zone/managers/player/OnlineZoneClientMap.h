@@ -24,6 +24,28 @@ public:
 		setLoggingName("OnlineZoneClientMap");
 	}
 
+	// The caller must hold PlayerManager's onlineMapMutex while copying.
+	// Keep strong references so disconnect callbacks can remove live map entries
+	// without invalidating the shutdown traversal or destroying its sessions.
+	Vector<Reference<ZoneClientSession*> > getSessionsSnapshot() {
+		Vector<Reference<ZoneClientSession*> > sessions;
+		auto iter = iterator();
+
+		while (iter.hasNext()) {
+			auto clients = iter.next();
+
+			for (int i = 0; i < clients.size(); ++i) {
+				auto client = clients.get(i);
+
+				if (client != nullptr) {
+					sessions.add(client);
+				}
+			}
+		}
+
+		return sessions;
+	}
+
 	void accountLoggedIn(const String& ip, uint32 accountId, int galaxyId) {
 		int onlineCount = -1;
 

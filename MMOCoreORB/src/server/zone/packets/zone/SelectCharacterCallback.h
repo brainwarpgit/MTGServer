@@ -100,6 +100,14 @@ public:
 		}
 #endif // WITH_SWGREALMS_API
 
+		// Queued reconnects and external login approval can finish after run()
+		// checked the server state. Do not attach a new player during shutdown.
+		if (zoneServer->isServerShuttingDown()) {
+			client->sendMessage(new ErrorMessage("Login Error", "Server is shutting down", 0));
+			client->closeConnection(false, true);
+			return;
+		}
+
 		// Tie client to player object
 		player->setClient(client);
 		client->setPlayer(player);
@@ -142,6 +150,15 @@ public:
 			ErrorMessage* errMsg = new ErrorMessage("Login Error", msg.toString(), 0x0);
 			client->sendMessage(errMsg);
 
+			return;
+		}
+
+		// If shutdown began while registering, its session snapshot may have
+		// already been taken. Close this late session before entering the world.
+		if (zoneServer->isServerShuttingDown()) {
+			client->sendMessage(new ErrorMessage("Login Error", "Server is shutting down", 0));
+			client->closeConnection(false, true);
+			player->setClient(nullptr);
 			return;
 		}
 

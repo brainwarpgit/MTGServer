@@ -71,11 +71,8 @@ class PlayerManager extends Observer implements Logger {
 
 	@weakReference
 	protected transient OnlinePlayerLogTask onlinePlayerLogTask;
-	protected transient int onlinePlayerLogSum = 0;
+	protected transient string onlinePlayerLogSummary;
 	protected transient boolean onlinePlayersLogOnSessionChange = false;
-
-	@dereferenced
-	protected transient Time lastOnlinePlayerLogMsg;
 
 	// Used for frog/gm buffs
 	protected int performanceBuff;
@@ -652,7 +649,7 @@ class PlayerManager extends Observer implements Logger {
 	public native boolean rescheduleOnlinePlayerLogTask(int logSeconds);
 
 	public void updateOnlinePlayers() {
-		// Update just the log/who.json file based on Core3.LogOnlineOnSessionChange (default: true)
+		// Always refresh who.json; append session-change history when enabled.
 		logOnlinePlayers(!onlinePlayersLogOnSessionChange);
 	}
 
