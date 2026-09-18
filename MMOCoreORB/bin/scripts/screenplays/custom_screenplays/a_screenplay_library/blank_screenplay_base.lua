@@ -5,7 +5,7 @@ newScreenPlay = ScreenPlay:new {
 
 }
 
-registerScreenPlay("newScreenPlay", true)
+registerScreenPlay("newScreenPlay", false)
 
 function newScreenPlay:start()
 	if (isZoneEnabled("tatooine")) then

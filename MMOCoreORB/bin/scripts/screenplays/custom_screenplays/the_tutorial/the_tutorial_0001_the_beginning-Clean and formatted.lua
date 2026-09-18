@@ -10,7 +10,7 @@ theTutorial0001ScreenPlay = ScreenPlay:new {
 	},
 }
 
-registerScreenPlay("theTutorial0001ScreenPlay", true)
+registerScreenPlay("theTutorial0001ScreenPlay", false)
 
 function theTutorial0001ScreenPlay:start()
 	if (isZoneEnabled("tatooine")) then

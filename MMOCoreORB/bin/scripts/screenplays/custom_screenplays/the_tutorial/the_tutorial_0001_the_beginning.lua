@@ -10,7 +10,7 @@ theTutorial0001ScreenPlay = ScreenPlay:new { -- This sets a new screenplay. Any 
 	},
 }
 
-registerScreenPlay("theTutorial0001ScreenPlay", true) -- Registers the screenplay so it loads on start.
+registerScreenPlay("theTutorial0001ScreenPlay", false) -- Registers the screenplay so it loads on start.
 
 --******************************************************************************************************************************
 
