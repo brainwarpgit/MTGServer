@@ -139,6 +139,14 @@ public:
 	bool canSurrenderSkill(CreatureObject* creature, const String& skillName);
 
 	/**
+	 * Silently checks the Jedi restrictions for an ordered skill surrender plan.
+	 * Skills must be owned and ordered with dependents before prerequisites. Progression
+	 * titles and Force Ranking System skills must use their existing surrender paths.
+	 * No skills are removed while checking the projected remaining skill totals.
+	 */
+	bool canSurrenderSkills(CreatureObject* creature, const Vector<String>& orderedSkillNames);
+
+	/**
 	 * Decides what to do next pending learning an FS tree.
 	 * Calls the onFSTreeCompleted in the lua manager.
 	 * @param creature the creature object.

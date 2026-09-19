@@ -4,6 +4,9 @@
 
 #include "JediManager.h"
 #include "server/zone/managers/director/DirectorManager.h"
+#include "server/zone/objects/creature/variables/Skill.h"
+#include "server/zone/objects/creature/variables/SkillList.h"
+#include "server/zone/objects/player/PlayerObject.h"
 
 JediManager::JediManager() : Logger("JediManager") {
 	jediProgressionType = NOJEDIPROGRESSION;
@@ -151,6 +154,106 @@ bool JediManager::canSurrenderSkill(CreatureObject* creature, const String& skil
 	lua_pop(L, 1);
 
 	return result;
+}
+
+bool JediManager::canSurrenderSkills(CreatureObject* creature, const Vector<String>& orderedSkillNames) {
+	if (creature == nullptr || orderedSkillNames.size() == 0) {
+		return false;
+	}
+
+	Locker locker(creature);
+
+	if (creature->getPlayerObject() == nullptr) {
+		return false;
+	}
+
+	const SkillList* ownedSkills = creature->getSkillList();
+	Vector<Skill*> orderedSkills;
+	int forceSensitiveCount = 0;
+	int jediPoints = 0;
+	int jediFullTrees = 0;
+
+	for (int i = 0; i < ownedSkills->size(); ++i) {
+		Skill* skill = ownedSkills->get(i);
+		const String& name = skill->getSkillName();
+
+		// Match SkillManager's force-sensitive and Village Knight counters.
+		if (name.contains("force_sensitive") && name.indexOf("0") != -1) {
+			++forceSensitiveCount;
+		}
+
+		if (name.contains("force_discipline_") && (name.indexOf("0") != -1 || name.contains("novice") || name.contains("master"))) {
+			jediPoints += skill->getSkillPointsRequired();
+
+			if (name.indexOf("4") != -1) {
+				++jediFullTrees;
+			}
+		}
+	}
+
+	for (int i = 0; i < orderedSkillNames.size(); ++i) {
+		const String& name = orderedSkillNames.get(i);
+		Skill* skill = nullptr;
+
+		// These skills can alter progression/FRS state in addition to the skill list.
+		if (name.beginsWith("force_title_") || name.beginsWith("force_rank_")) {
+			return false;
+		}
+
+		for (int j = 0; j < ownedSkills->size(); ++j) {
+			Skill* candidate = ownedSkills->get(j);
+
+			if (candidate->getSkillName() == name) {
+				skill = candidate;
+				break;
+			}
+		}
+
+		if (skill == nullptr || orderedSkills.contains(skill)) {
+			return false;
+		}
+
+		orderedSkills.add(skill);
+	}
+
+	for (int i = 0; i < orderedSkills.size(); ++i) {
+		Skill* skill = orderedSkills.get(i);
+		const String& name = skill->getSkillName();
+
+		if (name.contains("force_discipline_")) {
+			jediPoints -= skill->getSkillPointsRequired();
+
+			if (name.indexOf("4") != -1) {
+				--jediFullTrees;
+			}
+		}
+
+		if (name.beginsWith("force_")) {
+			Lua* lua = DirectorManager::instance()->getLuaInstance();
+			Reference<LuaFunction*> check = lua->createFunction(getJediManagerName(), "canSurrenderSkillInBatch", 1);
+			*check << creature;
+			*check << name;
+			*check << forceSensitiveCount;
+			*check << jediPoints;
+			*check << jediFullTrees;
+
+			lua_State* L = check->callFunction();
+			const bool allowed = lua_toboolean(L, -1);
+			lua_pop(L, 1);
+
+			if (!allowed) {
+				return false;
+			}
+		}
+
+		// The existing Village rule checks the count BEFORE surrendering even a
+		// zero-point novice/master box, so update this only after checking each step.
+		if (name.contains("force_sensitive") && name.indexOf("0") != -1) {
+			--forceSensitiveCount;
+		}
+	}
+
+	return true;
 }
 
 void JediManager::onFSTreeCompleted(CreatureObject* creature, const String& branch) {

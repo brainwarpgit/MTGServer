@@ -5,7 +5,7 @@
 #ifndef SURRENDERSKILLCOMMAND_H_
 #define SURRENDERSKILLCOMMAND_H_
 
-#include "server/zone/managers/skill/SkillManager.h"
+#include "server/zone/managers/skill/SkillSurrenderDialog.h"
 
 class SurrenderSkillCommand : public QueueCommand {
 public:
@@ -19,15 +19,7 @@ public:
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
 
-		SkillManager* skillManager = SkillManager::instance();
-
-		if (skillManager == nullptr) {
-			return GENERALERROR;
-		}
-
-		skillManager->surrenderSkill(arguments.toString(), creature, true);
-
-		return SUCCESS;
+		return SkillSurrenderDialog::open(creature, arguments.toString()) ? SUCCESS : GENERALERROR;
 	}
 };
 

@@ -81,6 +81,12 @@ function JediManager:canSurrenderSkill(pPlayer, skillName)
 	return true
 end
 
+-- Silent preflight for a sequence of skill removals. Custom progression systems
+-- that override canSurrenderSkill must also implement their projected batch rule.
+function JediManager:canSurrenderSkillInBatch(pPlayer, skillName, forceSensitiveCountBefore, jediPointsAfter, jediFullTreesAfter)
+	return self.canSurrenderSkill == JediManager.canSurrenderSkill
+end
+
 function JediManager:onFSTreeCompleted(pCreatureObject, branch)
 	-- Default behaviour for the onFSTreesCompleted event, do nothing.
 end

@@ -141,6 +141,28 @@ function VillageJediManager:canSurrenderSkill(pPlayer, skillName)
 	return true
 end
 
+-- Check every proposed removal against the totals at that step without changing
+-- the player or sending denial messages while populating the skill selection list.
+function VillageJediManager:canSurrenderSkillInBatch(pPlayer, skillName, forceSensitiveCountBefore, jediPointsAfter, jediFullTreesAfter)
+	if pPlayer == nil or self.canSurrenderSkill ~= VillageJediManager.canSurrenderSkill then
+		return false
+	end
+
+	if skillName == "force_title_jedi_rank_02" or skillName == "force_title_jedi_novice" then
+		return false
+	end
+
+	if string.find(skillName, "force_sensitive_") and CreatureObject(pPlayer):hasSkill("force_title_jedi_rank_02") and forceSensitiveCountBefore <= 24 then
+		return false
+	end
+
+	if string.find(skillName, "force_discipline_") and CreatureObject(pPlayer):hasSkill("force_title_jedi_rank_03") and (jediPointsAfter < 206 or jediFullTreesAfter < 2) then
+		return false
+	end
+
+	return true
+end
+
 -- Handling of the onFSTreesCompleted event.
 -- @param pPlayer pointer to the creature object of the player
 function VillageJediManager:onFSTreeCompleted(pPlayer, branch)
