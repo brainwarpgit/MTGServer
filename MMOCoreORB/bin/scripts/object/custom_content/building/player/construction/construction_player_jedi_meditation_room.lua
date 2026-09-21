@@ -1,5 +1,6 @@
 object_building_player_construction_construction_player_jedi_meditation_room = object_building_player_construction_shared_construction_player_jedi_meditation_room:new {
-
+	gameObjectType = 4096,
+	enableNavMeshUpdates = false
 }
 
 ObjectTemplates:addTemplate(object_building_player_construction_construction_player_jedi_meditation_room, "object/building/player/construction/construction_player_jedi_meditation_room.iff")

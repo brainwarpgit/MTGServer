@@ -54,8 +54,8 @@ public:
 		return lotSize;
 	}
 
-	inline bool isAllowedZone(const String& zoneName) {
-		return allowedZones.contains(zoneName);
+	inline bool isAllowedZone(const String& zoneName, bool allowAnyPlanet = false) {
+		return allowAnyPlanet || allowedZones.contains(zoneName);
 	}
 
 	inline bool isCivicStructure() const {

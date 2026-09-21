@@ -118,6 +118,16 @@ function BartendersScreenPlay:start()
 	self:spawnBartenders()
 end
 
+function BartendersScreenPlay:isValidCell(planetName, cellID)
+	if (planetName == nil or planetName == "" or cellID == nil or cellID == 0) then
+		return false
+	end
+
+	local pCell = getSceneObject(cellID)
+
+	return pCell ~= nil and SceneObject(pCell):isCellObject() and SceneObject(pCell):getZoneName() == planetName
+end
+
 function BartendersScreenPlay:spawnBartenders()
 	local x = self.patrolLocations[1][1]
 	local z = self.patrolLocations[1][2]
@@ -130,7 +140,15 @@ function BartendersScreenPlay:spawnBartenders()
 
 		--print("BartendersScreenPlay:spawnBartenders -- spawning: " ..  bartenderTable[1] .. " on " .. bartenderTable[2] .. " Cell ID: " .. bartenderTable[3])
 
-		local pNpc = spawnMobile(bartenderTable[2], bartenderTable[1], -1, x, z, y, 0, bartenderTable[3])
+		local pNpc = nil
+
+		if (isZoneEnabled(bartenderTable[2])) then
+			if (self:isValidCell(bartenderTable[2], bartenderTable[3])) then
+				pNpc = spawnMobile(bartenderTable[2], bartenderTable[1], -1, x, z, y, 0, bartenderTable[3])
+			else
+				printLuaError("Unable to spawn bartender on " .. bartenderTable[2] .. ", cell " .. tostring(bartenderTable[3]) .. " is missing or invalid for that planet.")
+			end
+		end
 
 		if (pNpc ~= nil) then
 			local npcID = SceneObject(pNpc):getObjectID()
@@ -256,9 +274,17 @@ function BartendersScreenPlay:assignPatrolPoint(pNpc)
 		return
 	end
 
+	local parentID = SceneObject(pNpc):getParentID()
+	local planetName = SceneObject(pNpc):getZoneName()
+
+	-- The patrol points are local bar coordinates, never outdoor positions.
+	if (not self:isValidCell(planetName, parentID)) then
+		printLuaError("Unable to assign bartender patrol for NPC " .. tostring(SceneObject(pNpc):getObjectID()) .. ", cell " .. tostring(parentID) .. " is missing or invalid for " .. planetName .. ".")
+		return
+	end
+
 	local randomPoint = getRandomNumber(#self.patrolLocations)
 	local point = self.patrolLocations[randomPoint]
-	local parentID = SceneObject(pNpc):getParentID()
 
 	AiAgent(pNpc):setNextPosition(point[1], point[2], point[3], parentID)
 end

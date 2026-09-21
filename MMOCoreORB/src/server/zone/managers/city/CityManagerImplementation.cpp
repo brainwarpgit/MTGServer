@@ -223,7 +223,15 @@ CityRegion* CityManagerImplementation::createCity(CreatureObject* mayor, const S
 }
 
 bool CityManagerImplementation::isCityRankCapped(const String& planetName, byte rank) {
+	// An unconfigured planet or rank must not permit a city or index a missing cap.
+	if (rank < OUTPOST || rank > METROPOLIS || !citiesAllowedPerRank.containsKey(planetName))
+		return true;
+
 	Vector < byte > *citiesAllowed = &citiesAllowedPerRank.get(planetName);
+
+	if (rank > citiesAllowed->size())
+		return true;
+
 	byte maxAtRank = citiesAllowed->get(rank - 1);
 	byte totalAtRank = 0;
 

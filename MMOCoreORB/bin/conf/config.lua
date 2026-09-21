@@ -321,6 +321,8 @@ Core3 = {
 	-- Structures, maintenance and travel
 	-- ----------------------------------
 	StructureManager = {
+		AnyPlanet = false, -- Ignore structure planet lists; other placement rules still apply.
+		RequireDestroyCode = true, -- Require the numeric demolition code after the Yes/No confirmation.
 		EnhancedFurnitureRotate = false,
 		-- Optional per-client-structure navmesh flags, keyed by exact objectName.getFullPath():
 		-- CreateNavMesh = { ["<exact objectName.getFullPath()>"] = false },

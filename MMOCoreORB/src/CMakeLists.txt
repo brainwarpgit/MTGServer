@@ -69,6 +69,11 @@ endif(ENABLE_ODB)
 file(GLOB_RECURSE tests_sources "tests/*.cpp")
 file(GLOB_RECURSE tests_headers "tests/*.h")
 
+# Tests are local-only and may be absent in a fresh checkout.
+if(COMPILE_TESTS AND NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/tests/TestCore.h")
+	set(COMPILE_TESTS OFF)
+endif()
+
 set(core3tests_libs)
 set(gmock_libs)
 
@@ -102,6 +107,7 @@ if(ENABLE_EXPORTED_SYMBOLS)
 endif(ENABLE_EXPORTED_SYMBOLS)
 
 if(COMPILE_TESTS)
+	target_compile_definitions(core3 PRIVATE CORE3_LOCAL_TESTS_AVAILABLE)
 	add_dependencies(core3 idlobjects)
 else(COMPILE_TESTS)
 	add_dependencies(core3 idlobjects)

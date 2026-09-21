@@ -4,10 +4,11 @@ These instructions apply throughout this project. Paths below are relative to th
 
 ## Workspace boundaries
 
-- Stay within `MMOCoreORB/bin` and `MMOCoreORB/src` for all project work.
-- Keep project file access, searches, edits, and command working directories within these two folders.
+- Stay within `MMOCoreORB/bin` and `MMOCoreORB/src` for project work unless an exception below applies.
+- Keep project file access, searches, edits, and command working directories within these two folders except as explicitly allowed below.
 - The root `AGENTS.md` is an exception: it may be read and updated to maintain this guidance.
-- `/home/swgemu/workspace/tre` is an exception for read-only access: its files may be listed, searched, and read whenever needed. Do not create, modify, move, or delete files there. Keep command working directories and any extracted or generated files within `MMOCoreORB/bin` or `MMOCoreORB/src`.
+- `/home/swgemu/workspace/tre` is an exception for read-only access: its files may be listed, searched, and read whenever needed. Do not create, modify, move, or delete files there. Keep command working directories in the writable locations authorized here.
+- `mtg_patch_024` at the repository root (`/home/swgemu/workspace/MTGServer/mtg_patch_024`) is an exception with full read/write access, including searches, file creation, edits, and command working directories. Save new or corrected files intended for a TRE archive here, preserving their archive-relative directory paths (for example, `mtg_patch_024/object/tangible/deed/player_house_deed/<filename>.iff`). This directory and its asset files are tracked by Git. Keep other audit or test artifacts within `MMOCoreORB/bin` or `MMOCoreORB/src`.
 - Do not access other locations unless the user explicitly asks you to do so.
 
 ## Git commits
@@ -20,6 +21,7 @@ These instructions apply throughout this project. Paths below are relative to th
 - Do not compile Core3 or its components, link or install a rebuilt executable, or run `core3`, including under GDB or through `runUnitTests`, unless the user explicitly requests it.
 - Perform as much relevant validation as possible before that point, within the allowed folders: review changes and callers, check diffs and whitespace, use available syntax or static checks, and run standalone tests that do not build or execute Core3.
 - Add or update regression tests when appropriate, even when executing them requires the user's Core3 build. Clearly distinguish checks actually run from build-dependent or runtime checks left for the user.
+- Keep `MMOCoreORB/src/tests` and its contents local and ignored by Git. Do not add or force-add files from this folder to Git tracking.
 
 ## Maintaining this guidance
 

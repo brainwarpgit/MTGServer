@@ -5,6 +5,7 @@
  *      Author: crush
  */
 
+#include "conf/ConfigManager.h"
 #include "server/zone/objects/player/sessions/DestroyStructureSession.h"
 #include "server/zone/managers/structure/StructureManager.h"
 #include "server/zone/objects/creature/CreatureObject.h"
@@ -70,6 +71,9 @@ int DestroyStructureSessionImplementation::sendDestroyCode() {
 	//TODO: Temporary until CreatureObject* dependency removed.
 	if (!creatureObject->isPlayerCreature())
 		return cancelSession();
+
+	if (!ConfigManager::instance()->getBool("Core3.StructureManager.RequireDestroyCode", true))
+		return destroyStructure();
 
 	Locker structureLock(structureObject);
 

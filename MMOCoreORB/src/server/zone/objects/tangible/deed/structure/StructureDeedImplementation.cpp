@@ -12,6 +12,7 @@
 #include "templates/tangible/SharedStructureObjectTemplate.h"
 #include "templates/manager/TemplateManager.h"
 #include "server/zone/managers/components/ComponentManager.h"
+#include "conf/ConfigManager.h"
 
 void StructureDeedImplementation::initializeTransientMembers() {
 	DeedImplementation::initializeTransientMembers();
@@ -67,6 +68,11 @@ void StructureDeedImplementation::fillAttributeList(AttributeListMessage* alm, C
 
 	if (extractionRate > 0)
 		alm->insertAttribute("examine_extractionrate", String::valueOf(Math::getPrecision(extractionRate, 2)));
+
+	if (ConfigManager::instance()->getBool("Core3.StructureManager.AnyPlanet", false)) {
+		alm->insertAttribute("examine_scene", "All planets");
+		return;
+	}
 
 	for (int i = 0; i < structureTemplate->getTotalAllowedZones(); ++i) {
 		String zoneName = structureTemplate->getAllowedZone(i);

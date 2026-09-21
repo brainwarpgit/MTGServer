@@ -274,6 +274,11 @@ int StructureManager::placeStructureFromDeed(CreatureObject* creature, Structure
 	if (zone == nullptr || creature->containsActiveSession(SessionFacadeType::PLACESTRUCTURE))
 		return 1;
 
+	if (!zone->isGroundZone()) {
+		creature->sendSystemMessage("@player_structure:wrong_planet");
+		return 1;
+	}
+
 	String serverTemplatePath = deed->getGeneratedObjectTemplate();
 
 	// Check deed faction, player faction and status to make sure they are allowed to place a faction deeds (bases)
@@ -306,10 +311,16 @@ int StructureManager::placeStructureFromDeed(CreatureObject* creature, Structure
 
 	ManagedReference<PlanetManager*> planetManager = zone->getPlanetManager();
 
+	if (planetManager == nullptr) {
+		creature->sendSystemMessage("@player_structure:not_permitted");
+		return 1;
+	}
+
 	Reference<SharedStructureObjectTemplate*> serverTemplate = dynamic_cast<SharedStructureObjectTemplate*>(templateManager->getTemplate(serverTemplatePath.hashCode()));
 
 	// Check to see if this zone allows this structure.
-	if (serverTemplate == nullptr || !serverTemplate->isAllowedZone(zone->getZoneName())) {
+	const bool allowAnyPlanet = ConfigManager::instance()->getBool("Core3.StructureManager.AnyPlanet", false);
+	if (serverTemplate == nullptr || !serverTemplate->isAllowedZone(zone->getZoneName(), allowAnyPlanet)) {
 		creature->sendSystemMessage("@player_structure:wrong_planet"); // That deed cannot be used on this planet.
 		return 1;
 	}

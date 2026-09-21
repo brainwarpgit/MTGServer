@@ -1,6 +1,7 @@
 object_building_player_city_barn_no_planet_restriction = object_building_player_city_shared_barn_no_planet_restriction:new {
 	lotSize = 2,
 	baseMaintenanceRate = 50,
+	constructionMarker = "object/building/player/construction/construction_player_barn.iff",
 	allowedZones = {"corellia", "dantooine", "lok", "naboo", "rori", "talus", "tatooine"},
 	publicStructure = 0,
 	skillMods = {

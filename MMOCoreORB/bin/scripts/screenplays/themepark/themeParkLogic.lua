@@ -71,6 +71,17 @@ function ThemeParkLogic:spawnNpcs()
 			return false
 		end
 
+		-- Interior coordinates must never fall back to an outdoor spawn when a
+		-- snapshot cell is missing or its ID belongs to a different planet.
+		if (npcSpawnData.cellID ~= nil and npcSpawnData.cellID ~= 0) then
+			local pCell = getSceneObject(npcSpawnData.cellID)
+
+			if (pCell == nil or not SceneObject(pCell):isCellObject() or SceneObject(pCell):getZoneName() ~= planetName) then
+				printLuaError("Unable to spawn quest NPC " .. npcSpawnData.npcTemplate .. " for screenplay " .. self.className .. ", cell " .. tostring(npcSpawnData.cellID) .. " is not a valid cell on " .. planetName .. ".")
+				return false
+			end
+		end
+
 		local pNpc = spawnMobile(planetName, npcSpawnData.npcTemplate, 1, npcSpawnData.x, npcSpawnData.z, npcSpawnData.y, npcSpawnData.direction, npcSpawnData.cellID)
 
 		if (pNpc == nil) then

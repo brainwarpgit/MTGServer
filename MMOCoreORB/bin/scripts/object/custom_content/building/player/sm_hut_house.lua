@@ -15,7 +15,7 @@ object_building_player_sm_hut_house = object_building_player_shared_sm_hut_house
 		{"private_safe_logout", 1},
 	},
 	childObjects = {
-			{templateFile = "object/tangible/terminal/terminal_player_structure.iff", x = 2.56417, z = 0.699501, y = 3.14297, ow = -4.37114e-08, ox = 0, oz = 0, oy = 1, containmentType = -1},
+			{templateFile = "object/tangible/terminal/terminal_player_structure.iff", x = 2.56417, z = 0.699501, y = 3.14297, ow = -4.37114e-08, ox = 0, oz = 0, oy = 1, cellid = 1, containmentType = -1},
 			{templateFile = "object/tangible/sign/player/house_address.iff", x = 1.20, z = 4.60, y = 5.50, ow = 0, ox = 0, oz = 0, oy = 1, cellid = -1, containmentType = -1}
 	},
 	shopSigns = {

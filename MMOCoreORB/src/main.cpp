@@ -13,7 +13,7 @@
 #include "server/zone/managers/director/DirectorManager.h"
 #include "server/zone/managers/object/ObjectManager.h"
 
-#ifdef COMPILE_CORE3_TESTS
+#ifdef CORE3_LOCAL_TESTS_AVAILABLE
 #include "tests/TestCore.h"
 
 #include "gtest/gtest.h"
@@ -63,7 +63,7 @@ int main(int argc, char* argv[]) {
 				core.wait();
 			}
 #endif
-#ifdef COMPILE_CORE3_TESTS
+#ifdef CORE3_LOCAL_TESTS_AVAILABLE
 		} else if (arguments.contains("runUnitTests")) {
 			TestCore core;
 			core.info("Running unit tests...", true);

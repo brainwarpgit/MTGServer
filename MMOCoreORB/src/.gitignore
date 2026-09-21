@@ -1,2 +1,5 @@
 /autogen/*
 /autogen/
+
+# Local tests and validation artifacts
+/tests/
