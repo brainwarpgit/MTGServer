@@ -3,7 +3,7 @@ object_tangible_deed_vehicle_deed_speeder_ric_920_deed = object_tangible_deed_ve
 	templateType = VEHICLEDEED,
 
 	controlDeviceObjectTemplate = "object/intangible/vehicle/speeder_ric_920_pcd.iff",
-	generatedObjectTemplate = "object/mobile/vehicle/ric_920_speeder.iff",
+	generatedObjectTemplate = "object/mobile/vehicle/speeder_ric_920.iff",
 }
 
 ObjectTemplates:addTemplate(object_tangible_deed_vehicle_deed_speeder_ric_920_deed, "object/tangible/deed/vehicle_deed/speeder_ric_920_deed.iff")

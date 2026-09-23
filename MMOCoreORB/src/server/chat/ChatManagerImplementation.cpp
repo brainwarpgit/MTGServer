@@ -40,6 +40,7 @@
 #include "server/zone/objects/guild/GuildObject.h"
 #include "server/zone/objects/player/PlayerObject.h"
 #include "server/zone/objects/creature/ai/AiAgent.h"
+#include "server/zone/objects/creature/VehicleJump.h"
 
 #include "server/chat/StringIdChatParameter.h"
 #include "server/chat/PersistentMessage.h"
@@ -844,6 +845,29 @@ void ChatManagerImplementation::handleSocialInternalMessage(CreatureObject* send
 
 	if (text == 0)
 		doText = false;
+
+	// The configured Jump key invokes the normal /jump social. Play that action
+	// on a supported mount instead of animating its rider.
+	if (sender->isRidingMount() && doAnim && socialTypes.contains(emoteID) && getSocialType(emoteID) == "jump") {
+		ManagedReference<SceneObject*> parent = sender->getParent().get();
+
+		if (parent != nullptr && parent->isVehicleObject()) {
+			VehicleObject* vehicle = cast<VehicleObject*>(parent.get());
+			Locker vehicleLocker(vehicle, sender);
+
+			if (VehicleJump::handleJump(vehicle, sender)) {
+				doAnim = false;
+				// A text-only social can still ask the client to face its target.
+				// A vehicle jump must not turn the rider toward the selected object.
+				targetID = 0;
+			}
+		}
+
+		// Taking the cross lock can temporarily release the sender lock.
+		zone = sender->getZone();
+		if (zone == nullptr)
+			return;
+	}
 
 	String firstName;
 

@@ -1703,6 +1703,12 @@ object_building_player_shared_player_house_naboo_medium_style_01 = SharedBuildin
 
 ObjectTemplates:addClientTemplate(object_building_player_shared_player_house_naboo_medium_style_01, "object/building/player/shared_player_house_naboo_medium_style_01.iff")
 
+object_building_player_shared_player_house_naboo_medium_style_02 = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/player/shared_player_house_naboo_medium_style_02.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_building_player_shared_player_house_naboo_medium_style_02, "object/building/player/shared_player_house_naboo_medium_style_02.iff")
+
 object_building_player_shared_player_house_naboo_small_style_01 = SharedBuildingObjectTemplate:new {
 	clientTemplateFileName = "object/building/player/shared_player_house_naboo_small_style_01.iff"
 	--Data below here is deprecated and loaded from the tres, keeping for easy lookups

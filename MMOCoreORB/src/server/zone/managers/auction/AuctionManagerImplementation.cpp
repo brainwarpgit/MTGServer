@@ -11,6 +11,7 @@
 #include "templates/manager/TemplateManager.h"
 #include "server/zone/managers/player/PlayerManager.h"
 #include "server/zone/objects/auction/AuctionItem.h"
+#include "server/zone/objects/scene/TemplateAttributes.h"
 #include "server/zone/packets/auction/ItemSoldMessage.h"
 #include "server/zone/packets/auction/CancelLiveAuctionResponseMessage.h"
 #include "server/zone/packets/auction/AuctionQueryHeadersResponseMessage.h"
@@ -1939,6 +1940,8 @@ void AuctionManagerImplementation::getItemAttributes(CreatureObject* player, uin
 		object->getAttributeListComponent()->fillAttributeList(msg, player, object);
 	} else
 		object->fillAttributeList(msg, player);
+
+	TemplateAttributes::append(msg, object.get());
 
 	PlayerObject* ghost = player->getPlayerObject();
 

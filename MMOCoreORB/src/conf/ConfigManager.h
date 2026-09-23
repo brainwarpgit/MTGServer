@@ -619,6 +619,19 @@ namespace conf {
 			return cachedOnlineLogSize;
 		}
 
+		inline bool showTangibleTemplate() {
+			static uint32 cachedVersion = 0;
+			static bool cachedValue = false;
+
+			if (configVersion.get() > cachedVersion) {
+				Locker guard(&mutex);
+				cachedValue = getBool("Core3.TangibleObject.ShowTemplate", false);
+				cachedVersion = configVersion.get();
+			}
+
+			return cachedValue;
+		}
+
 		inline String getNoTradeMessage() {
 			static uint32 cachedVersion = 0;
 			static String cachedNoTradeMessage;

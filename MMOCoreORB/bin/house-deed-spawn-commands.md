@@ -200,12 +200,19 @@ Garden placement requires a player city and follows its decoration limits, permi
 
 The custom Imperial and Rebel garden building templates are registered, but no matching placement deed is registered. They are therefore excluded from the spawn commands.
 
-## Registered deed with missing building — item inspection only
+## Naboo Medium Style 2 — confirmed working
 
-The Naboo medium style 2 deed is registered, but its generated building is missing. This command can create the deed item; the deed cannot place its building until the missing assets and server definition are supplied.
+The missing player-building definition now uses the original
+`ply_nboo_house_m_s02_fp1` model and interior. The user confirmed the deed works
+on 2026-09-23 and adjusted the management-terminal position. Deploy the updated
+Lua and `mtg_patch_024` files for both server and client to use this house.
+
+Its character-builder menu entry is already commented out, so it will not appear
+there. The server definition is
+`scripts/object/tangible/deed/player_house_deed/naboo_house_medium_style_02_deed.lua`;
+the shared deed asset comes from `mtg_patch_010_object_01.tre`. The new shared
+player-building template and footprint are in `mtg_patch_024`.
 
 ```text
 /object createitem object/tangible/deed/player_house_deed/naboo_house_medium_style_02_deed.iff
 ```
-
-The TRE-only `shared_generic_house_medium_windowed_s03_deed.iff` has no registered server deed, so it has no valid spawn command in this list.

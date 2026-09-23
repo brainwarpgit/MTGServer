@@ -4,7 +4,7 @@ object_tangible_deed_vehicle_deed_atst_deed = object_tangible_deed_vehicle_deed_
 	templateType = VEHICLEDEED,
 
 	controlDeviceObjectTemplate = "object/intangible/vehicle/atst_pcd.iff",
-	generatedObjectTemplate = "object/mobile/vehicle/vehicle_atst.iff",
+	generatedObjectTemplate = "object/mobile/vehicle/walker_at_st.iff",
 
 }
 ObjectTemplates:addTemplate(object_tangible_deed_vehicle_deed_atst_deed, "object/tangible/deed/vehicle_deed/atst_deed.iff")

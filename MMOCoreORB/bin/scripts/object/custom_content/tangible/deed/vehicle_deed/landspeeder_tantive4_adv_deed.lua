@@ -3,8 +3,8 @@ object_tangible_deed_vehicle_deed_landspeeder_tantive4_adv_deed = object_tangibl
 
 	templateType = VEHICLEDEED,
 
-	controlDeviceObjectTemplate = "object/intangible/vehicle/barc_speeder_pcd.iff",
-	generatedObjectTemplate = "object/mobile/vehicle/barc_speeder.iff",
+	controlDeviceObjectTemplate = "object/intangible/vehicle/landspeeder_tantive4_adv_pcd.iff",
+	generatedObjectTemplate = "object/mobile/vehicle/landspeeder_tantive4_adv.iff",
 
 }
 ObjectTemplates:addTemplate(object_tangible_deed_vehicle_deed_landspeeder_tantive4_adv_deed, "object/tangible/deed/vehicle_deed/landspeeder_tantive4_adv_deed.iff")

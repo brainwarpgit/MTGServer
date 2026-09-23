@@ -66,8 +66,9 @@ if(ENABLE_ODB)
 	file(GLOB_RECURSE odb3_headers "odb/*.h")
 endif(ENABLE_ODB)
 
-file(GLOB_RECURSE tests_sources "tests/*.cpp")
-file(GLOB_RECURSE tests_headers "tests/*.h")
+# Compiled tests live directly in tests/; subdirectories hold audit/reference files.
+file(GLOB tests_sources "tests/*.cpp")
+file(GLOB tests_headers "tests/*.h")
 
 # Tests are local-only and may be absent in a fresh checkout.
 if(COMPILE_TESTS AND NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/tests/TestCore.h")

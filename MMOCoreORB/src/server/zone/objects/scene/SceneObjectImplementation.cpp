@@ -4,6 +4,7 @@
 
 #include "server/zone/objects/scene/SceneObject.h"
 #include "server/zone/objects/scene/DatabaseZoneInsertion.h"
+#include "server/zone/objects/scene/TemplateAttributes.h"
 
 #include "server/zone/packets/scene/SceneObjectCreateMessage.h"
 #include "server/zone/packets/scene/SceneObjectDestroyMessage.h"
@@ -597,6 +598,7 @@ void SceneObjectImplementation::sendAttributeListTo(CreatureObject* object) {
 		}
 
 		attributeListComponent->fillAttributeList(alm, object, asSceneObject());
+		TemplateAttributes::append(alm, asSceneObject());
 
 	} catch (const Exception& e) {
 		error(e.getMessage());

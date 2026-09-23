@@ -354,6 +354,7 @@ Core3 = {
 	-- Items, loot and auctions
 	-- ------------------------
 	TangibleObject = {
+		ShowTemplate = false, -- Show server/shared .iff template paths in Examine for all viewers.
 		NoTradeMessage = "", -- Text appended to the item condition attribute.
 		ForceNoTradeMessage = "", -- Text appended to the item condition attribute.
 		ForceNoTradeADKMessage = "", -- Text appended to the item condition attribute.

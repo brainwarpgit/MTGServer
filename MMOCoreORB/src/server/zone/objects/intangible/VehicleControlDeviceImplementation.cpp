@@ -9,6 +9,7 @@
 #include "server/zone/objects/intangible/VehicleControlObserver.h"
 #include "server/zone/objects/creature/CreatureObject.h"
 #include "server/zone/objects/creature/VehicleObject.h"
+#include "server/zone/objects/creature/JetpackTemplate.h"
 #include "server/zone/objects/creature/events/VehicleDecayTask.h"
 #include "server/zone/packets/scene/AttributeListMessage.h"
 #include "server/zone/ZoneServer.h"
@@ -164,7 +165,7 @@ void VehicleControlDeviceImplementation::spawnObject(CreatureObject* player) {
 		decayTask->execute();
 	}
 
-	if (vehicle != nullptr && controlledObject->getServerObjectCRC() == 0x32F87A54) { // Jetpack
+	if (vehicle != nullptr && JetpackTemplate::isJetpack(controlledObject->getServerObjectCRC())) {
 		controlledObject->setCustomizationVariable("/private/index_hover_height", 40, true);				  // Illusion of flying.
 		player->executeObjectControllerAction(STRING_HASHCODE("mount"), controlledObject->getObjectID(), ""); // Auto mount.
 	}

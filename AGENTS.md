@@ -14,6 +14,7 @@ These instructions apply throughout this project. Paths below are relative to th
 ## Git commits
 
 - Do not create commits unless the user explicitly asks you to commit.
+- Keep `MMOCoreORB/bin/scripts/managers/resource_manager_spawns.lua` local, untracked, and ignored by Git. Preserve its local contents and do not force-add it.
 
 ## Building, running, and testing
 
@@ -27,3 +28,13 @@ These instructions apply throughout this project. Paths below are relative to th
 
 - Keep this root file as the single running record of project instructions and preferences provided by the user.
 - Update it when the user adds or changes standing project guidance.
+
+## Maintaining the update history
+
+- Keep `MMOCoreORB/bin/updates.md` and `MMOCoreORB/bin/updatesfull.md` current as project work progresses.
+- `updates.md` is the short, plain-language list of meaningful Core3 and related server/client content updates.
+- `updatesfull.md` is the expanded high-level history: explain what changed, why it matters, relevant commands or configuration options, and any remaining deployment or testing work. Summarize related fixes together rather than listing every edited file.
+- Update both files in the same working change as each meaningful feature, fix, content change, removal, or standing workflow change. Also update their status when the user reports build or in-game results.
+- Record actual implemented work and distinguish committed changes, uncommitted changes, user-confirmed behavior, and changes awaiting testing. Do not present a proposal, reverted experiment, or unresolved issue as a completed feature.
+- Use dated sections, preserve earlier history, and update an existing entry when refining the same change. Identify related user-supplied asset or configuration changes when relevant, without including private local settings or secrets.
+- Keep these files synchronized with each other and the final implementation. Maintaining them does not authorize a Git commit or a Core3 build/run.

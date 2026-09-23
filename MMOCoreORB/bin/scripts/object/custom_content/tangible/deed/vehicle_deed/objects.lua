@@ -6,6 +6,14 @@ ObjectTemplates:addClientTemplate(object_tangible_deed_vehicle_deed_shared_a1_de
 ------------------------------------------------------------------------------------------------------------------------------------
 
 
+object_tangible_deed_vehicle_deed_shared_grievous_wheel_bike_deed = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/vehicle_deed/shared_grievous_wheel_bike_deed.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_vehicle_deed_shared_grievous_wheel_bike_deed, "object/tangible/deed/vehicle_deed/shared_grievous_wheel_bike_deed.iff")
+------------------------------------------------------------------------------------------------------------------------------------
+
+
 object_tangible_deed_vehicle_deed_shared_hover_chair_deed = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/deed/vehicle_deed/shared_hover_chair_deed.iff"
 }
@@ -174,22 +182,6 @@ ObjectTemplates:addClientTemplate(object_tangible_deed_vehicle_deed_shared_vehic
 ------------------------------------------------------------------------------------------------------------------------------------
 
 
-object_tangible_deed_vehicle_deed_shared_vehicular_prototype_bike_deed = SharedTangibleObjectTemplate:new {
-	clientTemplateFileName = "object/tangible/deed/vehicle_deed/shared_vehicular_prototype_bike_deed.iff"
-}
-
-ObjectTemplates:addClientTemplate(object_tangible_deed_vehicle_deed_shared_vehicular_prototype_bike_deed, "object/tangible/deed/vehicle_deed/shared_vehicular_prototype_bike_deed.iff")
-------------------------------------------------------------------------------------------------------------------------------------
-
-
-object_tangible_deed_vehicle_deed_shared_vehicular_prototype_deed = SharedTangibleObjectTemplate:new {
-	clientTemplateFileName = "object/tangible/deed/vehicle_deed/shared_vehicular_prototype_deed.iff"
-}
-
-ObjectTemplates:addClientTemplate(object_tangible_deed_vehicle_deed_shared_vehicular_prototype_deed, "object/tangible/deed/vehicle_deed/shared_vehicular_prototype_deed.iff")
-------------------------------------------------------------------------------------------------------------------------------------
-
-
 object_tangible_deed_vehicle_deed_shared_walker_at_rt_reg = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/deed/vehicle_deed/shared_walker_at_rt_reg.iff"
 }
@@ -349,6 +341,13 @@ ObjectTemplates:addClientTemplate(object_tangible_deed_vehicle_deed_shared_lands
 
 --*****************************************
 
+object_tangible_deed_vehicle_deed_shared_landspeeder_usv5_s02_deed = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/vehicle_deed/shared_landspeeder_usv5_s02_deed.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_deed_vehicle_deed_shared_landspeeder_usv5_s02_deed, "object/tangible/deed/vehicle_deed/shared_landspeeder_usv5_s02_deed.iff")
+
+--*****************************************
+
 object_tangible_deed_vehicle_deed_shared_landspeeder_v35_deed = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/deed/vehicle_deed/shared_landspeeder_v35_deed.iff"
 }
@@ -382,3 +381,15 @@ object_tangible_deed_vehicle_deed_shared_temp_walker1_deed = SharedTangibleObjec
 	clientTemplateFileName = "object/tangible/deed/vehicle_deed/shared_temp_walker1_deed.iff"
 }
 ObjectTemplates:addClientTemplate(object_tangible_deed_vehicle_deed_shared_temp_walker1_deed, "object/tangible/deed/vehicle_deed/shared_temp_walker1_deed.iff")
+
+object_tangible_deed_vehicle_deed_shared_vehicle_deed_sith_speeder = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/vehicle_deed/shared_vehicle_deed_sith_speeder.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_vehicle_deed_shared_vehicle_deed_sith_speeder, "object/tangible/deed/vehicle_deed/shared_vehicle_deed_sith_speeder.iff")
+
+object_tangible_deed_vehicle_deed_shared_vehicle_deed_organa_speeder = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/vehicle_deed/shared_vehicle_deed_organa_speeder.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_vehicle_deed_shared_vehicle_deed_organa_speeder, "object/tangible/deed/vehicle_deed/shared_vehicle_deed_organa_speeder.iff")

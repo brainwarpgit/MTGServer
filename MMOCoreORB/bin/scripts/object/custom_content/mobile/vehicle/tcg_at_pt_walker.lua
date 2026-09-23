@@ -1,6 +1,8 @@
 
 object_mobile_vehicle_tcg_at_pt_walker = object_mobile_vehicle_shared_tcg_at_pt_walker:new {
 	templateType = VEHICLE,
+	-- Keep server vehicle behavior while the client uses creature-mount animation.
+	gameObjectType = 65536,
 	decayRate = 15, -- Damage tick per decay cycle
 	decayCycle = 600 -- Time in seconds per cycle
 }

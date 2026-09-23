@@ -300,6 +300,13 @@ ObjectTemplates:addClientTemplate(object_mobile_vehicle_shared_swamp_speeder, "o
 
 --********************************************
 
+object_mobile_vehicle_shared_swoopracer_black = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/vehicle/shared_swoopracer_black.iff"
+}
+ObjectTemplates:addClientTemplate(object_mobile_vehicle_shared_swoopracer_black, "object/mobile/vehicle/shared_swoopracer_black.iff")
+
+--********************************************
+
 object_mobile_vehicle_shared_tcg_8_air_speeder = SharedCreatureObjectTemplate:new {
 	clientTemplateFileName = "object/mobile/vehicle/shared_tcg_8_air_speeder.iff"
 }

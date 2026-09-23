@@ -6,6 +6,7 @@
 #define DISMOUNTCOMMAND_H_
 
 #include "server/zone/objects/scene/SceneObject.h"
+#include "server/zone/objects/creature/JetpackTemplate.h"
 #include "server/zone/objects/intangible/ControlDevice.h"
 #include "templates/creature/SharedCreatureObjectTemplate.h"
 #include "server/zone/packets/object/DataTransform.h"
@@ -223,7 +224,7 @@ public:
 		// Store Jetpack
 		ManagedReference<ControlDevice*> device = vehicle->getControlDevice().get();
 
-		if (device != nullptr && vehicle->getServerObjectCRC() == 0x32F87A54) { // Auto-store jetpack on dismount.
+		if (device != nullptr && JetpackTemplate::isJetpack(vehicle->getServerObjectCRC())) { // Auto-store jetpack on dismount.
 			device->storeObject(creature);
 			creature->sendSystemMessage("@pet/pet_menu:jetpack_dismount"); // "You have been dismounted from the jetpack, and it has been stored."
 		}
