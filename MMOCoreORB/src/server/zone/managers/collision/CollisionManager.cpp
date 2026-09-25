@@ -108,7 +108,9 @@ bool CollisionManager::checkSphereCollision(const Vector3& origin, float radius,
 
 			const PortalLayout* portalLayout = templateObject->getPortalLayout();
 			if (portalLayout != nullptr) {
-				if(portalLayout->getAppearanceTemplate(0)->testCollide(sphere))
+				auto appearanceTemplate = portalLayout->getAppearanceTemplate(0);
+
+				if (appearanceTemplate != nullptr && appearanceTemplate->testCollide(sphere))
 					return true;
 			} else {
 				auto appearanceTemplate = templateObject->getAppearanceTemplate();
@@ -162,7 +164,7 @@ bool CollisionManager::checkLineOfSightWorldToCell(const Vector3& rayOrigin, con
 	float intersectionDistance;
 	Triangle* triangle = nullptr;
 
-	if (app->intersects(ray, distance, intersectionDistance, triangle, true)) {
+	if (app != nullptr && app->intersects(ray, distance, intersectionDistance, triangle, true)) {
 		return false;
 	}
 
@@ -174,7 +176,7 @@ bool CollisionManager::checkLineOfSightWorldToCell(const Vector3& rayOrigin, con
 		float intersectDist;
 		Triangle* triangle2 = nullptr;
 
-		if (appTemp->intersects(ray, distance, intersectDist, triangle2, true)) {
+		if (appTemp != nullptr && appTemp->intersects(ray, distance, intersectDist, triangle2, true)) {
 			return false;
 		}
 	}

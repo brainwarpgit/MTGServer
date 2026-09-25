@@ -8,18 +8,40 @@
 #include "MeshAppearanceTemplate.h"
 
 void MeshAppearanceTemplate::parse(IffStream* iffStream) {
-	//file = iffStream->getFileName();
-
-	iffStream->openForm('MESH');
+	if (iffStream->openForm('MESH') == nullptr) {
+		throw Exception(String("Missing MESH form in ") + iffStream->getFileName());
+	}
 
 	uint32 version = iffStream->getNextFormType();
-	iffStream->openForm(version);
+	if (iffStream->openForm(version) == nullptr) {
+		throw Exception(String("Missing mesh version form in ") + iffStream->getFileName());
+	}
 
-	AppearanceTemplate::readObject(iffStream);
+	const bool legacy = version == '0003';
+	if (!legacy) {
+		AppearanceTemplate::readObject(iffStream);
+	}
 
-	parseSPS(iffStream);
+	parseSPS(iffStream, legacy);
+
+	if (legacy) {
+		Chunk* center = iffStream->openChunk('CNTR');
+		if (center == nullptr || center->getChunkSize() != 12) {
+			throw Exception(String("Invalid legacy mesh center in ") + iffStream->getFileName());
+		}
+		iffStream->closeChunk('CNTR');
+
+		Chunk* radius = iffStream->openChunk('RADI');
+		if (radius == nullptr || radius->getChunkSize() != 4) {
+			throw Exception(String("Invalid legacy mesh radius in ") + iffStream->getFileName());
+		}
+		iffStream->closeChunk('RADI');
+	}
 
 	iffStream->closeForm(version);
+	if (legacy) {
+		readLegacyMeshBounds(iffStream);
+	}
 	iffStream->closeForm('MESH');
 
 	if (meshes.size() != 0) {
@@ -53,7 +75,9 @@ void MeshAppearanceTemplate::createAABB() {
 		}
 	}
 
-	//meshes.removeAll();
+	if (triangles.size() == 0) {
+		return;
+	}
 
 	//Logger::console.info("creating mesh aabb for triangles " + String::valueOf(triangles.size()), true);
 
@@ -86,31 +110,41 @@ bool MeshAppearanceTemplate::testCollide(float x, float z, float y, float radius
 
 	//Logger::console.info("checking collide in mesh", true);
 
-	return aabbTree->testCollide(sphere);
+	return aabbTree != nullptr && aabbTree->testCollide(sphere);
 }
 
-void MeshAppearanceTemplate::parseSPS(IffStream* iffStream) {
-	iffStream->openForm('SPS ');
-	iffStream->openForm('0001');
-
-	int count = 0;
-
-	iffStream->openChunk('CNT ');
-
-	count = iffStream->getInt();
-
-	iffStream->closeChunk();
-
-	for (int i = 1; i <= count; ++i) {
-		parseVertexData(iffStream, i);
+void MeshAppearanceTemplate::parseSPS(IffStream* iffStream, bool legacy) {
+	if (iffStream->openForm('SPS ') == nullptr) {
+		throw Exception(String("Missing mesh shader groups in ") + iffStream->getFileName());
 	}
 
-	iffStream->closeForm('0001');
+	const uint32 version = legacy ? '0000' : '0001';
+	if (iffStream->getNextFormType() != version || iffStream->openForm(version) == nullptr) {
+		throw Exception(String("Unsupported mesh shader group version in ") + iffStream->getFileName());
+	}
+
+	Chunk* countChunk = iffStream->openChunk('CNT ');
+	if (countChunk == nullptr || countChunk->getChunkSize() != 4) {
+		throw Exception(String("Invalid mesh shader group count in ") + iffStream->getFileName());
+	}
+
+	int count = iffStream->getInt();
+
+	iffStream->closeChunk();
+	if (count < 0 || count > iffStream->getRemainingSubChunksNumber()) {
+		throw Exception(String("Invalid mesh shader group count in ") + iffStream->getFileName());
+	}
+
+	for (int i = 1; i <= count; ++i) {
+		parseVertexData(iffStream, i, legacy);
+	}
+
+	iffStream->closeForm(version);
 	iffStream->closeForm('SPS ');
 }
 
-void MeshAppearanceTemplate::parseVertexData(IffStream* iffStream, int idx) {
-	int formVersion = 0;'0000';// + idx;
+void MeshAppearanceTemplate::parseVertexData(IffStream* iffStream, int idx, bool legacy) {
+	int formVersion = 0;
 
 	String idxText = String::valueOf(idx);
 	int lengthOfText = idxText.length();
@@ -125,26 +159,36 @@ void MeshAppearanceTemplate::parseVertexData(IffStream* iffStream, int idx) {
 		formVersion += (int)a;
 	}
 
-	iffStream->openForm(formVersion);
+	if (iffStream->openForm(formVersion) == nullptr) {
+		throw Exception(String("Missing mesh shader group in ") + iffStream->getFileName());
+	}
 
-	iffStream->openChunk('NAME');
+	if (iffStream->openChunk('NAME') == nullptr) {
+		throw Exception(String("Missing mesh shader name in ") + iffStream->getFileName());
+	}
 
 	String shaderName;
 	iffStream->getString(shaderName);
 
 	iffStream->closeChunk();
 
-	iffStream->openChunk('INFO');
+	if (iffStream->openChunk('INFO') == nullptr) {
+		throw Exception(String("Missing mesh shader information in ") + iffStream->getFileName());
+	}
 	iffStream->closeChunk();
 
 	uint32 nextVersion = iffStream->getNextFormType();
-	iffStream->openForm(nextVersion);
+	if (iffStream->openForm(nextVersion) == nullptr) {
+		throw Exception(String("Missing mesh shader data in ") + iffStream->getFileName());
+	}
 
-	iffStream->openChunk('INFO');
+	if (iffStream->openChunk('INFO') == nullptr) {
+		throw Exception(String("Missing mesh primitive information in ") + iffStream->getFileName());
+	}
 	iffStream->closeChunk();
 
 	Reference<MeshData*> meshData = new MeshData;
-	meshData->readObject(iffStream);
+	meshData->readObject(iffStream, legacy);
 	meshes.emplace(std::move(meshData));
 
 	iffStream->closeForm(nextVersion);

@@ -2,6 +2,24 @@
 
 ## 2026-09-25
 
+### Legacy MESH/0003 compatibility
+
+- **Entered validation:** 2026-09-25
+- **Status:** Validated — former runtime parsing exception removed
+- **Validated:** 2026-09-25
+- **Evidence:** The current branch's startup diagnosis documents the failing asset as `MESH/0003` with `SPS /0000`, `VTXA/0002`, raw 32-bit indices, and `EXBX/0000` bounds. Static review confirmed that the new parser follows that hierarchy while retaining modern count-prefixed 16-bit and 32-bit index handling. Parser failure cleanup and affected null callers were reviewed, and Git whitespace validation passed. The user subsequently confirmed that the former `InvalidChunkTypeException` no longer occurs.
+- **Core3 build/runtime validation:** The user rebuilt and confirmed that `appearance/defaultappearance.msh` loads without the former `InvalidChunkTypeException`.
+- **Remaining work:** The synthetic local `MeshAppearanceTest` has not been run; it may be run later in a test-enabled build, but no further work is required for the reported startup error.
+
+### Branch-local source provenance
+
+- **Entered validation:** 2026-09-25
+- **Status:** Validated — documentation and source review
+- **Validated:** 2026-09-25
+- **Evidence:** Confirmed that `AGENTS.md` prohibits using source changes from commits on other branches and requires fixes to rely solely on evidence in the currently checked-out branch. The accompanying legacy mesh changes were reviewed under that constraint.
+- **Core3 build/runtime validation:** Not applicable; this is a standing workflow rule.
+- **Remaining work:** None for the guidance change.
+
 ### Engine3 upstream alignment
 
 - **Entered validation:** 2026-09-25

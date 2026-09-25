@@ -1942,7 +1942,7 @@ Vector<Reference<MeshData*> > BuildingObjectImplementation::getTransformedMeshDa
 	if(pl) {
 		if(pl->getCellTotalNumber() > 0) {
 			const AppearanceTemplate *appr = pl->getAppearanceTemplate(0);
-			const FloorMesh *floor = TemplateManager::instance()->getFloorMesh(appr->getFloorMesh());
+			const FloorMesh *floor = appr != nullptr ? TemplateManager::instance()->getFloorMesh(appr->getFloorMesh()) : nullptr;
 
 			if (floor == nullptr) {
 				floor = pl->getFloorMesh(0);
@@ -1953,7 +1953,9 @@ Vector<Reference<MeshData*> > BuildingObjectImplementation::getTransformedMeshDa
 			}
 
 #ifndef RENDER_EXTERNAL_FLOOR_MESHES_ONLY
-			data.addAll(appr->getTransformedMeshData(fullTransform));
+			if (appr != nullptr) {
+				data.addAll(appr->getTransformedMeshData(fullTransform));
+			}
 #endif
 			const CellProperty* tmpl = pl->getCellProperty(0);
 
@@ -1979,7 +1981,7 @@ const BaseBoundingVolume* BuildingObjectImplementation::getBoundingVolume() {
 	if(pl) {
 		if(pl->getCellTotalNumber() > 0) {
 			const AppearanceTemplate *appr = pl->getAppearanceTemplate(0);
-			return appr->getBoundingVolume();
+			return appr != nullptr ? appr->getBoundingVolume() : nullptr;
 		}
 	} else {
 		return SceneObjectImplementation::getBoundingVolume();

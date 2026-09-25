@@ -2,6 +2,17 @@
 
 ## 2026-09-25
 
+### Legacy MESH/0003 compatibility — Committed
+
+- Added version-aware parsing for the legacy `appearance/defaultappearance.msh` layout documented by the current branch's startup diagnostics, including `SPS /0000`, `VTXA/0002`, raw 32-bit indices, and `EXBX/0000` bounds.
+- Preserved modern mesh support, including count-prefixed 16-bit and 32-bit indices, and added validation for malformed vertex/index data.
+- Failed appearance parses now return no template instead of a partial object; collision and building callers safely handle absent appearances or empty mesh trees.
+- Added a local ignored regression test for the legacy layout. The user rebuilt and confirmed that the former `InvalidChunkTypeException` is gone.
+
+### Branch-local source provenance — Committed
+
+- Updated project guidance to prohibit using source changes from commits on other branches and to require fixes to be developed solely from evidence available in the checked-out branch.
+
 ### Engine3 upstream alignment — Committed
 
 - Configured the engine3 submodule to follow its official upstream `master` branch and aligned the recorded revision with the Core3 source that added ship JSON serialization.

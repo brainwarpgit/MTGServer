@@ -97,10 +97,20 @@ Vector <MeshTriangle>* MeshData::getMeshWithinBounds(AABB& bounds) const {
 	return tris;
 }
 
-void MeshData::readObject(IffStream* iffStream) {
-	iffStream->openForm('VTXA');
-	iffStream->openForm('0003');
-	iffStream->openChunk('INFO');
+void MeshData::readObject(IffStream* iffStream, bool legacy) {
+	if (iffStream->openForm('VTXA') == nullptr) {
+		throw Exception(String("Missing mesh vertex array in ") + iffStream->getFileName());
+	}
+
+	const uint32 version = legacy ? '0002' : '0003';
+	if (iffStream->getNextFormType() != version || iffStream->openForm(version) == nullptr) {
+		throw Exception(String("Unsupported mesh vertex array version in ") + iffStream->getFileName());
+	}
+
+	Chunk* vertexInfo = iffStream->openChunk('INFO');
+	if (vertexInfo == nullptr || vertexInfo->getChunkSize() < 8) {
+		throw Exception(String("Invalid mesh vertex information in ") + iffStream->getFileName());
+	}
 
 	iffStream->getInt(); //unk
 
@@ -109,8 +119,14 @@ void MeshData::readObject(IffStream* iffStream) {
 	iffStream->closeChunk();
 
 	Chunk* vertexDataChunk = iffStream->openChunk('DATA');
+	if (vertexDataChunk == nullptr) {
+		throw Exception(String("Missing mesh vertex data in ") + iffStream->getFileName());
+	}
 
 	int vertexDataChunkSize = vertexDataChunk->getChunkSize();
+	if (numVertices <= 0 || vertexDataChunkSize % numVertices != 0 || vertexDataChunkSize / numVertices < 12) {
+		throw Exception(String("Invalid mesh vertex count or stride in ") + iffStream->getFileName());
+	}
 
 	int intBytesPerVertex = vertexDataChunkSize / numVertices;
 
@@ -123,19 +139,56 @@ void MeshData::readObject(IffStream* iffStream) {
 	}
 
 	iffStream->closeChunk('DATA');
-	iffStream->closeForm('0003');
+	iffStream->closeForm(version);
 	iffStream->closeForm('VTXA');
 
 	Chunk* indexData = iffStream->openChunk('INDX');
+	if (indexData == nullptr) {
+		throw Exception(String("Missing mesh indices in ") + iffStream->getFileName());
+	}
 
-	int indexCount = iffStream->getInt();
+	const int indexBytes = indexData->getChunkSize();
+	int indexCount = 0;
+	bool wideIndices = legacy;
+
+	if (legacy) {
+		if (indexBytes % 4 != 0) {
+			throw Exception(String("Invalid legacy mesh index size in ") + iffStream->getFileName());
+		}
+		indexCount = indexBytes / 4;
+	} else {
+		if (indexBytes < 4 || (indexBytes - 4) % 2 != 0) {
+			throw Exception(String("Invalid mesh index size in ") + iffStream->getFileName());
+		}
+
+		indexCount = iffStream->getInt();
+		const int payloadBytes = indexBytes - 4;
+
+		if (indexCount < 0) {
+			throw Exception(String("Invalid mesh index count in ") + iffStream->getFileName());
+		} else if (indexCount == payloadBytes / 2) {
+			wideIndices = false;
+		} else if (payloadBytes % 4 == 0 && indexCount == payloadBytes / 4) {
+			wideIndices = true;
+		} else {
+			throw Exception(String("Invalid mesh index count in ") + iffStream->getFileName());
+		}
+	}
+
+	if (indexCount % 3 != 0) {
+		throw Exception(String("Incomplete mesh triangle in ") + iffStream->getFileName());
+	}
 
 	triangles.removeAll(indexCount / 3);
 
-	for (int i = 1; i <= indexCount; i += 3) {
-		int a = indexData->readShort();
-		int b = indexData->readShort();
-		int c = indexData->readShort();
+	for (int i = 0; i < indexCount; i += 3) {
+		uint32 a = wideIndices ? iffStream->getUnsignedInt() : static_cast<uint16>(indexData->readShort());
+		uint32 b = wideIndices ? iffStream->getUnsignedInt() : static_cast<uint16>(indexData->readShort());
+		uint32 c = wideIndices ? iffStream->getUnsignedInt() : static_cast<uint16>(indexData->readShort());
+
+		if (a >= static_cast<uint32>(numVertices) || b >= static_cast<uint32>(numVertices) || c >= static_cast<uint32>(numVertices)) {
+			throw Exception(String("Mesh triangle index out of range in ") + iffStream->getFileName());
+		}
 
 		MeshTriangle triangle;
 		triangle.verts[0] = a;

@@ -17,6 +17,13 @@ class AppearanceTemplate : public Object {
 	BaseBoundingVolume* volume = nullptr;
 	BaseBoundingVolume* collisionVolume = nullptr;
 	VectorMap<String, Matrix4> hardpoints;
+
+protected:
+	void readLegacyMeshBounds(IffStream* iffStream) {
+		fileName = iffStream->getFileName();
+		volume = BoundingVolumeFactory::getVolume(iffStream);
+	}
+
 public:
 
 	virtual uint32 getType() const {

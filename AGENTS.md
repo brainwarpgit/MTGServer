@@ -19,6 +19,11 @@ These instructions apply throughout this project. Paths below are relative to th
 - Implement source fixes outside the engine3 submodule and within the authorized workspace boundaries. Do not use a submodule revision change as a workaround for a project source issue.
 - An engine3 revision or recorded-pointer update is permitted only when the user explicitly requests an upstream dependency alignment or update. Use an unmodified commit from the configured upstream branch, and do not include engine3 source changes.
 
+## Source provenance
+
+- Do not use source changes from commits on other branches, including by cherry-picking, copying, or recreating their patches.
+- Develop fixes solely from the source, documentation, diagnostics, and other project evidence present in the currently checked-out branch.
+
 ## Git commits
 
 - Do not create commits unless the user explicitly asks you to commit.
