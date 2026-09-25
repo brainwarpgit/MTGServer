@@ -2,6 +2,15 @@
 
 ## 2026-09-25
 
+### Startup template and region repairs
+
+- **Entered validation:** 2026-09-25
+- **Status:** Validated — targeted startup warnings and errors removed
+- **Validated:** 2026-09-25
+- **Evidence:** Static review confirmed one shared and one server registration for the missing vehicle parent, the generic lightsaber shared registration and server include, and correctly named files and globals for all five reported zones. The staged vehicle IFF is 1,278 bytes and has SHA-256 `11da6aa2a9a05f83e339c80aefa61af0437c31146bc02c05e59221f136f60aba`, matching the byte-identical common vehicle-component base assets in the configured source archive. The deployed `mtg_patch_024.tre` contains exactly that path and payload. Both Lua configurations list patch 024 first, and the source latest-TRE fallback also names patch 024. Git whitespace validation passed.
+- **Core3 build/runtime validation:** The user restarted the server and confirmed that the targeted warnings and errors are gone.
+- **Remaining work:** None for actionable startup errors 2 through 4. The empty region files intentionally provide zero scripted regions.
+
 ### Legacy MESH/0003 compatibility
 
 - **Entered validation:** 2026-09-25

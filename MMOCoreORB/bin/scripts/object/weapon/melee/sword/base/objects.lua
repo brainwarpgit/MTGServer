@@ -167,6 +167,12 @@ object_weapon_melee_sword_base_shared_crafted_sword_base = SharedWeaponObjectTem
 
 ObjectTemplates:addClientTemplate(object_weapon_melee_sword_base_shared_crafted_sword_base, "object/weapon/melee/sword/base/shared_crafted_sword_base.iff")
 
+object_weapon_melee_sword_base_shared_generic_lightsaber_base = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/sword/base/shared_generic_lightsaber_base.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_melee_sword_base_shared_generic_lightsaber_base, "object/weapon/melee/sword/base/shared_generic_lightsaber_base.iff")
+
 object_weapon_melee_sword_base_shared_lightsaber_base = SharedWeaponObjectTemplate:new {
 	clientTemplateFileName = "object/weapon/melee/sword/base/shared_lightsaber_base.iff"
 	--Data below here is deprecated and loaded from the tres, keeping for easy lookups

@@ -2,6 +2,14 @@
 
 ## 2026-09-25
 
+### Startup template and region repairs — Committed
+
+- Added the missing common vehicle-component parent template and staged its client IFF under `mtg_patch_024`, restoring the inheritance target used by 11 civilian and military vehicle components.
+- Registered the existing generic training-lightsaber base on both the shared and server sides so its derived template can load.
+- Added empty region tables for the enabled Coruscant, Dungeon2, Kashyyyk Main, Moraband, and Taanab zones; corrected the existing Tanaab filename and table spelling to Taanab.
+- Added `mtg_patch_024.tre` first in the tracked and local `TreFiles` lists and advanced the source default for the latest TRE from patch 023 to patch 024.
+- Static validation passed, including the deployed archive contents, and the user confirmed that the targeted startup warnings and errors are gone.
+
 ### Legacy MESH/0003 compatibility — Committed
 
 - Added version-aware parsing for the legacy `appearance/defaultappearance.msh` layout documented by the current branch's startup diagnostics, including `SPS /0000`, `VTXA/0002`, raw 32-bit indices, and `EXBX/0000` bounds.

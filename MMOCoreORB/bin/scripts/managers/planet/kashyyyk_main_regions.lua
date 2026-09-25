@@ -13,7 +13,7 @@
 
 require("scripts.managers.planet.regions")
 
-tanaab_regions = {
+kashyyyk_main_regions = {
 	-- Named Regions, POIs and Decor
 
 	-- Cities
