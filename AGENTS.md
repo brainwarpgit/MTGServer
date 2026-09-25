@@ -13,6 +13,12 @@ These instructions apply throughout this project. Paths below are relative to th
 - The root `UPDATES.md` and `UPDATESFULL.md` are exceptions: they may be read and updated to maintain work progress.
 - The root `VALIDATION.md` is an exception: it may be read and updated to maintain current change validation.
 
+## Protected dependencies
+
+- Treat the contents of the `MMOCoreORB/utils/engine3` submodule as immutable. Never edit, patch, format, replace, or generate files within it as part of a project fix or change.
+- Implement source fixes outside the engine3 submodule and within the authorized workspace boundaries. Do not use a submodule revision change as a workaround for a project source issue.
+- An engine3 revision or recorded-pointer update is permitted only when the user explicitly requests an upstream dependency alignment or update. Use an unmodified commit from the configured upstream branch, and do not include engine3 source changes.
+
 ## Git commits
 
 - Do not create commits unless the user explicitly asks you to commit.

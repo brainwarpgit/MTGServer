@@ -2,6 +2,13 @@
 
 ## 2026-09-25
 
+### Engine3 upstream alignment — Committed
+
+- Configured the engine3 submodule to follow its official upstream `master` branch and aligned the recorded revision with the Core3 source that added ship JSON serialization.
+- The aligned engine3 revision supplies the required `Vector4` and `Matrix4` JSON support and uses Clang 20-compatible literal-operator declarations; the temporary CMake warning exception was discarded.
+- Updated project guidance to keep engine3 source immutable while allowing explicitly requested upstream dependency alignments.
+- A user-run build completed and the game server loaded successfully.
+
 ### Local server files — Committed
 
 - Refreshed `MMOCoreORB/bin/conf/config-local.lua` from the tracked `config.lua` template while preserving the previous local file as an ignored backup.

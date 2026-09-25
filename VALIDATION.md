@@ -2,6 +2,15 @@
 
 ## 2026-09-25
 
+### Engine3 upstream alignment
+
+- **Entered validation:** 2026-09-25
+- **Status:** Validated — build completed and game server loaded
+- **Validated:** 2026-09-25
+- **Evidence:** Static review confirmed that `.gitmodules` selects the official engine3 `master` branch and that the recorded submodule revision is upstream commit `4cbf39336e0e727dfef861fbe65bd303ce70fd37`. That revision contains the required `Vector4` and `Matrix4` JSON support and the Clang 20-compatible literal-operator declarations. The discarded CMake workaround is absent, and Git whitespace checks passed.
+- **Core3 build/runtime validation:** The user reported that the Core3 build completed and the game server loaded successfully with the aligned engine3 revision.
+- **Remaining work:** None for this dependency alignment.
+
 ### Local server files
 
 - **Entered validation:** 2026-09-25
