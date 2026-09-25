@@ -5,11 +5,11 @@
 ### Moraband boundary compatibility and city-config cleanup
 
 - **Entered validation:** 2026-09-25
-- **Status:** Partially validated — boundary runtime fix confirmed; city-config message awaiting confirmation
-- **Validated:** 2026-09-25 for boundary compatibility; not yet for the city-config cleanup
-- **Evidence:** Static inspection of the current configured Moraband terrain confirmed that `BPOL/0007` is the existing `0005` payload plus one 32-bit field between `shaderSize` and `shaderName`, and `BREC/0004` is the existing `0003` payload with the same addition. All eight available newer-version records contain zero in that field, so the new readers consume it without assigning unverified behavior. Source review confirmed that older readers are unchanged, the two skipped polygons are in the enabled `various mountains` layer, and the rectangle's `playable boundary` parent layer is disabled. The user subsequently confirmed that the boundary-format errors are gone. An exhaustive source search found no remaining `CityVotingDuration` declaration, configuration lookup, or consumer. The ignored local regression test covers enabled geometry, bounds, inside/outside influence, a nonzero appended sentinel, and a following shader string. Git whitespace validation passed.
-- **Core3 build/runtime validation:** The user rebuilt and loaded Core3 and confirmed the boundary-format fix. Codex did not build or run Core3 after these changes, in accordance with project guidance. The city-config diagnostic was not separately confirmed.
-- **Remaining work:** Confirm that the `CityVotingDuration` expected-number message no longer appears. The ignored local `TerrainBoundaryVersionTest` has not been compiled or run.
+- **Status:** Validated — boundary compatibility and city-config cleanup confirmed
+- **Validated:** 2026-09-25
+- **Evidence:** Static inspection of the current configured Moraband terrain confirmed that `BPOL/0007` is the existing `0005` payload plus one 32-bit field between `shaderSize` and `shaderName`, and `BREC/0004` is the existing `0003` payload with the same addition. All eight available newer-version records contain zero in that field, so the new readers consume it without assigning unverified behavior. Source review confirmed that older readers are unchanged, the two skipped polygons are in the enabled `various mountains` layer, and the rectangle's `playable boundary` parent layer is disabled. The user confirmed that the runtime boundary-format errors are gone. `TerrainBoundaryVersionTest.ParsesPolygonVersionSeven` and `TerrainBoundaryVersionTest.ParsesRectangleVersionFour` both passed in the current test-enabled binary, together with an overall three-test result of zero. An exhaustive source search found no remaining `CityVotingDuration` declaration, configuration lookup, or consumer. A separate fresh filtered startup showed CityManager loading its configuration and reached `READY` without `CityVotingDuration` or unsupported boundary-version output. Git whitespace validation passed.
+- **Core3 build/runtime validation:** At the user's explicit request, Codex ran the two boundary regression tests through a controlled GDB wrapper; both passed, and the wrapper stopped before the unrelated parser-test cleanup path. Codex then started Core3 with a fresh filtered console, observed `READY` after 46 seconds with no targeted diagnostics, and stopped it with Ctrl+C.
+- **Remaining work:** None for this change.
 
 ### Core3 warning and error audit
 
@@ -18,7 +18,7 @@
 - **Validated:** 2026-09-25
 - **Evidence:** At the user's explicit request, Codex started Core3 at 15:33:04 (PID 255671). It initialized successfully in 46 seconds, remained running through the five-minute scheduled-task boundary and the normal 352-second database backup, and was then stopped intentionally. In `log/core3.log` lines 143106–144170, excluding the 38 deferred `ScheduleShuttleTask` errors, there are 28 TreeArchive warnings, five INFO-severity Lua load failures containing `ERROR`, and no exceptions. No additional non-shuttle warning, error, or exception appeared after initialization. The live console also reported two unsupported Moraband `BoundaryPolygon/0007` forms and one unsupported `BoundaryRectangle/0004` form; those direct-console messages are not copied into `core3.log`.
 - **Core3 build/runtime validation:** Core3 was run and monitored by Codex under the user's explicit authorization. The process was stopped with Ctrl+C only after initialization, the five-minute timer, and the scheduled backup completed.
-- **Remaining work:** The 28 known missing-data warnings comprise two mining-asteroid chassis tables reported twice each, three ship client-data CDFs reported six times each, the Corellian-corvette POB, `particle_test_31.prt`, and four snapshots. The five Lua load failures are three engine-configuration fallback probes and two absent optional `custom_scripts` overrides. The unsupported weighted base-player gender parameter produces 41 repeated INFO diagnostics while concrete player templates provide explicit genders. Moraband boundary compatibility is now runtime-validated; the stale `CityVotingDuration` read has been removed and awaits explicit message-level confirmation. Shuttle scheduling remains explicitly deferred.
+- **Remaining work:** The 28 known missing-data warnings comprise two mining-asteroid chassis tables reported twice each, three ship client-data CDFs reported six times each, the Corellian-corvette POB, `particle_test_31.prt`, and four snapshots. The five Lua load failures are three engine-configuration fallback probes and two absent optional `custom_scripts` overrides. The unsupported weighted base-player gender parameter produces 41 repeated INFO diagnostics while concrete player templates provide explicit genders. Moraband boundary compatibility and the removed `CityVotingDuration` read are now fully validated. Shuttle scheduling remains explicitly deferred.
 
 ### Significant startup warning and TRE cleanup
 
@@ -41,11 +41,11 @@
 ### Legacy MESH/0003 compatibility
 
 - **Entered validation:** 2026-09-25
-- **Status:** Validated — former runtime parsing exception removed
+- **Status:** Validated — runtime repair and parser regression test passed
 - **Validated:** 2026-09-25
-- **Evidence:** The current branch's startup diagnosis documents the failing asset as `MESH/0003` with `SPS /0000`, `VTXA/0002`, raw 32-bit indices, and `EXBX/0000` bounds. Static review confirmed that the new parser follows that hierarchy while retaining modern count-prefixed 16-bit and 32-bit index handling. Parser failure cleanup and affected null callers were reviewed, and Git whitespace validation passed. The user subsequently confirmed that the former `InvalidChunkTypeException` no longer occurs.
-- **Core3 build/runtime validation:** The user rebuilt and confirmed that `appearance/defaultappearance.msh` loads without the former `InvalidChunkTypeException`.
-- **Remaining work:** The synthetic local `MeshAppearanceTest` has not been run; it may be run later in a test-enabled build, but no further work is required for the reported startup error.
+- **Evidence:** The current branch's startup diagnosis documents the failing asset as `MESH/0003` with `SPS /0000`, `VTXA/0002`, raw 32-bit indices, and `EXBX/0000` bounds. Static review confirmed that the new parser follows that hierarchy while retaining modern count-prefixed 16-bit and 32-bit index handling. Parser failure cleanup and affected null callers were reviewed, and Git whitespace validation passed. The user confirmed that the former `InvalidChunkTypeException` no longer occurs. Codex subsequently ran `MeshAppearanceTest.ParsesLegacyVersionThreeWithoutAppearanceForm` in the current test-enabled binary; it passed, and the combined three-test run returned zero.
+- **Core3 build/runtime validation:** The user rebuilt and confirmed that `appearance/defaultappearance.msh` loads without the former `InvalidChunkTypeException`. At the user's explicit request, Codex also ran the synthetic mesh regression test through the controlled GDB wrapper; it passed, and the wrapper stopped before the unrelated parser-test cleanup path.
+- **Remaining work:** None for this change.
 
 ### Branch-local source provenance
 

@@ -6,7 +6,7 @@
 
 - Added support for the `BoundaryPolygon/0007` and `BoundaryRectangle/0004` layouts present in the current Moraband terrain. The new readers preserve all existing fields, consume the appended 32-bit field found in these versions, and leave the older boundary readers unchanged.
 - Removed the obsolete, unused `CityVotingDuration` declaration and Lua configuration read that produced an expected-number startup message when no such global was defined.
-- Added an ignored local regression test with synthetic `0007` polygon and `0004` rectangle data. Static source and format checks passed, and the user confirmed that the boundary-format errors are gone after rebuilding and loading Core3; explicit runtime confirmation of the city-config message remains pending.
+- Added an ignored local regression test with synthetic `0007` polygon and `0004` rectangle data. The legacy-mesh test and both boundary tests pass, and a fresh filtered startup reached `READY` without the boundary-version diagnostics or the `CityVotingDuration` message.
 - Diagnosed the banner/flagpole component lines and weighted-gender `IntegerParam` messages as non-fatal informational output; no behavior change or message suppression is included in this work.
 
 ### Significant startup warning and TRE cleanup — Committed
