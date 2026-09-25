@@ -2,6 +2,15 @@
 
 ## 2026-09-25
 
+### Local server files
+
+- **Entered validation:** 2026-09-25
+- **Status:** Validated — file and Git state checks
+- **Validated:** 2026-09-25
+- **Evidence:** Confirmed that `config-local.lua` matches `config.lua`, both requested local files match explicit ignore rules, and `resource_manager_spawns.lua` remains on disk while being removed from the Git index.
+- **Core3 build/runtime validation:** Not run; the user retains responsibility for building and running Core3.
+- **Remaining work:** None for this local-file tracking change.
+
 ### Project workflow records
 
 - **Entered validation:** 2026-09-25
