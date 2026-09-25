@@ -2,6 +2,15 @@
 
 ## 2026-09-25
 
+### Significant startup warning and TRE cleanup
+
+- **Entered validation:** 2026-09-25
+- **Status:** Validated — targeted warnings removed; delayed shuttle mapping deferred
+- **Validated:** 2026-09-25
+- **Evidence:** Static review confirmed one minimal table for each of the eight affected zones, all four battlefield templates now use the ship class, the PCD no longer has deed-only fields, the resource template uses its RCCT parent, and the particle-warning exception is restricted to the exact verified path. The 22 supplied ship-chassis IFFs are present under `mtg_patch_024/datatables/space`. The corrected 1,486-byte shared pilot-chair IFF references the existing `ship_pilot_station.iff` descriptor and has SHA-256 `90221a0a9ba9a9834b3669438fc447cdf403373f1486a477ca568f9a43e08db8`. The deployed `mtg_patch_024.tre` matches all 24 staged paths and payloads byte-for-byte. Core3 initialized in 48 seconds, and the resulting startup log contains none of the eight PlanetManager configuration warnings, six template-type mismatch warnings, `pt_light_indoor_glow.prt` component warnings, 22 supplied chassis-table warnings, or the `shipcontrol_pob.iff` warning. Its 28 remaining TreeArchive warnings are exactly the known unresolved data paths recorded below.
+- **Core3 build/runtime validation:** The user rebuilt the TRE archive and Core3, loaded the server, and confirmed that all changes discussed in this cleanup are working.
+- **Remaining work:** No further work is required for the implemented fixes. Correct source data is still needed before addressing the two mining-asteroid chassis tables, three ship client-data CDFs, Corellian-corvette POB, four missing snapshots, and `particle_test_31.prt`; their warnings intentionally remain visible. A longer run also produced 38 delayed `ScheduleShuttleTask` errors after the five-minute boot timer for snapshot shuttles in Chandrila, Coruscant, Hoth, Kaas, Mandalore, Moraband, and Taanab. Authoritative `planetTravelPoints` are not available in the current branch, and the user explicitly deferred this shuttle work.
+
 ### Startup template and region repairs
 
 - **Entered validation:** 2026-09-25

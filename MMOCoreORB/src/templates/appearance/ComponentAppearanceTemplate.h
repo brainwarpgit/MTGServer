@@ -85,7 +85,10 @@ public:
 			AppearanceTemplate* templ = TemplateManager::instance()->getAppearanceTemplate(meshFile);
 
 			if (templ == nullptr) {
-				Logger::console.warning() << "ComponentAppearanceTemplate - AppearanceTemplate not found:" << meshFile;
+				// This present PEFT is client-only and intentionally has no server
+				// appearance template. Keep warnings for every other unresolved child.
+				if (meshFile != "appearance/pt_light_indoor_glow.prt")
+					Logger::console.warning() << "ComponentAppearanceTemplate - AppearanceTemplate not found:" << meshFile;
 
 				iffStream->closeChunk('PART');
 

@@ -53,6 +53,16 @@ shuttleportLandedTime = 120
 starportLandedTime = 120
 
 
+chandrila = {
+	weatherEnabled = 0,
+	gcwEnabled = 0,
+}
+
+coruscant = {
+	weatherEnabled = 0,
+	gcwEnabled = 0,
+}
+
 corellia = {
 	weatherEnabled = 1,
 	gcwEnabled = 1,
@@ -248,6 +258,21 @@ endor = {
 	}
 }
 
+hoth = {
+	weatherEnabled = 0,
+	gcwEnabled = 0,
+}
+
+kaas = {
+	weatherEnabled = 0,
+	gcwEnabled = 0,
+}
+
+kashyyyk = {
+	weatherEnabled = 0,
+	gcwEnabled = 0,
+}
+
 kashyyyk_dead_forest = {
 	weatherEnabled = 0,
 	gcwEnabled = 0,
@@ -337,6 +362,16 @@ lok = {
 	planetObjects = {
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.999879, oz = 0, ow = 0.015506, x = 464.677, z = 8.75806, y = 5506.49, parentid = 0}
 	}
+}
+
+mandalore = {
+	weatherEnabled = 0,
+	gcwEnabled = 0,
+}
+
+moraband = {
+	weatherEnabled = 0,
+	gcwEnabled = 0,
 }
 
 mustafar = {
@@ -495,6 +530,11 @@ rori = {
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.69192, oz = 0, ow = 0.721974, x = 5370.22, z = 80, y = 5666.04, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.0274543, oz = 0, ow = 0.999623, x = 3672.91, z = 96, y = -6441.07, parentid = 0}
 	}
+}
+
+taanab = {
+	weatherEnabled = 0,
+	gcwEnabled = 0,
 }
 
 talus = {

@@ -8,9 +8,9 @@
 #ifndef RESOURCESPAWNTEMPLATE_H_
 #define RESOURCESPAWNTEMPLATE_H_
 
-#include "templates/SharedObjectTemplate.h"
+#include "templates/tangible/SharedResourceContainerObjectTemplate.h"
 
-class ResourceSpawnTemplate : public SharedObjectTemplate {
+class ResourceSpawnTemplate : public SharedResourceContainerObjectTemplate {
 private:
 
 public:
@@ -22,8 +22,8 @@ public:
 
 	}
 
-	void readObject(LuaObject* templateData) {
-		SharedObjectTemplate::readObject(templateData);
+	void readObject(LuaObject* templateData) override {
+		SharedResourceContainerObjectTemplate::readObject(templateData);
 
 	}
 };

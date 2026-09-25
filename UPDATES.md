@@ -2,6 +2,15 @@
 
 ## 2026-09-25
 
+### Significant startup warning and TRE cleanup — Committed
+
+- Added minimal PlanetManager configurations for Kashyyyk, Hoth, Kaas, Coruscant, Chandrila, Moraband, Taanab, and Mandalore. These configurations remove the missing-settings warnings and allow each zone to proceed to snapshot loading without inventing weather or GCW behavior.
+- Corrected six shared-template type mismatches: the resource-spawn base now uses the resource-container type, four battlefield-station templates use ship types, and the single-pod airspeeder is consistently registered as an intangible player control device (PCD).
+- Suppressed only the misleading component-child warning for the present `pt_light_indoor_glow.prt` particle appearance that the server intentionally does not instantiate. Warnings for every other unresolved child remain visible.
+- Added 22 supplied ship-chassis tables and a corrected shared pilot-chair asset to `mtg_patch_024`, removing those missing-table warnings and the `shipcontrol_pob` descriptor warning.
+- The user rebuilt the TRE archive and Core3, loaded the server, and confirmed the discussed changes are working. The remaining genuine data gaps are the two mining-asteroid chassis tables, three ship client-data CDFs, the Corellian-corvette POB, four snapshot files, and `particle_test_31.prt`.
+- Thirty-eight delayed shuttle-scheduling errors in seven custom zones remain deferred at the user's request; their snapshots are intentionally left enabled until authoritative travel-point data is added.
+
 ### Startup template and region repairs — Committed
 
 - Added the missing common vehicle-component parent template and staged its client IFF under `mtg_patch_024`, restoring the inheritance target used by 11 civilian and military vehicle components.
