@@ -8,6 +8,7 @@
 #include "server/zone/Zone.h"
 #include "server/zone/objects/creature/CreatureObject.h"
 #include "server/zone/objects/player/PlayerObject.h"
+#include "server/zone/objects/player/MustafarMapBoundary.h"
 
 #include "server/zone/packets/object/ObjectControllerMessageCallback.h"
 #include "server/zone/packets/scene/LightUpdateTransformMessage.h"
@@ -198,6 +199,10 @@ public:
 
 		if (deltaTime < Transform::MIN_DELTA) {
 			return updateError(creO, "deltaTime", false);
+		}
+
+		if (!MustafarMapBoundary::enforceMovement(creO, transform.getPosition(), transform.getParentID())) {
+			return;
 		}
 
 		ManagedReference<SceneObject*> parent = creO->getParent().get();

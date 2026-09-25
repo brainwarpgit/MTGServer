@@ -53,6 +53,17 @@ shuttleportLandedTime = 120
 starportLandedTime = 120
 
 
+chandrila = {
+	weatherEnabled = 1,
+	gcwEnabled = 0,
+
+	planetTravelPoints = {
+		{name = "Hanna City Starport", x = 182.69, z = 6, y = -2958, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, landingRange = 6},
+		-- Arrivals stand on the sloping terrain beside the starport, below its building origin.
+		{name = "Nayli Outpost", x = -5268.64, z = 18.09, y = 263.44, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, landingRange = 1},
+	}
+}
+
 corellia = {
 	weatherEnabled = 1,
 	gcwEnabled = 1,
@@ -97,6 +108,19 @@ corellia = {
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.346712, oz = 0, ow = 0.937972, x = -5049.64, z = 21, y = -2304.52, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.290803, oz = 0, ow = 0.956783, x = 3330.38, z = 308, y = 5517.14, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.666281, oz = 0, ow = 0.745701, x = -136.437, z = 28, y = -4730.23, parentid = 0}
+	}
+}
+
+coruscant = {
+	weatherEnabled = 1,
+	gcwEnabled = 0,
+
+	planetTravelPoints = {
+		{name = "Coruscant Starport", x = -98, z = 40, y = 3150.69, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, landingRange = 6},
+		{name = "Spaceport District Shuttleport", x = -34, z = 40, y = 3203, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1, landingRange = 3},
+		{name = "Monument Square Shuttleport", x = 1538, z = 40, y = 773, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1, landingRange = 3},
+		{name = "CoCo District Shuttleport", x = -1846, z = 40, y = -176, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1, landingRange = 3},
+		{name = "Entertainment District Shuttleport", x = 2251, z = 0, y = -4547, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1, landingRange = 3},
 	}
 }
 
@@ -248,13 +272,22 @@ endor = {
 	}
 }
 
+kaas = {
+	weatherEnabled = 1,
+	gcwEnabled = 0,
+
+	planetTravelPoints = {
+		{name = "Kaas Imperial Garrison", x = -5172.76, z = 80, y = -2223.66, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, landingRange = 3},
+	}
+}
+
 kashyyyk_dead_forest = {
-	weatherEnabled = 0,
+	weatherEnabled = 1,
 	gcwEnabled = 0,
 }
 
 kashyyyk_hunting = {
-	weatherEnabled = 0,
+	weatherEnabled = 1,
 	gcwEnabled = 0,
 }
 
@@ -294,7 +327,7 @@ kashyyyk_pob_dungeons = {
 }
 
 kashyyyk_rryatt_trail = {
-	weatherEnabled = 0,
+	weatherEnabled = 1,
 	gcwEnabled = 0,
 }
 
@@ -339,12 +372,37 @@ lok = {
 	}
 }
 
-mustafar = {
-	weatherEnabled = 0,
+mandalore = {
+	weatherEnabled = 1,
 	gcwEnabled = 0,
 
 	planetTravelPoints = {
-		{name = "Mensix Mining Facility", x = 308, z = 0, y = -1130, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, landingRange = 3}
+		{name = "Keldabe Starport", x = 1583, z = 2, y = -6595.31, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, landingRange = 6},
+		{name = "Keldabe Outpost", x = 1569.66, z = 4, y = -6415.76, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, landingRange = 3},
+		{name = "Keldabe Shuttleport", x = 1437, z = 2, y = -6163, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1, landingRange = 3},
+		{name = "Sundari Starport", x = 6302.76, z = 2, y = -6231.34, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, landingRange = 3},
+		{name = "Bralsin Shuttleport", x = -5682, z = 0, y = -5033, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1, landingRange = 3},
+		{name = "Norg Bral Shuttleport", x = -6649, z = 30, y = 5585, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1, landingRange = 3},
+		{name = "Enceri Shuttleport", x = 4712, z = 2, y = 7155, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1, landingRange = 3},
+		{name = "Shuror Shuttleport", x = 1071, z = 2, y = 2738, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1, landingRange = 3},
+	}
+}
+
+moraband = {
+	weatherEnabled = 1,
+	gcwEnabled = 0,
+
+	planetTravelPoints = {
+		{name = "Moraband Outpost", x = -1694.66, z = 91, y = -623.24, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, landingRange = 3},
+	}
+}
+
+mustafar = {
+	weatherEnabled = 1,
+	gcwEnabled = 0,
+
+	planetTravelPoints = {
+		{name = "Mensix Mining Facility", x = -1100, z = 37.843140, y = 2365, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, landingRange = 3}
 	},
 
 	--[[
@@ -494,6 +552,16 @@ rori = {
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.100263, oz = 0, ow = 0.994961, x = -5307.37, z = 80.1274, y = -2216.91, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.69192, oz = 0, ow = 0.721974, x = 5370.22, z = 80, y = 5666.04, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.0274543, oz = 0, ow = 0.999623, x = 3672.91, z = 96, y = -6441.07, parentid = 0}
+	}
+}
+
+taanab = {
+	weatherEnabled = 1,
+	gcwEnabled = 0,
+
+	planetTravelPoints = {
+		{name = "Pandath Starport", x = 2117.76, z = 45, y = 5379.66, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, landingRange = 3},
+		{name = "Starhunter Station", x = 3592.24, z = 31.7, y = -5404.66, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, landingRange = 3},
 	}
 }
 
@@ -680,6 +748,26 @@ yavin4 = {
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.705623, oz = 0, ow = 0.708587, x = -6917.18, z = 73, y = -5732.25, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.723339, oz = 0, ow = -0.690493, x = 4057.69, z = 37, y = -6217.54, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.00721678, oz = 0, ow = 0.999974, x = -293.367, z = 35, y = 4854.52, parentid = 0}
+	}
+}
+
+hoth = {
+	weatherEnabled = 1,
+	gcwEnabled = 0,
+
+	planetTravelPoints = {
+		{name = "Frostline Starport", x = 671, z = 0, y = 2135, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, landingRange = 6},
+		{name = "Frostline Shuttleport", x = 840, z = 0, y = 1925, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1, landingRange = 3},
+		{name = "South Range Outpost", x = 0, z = 0, y = -1965, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, landingRange = 6},
+	},
+
+	badgeAreas = {
+	},
+
+	navAreas = {
+	},
+
+	planetObjects = {
 	}
 }
 

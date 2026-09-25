@@ -1608,6 +1608,11 @@ void PlanetManagerImplementation::scheduleShuttle(CreatureObject* shuttle, int s
 	shuttleMap.put(oid, task);
 
 	task->schedule((task->getLandedTime() + task->getLandingTime()) * 1000);
+
+	Reference<TravelStartupTask*> startup = zone->getZoneServer()->getTravelStartupTask();
+
+	if (startup != nullptr)
+		startup->registerDeparture(oid, task.get());
 }
 
 int PlanetManagerImplementation::destroyEventObject(uint64 objectID) {

@@ -3,6 +3,7 @@
 
 #include "server/zone/objects/player/sui/SuiCallback.h"
 #include "server/zone/objects/player/sui/messagebox/SuiMessageBox.h"
+#include "server/zone/ZoneServer.h"
 
 class TravelCouponUseSuiCallback : public SuiCallback {
 	ManagedReference<SceneObject*> voucher;
@@ -24,6 +25,9 @@ public:
 
 	void run(CreatureObject* player, SuiBox* sui, uint32 eventIndex, Vector<UnicodeString>* args) {
 		if (player == nullptr || voucher == nullptr || server == nullptr)
+			return;
+
+		if (!server->checkTravelStartup(player))
 			return;
 
 		ManagedReference<Zone*> departureZone = server->getZone(departurePlanet);

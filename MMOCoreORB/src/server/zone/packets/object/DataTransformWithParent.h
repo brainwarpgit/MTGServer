@@ -10,6 +10,7 @@
 
 #include "server/zone/objects/creature/CreatureObject.h"
 #include "server/zone/objects/player/PlayerObject.h"
+#include "server/zone/objects/player/MustafarMapBoundary.h"
 #include "server/zone/objects/building/BuildingObject.h"
 #include "server/zone/objects/ship/PobShipObject.h"
 #include "server/zone/packets/object/ObjectControllerMessageCallback.h"
@@ -175,6 +176,10 @@ public:
 
 		if (parent == nullptr || !transform.isValidParentType(parent) || parent->getZone() == nullptr) {
 			return updateError(creO, "!parent");
+		}
+
+		if (!MustafarMapBoundary::enforceMovement(creO, transform.getPosition(), parentID)) {
+			return;
 		}
 
 		if (ghost->isForcedTransform()) {

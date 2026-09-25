@@ -9,9 +9,15 @@
 #include "server/zone/objects/tangible/terminal/travel/TravelTerminal.h"
 #include "server/zone/packets/player/EnterTicketPurchaseModeMessage.h"
 #include "server/zone/objects/creature/CreatureObject.h"
+#include "server/zone/ZoneServer.h"
 
 int TravelTerminalImplementation::handleObjectMenuSelect(CreatureObject* player, byte selectedID) {
 	if (selectedID != 20)
+		return 0;
+
+	auto zoneServer = player->getZoneServer();
+
+	if (zoneServer == nullptr || !zoneServer->checkTravelStartup(player))
 		return 0;
 
 	Reference<PlanetTravelPoint*> ptp = getPlanetTravelPoint();

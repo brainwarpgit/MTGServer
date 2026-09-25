@@ -47,6 +47,8 @@ import server.zone.managers.creature.PetManager;
 import server.zone.managers.guild.GuildManager;
 import server.zone.managers.city.CityManager;
 import server.zone.managers.name.NameManager;
+import server.zone.objects.creature.CreatureObject;
+include server.zone.TravelStartupTask;
 
 @dirty
 class ZoneServer extends ManagedService implements Logger {
@@ -59,6 +61,7 @@ class ZoneServer extends ManagedService implements Logger {
 	private transient ZoneHandler zoneHandler;
 
 	private transient ZoneProcessServer processor;
+	private transient TravelStartupTask travelStartupTask;
 
 	private transient VectorMap<string, GroundZone> zones;
 	private transient VectorMap<string, SpaceZone> spaceZones;
@@ -433,6 +436,13 @@ class ZoneServer extends ManagedService implements Logger {
 	public Time getStartTimestamp() {
 		return startTimestamp;
 	}
+
+	@local
+	public TravelStartupTask getTravelStartupTask() {
+		return travelStartupTask;
+	}
+
+	public native boolean checkTravelStartup(CreatureObject creature);
 
 	public void setGalaxyID(int galaxyid) {
 		galaxyID = galaxyid;

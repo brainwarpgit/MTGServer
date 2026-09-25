@@ -5,6 +5,8 @@
 #include "server/zone/ZoneServer.h"
 
 #include "server/zone/ZoneClientSession.h"
+#include "server/zone/TravelStartupTask.h"
+#include "server/zone/objects/creature/CreatureObject.h"
 
 #include "server/zone/Zone.h"
 #include "server/zone/GroundZone.h"
@@ -63,6 +65,7 @@ ZoneServerImplementation::ZoneServerImplementation(ConfigManager* config) :
 	galaxyName = "Core3";
 
 	processor = nullptr;
+	travelStartupTask = nullptr;
 
 
 	serverCap = 3000;
@@ -155,6 +158,13 @@ void ZoneServerImplementation::loadGalaxyName() {
 void ZoneServerImplementation::initialize() {
 	serverState = LOADING;
 
+	int bootDelay = configManager->getInt("Core3.ShuttleZoneComponent.BootDelay", 5 * 60 * 1000);
+
+	if (bootDelay < 0)
+		bootDelay = 0;
+
+	travelStartupTask = new TravelStartupTask(_this.getReferenceUnsafeStaticCast(), int64(startTimestamp.getMiliTime()) + bootDelay);
+
 	loadGalaxyName();
 
 	processor = new ZoneProcessServer(_this.getReferenceUnsafeStaticCast());
@@ -237,6 +247,8 @@ void ZoneServerImplementation::initialize() {
 	serverState = ONLINE; //Test Center does not need to apply this change, but would be convenient for Dev Servers.
 
 	ObjectDatabaseManager::instance()->commitLocalTransaction();
+
+	travelStartupTask->arm();
 }
 
 void ZoneServerImplementation::startGroundZones() {
@@ -963,9 +975,30 @@ void ZoneServerImplementation::setServerStateShuttingDown() {
 
 	serverState = SHUTTINGDOWN;
 
+	if (travelStartupTask != nullptr)
+		travelStartupTask->stop();
+
 	StringBuffer msg;
 	msg << dec << "server shutting down";
 	info(msg, true);
+}
+
+bool ZoneServerImplementation::checkTravelStartup(CreatureObject* creature) {
+	if (isServerShuttingDown() || isServerOffline()) {
+		if (creature != nullptr)
+			creature->sendSystemMessage("Shuttles and starports are unavailable while the server is offline or shutting down.");
+
+		return false;
+	}
+
+	if (travelStartupTask == nullptr) {
+		if (creature != nullptr)
+			creature->sendSystemMessage("Shuttles and starports are finishing startup. Please try again shortly.");
+
+		return false;
+	}
+
+	return travelStartupTask->checkTravel(creature);
 }
 
 String ZoneServerImplementation::getLoginMessage() const {

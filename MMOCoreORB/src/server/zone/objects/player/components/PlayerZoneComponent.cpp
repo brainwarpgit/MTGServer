@@ -8,9 +8,11 @@
 #include "PlayerZoneComponent.h"
 
 #include "server/zone/objects/player/PlayerObject.h"
+#include "server/zone/objects/player/MustafarMapBoundary.h"
 #include "server/zone/objects/creature/CreatureObject.h"
 #include "server/zone/objects/scene/SceneObject.h"
 #include "server/zone/Zone.h"
+#include "server/zone/ZoneServer.h"
 #include "server/zone/SpaceZone.h"
 #include "server/zone/TreeEntry.h"
 #include "server/zone/objects/creature/buffs/ConcealBuff.h"
@@ -105,6 +107,19 @@ void PlayerZoneComponent::notifyDissapear(SceneObject* sceneObject, TreeEntry* e
 void PlayerZoneComponent::switchZone(SceneObject* sceneObject, const String& newTerrainName, float newPostionX, float newPositionZ, float newPositionY, uint64 parentID, bool toggleInvisibility, int playerArrangement) const {
 	if (sceneObject->isPlayerCreature()) {
 		CreatureObject* player = sceneObject->asCreatureObject();
+		auto zoneServer = sceneObject->getZoneServer();
+		if (zoneServer != nullptr) {
+			Vector3 destination;
+			destination.setX(newPostionX);
+			destination.setY(newPositionY);
+			destination.setZ(newPositionZ);
+			if (!MustafarMapBoundary::resolveDestination(player, zoneServer->getZone(newTerrainName), destination, parentID)) {
+				return;
+			}
+			newPostionX = destination.getX();
+			newPositionZ = destination.getZ();
+			newPositionY = destination.getY();
+		}
 		PlayerObject* ghost = player->getPlayerObject();
 
 		ManagedReference<SceneObject*> par = sceneObject->getParent().get();
@@ -137,6 +152,16 @@ void PlayerZoneComponent::teleport(SceneObject* sceneObject, float newPositionX,
 
 	if (sceneObject->isPlayerCreature()) {
 		player = sceneObject->asCreatureObject();
+		Vector3 destination;
+		destination.setX(newPositionX);
+		destination.setY(newPositionY);
+		destination.setZ(newPositionZ);
+		if (!MustafarMapBoundary::resolveDestination(player, sceneObject->getZone(), destination, parentID)) {
+			return;
+		}
+		newPositionX = destination.getX();
+		newPositionZ = destination.getZ();
+		newPositionY = destination.getY();
 	}
 
 	ManagedReference<SceneObject*> par = sceneObject->getParent().get();

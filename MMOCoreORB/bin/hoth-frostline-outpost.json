@@ -1,0 +1,294 @@
+{
+  "name": "Frostline Outpost",
+  "planet": "hoth",
+  "center": {
+    "x": 671,
+    "y": 2035,
+    "z": 0
+  },
+  "original_snapshot_sha256": "30648270c2de3cafdd7cb3626459d3791d7587b5211788f448e15e1bf6aa25ea",
+  "original_nodes": 94,
+  "original_root_nodes": 17,
+  "snapshot": "snapshot/hoth.ws",
+  "buildings": [
+    {
+      "key": "starport",
+      "name": "Frostline Starport",
+      "object_id": 1900100000,
+      "template": "object/building/military/shared_outpost_starport.iff",
+      "x": 671,
+      "y": 2170,
+      "z": 0,
+      "heading": 0,
+      "cell_ids": [
+        1900100001
+      ],
+      "donor_snapshot": "snapshot/hoth.ws",
+      "donor_template": "object/building/military/shared_outpost_starport.iff",
+      "portal_crc": 3606209763
+    },
+    {
+      "key": "cloning",
+      "name": "Frostline Cloning Clinic",
+      "object_id": 1900100100,
+      "template": "object/building/military/shared_outpost_cloning_facility_s03.iff",
+      "x": 595,
+      "y": 2035,
+      "z": 0,
+      "heading": 90,
+      "cell_ids": [
+        1900100101,
+        1900100102,
+        1900100103,
+        1900100104,
+        1900100105,
+        1900100106
+      ],
+      "donor_snapshot": "snapshot/hoth.ws",
+      "donor_template": "object/building/military/shared_outpost_cloning_facility_s03.iff",
+      "portal_crc": 1376564094
+    },
+    {
+      "key": "bank",
+      "name": "Frostline Bank",
+      "object_id": 1900100200,
+      "template": "object/building/military/shared_military_base_shed_imperial_style_bank_s01.iff",
+      "x": 747,
+      "y": 2035,
+      "z": 0,
+      "heading": -90,
+      "cell_ids": [
+        1900100201,
+        1900100202,
+        1900100203,
+        1900100204,
+        1900100205,
+        1900100206
+      ],
+      "donor_snapshot": "snapshot/talus.ws",
+      "donor_template": "object/building/military/shared_military_base_shed_imperial_style_bank_s01.iff",
+      "portal_crc": 4052750128
+    },
+    {
+      "key": "cantina",
+      "name": "Frostline Cantina",
+      "object_id": 1900100300,
+      "template": "object/building/military/shared_military_base_shed_imperial_style_cantina_s01.iff",
+      "x": 671,
+      "y": 1950,
+      "z": 0,
+      "heading": 0,
+      "cell_ids": [
+        1900100301,
+        1900100302,
+        1900100303,
+        1900100304,
+        1900100305,
+        1900100306
+      ],
+      "donor_snapshot": "snapshot/talus.ws",
+      "donor_template": "object/building/military/shared_military_base_shed_imperial_style_cantina_s01.iff",
+      "portal_crc": 4052750128
+    },
+    {
+      "key": "shuttleport",
+      "name": "Frostline Shuttleport",
+      "object_id": 1900100400,
+      "template": "object/building/corellia/shared_shuttleport_corellia.iff",
+      "x": 860,
+      "y": 1925,
+      "z": 0,
+      "heading": 0,
+      "cell_ids": [],
+      "donor_snapshot": "snapshot/corellia.ws",
+      "donor_template": "object/building/corellia/shared_shuttleport_corellia.iff",
+      "portal_crc": 0
+    },
+    {
+      "key": "garage",
+      "name": "Frostline Vehicle Garage",
+      "object_id": 1900100500,
+      "template": "object/building/corellia/shared_garage_corellia.iff",
+      "x": 820,
+      "y": 2035,
+      "z": 0,
+      "heading": -90,
+      "cell_ids": [],
+      "donor_snapshot": "snapshot/corellia.ws",
+      "donor_template": "object/building/corellia/shared_garage_corellia.iff",
+      "portal_crc": 0
+    },
+    {
+      "key": "workshop",
+      "name": "Frostline Workshop",
+      "object_id": 1900100600,
+      "template": "object/building/military/shared_outpost_shed_s02.iff",
+      "x": 595,
+      "y": 2110,
+      "z": 0,
+      "heading": 90,
+      "cell_ids": [
+        1900100601,
+        1900100602,
+        1900100603,
+        1900100604,
+        1900100605,
+        1900100606
+      ],
+      "donor_snapshot": "snapshot/endor.ws",
+      "donor_template": "object/building/military/shared_outpost_shed_s04.iff",
+      "portal_crc": 1376564094
+    },
+    {
+      "key": "quarters_east",
+      "name": "Survey Team Quarters",
+      "object_id": 1900100700,
+      "template": "object/building/military/shared_outpost_shed_s04.iff",
+      "x": 747,
+      "y": 2110,
+      "z": 0,
+      "heading": -90,
+      "cell_ids": [
+        1900100701,
+        1900100702,
+        1900100703,
+        1900100704,
+        1900100705,
+        1900100706
+      ],
+      "donor_snapshot": "snapshot/endor.ws",
+      "donor_template": "object/building/military/shared_outpost_shed_s04.iff",
+      "portal_crc": 1376564094
+    },
+    {
+      "key": "quarters_west",
+      "name": "Expedition Quarters",
+      "object_id": 1900100800,
+      "template": "object/building/military/shared_outpost_shed_s05.iff",
+      "x": 595,
+      "y": 1950,
+      "z": 0,
+      "heading": 90,
+      "cell_ids": [
+        1900100801,
+        1900100802,
+        1900100803,
+        1900100804,
+        1900100805,
+        1900100806
+      ],
+      "donor_snapshot": "snapshot/yavin4.ws",
+      "donor_template": "object/building/military/shared_outpost_shed_s05.iff",
+      "portal_crc": 1376564094
+    }
+  ],
+  "services": [
+    {
+      "key": "bazaar",
+      "object_id": 1900100900,
+      "template": "object/tangible/terminal/shared_terminal_bazaar.iff",
+      "x": 700,
+      "y": 2035,
+      "z": 0,
+      "heading": 0
+    }
+  ],
+  "decorations": [
+    {
+      "object_id": 1900101000,
+      "template": "object/static/structure/general/shared_streetlamp_medium_blue_style_01_on.iff",
+      "x": 655,
+      "y": 2060,
+      "z": 0,
+      "heading": 0
+    },
+    {
+      "object_id": 1900101001,
+      "template": "object/static/structure/general/shared_streetlamp_medium_blue_style_01_on.iff",
+      "x": 687,
+      "y": 2060,
+      "z": 0,
+      "heading": 0
+    },
+    {
+      "object_id": 1900101002,
+      "template": "object/static/structure/general/shared_streetlamp_medium_blue_style_01_on.iff",
+      "x": 655,
+      "y": 2100,
+      "z": 0,
+      "heading": 0
+    },
+    {
+      "object_id": 1900101003,
+      "template": "object/static/structure/general/shared_streetlamp_medium_blue_style_01_on.iff",
+      "x": 687,
+      "y": 2100,
+      "z": 0,
+      "heading": 0
+    },
+    {
+      "object_id": 1900101004,
+      "template": "object/static/structure/general/shared_streetlamp_medium_blue_style_01_on.iff",
+      "x": 630,
+      "y": 2020,
+      "z": 0,
+      "heading": 0
+    },
+    {
+      "object_id": 1900101005,
+      "template": "object/static/structure/general/shared_streetlamp_medium_blue_style_01_on.iff",
+      "x": 715,
+      "y": 2020,
+      "z": 0,
+      "heading": 0
+    },
+    {
+      "object_id": 1900101006,
+      "template": "object/static/structure/general/shared_streetlamp_medium_blue_style_01_on.iff",
+      "x": 655,
+      "y": 1980,
+      "z": 0,
+      "heading": 0
+    },
+    {
+      "object_id": 1900101007,
+      "template": "object/static/structure/general/shared_streetlamp_medium_blue_style_01_on.iff",
+      "x": 687,
+      "y": 1980,
+      "z": 0,
+      "heading": 0
+    },
+    {
+      "object_id": 1900101008,
+      "template": "object/static/structure/general/shared_streetlamp_medium_blue_style_01_on.iff",
+      "x": 755,
+      "y": 1965,
+      "z": 0,
+      "heading": 0
+    },
+    {
+      "object_id": 1900101009,
+      "template": "object/static/structure/general/shared_streetlamp_medium_blue_style_01_on.iff",
+      "x": 800,
+      "y": 1935,
+      "z": 0,
+      "heading": 0
+    },
+    {
+      "object_id": 1900101010,
+      "template": "object/static/structure/general/shared_streetlamp_medium_blue_style_01_on.iff",
+      "x": 815,
+      "y": 1955,
+      "z": 0,
+      "heading": 0
+    },
+    {
+      "object_id": 1900101011,
+      "template": "object/static/structure/general/shared_streetlamp_medium_blue_style_01_on.iff",
+      "x": 835,
+      "y": 1935,
+      "z": 0,
+      "heading": 0
+    }
+  ]
+}

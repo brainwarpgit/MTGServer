@@ -21,6 +21,7 @@
 #include "server/zone/managers/planet/PlanetTravelPoint.h"
 #include "server/zone/managers/collision/CollisionManager.h"
 #include "server/zone/objects/group/GroupObject.h"
+#include "server/zone/ZoneServer.h"
 
 //#define ENABLE_CITY_TRAVEL_LIMIT
 
@@ -39,6 +40,11 @@ public:
 
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
+
+		auto zoneServer = server->getZoneServer();
+
+		if (zoneServer == nullptr || !zoneServer->checkTravelStartup(creature))
+			return GENERALERROR;
 
 		ManagedReference<Zone*> zone = creature->getZone();
 

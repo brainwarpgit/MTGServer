@@ -20,6 +20,7 @@
 #include "ServerWhoCommand.h"
 #include "ServerLootCommand.h"
 #include "OrphanStructuresCommand.h"
+#include "TravelStatusCommand.h"
 
 class ServerCommand : public QueueCommand {
 	MethodFactory<String, CreatureObject*, uint64, const String&> methodFactory;
@@ -43,6 +44,7 @@ public:
 		methodFactory.registerMethod<ServerWhoCommand>("who");
 		methodFactory.registerMethod<ServerLootCommand>("loot");
 		methodFactory.registerMethod<OrphanStructuresCommand>("orphanstructures");
+		methodFactory.registerMethod<TravelStatusCommand>("travelstatus");
 }
 
 	int doQueueCommand(CreatureObject* creature, const uint64& target, const UnicodeString& arguments) const {

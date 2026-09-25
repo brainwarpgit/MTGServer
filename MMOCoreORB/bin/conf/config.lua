@@ -261,6 +261,7 @@ Core3 = {
 
 	-- World spawning, AI and navigation
 	-- ---------------------------------
+	MustafarMapBounds = true, -- Keep all players, including admins, within Mustafar's mapped area.
 	Regions = {
 		DisableWorldSpawns = false,
 		DisableSpaceSpawns = false,

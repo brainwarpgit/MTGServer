@@ -1,22 +1,13 @@
--- Planet Region Definitions
---
--- {"regionName", x, y, shape and size, tier, {"spawnGroup1", ...}, maxSpawnLimit}
--- For circle and ring, x and y are the center point
--- For rectangles, x and y are the bottom left corner. x2 and y2 (see below) are the upper right corner
--- Shape and size is a table with the following format depending on the shape of the area:
---   - Circle: {CIRCLE, radius}
---   - Rectangle: {RECTANGLE, x2, y2}
---   - Ring: {RING, inner radius, outer radius}
--- Tier is a bit mask with the following possible values where each hexadecimal position is one possible configuration.
--- That means that it is not possible to have both a spawn area and a no spawn area in the same region, but
--- a spawn area that is also a no build zone is possible.
+-- City circles match the client region table for names and enter/leave boundaries.
+-- Protect settled areas from random spawns and player construction.
 
 require("scripts.managers.planet.regions")
 
 mandalore_regions = {
-	-- Named Regions, POIs and Decor
-
-	-- Cities
-
-	--Spawns
+	{"@mandalore_region_names:keldabe", 1589, -6385, {CIRCLE, 500}, CITY + NOSPAWNAREA + NOBUILDZONEAREA},
+	{"@mandalore_region_names:sundari", 6306, -6231, {CIRCLE, 500}, CITY + NOSPAWNAREA + NOBUILDZONEAREA},
+	{"@mandalore_region_names:norg_bral", -6621, 5507, {CIRCLE, 450}, CITY + NOSPAWNAREA + NOBUILDZONEAREA},
+	{"@mandalore_region_names:bralsin", -5683, -5033, {CIRCLE, 175}, CITY + NOSPAWNAREA + NOBUILDZONEAREA},
+	{"@mandalore_region_names:enceri", 4709, 7155, {CIRCLE, 125}, CITY + NOSPAWNAREA + NOBUILDZONEAREA},
+	{"@mandalore_region_names:shuror", 1069, 2736, {CIRCLE, 125}, CITY + NOSPAWNAREA + NOBUILDZONEAREA},
 }

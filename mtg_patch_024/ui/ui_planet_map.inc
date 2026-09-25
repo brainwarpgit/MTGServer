@@ -608,6 +608,31 @@ parent.treebg.enabled=visible'
 						>
 							<Page
 								BackgroundColor='#FFFFFF'
+								Name='mustafar'
+								MapWidth='16384,16384'
+								OpacityRelativeMin='0.50'
+								PackLocation='nfn,nfn'
+								PackSize='1,1'
+								RStyleDefault='rs_default'
+								ScrollExtent='16384,16384'
+								Size='16384,16384'
+								Visible='false'
+								>
+								<Image
+									BackgroundColor='#FFFFFF'
+									Name='a'
+									Location='1312,1216'
+									PackLocation='npn,npn'
+									PackSize='p,p'
+									ScrollExtent='8000,8000'
+									Size='8000,8000'
+									SourceRect='0,0,1024,1024'
+									SourceResource='ui_map_mustafar'
+									VisualEditLock='true'
+								/>
+							</Page>
+							<Page
+								BackgroundColor='#FFFFFF'
 								Name='mustafar__mustafar_main'
 								OpacityRelativeMin='0.50'
 								PackLocation='nfn,nfn'
@@ -690,6 +715,116 @@ parent.treebg.enabled=visible'
 									Size='485,440'
 									SourceRect='0,0,4096,4096'
 									SourceResource='ui_map_dathomir'
+									VisualEditLock='true'
+								/>
+							</Page>
+							<Page
+								BackgroundColor='#FFFFFF'
+								Name='hoth'
+								OpacityRelativeMin='0.50'
+								PackLocation='nfn,nfn'
+								PackSize='a,a'
+								RStyleDefault='rs_default'
+								ScrollExtent='485,440'
+								Size='485,440'
+								Visible='false'
+							>
+								<Image
+									BackgroundColor='#FFFFFF'
+									Name='a'
+									PackSize='a,a'
+									ScrollExtent='485,440'
+									Size='485,440'
+									SourceRect='0,0,1024,1014'
+									SourceResource='ui_map_hoth'
+									VisualEditLock='true'
+								/>
+							</Page>
+							<Page
+								BackgroundColor='#FFFFFF'
+								Name='kaas'
+								OpacityRelativeMin='0.50'
+								PackLocation='nfn,nfn'
+								PackSize='a,a'
+								RStyleDefault='rs_default'
+								ScrollExtent='485,440'
+								Size='485,440'
+								Visible='false'
+							>
+								<Image
+									BackgroundColor='#FFFFFF'
+									Name='a'
+									PackSize='a,a'
+									ScrollExtent='485,440'
+									Size='485,440'
+									SourceRect='0,0,1024,1024'
+									SourceResource='ui_map_kaas'
+									VisualEditLock='true'
+								/>
+							</Page>
+							<Page
+								BackgroundColor='#FFFFFF'
+								Name='mandalore'
+								OpacityRelativeMin='0.50'
+								PackLocation='nfn,nfn'
+								PackSize='a,a'
+								RStyleDefault='rs_default'
+								ScrollExtent='485,440'
+								Size='485,440'
+								Visible='false'
+							>
+								<Image
+									BackgroundColor='#FFFFFF'
+									Name='a'
+									PackSize='a,a'
+									ScrollExtent='485,440'
+									Size='485,440'
+									SourceRect='0,0,1024,1024'
+									SourceResource='ui_map_mandalore'
+									VisualEditLock='true'
+								/>
+							</Page>
+							<Page
+								BackgroundColor='#FFFFFF'
+								Name='chandrila'
+								OpacityRelativeMin='0.50'
+								PackLocation='nfn,nfn'
+								PackSize='a,a'
+								RStyleDefault='rs_default'
+								ScrollExtent='485,440'
+								Size='485,440'
+								Visible='false'
+							>
+								<Image
+									BackgroundColor='#FFFFFF'
+									Name='a'
+									PackSize='a,a'
+									ScrollExtent='485,440'
+									Size='485,440'
+									SourceRect='0,0,1024,1024'
+									SourceResource='ui_map_chandrila'
+									VisualEditLock='true'
+								/>
+							</Page>
+							<Page
+								BackgroundColor='#FFFFFF'
+								Name='coruscant'
+								OpacityRelativeMin='0.50'
+								PackLocation='nfn,nfn'
+								PackSize='a,a'
+								RStyleDefault='rs_default'
+								ScrollExtent='485,440'
+								Size='485,440'
+								Visible='false'
+							>
+								<Image
+									BackgroundColor='#FFFFFF'
+									Name='a'
+									PackSize='a,a'
+									ScrollExtent='485,440'
+									Size='485,440'
+									SourceRect='0,0,1024,1024'
+									SourceResource='ui_map_coruscant'
 									VisualEditLock='true'
 								/>
 							</Page>
@@ -842,8 +977,8 @@ parent.treebg.enabled=visible'
 									PackSize='a,a'
 									ScrollExtent='485,440'
 									Size='485,440'
-									SourceRect='0,0,4096,4096'
-									SourceResource='ui_map_talus'
+									SourceRect='0,0,1024,1024'
+									SourceResource='ui_map_taanab'
 									VisualEditLock='true'
 								/>
 							</Page>
@@ -893,6 +1028,105 @@ parent.treebg.enabled=visible'
 							</Page>
 							<Page
 								BackgroundColor='#FFFFFF'
+								Name='kashyyyk'
+								MapWidth='16384,16384'
+								OpacityRelativeMin='0.50'
+								PackLocation='nfn,nfn'
+								PackSize='1,1'
+								RStyleDefault='rs_default'
+								ScrollExtent='16384,16384'
+								Size='16384,16384'
+								Visible='false'
+								>
+								<Image
+									BackgroundColor='#FFFFFF'
+									Name='kachirho'
+									Location='7168,7084'
+									PackLocation='npn,npn'
+									PackSize='p,p'
+									ScrollExtent='2016,2016'
+									Size='2016,2016'
+									SourceRect='0,0,1024,1024'
+									SourceResource='ui_map_kashyyyk'
+									VisualEditLock='true'
+								/>
+								<Image
+									BackgroundColor='#FFFFFF'
+									Name='dead_forest'
+									Location='6188,6164'
+									PackLocation='npn,npn'
+									PackSize='p,p'
+									ScrollExtent='1056,1056'
+									Size='1056,1056'
+									SourceRect='0,0,1024,1024'
+									SourceResource='ui_map_kashyyyk_dead_forest'
+									VisualEditLock='true'
+								/>
+								<Image
+									BackgroundColor='#FFFFFF'
+									Name='hunting_grounds'
+									Location='6770,10228'
+									PackLocation='npn,npn'
+									PackSize='p,p'
+									ScrollExtent='2844,2844'
+									Size='2844,2844'
+									SourceRect='0,0,1024,1024'
+									SourceResource='ui_map_kashyyyk_hunting'
+									VisualEditLock='true'
+								/>
+							</Page>
+							<Page
+								BackgroundColor='#FFFFFF'
+								Name='kashyyyk_main'
+								MapWidth='2304,2304'
+								OpacityRelativeMin='0.50'
+								PackLocation='nfn,nfn'
+								PackSize='1,1'
+								RStyleDefault='rs_default'
+								ScrollExtent='2304,2304'
+								Size='2304,2304'
+								Visible='false'
+								>
+								<Image
+									BackgroundColor='#FFFFFF'
+									Name='kachirho'
+									Location='128,44'
+									PackLocation='npn,npn'
+									PackSize='p,p'
+									ScrollExtent='2016,2016'
+									Size='2016,2016'
+									SourceRect='0,0,1024,1024'
+									SourceResource='ui_map_kashyyyk_main'
+									VisualEditLock='true'
+								/>
+							</Page>
+							<Page
+								BackgroundColor='#FFFFFF'
+								Name='kashyyyk_dead_forest'
+								MapWidth='1152,1152'
+								OpacityRelativeMin='0.50'
+								PackLocation='nfn,nfn'
+								PackSize='1,1'
+								RStyleDefault='rs_default'
+								ScrollExtent='1152,1152'
+								Size='1152,1152'
+								Visible='false'
+								>
+								<Image
+									BackgroundColor='#FFFFFF'
+									Name='dead_forest'
+									Location='72,48'
+									PackLocation='npn,npn'
+									PackSize='p,p'
+									ScrollExtent='1056,1056'
+									Size='1056,1056'
+									SourceRect='0,0,1024,1024'
+									SourceResource='ui_map_kashyyyk_dead_forest'
+									VisualEditLock='true'
+								/>
+							</Page>
+							<Page
+								BackgroundColor='#FFFFFF'
 								Name='kashyyyk_dead_forest__kashyyyk_dead_forest'
 								OpacityRelativeMin='0.50'
 								PackLocation='nfn,nfn'
@@ -910,6 +1144,29 @@ parent.treebg.enabled=visible'
 									Size='485,440'
 									SourceRect='0,0,1024,1024'
 									SourceResource='ui_map_kashyyyk_dead_forest'
+									VisualEditLock='true'
+								/>
+							</Page>
+							<Page
+								BackgroundColor='#FFFFFF'
+								MapWidth='2844,2844'
+								Name='kashyyyk_hunting'
+								OpacityRelativeMin='0.50'
+								PackLocation='nfn,nfn'
+								PackSize='a,a'
+								RStyleDefault='rs_default'
+								ScrollExtent='485,440'
+								Size='485,440'
+								Visible='false'
+							>
+								<Image
+									BackgroundColor='#FFFFFF'
+									Name='a'
+									PackSize='a,a'
+									ScrollExtent='485,440'
+									Size='485,440'
+									SourceRect='0,0,1024,1024'
+									SourceResource='ui_map_kashyyyk_hunting'
 									VisualEditLock='true'
 								/>
 							</Page>

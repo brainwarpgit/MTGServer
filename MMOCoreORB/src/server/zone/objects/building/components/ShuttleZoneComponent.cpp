@@ -34,10 +34,18 @@ void ShuttleZoneComponent::notifyInsertToZone(SceneObject* sceneObject, Zone* zo
 	if (zoneServer == nullptr)
 		return;
 
-	Reference<ScheduleShuttleTask*> task = new ScheduleShuttleTask(shuttle, zone);
+	Reference<TravelStartupTask*> startup;
+
+	if (zoneServer->isServerLoading())
+		startup = zoneServer->getTravelStartupTask();
+
+	Reference<ScheduleShuttleTask*> task = new ScheduleShuttleTask(shuttle, zone, startup.get());
 
 	if (task == nullptr)
 		return;
+
+	if (startup != nullptr)
+		startup->registerShuttle(shuttle);
 
 	int delay = 500;
 
@@ -57,7 +65,15 @@ void ShuttleZoneComponent::notifyInsertToZone(SceneObject* sceneObject, Zone* zo
 #endif
 	}
 
-	task->schedule(delay);
+	try {
+		task->schedule(delay);
+	} catch (...) {
+		// A task that could not be queued will never report its registration result.
+		if (startup != nullptr)
+			startup->finishRegistration(shuttle->getObjectID(), true, false, "Unable to queue the initial shuttle registration task.");
+
+		throw;
+	}
 }
 
 void ShuttleZoneComponent::notifyRemoveFromZone(SceneObject* sceneObject) const {

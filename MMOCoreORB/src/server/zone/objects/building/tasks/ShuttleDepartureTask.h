@@ -11,10 +11,13 @@
 #include "server/zone/objects/creature/CreatureObject.h"
 #include "engine/engine.h"
 
+#include <atomic>
+
 //#define SHUTTLE_TIMER_DEBUG
 
 class ShuttleDepartureTask : public Task, public Logger {
 	ManagedWeakReference<CreatureObject*> shuttleObject;
+	std::atomic<bool> firstLandingCompleted{false};
 
 protected:
 	int landedTime; //In seconds
@@ -51,12 +54,18 @@ public:
 		Locker _lock(strongReference);
 
 		if (strongReference->isStanding()) {
+			// A delayed startup monitor may miss the initial boarding window.
+			firstLandingCompleted.store(true);
 			strongReference->setPosture(CreaturePosture::PRONE);
 			reschedule(getDepartedTime() * 1000);
 		} else {
 			strongReference->setPosture(CreaturePosture::UPRIGHT);
 			reschedule(getLandedTime() * 1000);
 		}
+	}
+
+	bool hasCompletedFirstLanding() const {
+		return firstLandingCompleted.load();
 	}
 
 	int getSecondsRemaining() {

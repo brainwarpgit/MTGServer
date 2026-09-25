@@ -17,6 +17,8 @@ hoth_regions = {
 	-- Named Regions, POIs and Decor
 
 	-- Cities
+	{"@hoth_region_names:frostline_outpost", 671, 2035, {CIRCLE, 260}, CITY + NOSPAWNAREA + NOBUILDZONEAREA + NAVAREA},
+	{"@hoth_region_names:south_range_outpost", 0, -2000, {CIRCLE, 250}, CITY + NOSPAWNAREA + NOBUILDZONEAREA},
 
 	--Spawns
 }

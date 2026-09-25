@@ -41,225 +41,202 @@
 --which carries forward this exception.
 
 
-
 --------------------------
 -- Weather System Notes
 --------------------------
--- Weather ID's are: 0-4 (0 being sunny and calm)
--- When a new weather ID is chosen (delayed by newWeatherTime), the server will slowly
--- change to that value one ID at a time (delayed by transitionTime).
+-- Enable each outdoor scene in planet/planet_manager.lua with weatherEnabled = 1.
+-- This file supplies that scene's climate profile, using the exact scene name.
+-- Weather IDs 0-4 run from clear to extreme. The client's environment table
+-- chooses the actual effect (rain, snow, dust, or regional forest effects).
+-- The server combines a random base intensity with a moving local storm map.
+--
+-- defaultWeather: initial base, 0-4. Initialization immediately generates an
+-- automatic weather pattern, so this does not force the weather at startup.
+-- averageWeatherDuration: positive duration input in seconds. Actual patterns
+-- last roughly 0.5-1.5 times this value, divided by (base intensity + 1).
+-- weatherStability: 0-100. Higher values favor calmer bases and milder patterns;
+-- lower values allow more frequent and stronger storms. Even 100 is not a
+-- permanent-clear setting. Patterns vary by position and time.
+--
+-- hasDamagingSandstorms: 0 or 1. These climate profiles use atmospheric effects
+-- only. Setting this to 1 enables damage, blindness and possible knockdowns or
+-- dismounts during extreme weather. sandstormDamage is read only when enabled.
+-- See bin/planet-weather.md for climate choices, client assets and verification.
 
+-- Temperate hills: long fair periods with occasional showers.
+chandrila = {
+	defaultWeather = 0,
+	averageWeatherDuration = 5400,
+	weatherStability = 95,
+	hasDamagingSandstorms = 0,
+}
 
-
-----------------------------
--- Desciption of Variables
-----------------------------
--- weatherEnabled: This determines if the weather will change over time.
--- Acceptable values: 0 or 1
--- Default: 1
-
--- defaultWeather: This determines which weather is in place when the server starts.
--- Acceptable values: 0, 1, 2, 3, 4, 5
--- A value of 5 will cause a random weather ID from 0-2 at startup.
--- Default: 5
-
--- weatherStability: This determines volitility in most factors for weather.
--- Acceptable values: 0-100
--- A value of 95 will have the following effect:
---  Base Weather:
---	0: 96%
---	1: 2.5%
---	2: 1.25%
---	3: < 1 so 0%
---	4: < 1 so 0%
---   Storm Patterns: 95% of storms will be mild, 5% medium to extreme
--- A value of 60 will have the following effect:
---  Base Weather:
---	0: 68%
---	1: 20%
---	2: 6.66%
---	3: 3.33%
---	4: 2%
---   Storm Patterns: 60% of storms will be mild, 40% medium to extreme
-
------------------------------------------------------------
-
--- ***Optional Sandstorm Hindrance Feature***
-
--- This feature is only in effect (ticks) when weather ID = 4 (severe)
-
--- hasDamagingSandstorms: Determines whether the optional sandstorm hindrance feature is enabled.
--- Acceptable values: 0 or 1
--- Default value: 0
-
-
--- sandstormDamage: Determines how many wounds a player can receive to his primary HAM bars per sandstorm "tick".
--- Acceptable range: 0 to 500
--- Default: 70 (Tatooine), 50 (Lok)
-
------------------------------------------------------------
-
------------------
---   Corellia
------------------
+-- Temperate plains and cities: established Core3 climate.
 corellia = {
-
-	defaultWeather = 0, -- Sunny
-
-	averageWeatherDuration = 3600, -- In seconds
-
-	weatherStability = 90, -- Range 0 - 100, Higher = Less weather changes, Overall better weather
-}
-
------------------
---   Tatooine
------------------
-tatooine = {
-
-	defaultWeather = 0, -- Sunny
-
-	averageWeatherDuration = 3600, -- In seconds
-
-	weatherStability = 70, -- Range 0 - 100, Higher = Less weather changes, Overall better weather
-
+	defaultWeather = 0,
+	averageWeatherDuration = 3600,
+	weatherStability = 90,
 	hasDamagingSandstorms = 0,
-
-	sandstormDamage = 70, -- 40 = Annoying, 100 = deadly
 }
 
+-- Urban skies: long calm periods and intermittent rain.
+coruscant = {
+	defaultWeather = 0,
+	averageWeatherDuration = 5400,
+	weatherStability = 92,
+	hasDamagingSandstorms = 0,
+}
 
------------------
---   Dantooine
------------------
+-- Open grasslands: established Core3 climate.
 dantooine = {
-
-	defaultWeather = 0, -- Sunny
-
-	averageWeatherDuration = 3600, -- In seconds
-
-	weatherStability = 85, -- Range 0 - 100, Higher = Less weather changes, Overall better weather
-}
-
------------------
---   Dathomir
------------------
-dathomir = {
-
-	defaultWeather = 0, -- Sunny
-
-	averageWeatherDuration = 3600, -- In seconds
-
-	weatherStability = 50, -- Range 0 - 100, Higher = Less weather changes, Overall better weather
-}
-
------------------
---    Endor
------------------
-endor = {
-
-	defaultWeather = 0, -- Sunny
-
-	averageWeatherDuration = 3600, -- In seconds
-
-	weatherStability = 90, -- Range 0 - 100, Higher = Less weather changes, Overall better weather
-}
-
------------------
---    Kashyyyk_hunting
------------------
-kashyyyk_hunting = {
-
-	defaultWeather = 0, -- Sunny
-
-	averageWeatherDuration = 3600, -- In seconds
-
-	weatherStability = 70, -- Range 0 - 100, Higher = Less weather changes, Overall better weather
-}
-
------------------
---    Kashyyyk_main
------------------
-kashyyyk_main = {
-
-	defaultWeather = 0, -- Sunny
-
-	averageWeatherDuration = 3600, -- In seconds
-
-	weatherStability = 70, -- Range 0 - 100, Higher = Less weather changes, Overall better weather
-}
-
------------------
---     Lok
------------------
-lok = {
-
-	defaultWeather = 0, -- Sunny
-
-	averageWeatherDuration = 3600, -- In seconds
-
-	weatherStability = 60, -- Range 0 - 100, Higher = Less weather changes, Overall better weather
-
+	defaultWeather = 0,
+	averageWeatherDuration = 3600,
+	weatherStability = 85,
 	hasDamagingSandstorms = 0,
-
-	sandstormDamage = 50, -- 30 = Annoying, 50 = deadly
 }
 
------------------
---    Mustafar
------------------
+-- Unsettled wilderness: established Core3 climate.
+dathomir = {
+	defaultWeather = 0,
+	averageWeatherDuration = 3600,
+	weatherStability = 50,
+	hasDamagingSandstorms = 0,
+}
+
+-- Forest moon: established Core3 climate.
+endor = {
+	defaultWeather = 0,
+	averageWeatherDuration = 3600,
+	weatherStability = 90,
+	hasDamagingSandstorms = 0,
+}
+
+-- Ice world: frequent snow patterns with breaks between blizzards.
+hoth = {
+	defaultWeather = 0,
+	averageWeatherDuration = 2400,
+	weatherStability = 45,
+	hasDamagingSandstorms = 0,
+}
+
+-- Dromund Kaas: frequent, changeable jungle storms.
+kaas = {
+	defaultWeather = 0,
+	averageWeatherDuration = 1800,
+	weatherStability = 35,
+	hasDamagingSandstorms = 0,
+}
+
+-- Damp forest floor: more unsettled regional weather.
+kashyyyk_dead_forest = {
+	defaultWeather = 0,
+	averageWeatherDuration = 3000,
+	weatherStability = 60,
+	hasDamagingSandstorms = 0,
+}
+
+-- Exposed hunting grounds: regular passing storms.
+kashyyyk_hunting = {
+	defaultWeather = 0,
+	averageWeatherDuration = 3000,
+	weatherStability = 65,
+	hasDamagingSandstorms = 0,
+}
+
+-- Kachirho and coastal forest: established regional climate.
+kashyyyk_main = {
+	defaultWeather = 0,
+	averageWeatherDuration = 3600,
+	weatherStability = 70,
+	hasDamagingSandstorms = 0,
+}
+
+-- Forest trails: changing conditions; effects follow each terrain region.
+kashyyyk_rryatt_trail = {
+	defaultWeather = 0,
+	averageWeatherDuration = 3000,
+	weatherStability = 65,
+	hasDamagingSandstorms = 0,
+}
+
+-- Arid wilderness: established Core3 dust-storm climate.
+lok = {
+	defaultWeather = 0,
+	averageWeatherDuration = 3600,
+	weatherStability = 60,
+	hasDamagingSandstorms = 0,
+	sandstormDamage = 50, -- Used only if damaging sandstorms are enabled.
+}
+
+-- MTG landscape: mostly settled conditions with occasional squalls.
+mandalore = {
+	defaultWeather = 0,
+	averageWeatherDuration = 3600,
+	weatherStability = 85,
+	hasDamagingSandstorms = 0,
+}
+
+-- Red desert: long dry periods punctuated by dust storms.
+moraband = {
+	defaultWeather = 0,
+	averageWeatherDuration = 5400,
+	weatherStability = 80,
+	hasDamagingSandstorms = 0,
+}
+
+-- Volcanic world: changing haze and drifting embers.
 mustafar = {
-
-	defaultWeather = 0, -- Sunny
-
-	averageWeatherDuration = 3600, -- In seconds
-
-	weatherStability = 70, -- Range 0 - 100, Higher = Less weather changes, Overall better weather
+	defaultWeather = 0,
+	averageWeatherDuration = 3600,
+	weatherStability = 80,
+	hasDamagingSandstorms = 0,
 }
 
------------------
---    Naboo
------------------
+-- Temperate lakes and plains: established Core3 climate.
 naboo = {
-
-	defaultWeather = 0, -- Sunny
-
-	averageWeatherDuration = 3600, -- In seconds
-
-	weatherStability = 90, -- Range 0 - 100, Higher = Less weather changes, Overall better weather
+	defaultWeather = 0,
+	averageWeatherDuration = 3600,
+	weatherStability = 90,
+	hasDamagingSandstorms = 0,
 }
 
------------------
---     Rori
------------------
+-- Marshland: established Core3 climate.
 rori = {
-
-	defaultWeather = 0, -- Sunny
-
-	averageWeatherDuration = 3600, -- In seconds
-
-	weatherStability = 80, -- Range 0 - 100, Higher = Less weather changes, Overall better weather
+	defaultWeather = 0,
+	averageWeatherDuration = 3600,
+	weatherStability = 80,
+	hasDamagingSandstorms = 0,
 }
 
------------------
---    Talus
------------------
+-- Rural plains: mostly fair conditions with periodic showers.
+taanab = {
+	defaultWeather = 0,
+	averageWeatherDuration = 4200,
+	weatherStability = 88,
+	hasDamagingSandstorms = 0,
+}
+
+-- Temperate wilderness: established Core3 climate.
 talus = {
-
-	defaultWeather = 0, -- Sunny
-
-	averageWeatherDuration = 3600, -- In seconds
-
-	weatherStability = 80, -- Range 0 - 100, Higher = Less weather changes, Overall better weather
+	defaultWeather = 0,
+	averageWeatherDuration = 3600,
+	weatherStability = 80,
+	hasDamagingSandstorms = 0,
 }
 
------------------
---    Yavin4
------------------
+-- Desert world: established Core3 sandstorm climate.
+tatooine = {
+	defaultWeather = 0,
+	averageWeatherDuration = 3600,
+	weatherStability = 70,
+	hasDamagingSandstorms = 0,
+	sandstormDamage = 70, -- Used only if damaging sandstorms are enabled.
+}
+
+-- Jungle moon: established Core3 climate.
 yavin4 = {
-
-	defaultWeather = 0, -- Sunny
-
-	averageWeatherDuration = 3600, -- In seconds
-
-	weatherStability = 70, -- Range 0 - 100, Higher = Less weather changes, Overall better weather
+	defaultWeather = 0,
+	averageWeatherDuration = 3600,
+	weatherStability = 70,
+	hasDamagingSandstorms = 0,
 }

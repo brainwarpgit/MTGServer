@@ -11,6 +11,7 @@
 #include "server/zone/objects/region/CityRegion.h"
 #include "server/zone/objects/transaction/TransactionLog.h"
 #include "server/zone/objects/player/sui/callbacks/TravelCouponUseSuiCallback.h"
+#include "server/zone/ZoneServer.h"
 
 class PurchaseTicketCommand : public QueueCommand {
 public:
@@ -23,6 +24,11 @@ public:
 
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
+
+		auto zoneServer = server->getZoneServer();
+
+		if (zoneServer == nullptr || !zoneServer->checkTravelStartup(creature))
+			return GENERALERROR;
 
 		SortedVector<TreeEntry*> closeObjects;
 		CloseObjectsVector* vec = (CloseObjectsVector*) creature->getCloseObjects();
@@ -90,16 +96,9 @@ public:
 			return INVALIDPARAMETERS;
 		}
 
-		departurePlanet = departurePlanet.replaceAll("_", " ");
+		// Planet tokens are scene identifiers; underscores are significant (kashyyyk_main).
 		departurePoint = departurePoint.replaceAll("_", " ");
-		arrivalPlanet = arrivalPlanet.replaceAll("_", " ");
 		arrivalPoint = arrivalPoint.replaceAll("_", " ");
-
-		auto zoneServer = server->getZoneServer();
-
-		if (zoneServer == nullptr) {
-			return GENERALERROR;
-		}
 
 		ManagedReference<Zone*> departureZone = zoneServer->getZone(departurePlanet);
 		ManagedReference<Zone*> arrivalZone = zoneServer->getZone(arrivalPlanet);

@@ -922,6 +922,11 @@ AppearanceTemplate* TemplateManager::instantiateAppearanceTemplate(IffStream* if
 			break;
 		case 'LSAT':
 			break;
+		case 'SPRT':
+			// Sprites are client visuals, not server collision meshes. Keep the
+			// filename in the log only so the asset can still be traced.
+			info(false) << "Sprite appearance has no server collision mesh: " << iffStream->getFileName();
+			break;
 		case 'APT ': {
 			AppearanceRedirect redirect;
 			redirect.readObject(iffStream);
@@ -930,7 +935,7 @@ AppearanceTemplate* TemplateManager::instantiateAppearanceTemplate(IffStream* if
 			break;
 		}
 		default:
-			error() << "unknown appearance type " << (char)((formType >> 24) & 0xFF) << (char)((formType >> 16) & 0xFF) << (char)((formType >> 8) & 0xFF) << (char)(formType & 0xFF);
+			error() << "unknown appearance type " << (char)((formType >> 24) & 0xFF) << (char)((formType >> 16) & 0xFF) << (char)((formType >> 8) & 0xFF) << (char)(formType & 0xFF) << " in " << iffStream->getFileName();
 			break;
 		}
 

@@ -36,6 +36,14 @@
 				buttonEndor='map.GalaxyMap.buttonEndor'
 				buttonExit='buttonExit'
 				buttonLok='map.GalaxyMap.buttonLok'
+				buttonChandrila='map.GalaxyMap.buttonChandrila'
+				buttonCoruscant='map.GalaxyMap.buttonCoruscant'
+				buttonKaas='map.GalaxyMap.buttonKaas'
+				buttonKashyyyk_main='map.GalaxyMap.buttonKashyyyk_main'
+				buttonMandalore='map.GalaxyMap.buttonMandalore'
+				buttonMoraband='map.GalaxyMap.buttonMoraband'
+				buttonTaanab='map.GalaxyMap.buttonTaanab'
+				buttonHoth='map.GalaxyMap.buttonHoth'
 				buttonMustafar='map.GalaxyMap.buttonMustafar'
 				buttonNaboo='map.GalaxyMap.buttonNaboo'
 				buttonPurchase='buttonPurchase'
@@ -430,7 +438,7 @@ parent.buttonTravel.visible=false
 				ScrollExtent='107,19'
 				Size='107,19'
 				Style='/Styles.New.Checkbox.Style2'
-			>@show_help</Checkbox>
+			>@ui:show_help</Checkbox>
 			<Button
 				LocalText='[@ui:purchase]'
 				Location='213,650'
@@ -659,7 +667,7 @@ parent.buttonTravel.visible=false
 					ColorCarat='#FFFFFF'
 					ColorSelection='#FFFFFF'
 					Font='bold_13'
-					LocalText='[@ui:travel_planet]'
+					LocalText='[@ui:avatar_table_planet]'
 					Location='5,20'
 					MinimumSize='0,19'
 					Name='labelPlanet'
@@ -671,13 +679,13 @@ parent.buttonTravel.visible=false
 					Size='246,19'
 					TextAlignmentVertical='Center'
 					TextColor='#97FFFF'
-				>@ui:travel_planet</Text>
+				>@ui:avatar_table_planet</Text>
 				<Text
 					BackgroundColor='#FFFFFF'
 					ColorCarat='#FFFFFF'
 					ColorSelection='#FFFFFF'
 					Font='bold_13'
-					LocalText='[@ui:travel_location]'
+					LocalText='[@ui:cameraloc]'
 					Location='5,58'
 					MinimumSize='0,19'
 					Name='labelLocation'
@@ -689,13 +697,13 @@ parent.buttonTravel.visible=false
 					Size='246,19'
 					TextAlignmentVertical='Center'
 					TextColor='#97FFFF'
-				>@ui:travel_location</Text>
+				>@ui:cameraloc</Text>
 				<Text
 					BackgroundColor='#FFFFFF'
 					ColorCarat='#FFFFFF'
 					ColorSelection='#FFFFFF'
 					Font='bold_13'
-					LocalText='[@UI:TRAVEL_TRAVEL_TO]'
+					LocalText='[@ui:travel]'
 					MinimumSize='0,19'
 					Name='labelDestination'
 					OpacityRelativeMin='0.70'
@@ -707,7 +715,7 @@ parent.buttonTravel.visible=false
 					TextAlignmentVertical='Center'
 					TextCapital='true'
 					TextColor='#97FFFF'
-				>@ui:travel_travel_to</Text>
+				>@ui:travel</Text>
 				<Page
 					BackgroundColor='#FFFFFF'
 					BackgroundOpacity='1.00'
@@ -772,6 +780,25 @@ parent.buttonTravel.visible=false
 					ScrollExtent='501,486'
 					Size='501,486'
 				>
+					<Text
+						BackgroundColor='#FFFFFF'
+						ColorCarat='#FFFFFF'
+						ColorSelection='#FFFFFF'
+						Font='bold_13'
+						LocalText='Hoth'
+						Location='84,224'
+						MinimumSize='0,19'
+						Name='Hoth'
+						OpacityRelativeMin='0.70'
+						PackLocation='cpc,cpc'
+						PackSize='p,f'
+						PalText='contrast1'
+						ScrollExtent='75,19'
+						Size='75,19'
+						TextAlignment='Center'
+						TextAlignmentVertical='Center'
+						TextColor='#62FF15'
+					>Hoth</Text>
 					<Text
 						BackgroundColor='#FFFFFF'
 						ColorCarat='#FFFFFF'
@@ -1011,7 +1038,7 @@ parent.parent.buttonArriveGalactic.visible=visible'
 				>
 					<Page
 						BackgroundOpacity='1.00'
-						Name='Mustafar'
+						Name='Chandrila'
 						PackLocation='nfn,nfn'
 						PackSize='a,a'
 						RStyleDefault='rs_default'
@@ -1025,6 +1052,149 @@ parent.parent.buttonArriveGalactic.visible=visible'
 							PackSize='a,a'
 							ScrollExtent='498,482'
 							Size='498,482'
+							SourceRect='0,0,1024,1024'
+							SourceResource='ui_map_chandrila'
+						/>
+					</Page>
+					<Page
+						BackgroundOpacity='1.00'
+						Name='Coruscant'
+						PackLocation='nfn,nfn'
+						PackSize='a,a'
+						RStyleDefault='rs_default'
+						ScrollExtent='498,482'
+						Size='498,482'
+					>
+						<Image
+							BackgroundOpacity='1.00'
+							Name='New Image'
+							PackLocation='nfn,nfn'
+							PackSize='a,a'
+							ScrollExtent='498,482'
+							Size='498,482'
+							SourceRect='0,0,1024,1024'
+							SourceResource='ui_map_coruscant'
+						/>
+					</Page>
+					<Page
+						BackgroundOpacity='1.00'
+						Name='Kaas'
+						PackLocation='nfn,nfn'
+						PackSize='a,a'
+						RStyleDefault='rs_default'
+						ScrollExtent='498,482'
+						Size='498,482'
+					>
+						<Image
+							BackgroundOpacity='1.00'
+							Name='New Image'
+							PackLocation='nfn,nfn'
+							PackSize='a,a'
+							ScrollExtent='498,482'
+							Size='498,482'
+							SourceRect='0,0,1024,1024'
+							SourceResource='ui_map_kaas'
+						/>
+					</Page>
+					<Page
+						BackgroundColor='#10232B'
+						BackgroundOpacity='1.00'
+						Name='Kashyyyk_main'
+						PackLocation='nfn,nfn'
+						PackSize='a,a'
+						RStyleDefault='rs_default'
+						ScrollExtent='498,482'
+						Size='498,482'
+					>
+					</Page>
+					<Page
+						BackgroundOpacity='1.00'
+						Name='Mandalore'
+						PackLocation='nfn,nfn'
+						PackSize='a,a'
+						RStyleDefault='rs_default'
+						ScrollExtent='498,482'
+						Size='498,482'
+					>
+						<Image
+							BackgroundOpacity='1.00'
+							Name='New Image'
+							PackLocation='nfn,nfn'
+							PackSize='a,a'
+							ScrollExtent='498,482'
+							Size='498,482'
+							SourceRect='0,0,1024,1024'
+							SourceResource='ui_map_mandalore'
+						/>
+					</Page>
+					<Page
+						BackgroundColor='#10232B'
+						BackgroundOpacity='1.00'
+						Name='Moraband'
+						PackLocation='nfn,nfn'
+						PackSize='a,a'
+						RStyleDefault='rs_default'
+						ScrollExtent='498,482'
+						Size='498,482'
+					>
+					</Page>
+					<Page
+						BackgroundOpacity='1.00'
+						Name='Taanab'
+						PackLocation='nfn,nfn'
+						PackSize='a,a'
+						RStyleDefault='rs_default'
+						ScrollExtent='498,482'
+						Size='498,482'
+					>
+						<Image
+							BackgroundOpacity='1.00'
+							Name='New Image'
+							PackLocation='nfn,nfn'
+							PackSize='a,a'
+							ScrollExtent='498,482'
+							Size='498,482'
+							SourceRect='0,0,1024,1024'
+							SourceResource='ui_map_taanab'
+						/>
+					</Page>
+					<Page
+						BackgroundOpacity='1.00'
+						Name='Hoth'
+						PackLocation='nfn,nfn'
+						PackSize='a,a'
+						RStyleDefault='rs_default'
+						ScrollExtent='498,482'
+						Size='498,482'
+					>
+						<Image
+							BackgroundOpacity='1.00'
+							Name='New Image'
+							PackLocation='nfn,nfn'
+							PackSize='a,a'
+							ScrollExtent='498,482'
+							Size='498,482'
+							SourceRect='0,0,1024,1014'
+							SourceResource='ui_map_hoth'
+						/>
+					</Page>
+					<Page
+						BackgroundOpacity='1.00'
+						Name='Mustafar'
+						PackLocation='nfn,nfn'
+						PackSize='1,1'
+						RStyleDefault='rs_default'
+						ScrollExtent='16384,16384'
+						Size='16384,16384'
+					>
+						<Image
+							BackgroundOpacity='1.00'
+							Name='New Image'
+							Location='1312,1216'
+							PackLocation='npn,npn'
+							PackSize='p,p'
+							ScrollExtent='8000,8000'
+							Size='8000,8000'
 							SourceRect='0,0,1024,1024'
 							SourceResource='ui_map_mustafar'
 						/>
@@ -1257,6 +1427,26 @@ parent.planetnames.visible=visible'
 						GetsInput='false'
 						lightambientcolor='#444444'
 						lightcolor='#ffffff'
+						Location='92,243'
+						Name='vHoth'
+						objectdatasource='data.hoth'
+						PackLocation='cpc,cpc'
+						PackSize='p,p'
+						RotateSpeed='0.3'
+						RStyleDefault='rs_default'
+						ScrollExtent='52,52'
+						Size='52,52'
+					/>
+					<CuiWidget3dObjectListViewer
+						AutoZoomOutOnly='true'
+						CameraForceTarget='true'
+						camerayaw='90'
+						dragyawok='false'
+						fieldofview='60'
+						FitDistanceFactor='1'
+						GetsInput='false'
+						lightambientcolor='#444444'
+						lightcolor='#ffffff'
 						Location='68,136'
 						Name='vMustafar'
 						objectdatasource='data.mustafar'
@@ -1267,6 +1457,122 @@ parent.planetnames.visible=visible'
 						ScrollExtent='77,77'
 						Size='77,77'
 					/>
+					<Button
+						BackgroundOpacity='0.80'
+						Font='bold_12'
+						LocalText='Chandrila'
+						Location='155,250'
+						MinimumSize='0,19'
+						Name='buttonChandrila'
+						PackLocation='cpc,cpc'
+						PackSize='p,p'
+						ScrollExtent='100,23'
+						Size='100,23'
+						Style='/Styles.New.buttons.hud.style'
+						TextAlignment='Center'
+						TextAlignmentVertical='Center'
+					>Chandrila</Button>
+					<Button
+						BackgroundOpacity='0.80'
+						Font='bold_12'
+						LocalText='Coruscant'
+						Location='265,250'
+						MinimumSize='0,19'
+						Name='buttonCoruscant'
+						PackLocation='cpc,cpc'
+						PackSize='p,p'
+						ScrollExtent='100,23'
+						Size='100,23'
+						Style='/Styles.New.buttons.hud.style'
+						TextAlignment='Center'
+						TextAlignmentVertical='Center'
+					>Coruscant</Button>
+					<Button
+						BackgroundOpacity='0.80'
+						Font='bold_12'
+						LocalText='Dromund Kaas'
+						Location='375,250'
+						MinimumSize='0,19'
+						Name='buttonKaas'
+						PackLocation='cpc,cpc'
+						PackSize='p,p'
+						ScrollExtent='100,23'
+						Size='100,23'
+						Style='/Styles.New.buttons.hud.style'
+						TextAlignment='Center'
+						TextAlignmentVertical='Center'
+					>Dromund Kaas</Button>
+					<Button
+						BackgroundOpacity='0.80'
+						Font='bold_12'
+						LocalText='Kashyyyk'
+						Location='155,280'
+						MinimumSize='0,19'
+						Name='buttonKashyyyk_main'
+						PackLocation='cpc,cpc'
+						PackSize='p,p'
+						ScrollExtent='100,23'
+						Size='100,23'
+						Style='/Styles.New.buttons.hud.style'
+						TextAlignment='Center'
+						TextAlignmentVertical='Center'
+					>Kashyyyk</Button>
+					<Button
+						BackgroundOpacity='0.80'
+						Font='bold_12'
+						LocalText='Mandalore'
+						Location='265,280'
+						MinimumSize='0,19'
+						Name='buttonMandalore'
+						PackLocation='cpc,cpc'
+						PackSize='p,p'
+						ScrollExtent='100,23'
+						Size='100,23'
+						Style='/Styles.New.buttons.hud.style'
+						TextAlignment='Center'
+						TextAlignmentVertical='Center'
+					>Mandalore</Button>
+					<Button
+						BackgroundOpacity='0.80'
+						Font='bold_12'
+						LocalText='Moraband'
+						Location='375,280'
+						MinimumSize='0,19'
+						Name='buttonMoraband'
+						PackLocation='cpc,cpc'
+						PackSize='p,p'
+						ScrollExtent='100,23'
+						Size='100,23'
+						Style='/Styles.New.buttons.hud.style'
+						TextAlignment='Center'
+						TextAlignmentVertical='Center'
+					>Moraband</Button>
+					<Button
+						BackgroundOpacity='0.80'
+						Font='bold_12'
+						LocalText='Taanab'
+						Location='155,310'
+						MinimumSize='0,19'
+						Name='buttonTaanab'
+						PackLocation='cpc,cpc'
+						PackSize='p,p'
+						ScrollExtent='100,23'
+						Size='100,23'
+						Style='/Styles.New.buttons.hud.style'
+						TextAlignment='Center'
+						TextAlignmentVertical='Center'
+					>Taanab</Button>
+					<Button
+						BackgroundColor='#FFFFFF'
+						Location='92,243'
+						MaximumSize='800,600'
+						Name='buttonHoth'
+						PackLocation='cpc,cpc'
+						PackSize='p,p'
+						ScrollExtent='52,52'
+						Size='52,52'
+						Style='/Styles.New.buttons.planetLrg.style'
+					></Button>
 					<Button
 						BackgroundColor='#FFFFFF'
 						Location='68,136'
@@ -3877,6 +4183,14 @@ parent.planetnames.visible=visible'
 					<Namespace
 						Name='data'
 					>
+						<DataSource
+							Name='Hoth'
+						>
+							<Data
+								appearanceTemplate='appearance/ui_planet_sel_hoth.apt'
+								Name='Hoth'
+							/>
+						</DataSource>
 						<DataSource
 							Name='Mustafar'
 						>
