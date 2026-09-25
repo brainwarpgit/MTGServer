@@ -2,6 +2,24 @@
 
 ## 2026-09-25
 
+### Moraband boundary compatibility and city-config cleanup
+
+- **Entered validation:** 2026-09-25
+- **Status:** Partially validated — boundary runtime fix confirmed; city-config message awaiting confirmation
+- **Validated:** 2026-09-25 for boundary compatibility; not yet for the city-config cleanup
+- **Evidence:** Static inspection of the current configured Moraband terrain confirmed that `BPOL/0007` is the existing `0005` payload plus one 32-bit field between `shaderSize` and `shaderName`, and `BREC/0004` is the existing `0003` payload with the same addition. All eight available newer-version records contain zero in that field, so the new readers consume it without assigning unverified behavior. Source review confirmed that older readers are unchanged, the two skipped polygons are in the enabled `various mountains` layer, and the rectangle's `playable boundary` parent layer is disabled. The user subsequently confirmed that the boundary-format errors are gone. An exhaustive source search found no remaining `CityVotingDuration` declaration, configuration lookup, or consumer. The ignored local regression test covers enabled geometry, bounds, inside/outside influence, a nonzero appended sentinel, and a following shader string. Git whitespace validation passed.
+- **Core3 build/runtime validation:** The user rebuilt and loaded Core3 and confirmed the boundary-format fix. Codex did not build or run Core3 after these changes, in accordance with project guidance. The city-config diagnostic was not separately confirmed.
+- **Remaining work:** Confirm that the `CityVotingDuration` expected-number message no longer appears. The ignored local `TerrainBoundaryVersionTest` has not been compiled or run.
+
+### Core3 warning and error audit
+
+- **Entered validation:** 2026-09-25
+- **Status:** Completed — non-shuttle runtime diagnostics inventoried
+- **Validated:** 2026-09-25
+- **Evidence:** At the user's explicit request, Codex started Core3 at 15:33:04 (PID 255671). It initialized successfully in 46 seconds, remained running through the five-minute scheduled-task boundary and the normal 352-second database backup, and was then stopped intentionally. In `log/core3.log` lines 143106–144170, excluding the 38 deferred `ScheduleShuttleTask` errors, there are 28 TreeArchive warnings, five INFO-severity Lua load failures containing `ERROR`, and no exceptions. No additional non-shuttle warning, error, or exception appeared after initialization. The live console also reported two unsupported Moraband `BoundaryPolygon/0007` forms and one unsupported `BoundaryRectangle/0004` form; those direct-console messages are not copied into `core3.log`.
+- **Core3 build/runtime validation:** Core3 was run and monitored by Codex under the user's explicit authorization. The process was stopped with Ctrl+C only after initialization, the five-minute timer, and the scheduled backup completed.
+- **Remaining work:** The 28 known missing-data warnings comprise two mining-asteroid chassis tables reported twice each, three ship client-data CDFs reported six times each, the Corellian-corvette POB, `particle_test_31.prt`, and four snapshots. The five Lua load failures are three engine-configuration fallback probes and two absent optional `custom_scripts` overrides. The unsupported weighted base-player gender parameter produces 41 repeated INFO diagnostics while concrete player templates provide explicit genders. Moraband boundary compatibility is now runtime-validated; the stale `CityVotingDuration` read has been removed and awaits explicit message-level confirmation. Shuttle scheduling remains explicitly deferred.
+
 ### Significant startup warning and TRE cleanup
 
 - **Entered validation:** 2026-09-25

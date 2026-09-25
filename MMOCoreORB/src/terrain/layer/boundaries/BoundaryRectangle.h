@@ -83,6 +83,9 @@ public:
 		iffStream->openForm(version);
 
 		switch (version) {
+		case '0004':
+			parseFromIffStream(iffStream, Version<'0004'>());
+			break;
 		case '0003':
 			parseFromIffStream(iffStream, Version<'0003'>());
 			break;
@@ -113,6 +116,36 @@ public:
 			featheringAmount = 0;
 		else if (featheringAmount > 1)
 			featheringAmount = 1;
+
+		iffStream->closeChunk('DATA');
+
+		initialize();
+	}
+
+	void parseFromIffStream(engine::util::IffStream* iffStream, Version<'0004'>) {
+		informationHeader.readObject(iffStream);
+
+		iffStream->openChunk('DATA');
+
+		x0 = iffStream->getFloat();
+		y0 = iffStream->getFloat();
+		x1 = iffStream->getFloat();
+		y1 = iffStream->getFloat();
+		featheringType = iffStream->getInt();
+		featheringAmount = iffStream->getFloat();
+
+		if (featheringAmount < 0) {
+			featheringAmount = 0;
+		} else if (featheringAmount > 1) {
+			featheringAmount = 1;
+		}
+
+		localWaterTableEnabled = iffStream->getInt();
+		var7 = iffStream->getInt();
+		localWaterTableHeight = iffStream->getFloat();
+		shaderSize = iffStream->getFloat();
+		iffStream->getInt(); // Appended field; unused by the current terrain implementation.
+		iffStream->getString(shaderName);
 
 		iffStream->closeChunk('DATA');
 

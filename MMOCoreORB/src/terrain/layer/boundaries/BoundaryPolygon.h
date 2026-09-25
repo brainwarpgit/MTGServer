@@ -279,6 +279,9 @@ public:
 		iffStream->openForm(version);
 
 		switch (version) {
+		case '0007':
+			parseFromIffStream(iffStream, Version<'0007'>());
+			break;
 		case '0005':
 			parseFromIffStream(iffStream, Version<'0005'>());
 			break;
@@ -310,6 +313,34 @@ public:
 		localWaterTableEnabled = iffStream->getInt(); // local water table enabled?
 		localWaterTableHeight = iffStream->getFloat(); // water height
 		shaderSize = iffStream->getFloat();
+		iffStream->getString(shaderName);
+
+		iffStream->closeChunk('DATA');
+
+		initialize();
+	}
+
+	void parseFromIffStream(engine::util::IffStream* iffStream, Version<'0007'>) {
+		informationHeader.readObject(iffStream);
+
+		iffStream->openChunk('DATA');
+
+		int vertexCount = iffStream->getInt();
+
+		for (int i = 0; i < vertexCount; ++i) {
+			Point2D* point = new Point2D();
+			point->x = iffStream->getFloat();
+			point->y = iffStream->getFloat();
+
+			vertices.add(point);
+		}
+
+		featheringType = iffStream->getInt();
+		featheringAmount = iffStream->getFloat();
+		localWaterTableEnabled = iffStream->getInt();
+		localWaterTableHeight = iffStream->getFloat();
+		shaderSize = iffStream->getFloat();
+		iffStream->getInt(); // Appended field; unused by the current terrain implementation.
 		iffStream->getString(shaderName);
 
 		iffStream->closeChunk('DATA');

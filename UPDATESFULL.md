@@ -2,6 +2,18 @@
 
 ## 2026-09-25
 
+### Moraband boundary compatibility and city-config cleanup — Committed
+
+The terrain boundary loader now recognizes the `BoundaryPolygon/0007` and `BoundaryRectangle/0004` forms used by the current configured Moraband terrain. Direct inspection of the branch-local terrain payloads established that each newer layout retains the corresponding existing field order and adds one 32-bit field after `shaderSize`, before the shader name. Dedicated version readers consume that field without assigning unproven semantics, while the existing `0005` polygon and `0003` rectangle readers remain unchanged.
+
+This restores two polygons in Moraband's enabled `various mountains` layer that Core3 previously skipped. The newer rectangle belongs to the disabled `playable boundary` layer, so reading it removes the unsupported-version diagnostic and preserves its data without changing current terrain behavior. The implementation is based solely on the current branch and its configured terrain data; engine3 and other branches were not used.
+
+The stale `CityVotingDuration` member and Lua configuration lookup were removed. The value had no consumers, was absent from the configuration, and was not part of the active election calculation, which uses the configured voting-cycle values and city update interval. Removing the dead lookup eliminates its expected-number startup message without changing election timing.
+
+An ignored local `TerrainBoundaryVersionTest` constructs synthetic enabled `BPOL/0007` and `BREC/0004` forms with a nonzero appended sentinel, a shader name, geometry bounds, and inside/outside checks. It remains local under `src/tests`, is covered by the existing ignore rule, and has not been compiled or executed. Static layout review and Git whitespace checks passed; Codex did not build or run Core3. The user rebuilt and loaded Core3 and confirmed that the boundary-format errors are gone. The removed `CityVotingDuration` message has not yet received separate runtime confirmation.
+
+The supplied bannerpole and flagpole excerpt was also traced. Its 37 lines are INFO messages emitted when an empty component name fails lookup; Core3 immediately installs the default `GroundZoneComponent`, so the objects continue loading. The 41 weighted-gender `IntegerParam` messages come from one weighted 50/50 gender value in the abstract base-player template being encountered once directly and again through 40 concrete templates. All 40 concrete templates explicitly replace it with a supported scalar gender. Both message groups are therefore left unchanged pending any later logging cleanup or a complete weighted-parameter design.
+
 ### Significant startup warning and TRE cleanup — Committed
 
 Eight enabled zones had no matching global table in `scripts/managers/planet/planet_manager.lua`, causing PlanetManager to skip their normal configuration and snapshot-loading path. Minimal entries were added for `kashyyyk`, `hoth`, `kaas`, `coruscant`, `chandrila`, `moraband`, `taanab`, and `mandalore`, with weather and GCW behavior disabled rather than inferred. Supplying these tables removes the missing-configuration warnings and allows each zone to proceed to snapshot loading without inventing unsupported weather or GCW behavior.
