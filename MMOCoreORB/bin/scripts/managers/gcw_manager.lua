@@ -73,7 +73,7 @@ bonusXP = 15
 crackdownScansEnabled = true
 
 -- thresholds for scaling crackdown npc's difficulty, first threshold should always be 0.
-difficutlyScalingThresholds = {0, 64}
+difficultyScalingThresholds = {0, 64}
 
 -- PRODUCTION SERVER VALUES
 crackdownScanPrivilegedPlayers = false

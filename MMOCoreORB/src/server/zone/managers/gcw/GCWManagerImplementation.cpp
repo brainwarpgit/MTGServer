@@ -218,7 +218,7 @@ void GCWManagerImplementation::loadLuaConfig() {
 
 	strongholdsObject.pop();
 
-	LuaObject difficulties = lua->getGlobalObject("difficutlyScalingThresholds");
+	LuaObject difficulties = lua->getGlobalObject("difficultyScalingThresholds");
 	if (difficulties.isValidTable()) {
 		for (int i = 1; i <= difficulties.getTableSize(); ++i) {
 			difficultyScalingThresholds.add(difficulties.getIntAt(i));

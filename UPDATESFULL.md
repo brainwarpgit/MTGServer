@@ -2,6 +2,20 @@
 
 ## 2026-09-25
 
+### Core3 configuration catalog and naming cleanup — Committed
+
+A branch-local inventory of the configuration reads under `MMOCoreORB/src` and relevant runtime scripts under `MMOCoreORB/bin` was reconciled with the tracked `conf/config.lua`. The reorganized file now contains 151 active fixed settings grouped by service/network, databases, login/accounts, players, zones, TRE archives, AI/navigation, combat/JTL, missions, structures/travel, items/auctions, logging/metrics, Lua/commands, REST/exports, and transaction logging. Existing configured behavior was retained, live replacement keys keep their former values, and other newly exposed settings use their current source defaults. Legacy numeric and string booleans were normalized to native Lua booleans.
+
+Sixteen conditional, derived, inherited, or dynamically named examples remain commented rather than being assigned fixed values. These include build-specific options, logger rotation values that inherit the global setting, the derived login stream URL, travel timings normally supplied by planet scripts, per-zone thread counts, per-template AI logging, per-command cooldowns, structure navmesh flags, and account-specific overrides. This documents the available configuration surface without changing the existing fallback behavior.
+
+Seven settings with no current-branch consumer were removed: `MakeWeb`, `LoginProcessingThreads`, `ZoneProcessingThreads`, `WebPorts`, `WebAccessLog`, `WebErrorLog`, and `WebSessionTimeout`. The stale `DeleteCharacters` entry was replaced with the live `PurgeDeletedCharacters` key, and `MantisPrfx` was corrected to `MantisPrefix` in both the configuration and its source accessor.
+
+Three other naming defects found during the audit were corrected at their consumers. `Core3.Tweaks.StructureObject.DestoryOrphans` is now `Core3.Tweaks.StructureObject.DestroyOrphans`; the PvP victim-list lookup now uses the configured `Core3.PlayerManager.accountVictimList` namespace; and `difficutlyScalingThresholds` is now consistently spelled `difficultyScalingThresholds` in the GCW manager C++ and Lua files.
+
+The ignored `config-local.lua` was synchronized with the tracked organization and complete key set while retaining its private database credentials and locally enabled Moraband setting. No secret values were added to tracked files or project records.
+
+Static validation confirmed that both configurations parse, expose the same 151-key fixed configuration surface, and preserve only the intended local overrides. The active tracked keys map to current-branch consumers, the removed legacy names no longer occur in live source or configuration, the corrected names agree between producers and consumers, `config-local.lua` remains ignored, and Git whitespace validation passes. In accordance with project guidance, Core3 was not compiled or run; a user build and startup remain required for runtime confirmation.
+
 ### Moraband boundary compatibility and city-config cleanup — Committed
 
 The terrain boundary loader now recognizes the `BoundaryPolygon/0007` and `BoundaryRectangle/0004` forms used by the current configured Moraband terrain. Direct inspection of the branch-local terrain payloads established that each newer layout retains the corresponding existing field order and adds one 32-bit field after `shaderSize`, before the shader name. Dedicated version readers consume that field without assigning unproven semantics, while the existing `0005` polygon and `0003` rectangle readers remain unchanged.

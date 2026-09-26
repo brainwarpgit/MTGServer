@@ -407,7 +407,7 @@ namespace conf {
 		}
 
 		inline const String& getMantisPrefix() {
-			return getString("Core3.MantisPrfx", "");
+			return getString("Core3.MantisPrefix", "");
 		}
 
 		inline const String& getMessageOfTheDay() {

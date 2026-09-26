@@ -2,6 +2,14 @@
 
 ## 2026-09-25
 
+### Core3 configuration catalog and naming cleanup — Committed
+
+- Expanded and reorganized `config.lua` into functional sections covering all 151 fixed Core3 settings identified in the current branch. Conditional, derived, inherited, and dynamically named overrides remain documented but commented so their existing runtime behavior is preserved.
+- Removed seven obsolete server/web settings with no current consumer, replaced `DeleteCharacters` with `PurgeDeletedCharacters`, and corrected `MantisPrfx` to `MantisPrefix`.
+- Corrected three additional configuration-name defects: the structure orphan-cleanup spelling, the missing `Core3.` namespace on the PvP account-victim option, and the GCW difficulty-threshold spelling in both C++ and Lua.
+- Synchronized the ignored `config-local.lua` with the new layout while preserving its private credentials and locally enabled Moraband setting.
+- Static configuration, source-reference, ignore-state, and Git whitespace checks passed. Core3 has not been built or run for this uncommitted change.
+
 ### Moraband boundary compatibility and city-config cleanup — Committed
 
 - Added support for the `BoundaryPolygon/0007` and `BoundaryRectangle/0004` layouts present in the current Moraband terrain. The new readers preserve all existing fields, consume the appended 32-bit field found in these versions, and leave the older boundary readers unchanged.

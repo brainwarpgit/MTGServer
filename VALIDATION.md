@@ -2,6 +2,15 @@
 
 ## 2026-09-25
 
+### Core3 configuration catalog and naming cleanup
+
+- **Entered validation:** 2026-09-25
+- **Status:** Awaiting runtime validation — static configuration audit passed
+- **Validated:** Pending
+- **Evidence:** Both `config.lua` and the ignored `config-local.lua` parse successfully and expose the same 151 active fixed settings. The tracked settings were reconciled against current-branch consumers; seven obsolete server/web settings were removed, the two stale tracked names were replaced with their live names, and source searches confirm that the corrected Mantis, structure orphan-cleanup, player victim-list, and GCW difficulty-threshold names agree between their producers and consumers. The local configuration retains only its intended private/local overrides, remains ignored by Git, and no credential values were added to tracked files. Git whitespace validation passes.
+- **Core3 build/runtime validation:** Not run; project guidance leaves the Core3 build and startup to the user.
+- **Remaining work:** Build and start Core3, confirm that the configuration loads without missing-value or type diagnostics, and verify the locally expected zones and corrected configuration-controlled behavior.
+
 ### Moraband boundary compatibility and city-config cleanup
 
 - **Entered validation:** 2026-09-25
